@@ -314,6 +314,8 @@ GameObject:
   - component: {fileID: 553789562}
   - component: {fileID: 3000000302}
   - component: {fileID: 3000000400}
+  - component: {fileID: 3000000600}
+  - component: {fileID: 3000000601}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -349,7 +351,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553789557}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -488,6 +490,7 @@ GameObject:
   - component: {fileID: 780108530}
   - component: {fileID: 780108529}
   - component: {fileID: 780108528}
+  - component: {fileID: 3000000500}
   m_Layer: 0
   m_Name: PlayerAnimation_8
   m_TagString: Untagged
@@ -564,7 +567,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1907199128, guid: 631cdc69df876f34592d77f0ffe24266, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -585,13 +588,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780108527}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -48, y: 19, z: -257}
+  m_LocalRotation: {x: 0.54240304, y: 0, z: 0, w: 0.84011847}
+  m_LocalPosition: {x: 56.5, y: 21.971262, z: -73.39418}
   m_LocalScale: {x: 25, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 65.695, y: 0, z: 0}
 --- !u!1 &822953459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,7 +1384,7 @@ GameObject:
   - component: {fileID: 1670939213}
   - component: {fileID: 1670939212}
   m_Layer: 0
-  m_Name: Citadel2
+  m_Name: Citadel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1751,8 +1754,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 5000
   field of view: 29
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 620
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2300,6 +2303,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 8720068207777280820, guid: 42c0e21c5c5e3204b8977e334a2faad3, type: 3}
   spawnInterval: 1
   enemiesPerWave: 2
+  enemyCountModifierSource: {fileID: 3000000600}
   leftSpawnX: -950
   rightSpawnX: 1100
   spawnY: -5.6
@@ -2367,6 +2371,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   experiencePerThreshold: 100
   totalExperience: 0
+--- !u!114 &3000000500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780108527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e171a55e89c44974a29e4cb0ceffd190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 1874139558}
+  rotationOffsetEuler: {x: 0, y: 0, z: 0}
+  sortingOrder: 100
+  characterCollider: {fileID: 553789558}
+  localFootPoint: {x: 0.06, y: -2.66, z: 0}
+  groundClearance: 0.6
+--- !u!114 &3000000600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553789557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f6f67b51ca04dd796538cd69bc6af1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maximumPower: 100
+  recoveryTarget: 60
+  depletionPerSecond: 1
+  recoveryPerSecond: 1
+  recoveringEnemyMultiplier: 1.5
+  currentPower: 0
+  state: 0
+--- !u!114 &3000000601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553789557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a994ff7b60d4a2092c87b771d809da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: {fileID: 3000000600}
+  aimCamera: {fileID: 1874139558}
+  shotOrigin: {fileID: 3000000301}
+  projectilePrefab: {fileID: 1800225542277944044, guid: b882483ebfc268440b9b1536f31b2206, type: 3}
+  powerCost: 20
+  explosionRadius: 250
+  projectileScaleMultiplier: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

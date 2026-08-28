@@ -50,9 +50,25 @@ namespace Rushitadel.Combat
             currentHealth = Mathf.Max(0f, currentHealth - amount);
             if (!IsAlive)
             {
-                SpawnExperience();
-                Destroy(gameObject);
+                Die();
             }
+        }
+
+        public void Eliminate()
+        {
+            if (!IsAlive)
+            {
+                return;
+            }
+
+            currentHealth = 0f;
+            Die();
+        }
+
+        private void Die()
+        {
+            SpawnExperience();
+            Destroy(gameObject);
         }
 
         private void SpawnExperience()

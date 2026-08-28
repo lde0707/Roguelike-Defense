@@ -13,13 +13,35 @@ namespace Rushitadel.Player
         private Vector3 direction;
         private Vector3 destination;
         private float damage;
+        private float impactRadius = -1f;
+        private bool eliminateOnImpact;
         private float remainingLifetime;
 
         public void Launch(Vector3 newDirection, Vector3 newDestination, float newDamage)
         {
+            ConfigureFlight(newDirection, newDestination, newDamage, -1f, false);
+        }
+
+        public void LaunchEliminating(
+            Vector3 newDirection,
+            Vector3 newDestination,
+            float newImpactRadius)
+        {
+            ConfigureFlight(newDirection, newDestination, 0f, newImpactRadius, true);
+        }
+
+        private void ConfigureFlight(
+            Vector3 newDirection,
+            Vector3 newDestination,
+            float newDamage,
+            float newImpactRadius,
+            bool shouldEliminateOnImpact)
+        {
             direction = newDirection.sqrMagnitude > 0f ? newDirection.normalized : Vector3.forward;
             destination = newDestination;
             damage = newDamage;
+            impactRadius = newImpactRadius;
+            eliminateOnImpact = shouldEliminateOnImpact;
             remainingLifetime = lifetime;
 
             Rigidbody projectileBody = GetComponent<Rigidbody>();
@@ -54,18 +76,29 @@ namespace Rushitadel.Player
 
         private void ApplyAreaDamage()
         {
-            float radius = interactionSettings != null ? interactionSettings.Radius : 0f;
+            float radius = impactRadius >= 0f
+                ? impactRadius
+                : interactionSettings != null ? interactionSettings.Radius : 0f;
             List<EnemyController> enemies = EnemyRegistry.FindAllWithinRadius(destination, radius);
             foreach (EnemyController enemy in enemies)
             {
-                enemy.TakeDamage(damage);
+                if (eliminateOnImpact)
+                {
+                    enemy.Eliminate();
+                }
+                else
+                {
+                    enemy.TakeDamage(damage);
+                }
             }
         }
 
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = new Color(0.2f, 0.8f, 1f, 0.75f);
-            float radius = interactionSettings != null ? interactionSettings.Radius : 0f;
+            float radius = impactRadius >= 0f
+                ? impactRadius
+                : interactionSettings != null ? interactionSettings.Radius : 0f;
             Gizmos.DrawWireSphere(transform.position, radius);
         }
     }
