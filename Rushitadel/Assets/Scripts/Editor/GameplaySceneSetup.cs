@@ -1,5 +1,8 @@
 #if UNITY_EDITOR
 using Rushitadel.Combat;
+using Rushitadel.Presentation;
+using Rushitadel.Power;
+using Rushitadel.Player;
 using Rushitadel.Spawning;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -13,6 +16,9 @@ namespace Rushitadel.Editor
         private const string ScenePath = "Assets/Scenes/inGame.unity";
         private const string EnemyPrefabPath = "Assets/Prefabs/Enemy.prefab";
         private const string ProjectilePrefabPath = "Assets/Prefabs/towerProjectile.prefab";
+        private const string PlayerProjectilePrefabPath = "Assets/Prefabs/playerProjectile.prefab";
+        private const float GameplayCameraOrthographicSize = 620f;
+        private const int PlayerSortingOrder = 100;
 
         [InitializeOnLoadMethod]
         private static void ScheduleSetup() => EditorApplication.delayCall += SetupIfPossible;
@@ -109,12 +115,84 @@ namespace Rushitadel.Editor
                 serializedSpawner.ApplyModifiedPropertiesWithoutUndo();
             }
 
+            ConfigurePlayerPresentation(scene);
+            ConfigurePowerSystem(scene, spawner);
+
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
             if (openedForSetup)
             {
                 EditorSceneManager.CloseScene(scene, true);
             }
+        }
+
+        private static void ConfigurePlayerPresentation(Scene scene)
+        {
+            GameObject player = FindRoot(scene, "Player");
+            GameObject playerVisual = FindRoot(scene, "PlayerAnimation_8");
+            Camera mainCamera = FindMainCamera(scene);
+            if (player == null || playerVisual == null || mainCamera == null)
+            {
+                return;
+            }
+
+            Collider characterCollider = player.GetComponent<Collider>();
+            if (characterCollider == null)
+            {
+                Debug.LogError("Player needs a Collider for sprite foot grounding.");
+                return;
+            }
+
+            MeshRenderer placeholderRenderer = player.GetComponent<MeshRenderer>();
+            if (placeholderRenderer != null)
+            {
+                placeholderRenderer.enabled = false;
+            }
+
+            CameraAlignedSprite alignedSprite = playerVisual.GetComponent<CameraAlignedSprite>();
+            if (alignedSprite == null)
+            {
+                alignedSprite = playerVisual.AddComponent<CameraAlignedSprite>();
+            }
+
+            alignedSprite.SetTargetCamera(mainCamera);
+            alignedSprite.SetSortingOrder(PlayerSortingOrder);
+            alignedSprite.SetCharacterCollider(characterCollider);
+            mainCamera.orthographic = true;
+            mainCamera.orthographicSize = GameplayCameraOrthographicSize;
+        }
+
+        private static Camera FindMainCamera(Scene scene)
+        {
+            GameObject cameraObject = FindRoot(scene, "Main Camera");
+            return cameraObject != null ? cameraObject.GetComponent<Camera>() : null;
+        }
+
+        private static void ConfigurePowerSystem(Scene scene, EnemySpawner spawner)
+        {
+            GameObject player = FindRoot(scene, "Player");
+            Camera mainCamera = FindMainCamera(scene);
+            if (player == null || mainCamera == null || spawner == null)
+            {
+                return;
+            }
+
+            PlayerPower power = player.GetComponent<PlayerPower>();
+            if (power == null)
+            {
+                power = player.AddComponent<PlayerPower>();
+            }
+
+            PlayerPowerShotController powerShot = player.GetComponent<PlayerPowerShotController>();
+            if (powerShot == null)
+            {
+                powerShot = player.AddComponent<PlayerPowerShotController>();
+            }
+
+            GameObject projectilePrefab =
+                AssetDatabase.LoadAssetAtPath<GameObject>(PlayerProjectilePrefabPath);
+            powerShot.Configure(power, mainCamera, FindShotPosition(player.transform), projectilePrefab);
+            spawner.SetEnemyCountModifier(power);
         }
 
         private static Scene FindLoadedScene()
@@ -148,7 +226,9 @@ namespace Rushitadel.Editor
         {
             foreach (Transform child in tower)
             {
-                if (child.name == "shotPos" || child.name == "mainShotPos")
+                if (child.name == "shotPos" ||
+                    child.name == "mainShotPos" ||
+                    child.name == "playerShotPos")
                 {
                     return child;
                 }
