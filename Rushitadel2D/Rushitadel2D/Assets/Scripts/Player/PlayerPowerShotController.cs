@@ -1,3 +1,4 @@
+using Rushitadel.Data;
 using Rushitadel.Power;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,19 +9,24 @@ namespace Rushitadel.Player
     [RequireComponent(typeof(PlayerPower))]
     public sealed class PlayerPowerShotController : MonoBehaviour
     {
+        [SerializeField] private PowerShotDefinition definition;
+        public PowerShotDefinition Definition => definition;
+
         [Header("References")]
         [SerializeField] private PlayerPower power;
         [SerializeField] private Camera aimCamera;
         [SerializeField] private Transform shotOrigin;
-        [SerializeField] private GameObject projectilePrefab;
+        [SerializeField] private PlayerProjectileController projectilePrefab;
 
-        [Header("Power Shot")]
-        [SerializeField, Min(0f)] private float powerCost = 20f;
-        [SerializeField, Min(0f)] private float explosionRadius = 2.5f;
-        [SerializeField, Min(0.01f)] private float projectileScaleMultiplier = 2f;
+        private float powerCost => definition.PowerCost;
+
+        private float explosionRadius => definition.ExplosionRadius;
+
+        private float projectileScaleMultiplier => definition.ProjectileScaleMultiplier;
 
         private void Awake()
         {
+            if (!DefinitionGuard.Require(this, definition)) return;
             if (power == null)
             {
                 power = GetComponent<PlayerPower>();
@@ -48,7 +54,7 @@ namespace Rushitadel.Player
             PlayerPower powerResource,
             Camera camera,
             Transform origin,
-            GameObject powerProjectilePrefab)
+            PlayerProjectileController powerProjectilePrefab)
         {
             power = powerResource;
             aimCamera = camera;
@@ -76,17 +82,9 @@ namespace Rushitadel.Player
             Quaternion rotation = direction.sqrMagnitude > 0f
                 ? Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f)
                 : origin.rotation;
-            GameObject projectileObject = Instantiate(projectilePrefab, origin.position, rotation);
-            projectileObject.transform.localScale *= projectileScaleMultiplier;
-            projectileObject.SetActive(true);
-
-            PlayerProjectileController projectile =
-                projectileObject.GetComponent<PlayerProjectileController>();
-            if (projectile == null)
-            {
-                projectile = projectileObject.AddComponent<PlayerProjectileController>();
-            }
-
+            PlayerProjectileController projectile = Instantiate(projectilePrefab, origin.position, rotation);
+            projectile.transform.localScale *= projectileScaleMultiplier;
+            projectile.gameObject.SetActive(true);
             projectile.LaunchEliminating(direction, destination, explosionRadius);
         }
 

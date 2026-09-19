@@ -1,3 +1,4 @@
+using Rushitadel.Data;
 using UnityEngine;
 using Rushitadel.Progression;
 
@@ -5,9 +6,15 @@ namespace Rushitadel.Combat
 {
     public sealed class EnemyController : MonoBehaviour, IDamageable
     {
-        [SerializeField, Min(1f)] private float maxHealth = 100f;
-        [SerializeField, Min(0f)] private float moveSpeed = 1f;
-        [SerializeField, Min(0f)] private float stoppingDistance = 0.45f;
+        [SerializeField] private EnemyDefinition definition;
+        public EnemyDefinition Definition => definition;
+
+
+        private float maxHealth => definition.MaxHealth;
+
+        private float moveSpeed => definition.MoveSpeed;
+
+        private float stoppingDistance => definition.StoppingDistance;
         [SerializeField] private ExperiencePickup experiencePickupPrefab;
 
         private float currentHealth;
@@ -15,7 +22,11 @@ namespace Rushitadel.Combat
         public bool IsAlive => currentHealth > 0f;
         public float CurrentHealth => currentHealth;
 
-        private void Awake() => currentHealth = maxHealth;
+        private void Awake()
+        {
+            if (!DefinitionGuard.Require(this, definition)) return;
+            currentHealth = maxHealth;
+        }
 
         private void OnEnable() => EnemyRegistry.Register(this);
 

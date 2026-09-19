@@ -1,3 +1,4 @@
+using Rushitadel.Data;
 using System;
 using UnityEngine;
 
@@ -6,20 +7,23 @@ namespace Rushitadel.Power
     [DisallowMultipleComponent]
     public sealed class PlayerPower : MonoBehaviour, IPowerResource, IEnemySpawnModifier
     {
-        [Header("Capacity")]
-        [SerializeField, Min(1f)] private float maximumPower = 100f;
-        [SerializeField, Min(1f)] private float recoveryTarget = 60f;
+        [SerializeField] private PowerCycleDefinition definition;
+        public PowerCycleDefinition Definition => definition;
 
-        [Header("Cycle Speed")]
-        [SerializeField, Min(0f)] private float depletionPerSecond = 1f;
-        [SerializeField, Min(0f)] private float recoveryPerSecond = 1f;
 
-        [Header("Enemy Pressure")]
-        [SerializeField, Min(1f)] private float recoveringEnemyMultiplier = 1.5f;
+        private float maximumPower => definition.MaximumPower;
+
+        private float recoveryTarget => definition.RecoveryTarget;
+
+        private float depletionPerSecond => definition.DepletionPerSecond;
+
+        private float recoveryPerSecond => definition.RecoveryPerSecond;
+
+        private float recoveringEnemyMultiplier => definition.RecoveringEnemyMultiplier;
 
         [Header("Runtime State")]
-        [SerializeField] private float currentPower;
-        [SerializeField] private PowerCycleState state;
+        private float currentPower;
+        private PowerCycleState state;
 
         public event Action<float, float> PowerChanged;
         public event Action<PowerCycleState> StateChanged;
@@ -33,6 +37,7 @@ namespace Rushitadel.Power
 
         private void Awake()
         {
+            if (!DefinitionGuard.Require(this, definition)) return;
             currentPower = maximumPower;
             state = PowerCycleState.Depleting;
         }
@@ -48,13 +53,7 @@ namespace Rushitadel.Power
             UpdateRecovery();
         }
 
-        private void OnValidate()
-        {
-            maximumPower = Mathf.Max(1f, maximumPower);
-            recoveryTarget = Mathf.Clamp(recoveryTarget, 1f, maximumPower);
-        }
-
-        public bool TrySpend(float amount)
+public bool TrySpend(float amount)
         {
             if (amount <= 0f || currentPower + Mathf.Epsilon < amount)
             {
