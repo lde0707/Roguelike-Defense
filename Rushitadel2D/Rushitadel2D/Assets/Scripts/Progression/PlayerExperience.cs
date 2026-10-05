@@ -1,4 +1,3 @@
-using Rushitadel.Data;
 using System;
 using UnityEngine;
 
@@ -6,14 +5,8 @@ namespace Rushitadel.Progression
 {
     public sealed class PlayerExperience : MonoBehaviour
     {
-        [SerializeField] private ExperienceDefinition definition;
-        public ExperienceDefinition Definition => definition;
-
-        private void Awake() => DefinitionGuard.Require(this, definition);
-
-
-        private int experiencePerThreshold => definition.ExperiencePerThreshold;
-        private int totalExperience;
+        [SerializeField, Min(1)] private int experiencePerThreshold = 100;
+        [SerializeField, Min(0)] private int totalExperience;
 
         public int TotalExperience => totalExperience;
         public int ExperiencePerThreshold => experiencePerThreshold;

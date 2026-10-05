@@ -1,4 +1,3 @@
-using Rushitadel.Data;
 using UnityEngine;
 
 namespace Rushitadel.Progression
@@ -6,22 +5,15 @@ namespace Rushitadel.Progression
     [RequireComponent(typeof(CircleCollider2D))]
     public sealed class ExperiencePickup : MonoBehaviour
     {
-        [SerializeField] private PickupDefinition definition;
-        public PickupDefinition Definition => definition;
-
-
-        private int experienceValue => definition.ExperienceValue;
-
-        private float collectSpeed => definition.CollectSpeed;
-
-        private float collectDistance => definition.CollectDistance;
+        [SerializeField, Min(1)] private int experienceValue = 20;
+        [SerializeField, Min(0f)] private float collectSpeed = 14f;
+        [SerializeField, Min(0f)] private float collectDistance = 0.5f;
 
         private PlayerExperience playerExperience;
         private bool isCollecting;
 
         private void Awake()
         {
-            if (!DefinitionGuard.Require(this, definition)) return;
             playerExperience = FindFirstObjectByType<PlayerExperience>();
             isCollecting = playerExperience != null;
         }

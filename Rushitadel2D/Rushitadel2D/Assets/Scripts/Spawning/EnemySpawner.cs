@@ -1,4 +1,3 @@
-using Rushitadel.Data;
 using System.Collections;
 using Rushitadel.Combat;
 using Rushitadel.Power;
@@ -8,27 +7,19 @@ namespace Rushitadel.Spawning
 {
     public sealed class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] private WaveDefinition definition;
-        public WaveDefinition Definition => definition;
-
-        [SerializeField] private EnemyController enemyPrefab;
-
-        private float spawnInterval => definition.SpawnInterval;
-
-        private int enemiesPerWave => definition.EnemiesPerWave;
+        [SerializeField] private GameObject enemyPrefab;
+        [SerializeField, Min(0.01f)] private float spawnInterval = 1f;
+        [SerializeField, Min(1)] private int enemiesPerWave = 2;
         [SerializeField] private MonoBehaviour enemyCountModifierSource;
-
-        private float leftSpawnX => definition.LeftSpawnX;
-
-        private float rightSpawnX => definition.RightSpawnX;
-
-        private float spawnDepth => definition.SpawnDepth;
-
-        private Vector2 spawnYRange => definition.SpawnYRange;
+        [Header("Spawn Position")]
+        [SerializeField] private float leftSpawnX = -9.5f;
+        [SerializeField] private float rightSpawnX = 11f;
+        [SerializeField] private float spawnDepth = 0f;
+        [SerializeField] private Vector2 spawnYRange = new(-4f, 5f);
 
         private IEnemySpawnModifier enemyCountModifier;
 
-        public void Configure(EnemyController prefab) => enemyPrefab = prefab;
+        public void Configure(GameObject prefab) => enemyPrefab = prefab;
 
         public void SetEnemyCountModifier(MonoBehaviour modifierSource)
         {
@@ -38,7 +29,6 @@ namespace Rushitadel.Spawning
 
         private void Awake()
         {
-            if (!DefinitionGuard.Require(this, definition)) return;
             ResolveEnemyCountModifier();
         }
 
@@ -63,8 +53,13 @@ namespace Rushitadel.Spawning
             {
                 float x = Random.value < 0.5f ? leftSpawnX : rightSpawnX;
                 float z = Random.Range(spawnYRange.x, spawnYRange.y);
-                EnemyController enemy = Instantiate(enemyPrefab, new Vector3(x, z, spawnDepth), Quaternion.identity);
-                enemy.gameObject.SetActive(true);
+                GameObject enemyObject = Instantiate(enemyPrefab, new Vector3(x, z, spawnDepth), Quaternion.identity);
+                if (enemyObject.GetComponent<EnemyController>() == null)
+                {
+                    enemyObject.AddComponent<EnemyController>();
+                }
+
+                enemyObject.SetActive(true);
             }
         }
 

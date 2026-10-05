@@ -1,4 +1,3 @@
-using Rushitadel.Data;
 using Rushitadel.Combat;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,18 +7,15 @@ namespace Rushitadel.Player
     [RequireComponent(typeof(Rigidbody2D))]
     public sealed class PlayerController : MonoBehaviour
     {
-        [SerializeField] private PlayerDefinition definition;
-        public PlayerDefinition Definition => definition;
+        [Header("Movement")]
+        [SerializeField, Min(0f)] private float moveSpeed = 2.5f;
 
-
-        private float moveSpeed => definition.MoveSpeed;
+        [Header("Shooting")]
         [SerializeField] private Camera aimCamera;
         [SerializeField] private Transform playerShotPos;
-        [SerializeField] private PlayerProjectileController playerBulletPrefab;
-
-        private float shotsPerSecond => definition.ShotsPerSecond;
-
-        private float bulletDamage => definition.BulletDamage;
+        [SerializeField] private GameObject playerBulletPrefab;
+        [SerializeField, Min(0.01f)] private float shotsPerSecond = 4f;
+        [SerializeField, Min(0f)] private float bulletDamage = 25f;
 
         private Rigidbody2D body;
         private Vector2 moveInput;
@@ -27,7 +23,6 @@ namespace Rushitadel.Player
 
         private void Awake()
         {
-            if (!DefinitionGuard.Require(this, definition)) return;
             body = GetComponent<Rigidbody2D>();
             body.gravityScale = 0f;
             body.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -101,8 +96,15 @@ namespace Rushitadel.Player
             Quaternion rotation = direction.sqrMagnitude > 0f
                 ? Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f)
                 : origin.rotation;
-            PlayerProjectileController bullet = Instantiate(playerBulletPrefab, origin.position, rotation);
-            bullet.gameObject.SetActive(true);
+            GameObject bulletObject = Instantiate(playerBulletPrefab, origin.position, rotation);
+            bulletObject.SetActive(true);
+
+            PlayerProjectileController bullet = bulletObject.GetComponent<PlayerProjectileController>();
+            if (bullet == null)
+            {
+                bullet = bulletObject.AddComponent<PlayerProjectileController>();
+            }
+
             bullet.Launch(direction, destination, bulletDamage);
         }
 

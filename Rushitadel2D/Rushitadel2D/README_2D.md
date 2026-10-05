@@ -34,7 +34,7 @@ Unity **6000.5.3f1**, URP 2D, Input System. `Assets/Scenes/Title.unity`를 열�
 
 전투, 이동/조준, 파워, 경험치, 스폰, 표현을 별도 컴포넌트로 분리합니다. `IDamageable`, `IPowerResource`, `IEnemySpawnModifier`로 역할을 구분하고, 탄환 두 종류는 `ProjectileBehaviour`를 상속하여 공통 물리 초기화와 피해 처리 계약을 공유합니다. 파워에 따른 스폰 변경은 인터페이스로 연결됩니다. 설정 필드는 private SerializeField로 캡슐화합니다.
 
-밸런스는 Assets/Data의 ScriptableObject, 외형과 컴포넌트 조합은 Assets/Prefabs, 배치와 연결은 씬에서 수정합니다. 기존 재생성 메뉴는 제거했으며 **Rushitadel 2D → Validate Gameplay Content**로 데이터·프리팹 연결을 검사합니다. [유지보수 가이드](Documentation/Maintenance.md)에 수정 위치와 확장 절차를 정리했습니다.
+씬/프리팹이 이미 생성되어 있어 별도 설정 작업은 필요 없습니다. 필요할 때만 **Rushitadel 2D → Rebuild Gameplay Scene**을 사용하세요. 이 메뉴는 생성된 게임 씬/프리팹을 기본값으로 재생성하므로 해당 에셋을 직접 수정한 뒤에는 주의하세요. 에디터 재로드만으로 씬을 덮어쓰지 않습니다.
 
 ## 검증 재실행
 

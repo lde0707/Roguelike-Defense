@@ -1,28 +1,20 @@
-using Rushitadel.Data;
 using UnityEngine;
 
 namespace Rushitadel.Combat
 {
     public sealed class TowerController : MonoBehaviour
     {
-        [SerializeField] private TowerDefinition definition;
-        public TowerDefinition Definition => definition;
-
-        private void Awake() => DefinitionGuard.Require(this, definition);
-
-
-        private float attackRange => definition.AttackRange;
-
-        private float shotInterval => definition.ShotInterval;
-
-        private float damage => definition.Damage;
+        [Header("Attack Settings")]
+        [SerializeField, Min(0f)] private float attackRange = 3f;
+        [SerializeField, Min(0.01f)] private float shotInterval = 0.5f;
+        [SerializeField, Min(0f)] private float damage = 25f;
 
         [Header("Projectile References")]
         [SerializeField] private Transform shotPos;
-        [SerializeField] private ProjectileController projectilePrefab;
+        [SerializeField] private GameObject projectilePrefab;
         private float nextShotTime;
 
-        public void Configure(Transform newShotPos, ProjectileController newProjectilePrefab)
+        public void Configure(Transform newShotPos, GameObject newProjectilePrefab)
         {
             shotPos = newShotPos != null ? newShotPos : transform;
             projectilePrefab = newProjectilePrefab;
@@ -57,14 +49,20 @@ namespace Rushitadel.Combat
         private void Fire(EnemyController target)
         {
             Transform origin = shotPos != null ? shotPos : transform;
-            ProjectileController projectile = Instantiate(projectilePrefab, origin.position, Quaternion.identity);
-            projectile.gameObject.SetActive(true);
+            GameObject projectileObject = Instantiate(projectilePrefab, origin.position, Quaternion.identity);
+            projectileObject.SetActive(true);
+
+            ProjectileController projectile = projectileObject.GetComponent<ProjectileController>();
+            if (projectile == null)
+            {
+                projectile = projectileObject.AddComponent<ProjectileController>();
+            }
+
             projectile.Launch(target, damage, transform.position, attackRange);
         }
 
         private void OnDrawGizmos()
         {
-            if (definition == null) return;
             Gizmos.color = new Color(1f, 0.25f, 0.1f, 0.75f);
             DrawRangeCircle(transform.position, attackRange, 64);
         }

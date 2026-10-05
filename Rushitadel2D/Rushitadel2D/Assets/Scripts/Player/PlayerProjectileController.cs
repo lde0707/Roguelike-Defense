@@ -1,4 +1,3 @@
-using Rushitadel.Data;
 using Rushitadel.Combat;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,16 +6,9 @@ namespace Rushitadel.Player
 {
     public sealed class PlayerProjectileController : ProjectileBehaviour
     {
-        [SerializeField] private AreaProjectileDefinition definition;
-        public AreaProjectileDefinition Definition => definition;
-
-        private void Awake() => DefinitionGuard.Require(this, definition);
-
-
-        private float speed => definition.Speed;
+        [SerializeField, Min(0f)] private float speed = 12f;
         [SerializeField] private MouseWorldInteractionSettings interactionSettings;
-
-        private float lifetime => definition.Lifetime;
+        [SerializeField, Min(0.1f)] private float lifetime = 3f;
 
         private Vector3 direction;
         private Vector3 destination;

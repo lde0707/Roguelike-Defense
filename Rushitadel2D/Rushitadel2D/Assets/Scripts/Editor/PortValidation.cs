@@ -17,10 +17,6 @@ namespace Rushitadel.Editor
         public static void Run()
         {
             EditorSceneManager.OpenScene("Assets/Scenes/inGame.unity");
-            GameplaySceneSetup.ValidateContent();
-            Require(PrefabUtility.IsPartOfPrefabInstance(UnityEngine.Object.FindFirstObjectByType<PlayerController>()), "Player is a connected prefab instance");
-            foreach (var tower in UnityEngine.Object.FindObjectsByType<TowerController>(FindObjectsSortMode.None))
-                Require(PrefabUtility.IsPartOfPrefabInstance(tower), "Tower is a connected prefab instance: " + tower.name);
             Require(UnityEngine.Object.FindObjectsByType<TowerController>(FindObjectsSortMode.None).Length == 7, "Seven towers");
             Require(UnityEngine.Object.FindFirstObjectByType<Rigidbody>() == null, "No 3D rigidbody");
             Require(UnityEngine.Object.FindFirstObjectByType<Collider>() == null, "No 3D collider");

@@ -1,21 +1,12 @@
-using Rushitadel.Data;
 using UnityEngine;
 
 namespace Rushitadel.Combat
 {
     public sealed class ProjectileController : ProjectileBehaviour
     {
-        [SerializeField] private HomingProjectileDefinition definition;
-        public HomingProjectileDefinition Definition => definition;
-
-        private void Awake() => DefinitionGuard.Require(this, definition);
-
-
-        private float speed => definition.Speed;
-
-        private float hitDistance => definition.HitDistance;
-
-        private float lifetime => definition.Lifetime;
+        [SerializeField, Min(0f)] private float speed = 10f;
+        [SerializeField, Min(0f)] private float hitDistance = 0.2f;
+        [SerializeField, Min(0.1f)] private float lifetime = 5f;
 
         private EnemyController target;
         private float damage;
