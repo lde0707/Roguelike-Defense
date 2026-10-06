@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-36d37bf3-4422-4da0-b3d5-2cad778d5f8c.png",
+  "prompt": "Use case: precise-object-edit. Edit the supplied RUSHITADEL title image. Remove ALL characters: both large spider robots and both small robots on the side cliffs, and the purple five-turret player at bottom center. Also remove all red and purple projectiles, ricochet trails, sparks and character-associated glow or shadows. Seamlessly reconstruct the original dark pixel-art rocky ground underneath these removed objects. Keep the existing canyon, cliff geometry, recessed center road, dark shadowed atmosphere, pixel texture and composition otherwise unchanged. Preserve EXACTLY the centered RUSHITADEL logo and all four buttons, icons, typography, sizes, positions, mint colors and text 게임 시작 / 이어하기 / 설정 / 게임 종료. Continue remains disabled gray. No characters, no weapons, no bullets, no new decorations. Same landscape aspect ratio. A clean empty dark canyon backdrop with the unchanged central title/menu UI.",
+  "appliedToGame": false
+}

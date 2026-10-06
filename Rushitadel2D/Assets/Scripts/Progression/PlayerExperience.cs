@@ -9,12 +9,19 @@ namespace Rushitadel.Progression
         [SerializeField, Min(0)] private int totalExperience;
 
         public int TotalExperience => totalExperience;
+        public int Level => CompletedThresholds + 1;
         public int ExperiencePerThreshold => experiencePerThreshold;
         public int CompletedThresholds => totalExperience / experiencePerThreshold;
         public int CurrentGaugeExperience => totalExperience % experiencePerThreshold;
         public float NormalizedGauge => (float)CurrentGaugeExperience / experiencePerThreshold;
 
         public event Action<int> ExperienceChanged;
+
+        public void RestoreExperience(int amount)
+        {
+            totalExperience = Mathf.Max(0, amount);
+            ExperienceChanged?.Invoke(totalExperience);
+        }
 
         public void AddExperience(int amount)
         {

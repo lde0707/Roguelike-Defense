@@ -1,0 +1,66 @@
+{
+  "mode": "built-in image_gen",
+  "appliedToGame": false,
+  "images": [
+    {
+      "id": "01",
+      "name": "라벤더 기본형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-25cc1a32-e8a2-4ef1-ae43-269c7488d76d.png",
+      "file": "01_lavender_center.png"
+    },
+    {
+      "id": "02",
+      "name": "크림 좌측 메뉴형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-a49572fb-330f-4227-ae35-6fbc16ec9c79.png",
+      "file": "02_cream_split.png"
+    },
+    {
+      "id": "03",
+      "name": "하늘색 하단 메뉴형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-3f57fe44-fcbb-4b4d-ac47-8533ed83d271.png",
+      "file": "03_sky_bottom.png"
+    },
+    {
+      "id": "04",
+      "name": "네이비 클래식형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1e452f7e-4096-4ed5-8f11-070792e0e0c5.png",
+      "file": "04_navy_classic.png"
+    },
+    {
+      "id": "05",
+      "name": "세이지 사이드형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-e2d8c8df-1f47-471c-84e4-385493612991.png",
+      "file": "05_sage_sidebar.png"
+    },
+    {
+      "id": "06",
+      "name": "클래식 윈도형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-3e6eb73d-aea3-4ddc-9de2-b943158d7838.png",
+      "file": "06_classic_window.png"
+    },
+    {
+      "id": "07",
+      "name": "민트 가로형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-6c2b12d6-ac8a-469f-9b61-8111d20d63fe.png",
+      "file": "07_mint_horizontal.png"
+    },
+    {
+      "id": "08",
+      "name": "피치 2열 버튼형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-2bcccb92-296a-4bdb-8b44-373bfff562f5.png",
+      "file": "08_peach_grid.png"
+    },
+    {
+      "id": "09",
+      "name": "아이스 우측 메뉴형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-7a803dd7-535f-4021-8cdf-bed3dcec0631.png",
+      "file": "09_ice_right.png"
+    },
+    {
+      "id": "10",
+      "name": "화이트 미니멀형",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1055b127-fc3a-4866-9b10-7b130c717863.png",
+      "file": "10_white_minimal.png"
+    }
+  ]
+}

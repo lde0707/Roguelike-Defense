@@ -1,11 +1,12 @@
 using Rushitadel.Power;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 namespace Rushitadel.Player
 {
     [DisallowMultipleComponent]
-    [RequireComponent(typeof(PlayerPower))]
+    [RequireComponent(typeof(PlayerPower), typeof(PlayerController))]
     public sealed class PlayerPowerShotController : MonoBehaviour
     {
         [Header("References")]
@@ -15,12 +16,16 @@ namespace Rushitadel.Player
         [SerializeField] private GameObject projectilePrefab;
 
         [Header("Power Shot")]
-        [SerializeField, Min(0f)] private float powerCost = 20f;
-        [SerializeField, Min(0f)] private float explosionRadius = 2.5f;
-        [SerializeField, Min(0.01f)] private float projectileScaleMultiplier = 2f;
+        [SerializeField, Range(0.01f, 1f)] private float powerCostFraction = 0.7f;
+        [SerializeField, Min(0.01f)] private float diameterMultiplier = 1.5f;
+        [SerializeField, Min(0f)] private float recoilDistance = 0.18f;
+        [SerializeField, Min(0.01f)] private float recoilDuration = 0.12f;
+        private PlayerController movement;
+        public float AttackRadius => movement.BodyRadius * diameterMultiplier;
 
         private void Awake()
         {
+            movement = GetComponent<PlayerController>();
             if (power == null)
             {
                 power = GetComponent<PlayerPower>();
@@ -56,28 +61,28 @@ namespace Rushitadel.Player
             projectilePrefab = powerProjectilePrefab;
         }
 
-        private void TryFire(Vector2 screenPosition)
+        public bool TryFire(Vector2 screenPosition)
         {
-            if (power == null || aimCamera == null || projectilePrefab == null)
+            if (Time.timeScale <= 0f || PlayerHealth.Instance == null || !PlayerHealth.Instance.IsAlive || power == null || aimCamera == null || projectilePrefab == null)
             {
-                return;
+                return false;
             }
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) return false;
 
             Transform origin = shotOrigin != null ? shotOrigin : transform;
             Vector3 destination = GetWorldPosition(screenPosition, origin.position);
             Vector3 direction = destination - origin.position;
             direction.z = 0f;
             direction = direction.sqrMagnitude > 0f ? direction.normalized : transform.up;
-            if (!power.TrySpend(powerCost))
+            if (!power.TrySpend(power.MaximumPower * powerCostFraction))
             {
-                return;
+                return false;
             }
 
             Quaternion rotation = direction.sqrMagnitude > 0f
                 ? Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f)
                 : origin.rotation;
             GameObject projectileObject = Instantiate(projectilePrefab, origin.position, rotation);
-            projectileObject.transform.localScale *= projectileScaleMultiplier;
             projectileObject.SetActive(true);
 
             PlayerProjectileController projectile =
@@ -87,7 +92,9 @@ namespace Rushitadel.Player
                 projectile = projectileObject.AddComponent<PlayerProjectileController>();
             }
 
-            projectile.LaunchEliminating(direction, destination, explosionRadius);
+            projectile.LaunchArea(direction, destination, AttackRadius);
+            movement.ApplyRecoil(direction, recoilDistance, recoilDuration);
+            return true;
         }
 
         private Vector3 GetWorldPosition(Vector2 screenPosition, Vector3 origin)

@@ -1,11 +1,18 @@
 using UnityEngine;
+using Rushitadel.Player;
 
 namespace Rushitadel.Combat
 {
     public sealed class TowerController : MonoBehaviour
     {
+        [SerializeField, Range(1, 5)] private int slotId = 1;
+        private PlayerHealth owner;
+        public int SlotId => slotId;
+        private void Awake() => owner = GetComponentInParent<PlayerHealth>();
+
         [Header("Attack Settings")]
-        [SerializeField, Min(0f)] private float attackRange = 3f;
+        [SerializeField, Min(0f)] private float attackRange = 5f;
+        public float AttackRange => attackRange;
         [SerializeField, Min(0.01f)] private float shotInterval = 0.5f;
         [SerializeField, Min(0f)] private float damage = 25f;
 
@@ -26,27 +33,16 @@ namespace Rushitadel.Combat
 
         private void Update()
         {
-            if (Time.time < nextShotTime || projectilePrefab == null)
+            if (Time.timeScale <= 0f || owner == null || !owner.IsAlive || Time.time < nextShotTime || projectilePrefab == null)
             {
                 return;
             }
 
-            EnemyController target = FindClosestEnemyInRange();
-            if (target == null)
-            {
-                return;
-            }
-
-            Fire(target);
-            nextShotTime = Time.time + shotInterval;
+            Fire();
+            nextShotTime = Time.time + shotInterval / (1 + .2f * Rushitadel.Progression.CampaignDirector.Rank(slotId, 1));
         }
 
-        private EnemyController FindClosestEnemyInRange()
-        {
-            return EnemyRegistry.FindClosest(transform.position, attackRange);
-        }
-
-        private void Fire(EnemyController target)
+        private void Fire()
         {
             Transform origin = shotPos != null ? shotPos : transform;
             GameObject projectileObject = Instantiate(projectilePrefab, origin.position, Quaternion.identity);
@@ -58,25 +54,16 @@ namespace Rushitadel.Combat
                 projectile = projectileObject.AddComponent<ProjectileController>();
             }
 
-            projectile.Launch(target, damage, transform.position, attackRange);
+            // Capture forward at launch. Neither the mouse nor enemy positions steer this shot.
+            projectile.Launch(transform.up, damage * (1 + .25f * Rushitadel.Progression.CampaignDirector.Rank(slotId, 0)), attackRange);
+            projectile.SetModifiers(Rushitadel.Progression.CampaignDirector.Rank(slotId, 2), false, false);
         }
 
-        private void OnDrawGizmos()
+        private void OnDrawGizmosSelected()
         {
             Gizmos.color = new Color(1f, 0.25f, 0.1f, 0.75f);
-            DrawRangeCircle(transform.position, attackRange, 64);
-        }
-
-        private static void DrawRangeCircle(Vector3 center, float radius, int segments)
-        {
-            Vector3 previous = center + Vector3.up * radius;
-            for (int index = 1; index <= segments; index++)
-            {
-                float angle = index * Mathf.PI * 2f / segments;
-                Vector3 next = center + new Vector3(Mathf.Sin(angle), Mathf.Cos(angle), 0f) * radius;
-                Gizmos.DrawLine(previous, next);
-                previous = next;
-            }
+            Vector3 origin = shotPos != null ? shotPos.position : transform.position;
+            Gizmos.DrawLine(origin, origin + transform.up * attackRange);
         }
     }
 }

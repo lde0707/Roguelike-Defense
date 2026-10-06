@@ -144,5 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Rushitadel.Combat.EnemyController
   maxHealth: 100
   moveSpeed: 1
-  stoppingDistance: 0.45
+  stoppingDistance: 1.05
+  contactDamage: 10
+  attackInterval: 1
   experiencePickupPrefab: {fileID: 6700242661440569373, guid: bdb07741e0670444ca9551433f5c63fc, type: 3}

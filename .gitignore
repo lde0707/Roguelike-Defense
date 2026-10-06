@@ -1,0 +1,5 @@
+# Local backups, generation scripts and QA intermediates
+.work/
+~$*
+# Unity validation machine logs
+Rushitadel2D/ValidationErrors.txt

@@ -1,0 +1,36 @@
+{
+  "mode": "built-in image_gen",
+  "appliedToGame": false,
+  "images": [
+    {
+      "id": "01",
+      "name": "초원 협곡",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-a26a2594-c062-4a79-9399-fc0409329308.png",
+      "file": "01_grass_canyon.png"
+    },
+    {
+      "id": "02",
+      "name": "빙하 협곡",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-54e4fb8a-ebb1-46a7-b000-8708b00e4bec.png",
+      "file": "02_ice_canyon.png"
+    },
+    {
+      "id": "03",
+      "name": "심해 협곡",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1b89e52d-d8d3-4d20-bf78-9e147d718865.png",
+      "file": "03_deepsea_canyon.png"
+    },
+    {
+      "id": "04",
+      "name": "미니멀 협곡",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-fb18504c-bb68-4187-a63e-8a3a339cf100.png",
+      "file": "04_minimal_canyon.png"
+    },
+    {
+      "id": "05",
+      "name": "픽셀 전술맵",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-a85e6076-1877-4077-8604-061e47313b04.png",
+      "file": "05_tactical_grid.png"
+    }
+  ]
+}

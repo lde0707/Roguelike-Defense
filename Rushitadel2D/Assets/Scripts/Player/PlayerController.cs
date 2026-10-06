@@ -1,131 +1,72 @@
-using Rushitadel.Combat;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Rushitadel.Combat;
+using Rushitadel.World;
 
 namespace Rushitadel.Player
 {
-    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(PlayerHealth), typeof(CircleCollider2D))]
     public sealed class PlayerController : MonoBehaviour
     {
-        [Header("Movement")]
         [SerializeField, Min(0f)] private float moveSpeed = 2.5f;
-
-        [Header("Shooting")]
-        [SerializeField] private Camera aimCamera;
-        [SerializeField] private Transform playerShotPos;
-        [SerializeField] private GameObject playerBulletPrefab;
-        [SerializeField, Min(0.01f)] private float shotsPerSecond = 4f;
-        [SerializeField, Min(0f)] private float bulletDamage = 25f;
-
+        [SerializeField] private Vector2 minimumPosition = new(-5.4f, -4.3f);
+        [SerializeField] private Vector2 maximumPosition = new(5.4f, 4.3f);
         private Rigidbody2D body;
+        private PlayerHealth health;
         private Vector2 moveInput;
-        private float nextShotTime;
+        private Vector2 recoilVelocity;
+        private float recoilRemaining;
+        private CircleCollider2D hitbox;
+        public float BodyRadius => hitbox.radius * Mathf.Max(Mathf.Abs(transform.lossyScale.x), Mathf.Abs(transform.lossyScale.y));
 
         private void Awake()
         {
             body = GetComponent<Rigidbody2D>();
+            health = GetComponent<PlayerHealth>();
+            hitbox = GetComponent<CircleCollider2D>();
             body.gravityScale = 0f;
             body.constraints = RigidbodyConstraints2D.FreezeRotation;
             body.interpolation = RigidbodyInterpolation2D.Interpolate;
             body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-            if (aimCamera == null)
-            {
-                aimCamera = Camera.main;
-            }
         }
 
         private void Update()
         {
-            if (Time.timeScale <= 0f) return;
-            ReadMovementInput();
-            HandleShooting();
+            moveInput = Vector2.zero;
+            if (Time.timeScale <= 0f || !health.IsAlive) return;
+            Keyboard keyboard = Keyboard.current;
+            if (keyboard == null) return;
+            float x = (keyboard.dKey.isPressed ? 1f : 0f) - (keyboard.aKey.isPressed ? 1f : 0f);
+            float y = (keyboard.wKey.isPressed ? 1f : 0f) - (keyboard.sKey.isPressed ? 1f : 0f);
+            moveInput = Vector2.ClampMagnitude(new Vector2(x, y), 1f);
         }
 
         private void FixedUpdate()
         {
-            Vector3 movement = new(moveInput.x, moveInput.y, 0f);
-            body.linearVelocity = movement * moveSpeed;
+            if (!health.IsAlive) { body.linearVelocity = Vector2.zero; return; }
+            float recoilStep = Mathf.Min(recoilRemaining, Time.fixedDeltaTime);
+            Vector2 next = body.position + (recoilStep > 0f ? recoilVelocity * recoilStep :
+                moveInput * (moveSpeed * (Rushitadel.Progression.CampaignDirector.HasWeb(5) ? 1.1f : 1f) * Time.fixedDeltaTime));
+            recoilRemaining = Mathf.Max(0f, recoilRemaining - recoilStep);
+            next.x = Mathf.Clamp(next.x, minimumPosition.x, maximumPosition.x);
+            var pressure = ForwardPressureController.Instance;
+            if (pressure != null && pressure.isActiveAndEnabled) next = pressure.ClampPlayer(next, BodyRadius);
+            else next.y = Mathf.Clamp(next.y, minimumPosition.y, maximumPosition.y);
+            if (PlayfieldBoundary.Instance != null) next = PlayfieldBoundary.Instance.ClampPlayer(next, BodyRadius);
+            body.MovePosition(next);
+        }
+
+        public void ApplyRecoil(Vector2 firingDirection, float distance, float duration)
+        {
+            if (!health.IsAlive || Time.timeScale <= 0f || duration <= 0f) return;
+            recoilVelocity = -firingDirection.normalized * Mathf.Max(0f, distance) / duration;
+            recoilRemaining = duration;
         }
 
         private void OnDisable()
         {
-            if (body != null)
-            {
-                body.linearVelocity = Vector3.zero;
-            }
-        }
-
-        private void ReadMovementInput()
-        {
-            Keyboard keyboard = Keyboard.current;
-            if (keyboard == null)
-            {
-                moveInput = Vector2.zero;
-                return;
-            }
-
-            float horizontal = (keyboard.dKey.isPressed ? 1f : 0f) - (keyboard.aKey.isPressed ? 1f : 0f);
-            float vertical = (keyboard.wKey.isPressed ? 1f : 0f) - (keyboard.sKey.isPressed ? 1f : 0f);
-            moveInput = Vector2.ClampMagnitude(new Vector2(horizontal, vertical), 1f);
-        }
-
-        private void HandleShooting()
-        {
-            Mouse mouse = Mouse.current;
-            if (mouse == null || !mouse.leftButton.isPressed || Time.time < nextShotTime)
-            {
-                return;
-            }
-
-            Fire();
-            nextShotTime = Time.time + 1f / shotsPerSecond;
-        }
-
-        private void Fire()
-        {
-            if (playerBulletPrefab == null)
-            {
-                return;
-            }
-
-            Transform origin = playerShotPos != null ? playerShotPos : transform;
-            Vector3 destination = GetMouseWorldPosition(origin.position);
-            Vector3 direction = destination - origin.position;
-            direction.z = 0f;
-            direction = direction.sqrMagnitude > 0f ? direction.normalized : transform.up;
-            Quaternion rotation = direction.sqrMagnitude > 0f
-                ? Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f)
-                : origin.rotation;
-            GameObject bulletObject = Instantiate(playerBulletPrefab, origin.position, rotation);
-            bulletObject.SetActive(true);
-
-            PlayerProjectileController bullet = bulletObject.GetComponent<PlayerProjectileController>();
-            if (bullet == null)
-            {
-                bullet = bulletObject.AddComponent<PlayerProjectileController>();
-            }
-
-            bullet.Launch(direction, destination, bulletDamage);
-        }
-
-        private Vector3 GetMouseWorldPosition(Vector3 origin)
-        {
-            Mouse mouse = Mouse.current;
-            if (aimCamera == null || mouse == null)
-            {
-                return origin + transform.up * 10f;
-            }
-
-            Ray mouseRay = aimCamera.ScreenPointToRay(mouse.position.ReadValue());
-            Plane movementPlane = new(Vector3.forward, origin);
-            if (!movementPlane.Raycast(mouseRay, out float distance))
-            {
-                return origin + transform.up * 10f;
-            }
-
-            Vector3 destination = mouseRay.GetPoint(distance);
-            destination.z = origin.z;
-            return destination;
+            if (body != null) body.linearVelocity = Vector2.zero;
+            recoilRemaining = 0f;
         }
     }
 }

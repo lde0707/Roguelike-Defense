@@ -1,0 +1,1299 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.3f1 (c2eb47b3a2a9) revision 12774215'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0" at "2026-10-05T16:49:31.2991924Z"
+OS: 'Windows 11  (10.0.22631) Core' Language: 'ko' Physical Memory: 32480 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-05T16:49:31Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Unity.exe
+-batchmode
+-projectPath
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+-executeMethod
+Rushitadel.Editor.TitleUiValidation.Run
+-logFile
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/output/campaign-title-regression.log
+Successfully changed project path to: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [34412]  Target information:
+
+Player connection [34412]  * "[IP] 14.36.34.114 [Port] 55504 [Flags] 2 [Guid] 133525559 [EditorId] 133525559 [Version] 1048832 [Id] WindowsEditor(7,doeon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [34412] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [34412] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-6292" after 0.3 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-doun0"
+[Licensing::IpcConnector] LicenseClient-doun0 channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-doun0-6000.5.3 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 39580)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0-6000.5.3" at "2026-10-05T16:49:33.4155068Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 39580, path: "C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              c41f495a77ec415581622ad1b6bb9a99
+  Correlation Id:          26e1fa1781b94841a85bca828438dcca
+  External correlation Id: 764575898807687463
+  Machine Id:              +Y9dLo+xTxeE++gkth21EHAEDmE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-doun0-6000.5.3" (connect: 0.58s, validation: 0.12s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0-6000.5.3-notifications" at "2026-10-05T16:49:33.5483756Z"
+[Licensing::Module] Connected to LicensingClient (PId: 39580, launch time: 0.03, total connection time: 0.71s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 14568939546096-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 2.29s
+[Licensing::Module] Licensing is initialized (took 1.77s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 1 unused hashed content files
+Initialize engine version: 6000.5.3f1 (c2eb47b3a2a9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4060 Ti (ID=0x2803)
+    Vendor:          NVIDIA
+    VRAM:            7949 MB
+    App VRAM Budget: 7181 MB
+    Driver:          32.0.16.1088
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002222 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.303 seconds
+Domain Reload Profiling: 748ms
+	BeginReloadAssembly (138ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (230ms)
+		LoadAssemblies (115ms)
+		AnalyzeDomain (166ms)
+			TypeCache.Refresh (164ms)
+				TypeCache.ScanAssembly (153ms)
+	FinalizeReload (305ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (65ms)
+			ProcessInitializeOnLoadAttributes (74ms)
+			ProcessInitializeOnLoadMethodAttributes (109ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 65 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.2d.animation@15.1.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.animation@6d5a363ae647)
+    com.unity.2d.aseprite@5.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.aseprite@d13865913efa)
+    com.unity.2d.psdimporter@14.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.psdimporter@5d82044f9e43)
+    com.unity.2d.spriteshape@15.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.spriteshape@fcb7ec61a58b)
+    com.unity.2d.tilemap.extras@8.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.tilemap.extras@a80140457adc)
+    com.unity.2d.tooling@3.0.1 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.tooling@6f06ffb033c0)
+    com.unity.collab-proxy@2.12.4 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.collab-proxy@0b1559bcd34e)
+    com.unity.ide.rider@3.0.38 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.19.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.timeline@1.8.12 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.visualscripting@1.9.11 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.visualscripting@8bed5ad90189)
+    com.unity.2d.common@14.0.1 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.common@73badf92ba8b)
+    com.unity.searcher@4.9.4 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.29 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.test-framework.performance@8b56083ec0f0)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.sprite@053a968eab56)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.tilemap@592c6ccaefe1)
+    com.unity.multiplayer.center@1.0.1 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.multiplayer.center@b860850997d0)
+    com.unity.render-pipelines.universal@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.render-pipelines.universal@276396f56b3f)
+    com.unity.test-framework@1.7.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.test-framework@1405238725ab)
+    com.unity.ugui@2.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ugui@377fd60ad87b)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ext.nunit@44f7d31723bd)
+    com.unity.render-pipelines.core@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.render-pipelines.core@0733e3164aa3)
+    com.unity.shadergraph@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.shadergraph@8aa9acb51790)
+    com.unity.render-pipelines.universal-config@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.render-pipelines.universal-config@fdda01c80fe3)
+    com.unity.mathematics@1.4.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.mathematics@981956d94fb6)
+    com.unity.collections@6.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.collections@a43cabe808ca)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.06 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s501ms
+[ 863/1110  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.41 seconds), 1 items updated, 1110 evaluated
+AssetDatabase: script compilation time: 0.984374s
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 3.10 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.48 ms, found 5 plugins.
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.618 seconds
+Domain Reload Profiling: 3647ms
+	BeginReloadAssembly (329ms)
+		DisableScriptedObjects (22ms)
+		CreateAndSetChildDomain (159ms)
+	RebuildCommonClasses (7ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (618ms)
+		LoadAssemblies (370ms)
+		AnalyzeDomain (221ms)
+			TypeCache.Refresh (145ms)
+				TypeCache.ScanAssembly (135ms)
+			BuildScriptInfoCaches (68ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (2619ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (1990ms)
+			ProcessInitializeOnLoadMethodAttributes (364ms)
+			AfterProcessingInitializeOnLoad (11ms)
+		AwakeInstancesAfterBackupRestoration (32ms)
+Starting new worker id: 0 with log in C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=a0b419c9523819c42915eb4704ce13a4): Total: 5.592 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3332 ms
+		Asset DB Callback time: managed=28 ms, native=59 ms
+		Scripting: domain reloads=1, domain reload time=1102 ms, compile time=987 ms, other=81 ms
+		Project Asset Count: scripts=1560, non-scripts=3109
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 62.120ms
+	ApplyChangesToAssetFolders: 0.642ms
+	Scan: 197.596ms
+	Collect global state as custom dependencies: 3.365ms
+	CategorizeScriptCompilationAssets: 54.624ms
+	ProcessAssetsWithTransientArtifactChanges: 79.629ms
+	CategorizeAssets: 52.959ms
+	CompileScripts: 987.236ms
+	ImportOutOfDateAssets: 2747.431ms (2639.869ms without children)
+		UnloadImportedAssets: 0.767ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.702ms
+		ImportSchedulerStart: 106.045ms
+	PostProcessAllAssets: 28.602ms
+		MonoPostProcessAllAssets: 28.532ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 8.719ms
+			SyncVS.PostprocessSyncProject 3.245ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.914ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.906ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.929ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.760ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.325ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.314ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.298ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.216ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.181ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.165ms
+	UnloadStreamsBegin: 2.358ms
+	PersistCurrentRevisions: 0.118ms
+	GenerateScriptTypeHashes: 1.871ms
+	GenerateScriptTypeSerializationHashes: 2.937ms
+	Untracked: 1361.330ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Scanning for USB devices : 11.036ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Rushitadel2D
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7221 unused Assets / (7.6 MB). Loaded Objects now: 8127.
+Memory consumption went from 423.9 MB to 416.3 MB.
+Total: 16.355400 ms (FindLiveObjects: 1.156600 ms CreateObjectMapping: 2.817000 ms MarkObjects: 6.647700 ms  DeleteObjects: 5.730500 ms)
+
+Asset Pipeline Refresh (id=a88e8ed8f7b1015498410d8e6237cfda): Total: 0.150 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Importing 'GUID: 22e4dafdb5a3ad144abdaee774100032 - Path: Assets/Resources/TitleUI/Background.png' with importer (TextureImporter)
+Imported 'GUID: 22e4dafdb5a3ad144abdaee774100032' -> (Import Result ID: '65b9a17ab35956252a2c87829b930dd3') in 0.113 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e57f0b416777c4bb1af201478a9d4196 DependenciesID=a88a4a260236e2bddead7c919d019d54 StaticDependenciesID=3b65b281c94cf36864c742105fa13042 
+Refreshing native plugins compatible for Editor in 3.58 ms, found 5 plugins.
+
+Asset Pipeline Refresh (id=12f43fde1df66e8479a4a853f86e4675): Total: 0.316 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=23 ms, native=167 ms
+		Asset DB Callback time: managed=113 ms, native=10 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=1560, non-scripts=3109
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 4
+	ApplyChangesToAssetFolders: 0.116ms
+	Scan: 13.003ms
+	Collect global state as custom dependencies: 0.137ms
+	CategorizeAssets: 11.472ms
+	ImportOutOfDateAssets: 163.087ms (11.667ms without children)
+		ImportManagerImport: 115.403ms (1.245ms without children)
+		UnloadImportedAssets: 0.547ms
+		ReloadImportedAssets: 0.340ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.722ms
+		ImportSchedulerStart: 34.696ms
+	PostProcessAllAssets: 121.035ms
+		XRBuildSystem.XRAssetImported 6.425ms
+		MonoPostProcessAllAssets: 113.973ms
+			AssetPostprocessor.OnPostprocessAllAssets 70.936ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 17.473ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.167ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 1.966ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 1.821ms
+			AssetChangedListener.OnPostprocessAllAssets 1.450ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.443ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.275ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.225ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.024ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.685ms
+			SyncVS.PostprocessSyncProject 0.654ms
+			AssetProcessor.OnPostprocessAllAssets 0.644ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.477ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.447ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.431ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.323ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.290ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.272ms
+			AssetEvents.OnPostprocessAllAssets 0.253ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.248ms
+			PostProcessor.OnPostprocessAllAssets 0.237ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.222ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.190ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.173ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.161ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.121ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.114ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.109ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.107ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.062ms
+	PostAssetChangesProfiler: 3.782ms
+	GatherAllCurrentPrimaryImportResultRevisions: 0.145ms
+	PersistCurrentRevisions: 0.117ms
+	Untracked: 3.088ms
+
+Importing 'GUID: fced75514bafb744e86f805b9ea92f48 - Path: Assets/Resources/TitleUI/Continue_Hover.png' with importer (TextureImporter)
+Imported 'GUID: fced75514bafb744e86f805b9ea92f48' -> (Import Result ID: 'ae07e40a8e18fe184f1027d346944344') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bbba98a7a317d84e218d5a9db1f2551b DependenciesID=f19609313258364f8f46e464abe1f909 StaticDependenciesID=d5f18ec545555d2c001d7b1c6e19a805 
+Refreshing native plugins compatible for Editor in 3.68 ms, found 5 plugins.
+Asset Pipeline Refresh (id=52ac2ed6060487e4e86c3eebe073760e): Total: 0.082 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1ffbbd82c99dfa240a7ea2b739cad45b - Path: Assets/Resources/TitleUI/Continue_Normal.png' with importer (TextureImporter)
+Imported 'GUID: 1ffbbd82c99dfa240a7ea2b739cad45b' -> (Import Result ID: '6e50dd01a09bfe5d35678a65ef9fe084') in 0.041 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2de3f0892fa068237278f8eac62f4613 DependenciesID=cd8af0620aebc04cbdfd03957fd59830 StaticDependenciesID=2dcddbc759e678dc5844359cd395aab1 
+Refreshing native plugins compatible for Editor in 2.76 ms, found 5 plugins.
+Asset Pipeline Refresh (id=7819354ac951396479bedd1c8e824485): Total: 0.103 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: a2d063e8c14943e4280e64ce57ab6d20 - Path: Assets/Resources/TitleUI/Continue_Pressed.png' with importer (TextureImporter)
+Imported 'GUID: a2d063e8c14943e4280e64ce57ab6d20' -> (Import Result ID: '549f97679fb5524259ba680fbee42742') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bf729c33fcf93824854b1d37178ed153 DependenciesID=24d81f17ce1230368da96003ad720577 StaticDependenciesID=0060fb1e96cfcc8101dff4ee66d28b1b 
+Refreshing native plugins compatible for Editor in 3.49 ms, found 5 plugins.
+Asset Pipeline Refresh (id=ac3bd2f82b25bdd43b41d419befb4693): Total: 0.060 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f5bd253f05ae82e4d8b0fe3904921203 - Path: Assets/Resources/TitleUI/Logo.png' with importer (TextureImporter)
+Imported 'GUID: f5bd253f05ae82e4d8b0fe3904921203' -> (Import Result ID: '351e5eed9a52f583756b7e1bc1507538') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=aa9a0592db8382d3e1b8ff2040e9ad96 DependenciesID=7591774b298e66473b00f2ffe541b6ec StaticDependenciesID=32b480621c5544e74b4eee8a86b26d7a 
+Refreshing native plugins compatible for Editor in 2.98 ms, found 5 plugins.
+Asset Pipeline Refresh (id=65776804926bbc149b932731aef6fde5): Total: 0.066 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1b0fc215d2d37c845be3b7263e6bb561 - Path: Assets/Resources/TitleUI/Quit_Hover.png' with importer (TextureImporter)
+Imported 'GUID: 1b0fc215d2d37c845be3b7263e6bb561' -> (Import Result ID: 'efed47509b4380bc40a36e191d19a8a6') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f0031261ef414f062c9e12c84f85965a DependenciesID=0050aa465b0b6fb3c355db97af956f4c StaticDependenciesID=ad12b4fb9504fee11b10103dd44f2163 
+Refreshing native plugins compatible for Editor in 3.22 ms, found 5 plugins.
+Asset Pipeline Refresh (id=2a1ba36188f3d924983a7f7860ac15c3): Total: 0.060 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8d23e803f23c9464ba9f825b092d24ec - Path: Assets/Resources/TitleUI/Quit_Normal.png' with importer (TextureImporter)
+Imported 'GUID: 8d23e803f23c9464ba9f825b092d24ec' -> (Import Result ID: '42db8ea2ed16386812b620ac1411f20e') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b3f9a8c1c9bf152bce77c99e9a8cf9e5 DependenciesID=bd200446feb7b5d1c02b2d1b556dab2a StaticDependenciesID=73f013db0e4b4721757c5319c3cfd46c 
+Refreshing native plugins compatible for Editor in 3.48 ms, found 5 plugins.
+Asset Pipeline Refresh (id=e0902f31a3fcdf94fa2663d599abfabb): Total: 0.060 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f348b129c575d754abb1913906dfb2e9 - Path: Assets/Resources/TitleUI/Quit_Pressed.png' with importer (TextureImporter)
+Imported 'GUID: f348b129c575d754abb1913906dfb2e9' -> (Import Result ID: '8ba241e06313093157134e483b7b05d2') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a8950e8bbaca2ec8e123b5b1b6e847d9 DependenciesID=bf8b6a0a6324ae557cd618fab39a434f StaticDependenciesID=8843df6eedaccd03c822ec9007c23224 
+Refreshing native plugins compatible for Editor in 2.65 ms, found 5 plugins.
+Asset Pipeline Refresh (id=f54d593d1fc709f4baadfcf9e11850ee): Total: 0.068 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 0956606296add4246b3fb057956dbc05 - Path: Assets/Resources/TitleUI/Settings_Hover.png' with importer (TextureImporter)
+Imported 'GUID: 0956606296add4246b3fb057956dbc05' -> (Import Result ID: 'd42c041816088f5bb072a18f456fc241') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0a032377097a65eafb90d179e4848dee DependenciesID=0e00695d51a22c9bc5bc248642173df8 StaticDependenciesID=9000eb84a605f31dfe3340f53a4d5ccf 
+Refreshing native plugins compatible for Editor in 3.68 ms, found 5 plugins.
+Asset Pipeline Refresh (id=72e0bb2f604d5a1458726b7a08583e61): Total: 0.068 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8f99719bb89bc774a8da0f4e68c5ea19 - Path: Assets/Resources/TitleUI/Settings_Normal.png' with importer (TextureImporter)
+Imported 'GUID: 8f99719bb89bc774a8da0f4e68c5ea19' -> (Import Result ID: 'abfe9dc38bd4d5022ad5165ecf3884ee') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5c2c73f2346c6bc31e4913e226993b6e DependenciesID=212d876217caa12ba809970f53cdd55c StaticDependenciesID=476f7a141a2716e0db941515fbdfb0d8 
+Refreshing native plugins compatible for Editor in 3.38 ms, found 5 plugins.
+Asset Pipeline Refresh (id=fadd2133a6221a54c83526f96aab7786): Total: 0.069 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 2b3fd167a7100fc47a67e027da3b5717 - Path: Assets/Resources/TitleUI/Settings_Pressed.png' with importer (TextureImporter)
+Imported 'GUID: 2b3fd167a7100fc47a67e027da3b5717' -> (Import Result ID: '7119e903a6d29483fc50bfe8f47027d1') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5c97fea7d9b8b3bcb2d102a180f9c605 DependenciesID=7ab97f3a5d305b42a054d3c5048ddea3 StaticDependenciesID=6752abe7a110ae0c198ddc8698bcb427 
+Refreshing native plugins compatible for Editor in 3.17 ms, found 5 plugins.
+Asset Pipeline Refresh (id=ab5d17f280b1a1e48b0a718ab8847651): Total: 0.064 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Worker ready: AssetImportWorkerHW0 0
+Importing 'GUID: 21ad1c52364603d4298db375b239d690 - Path: Assets/Resources/TitleUI/Start_Hover.png' with importer (TextureImporter)
+Imported 'GUID: 21ad1c52364603d4298db375b239d690' -> (Import Result ID: 'e77ed80d70371555c355b1f2b387a947') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fa709abb2913f08eb777823cad3802bd DependenciesID=7ed4cadffdd454ef594780376a8a2684 StaticDependenciesID=2c93828d566bf43b8e045a4da36ca8e8 
+Refreshing native plugins compatible for Editor in 2.66 ms, found 5 plugins.
+Asset Pipeline Refresh (id=29b24aae09081814eb82ae0cbdc48e13): Total: 0.068 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 6d23f7ada4ecf404f9da62e91ef67a04 - Path: Assets/Resources/TitleUI/Start_Normal.png' with importer (TextureImporter)
+Imported 'GUID: 6d23f7ada4ecf404f9da62e91ef67a04' -> (Import Result ID: 'fb3fe0b6e90a779a98d30082f0aff1ea') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0ca9f324fcbd334ad7f6959e478b4ab6 DependenciesID=7f0a810fe4a3c2c80dee7f39610d6a8f StaticDependenciesID=132e2a85d2878f3d42d56e58fda2350a 
+Refreshing native plugins compatible for Editor in 2.77 ms, found 5 plugins.
+Asset Pipeline Refresh (id=42f07d64e1c2f37499ea6b6eef1237e9): Total: 0.070 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 132abc48b1ffa744ba09a684032c29a8 - Path: Assets/Resources/TitleUI/Start_Pressed.png' with importer (TextureImporter)
+Imported 'GUID: 132abc48b1ffa744ba09a684032c29a8' -> (Import Result ID: '39597bafbf49891dd889f232243f99b1') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b1fda74f947b628d6e64b886ab7aec60 DependenciesID=a6f236eda15c8dcb6c8b7e2e3eef2165 StaticDependenciesID=4e047179adc733c979f65cce2b631192 
+Refreshing native plugins compatible for Editor in 2.97 ms, found 5 plugins.
+Asset Pipeline Refresh (id=e2b47e85c6e6c6949b7a313d795f71f7): Total: 0.068 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+TITLE_UI_ASSETS_READY
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Editor.TitleUiSetup:Prepare () (at Assets/Scripts/Editor/TitleUiSetup.cs:49)
+Rushitadel.Editor.TitleUiValidation:Run () (at Assets/Scripts/Editor/TitleUiValidation.cs:11)
+
+(Filename: Assets/Scripts/Editor/TitleUiSetup.cs Line: 49)
+
+Opening scene 'Assets/Scenes/Title.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Title.unity'
+	Deserialize:            7.243 ms
+	Integration:            284.732 ms
+	Integration of assets:  0.027 ms
+	Thread Wait Time:       0.012 ms
+	Total Operation Time:   292.013 ms
+Unloading 32 unused Assets / (16.5 KB). Loaded Objects now: 8248.
+Memory consumption went from 419.7 MB to 419.7 MB.
+Total: 8.035100 ms (FindLiveObjects: 0.531500 ms CreateObjectMapping: 0.729200 ms MarkObjects: 6.722800 ms  DeleteObjects: 0.050500 ms)
+
+[Project] Loading completed in 12.143 seconds
+	Project init time: 				9.642 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		2.019 seconds
+		Asset Database init time: 		0.196 seconds
+		Global illumination init time: 	0.004 seconds
+		Assemblies load time: 			0.797 seconds
+		Unity extensions init time: 	0.037 seconds
+		Asset Database refresh time: 	5.592 seconds
+	Scene opening time: 			2.268 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1791218983428,"processId":6292,"projectLoad":12.1427128,"projectInit":9.6418929,"templateInit":0.0,"packageManagerInit":2.0187235,"assetDatabaseInit":0.1957276,"globalIlluminationInit":0.0035477,"assembliesLoad":0.7965822,"unityExtensionsInit":0.0366668,"assetDatabaseRefresh":5.5922117,"sceneOpening":2.2682663}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1791218983428,"processId":6292,"editorVersion":"6000.5.3f1 (c2eb47b3a2a9)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
+SpriteAtlasPacking completed in 0.004752 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.470 ms
+	Integration:            348.164 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   350.645 ms
+[Licensing::Client] Successfully resolved entitlement details
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+Created GICache directory at C:/Users/doun0/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.028s, timestamps: [12.577 - 12.605]
+[Licensing::Client] Successfully resolved entitlement details
+PASS: Editor Play begins at title
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:48)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Continue disabled without a valid save
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:49)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Start owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:54)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Start hover swap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Continue owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:54)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Settings owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:54)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Settings hover swap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Quit owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:54)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Quit hover swap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: QuitButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:62)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Quit confirmation text
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:63)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:64)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Quit cancellation stays on title
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:65)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:66)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 사운드 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Three independent audio sliders
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:69)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Audio previews immediately
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:72)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:73)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Cancel restores audio
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:74)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 사운드 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 적용 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:77)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Settings persist and reload
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:78)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:79)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 조작 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:79)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:80)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:81)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 적용 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:83)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Display timeout reverts
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:87)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:88)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: StartButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:89)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Theme confirmation disabled until selection
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:92)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 선택 확정 · 시작 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:94)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.365900 ms
+Loaded scene 'Assets/Scenes/inGame.unity'
+	Deserialize:            11.633 ms
+	Integration:            294.129 ms
+	Integration of assets:  2.834 ms
+	Thread Wait Time:       21.254 ms
+	Total Operation Time:   329.851 ms
+Unloading 43 unused Assets / (72.6 KB). Loaded Objects now: 8720.
+Memory consumption went from 462.9 MB to 462.8 MB.
+Total: 10.965800 ms (FindLiveObjects: 0.501100 ms CreateObjectMapping: 1.017500 ms MarkObjects: 9.230300 ms  DeleteObjects: 0.216100 ms)
+
+PASS: New run loads gameplay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:96)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Theme confirmation writes slot atomically
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:97)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Safe checkpoint saves live player data: 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Previous good save backup retained
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Pause freezes simulation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 설정 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:108)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:108)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Settings returns to paused game
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:109)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 타이틀로 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:110)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 확인 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:110)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.577600 ms
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.316 ms
+	Integration:            316.146 ms
+	Integration of assets:  0.127 ms
+	Thread Wait Time:       30.701 ms
+	Total Operation Time:   349.290 ms
+Unloading 59 unused Assets / (36.4 KB). Loaded Objects now: 8470.
+Memory consumption went from 465.2 MB to 465.2 MB.
+Total: 12.009300 ms (FindLiveObjects: 0.704200 ms CreateObjectMapping: 1.025000 ms MarkObjects: 10.092000 ms  DeleteObjects: 0.187000 ms)
+
+PASS: Continue enabled with valid checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:111)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: ContinueButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:114)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 불러오기 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.395800 ms
+Loaded scene 'Assets/Scenes/inGame.unity'
+	Deserialize:            7.151 ms
+	Integration:            244.112 ms
+	Integration of assets:  2.166 ms
+	Thread Wait Time:       26.968 ms
+	Total Operation Time:   280.397 ms
+Unloading 42 unused Assets / (71.3 KB). Loaded Objects now: 8720.
+Memory consumption went from 463.4 MB to 463.4 MB.
+Total: 10.966400 ms (FindLiveObjects: 0.424700 ms CreateObjectMapping: 0.808000 ms MarkObjects: 9.548200 ms  DeleteObjects: 0.184700 ms)
+
+PASS: Continue restores HP and XP
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.839300 ms
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.617 ms
+	Integration:            273.796 ms
+	Integration of assets:  0.185 ms
+	Thread Wait Time:       13.774 ms
+	Total Operation Time:   290.373 ms
+Unloading 59 unused Assets / (38.2 KB). Loaded Objects now: 8545.
+Memory consumption went from 465.3 MB to 465.3 MB.
+Total: 10.139200 ms (FindLiveObjects: 0.432900 ms CreateObjectMapping: 0.891800 ms MarkObjects: 8.685400 ms  DeleteObjects: 0.128200 ms)
+
+PASS: Corrupt data rejected without deleting original
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:120)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Unsupported schema rejected
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Non-finite save values rejected
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:124)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: StartButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:127)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Overwrite asks before replacing slot
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:130)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Overwrite cancellation preserves slot
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:132)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: No UI runtime errors
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:133)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+RUSHITADEL_TITLE_UI_VALIDATION_SUCCESS
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 135)
+
+MonoPathRemapper: Attempts to remap: 47753; Successful remaps: 22872
+Serialized file version minimum: 23, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-doun0-6000.5.3-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-doun0-6000.5.3 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791218989306,"processId":6292,"allocatedMemory":17917350,"memoryLabels":[{"Default":218704},{"Permanent":15516},{"NewDelete":67307},{"Thread":4205176},{"Manager":819589},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":852831},{"Material":24},{"GfxDevice":57608},{"Animation":952},{"Audio":368},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":2744},{"Input":42840},{"JobScheduler":256},{"TextLib":280},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1583052},{"BaseObject":1629568},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":6970},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":40480},{"StaticString":3808},{"Utility":2673238},{"Curl":2498},{"PoolAlloc":2360},{"AI":80},{"TypeTree":14869},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":16024},{"WebRequest":552},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":72},{"CoreStats":13688},{"Identifiers":6768},{"Gui":128},{"EditorUtility":113184},{"VersionControl":8},{"Undo":931},{"AssetDatabase":5026436},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":38929},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

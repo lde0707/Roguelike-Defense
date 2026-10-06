@@ -14,13 +14,20 @@ namespace Rushitadel.Editor
 {
     public static class PortValidation
     {
+        public static void BuildAndRun()
+        {
+            GameplaySceneSetup.Build();
+            Run();
+        }
+
         public static void Run()
         {
             EditorSceneManager.OpenScene("Assets/Scenes/inGame.unity");
-            Require(UnityEngine.Object.FindObjectsByType<TowerController>(FindObjectsSortMode.None).Length == 7, "Seven towers");
+            Require(UnityEngine.Object.FindObjectsByType<TowerController>(FindObjectsSortMode.None).Length == 5, "Five attached turrets");
             Require(UnityEngine.Object.FindFirstObjectByType<Rigidbody>() == null, "No 3D rigidbody");
             Require(UnityEngine.Object.FindFirstObjectByType<Collider>() == null, "No 3D collider");
             Require(UnityEngine.Object.FindFirstObjectByType<PlayerController>() != null, "Player movement");
+            Require(UnityEngine.Object.FindFirstObjectByType<PlayerAttackController>() != null, "Mouse aimed player attack");
             Require(UnityEngine.Object.FindFirstObjectByType<PlayerPowerShotController>() != null, "Power shot");
             foreach (GameObject root in UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects())
                 foreach (Transform child in root.GetComponentsInChildren<Transform>(true))

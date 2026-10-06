@@ -1,5 +1,6 @@
 using UnityEngine;
 using Rushitadel.Progression;
+using Rushitadel.Player;
 
 namespace Rushitadel.Combat
 {
@@ -7,13 +8,23 @@ namespace Rushitadel.Combat
     {
         [SerializeField, Min(1f)] private float maxHealth = 100f;
         [SerializeField, Min(0f)] private float moveSpeed = 1f;
-        [SerializeField, Min(0f)] private float stoppingDistance = 0.45f;
+        [SerializeField, Min(0f)] private float stoppingDistance = 1.05f;
+        [SerializeField, Min(0f)] private float contactDamage = 10f;
+        [SerializeField, Min(0.1f)] private float attackInterval = 1f;
+        private float nextAttackTime;
         [SerializeField] private ExperiencePickup experiencePickupPrefab;
 
         private float currentHealth;
+        private int dropValue = 20;
+        public void ConfigureRun(float hp, int xp, bool stationary = false)
+        {
+            maxHealth = currentHealth = hp; dropValue = xp;
+            if (stationary) { moveSpeed = 0; contactDamage = 0; }
+        }
 
         public bool IsAlive => currentHealth > 0f;
         public float CurrentHealth => currentHealth;
+        public float MaximumHealth => maxHealth;
 
         private void Awake() => currentHealth = maxHealth;
 
@@ -23,8 +34,8 @@ namespace Rushitadel.Combat
 
         private void Update()
         {
-            TowerController target = FindClosestTower();
-            if (target == null)
+            PlayerHealth target = PlayerHealth.Instance;
+            if (Time.timeScale <= 0f || target == null || !target.IsAlive || !IsAlive)
             {
                 return;
             }
@@ -33,16 +44,21 @@ namespace Rushitadel.Combat
             offset.z = 0f;
             if (offset.sqrMagnitude <= stoppingDistance * stoppingDistance)
             {
+                if (Time.time >= nextAttackTime)
+                {
+                    target.TakeDamage(contactDamage);
+                    nextAttackTime = Time.time + attackInterval;
+                }
                 return;
             }
 
-            transform.position += offset.normalized * (moveSpeed * Time.deltaTime);
+            transform.position += offset.normalized * Mathf.Min(moveSpeed * Time.deltaTime, offset.magnitude - stoppingDistance);
             transform.up = offset.normalized;
         }
 
         public void TakeDamage(float amount)
         {
-            if (!IsAlive || amount <= 0f)
+            if (!IsAlive || !float.IsFinite(amount) || amount <= 0f)
             {
                 return;
             }
@@ -75,31 +91,13 @@ namespace Rushitadel.Combat
         {
             if (experiencePickupPrefab != null)
             {
-                Instantiate(experiencePickupPrefab, transform.position, Quaternion.identity);
+                var pickup = Instantiate(experiencePickupPrefab, transform.position, Quaternion.identity);
+                pickup.gameObject.SetActive(true); pickup.SetValue(dropValue);
             }
+            else new GameObject("Blue XP", typeof(CircleCollider2D), typeof(SpriteRenderer), typeof(ExperiencePickup))
+                { transform = { position = transform.position } }.GetComponent<ExperiencePickup>().SetValue(dropValue);
         }
 
-        private TowerController FindClosestTower()
-        {
-            TowerController closest = null;
-            float closestDistance = float.PositiveInfinity;
 
-            foreach (TowerController tower in TowerRegistry.ActiveTowers)
-            {
-                if (tower == null || !tower.isActiveAndEnabled)
-                {
-                    continue;
-                }
-
-                float distance = (tower.transform.position - transform.position).sqrMagnitude;
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    closest = tower;
-                }
-            }
-
-            return closest;
-        }
     }
 }

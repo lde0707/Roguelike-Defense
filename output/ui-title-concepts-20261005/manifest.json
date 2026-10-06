@@ -1,0 +1,66 @@
+{
+  "mode": "built-in image_gen",
+  "images": [
+    {
+      "id": "01",
+      "name": "클래식 아케이드",
+      "file": "01_classic_arcade.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ee93c86d-f49f-45a6-a972-d5558815e875.png"
+    },
+    {
+      "id": "02",
+      "name": "정비 격납고",
+      "file": "02_maintenance_hangar.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-b819eab4-e031-4f1b-bea7-d53be102cbae.png"
+    },
+    {
+      "id": "03",
+      "name": "전술 단말기",
+      "file": "03_tactical_terminal.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-6f4e741d-ab85-4f49-aeb4-654bc90aba97.png"
+    },
+    {
+      "id": "04",
+      "name": "초원 유적",
+      "file": "04_overgrown_ruins.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-252b6f1c-c781-493e-a857-65b965c7a737.png"
+    },
+    {
+      "id": "05",
+      "name": "빙결 게이트",
+      "file": "05_frozen_gateway.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1bb7f73e-1135-45c8-9ffe-66fc9cd2c93e.png"
+    },
+    {
+      "id": "06",
+      "name": "용암 방화문",
+      "file": "06_magma_bulkhead.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1bf2b9a5-d4c4-48c8-9351-6d0ce68506ef.png"
+    },
+    {
+      "id": "07",
+      "name": "심해 소나",
+      "file": "07_abyssal_sonar.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-e41cc9dd-dc83-4914-8ade-a0475c45731f.png"
+    },
+    {
+      "id": "08",
+      "name": "전기·물 듀얼 코어",
+      "file": "08_electric_duality.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-e011fad6-1a49-4393-9c68-cf9c8a180e6a.png"
+    },
+    {
+      "id": "09",
+      "name": "미니멀 코어",
+      "file": "09_minimal_core.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-50d700e7-ac32-41c8-a871-e3cb920add0f.png"
+    },
+    {
+      "id": "10",
+      "name": "전장 파노라마",
+      "file": "10_battle_panorama.png",
+      "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-8535e495-4f65-4f53-a2b0-16a1e6b5a788.png"
+    }
+  ],
+  "appliedToGame": false
+}

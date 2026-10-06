@@ -1,5 +1,4 @@
 using Rushitadel.Combat;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Rushitadel.Player
@@ -7,48 +6,33 @@ namespace Rushitadel.Player
     public sealed class PlayerProjectileController : ProjectileBehaviour
     {
         [SerializeField, Min(0f)] private float speed = 12f;
-        [SerializeField] private MouseWorldInteractionSettings interactionSettings;
         [SerializeField, Min(0.1f)] private float lifetime = 3f;
 
         private Vector3 direction;
         private Vector3 destination;
-        private float damage;
-        private float impactRadius = -1f;
-        private bool eliminateOnImpact;
+        private float impactRadius;
         private float remainingLifetime;
+        private bool flying;
+        public float ImpactRadius => impactRadius;
+        public const float ExecuteRadiusFraction = 0.3f;
 
-        public void Launch(Vector3 newDirection, Vector3 newDestination, float newDamage)
+        public void LaunchArea(Vector3 newDirection, Vector3 newDestination, float radius)
         {
-            ConfigureFlight(newDirection, newDestination, newDamage, -1f, false);
-        }
-
-        public void LaunchEliminating(
-            Vector3 newDirection,
-            Vector3 newDestination,
-            float newImpactRadius)
-        {
-            ConfigureFlight(newDirection, newDestination, 0f, newImpactRadius, true);
-        }
-
-        private void ConfigureFlight(
-            Vector3 newDirection,
-            Vector3 newDestination,
-            float newDamage,
-            float newImpactRadius,
-            bool shouldEliminateOnImpact)
-        {
+            newDirection.z = 0f;
             direction = newDirection.sqrMagnitude > 0f ? newDirection.normalized : Vector3.up;
             destination = newDestination;
-            damage = newDamage;
-            impactRadius = newImpactRadius;
-            eliminateOnImpact = shouldEliminateOnImpact;
-            remainingLifetime = lifetime;
-
+            destination.z = transform.position.z;
+            impactRadius = Mathf.Max(0.01f, radius);
+            // Allow any visible mouse destination to be reached before timeout.
+            remainingLifetime = Mathf.Max(lifetime, Vector3.Distance(transform.position, destination) / Mathf.Max(0.01f, speed) + 0.5f);
+            flying = true;
+            transform.localScale = Vector3.one * (impactRadius * 2f);
             PrepareBody();
         }
 
         private void Update()
         {
+            if (!flying || Time.timeScale <= 0f) return;
             remainingLifetime -= Time.deltaTime;
             if (remainingLifetime <= 0f)
             {
@@ -65,36 +49,48 @@ namespace Rushitadel.Player
             if (remainingDistance <= step + Mathf.Epsilon)
             {
                 ApplyAreaDamage();
-                Destroy(gameObject);
+                flying = false;
+                transform.position = destination;
+                // Briefly hold the two visible circles at impact so the actual radius is readable.
+                Destroy(gameObject, 0.12f);
             }
         }
 
         private void ApplyAreaDamage()
         {
-            float radius = impactRadius >= 0f
-                ? impactRadius
-                : interactionSettings != null ? interactionSettings.Radius : 0f;
-            List<EnemyController> enemies = EnemyRegistry.FindAllWithinRadius(destination, radius);
-            foreach (EnemyController enemy in enemies)
+            // Cursor screen/world conversion can shift an exact rim point by a few floating-point ULPs.
+            foreach (EnemyController enemy in EnemyRegistry.FindAllWithinRadius(destination, impactRadius * 1.00001f))
             {
-                if (eliminateOnImpact)
-                {
-                    enemy.Eliminate();
-                }
-                else
-                {
-                    ApplyDamage(enemy, damage);
-                }
+                DamageTarget(enemy, enemy.transform.position);
             }
+            foreach (var bullet in FindObjectsByType<EnemyProjectileController>(FindObjectsSortMode.None))
+                DamageTarget(bullet, bullet.transform.position);
+        }
+
+        private void DamageTarget(IDamageable target, Vector3 position)
+        {
+            float normalizedDistance = Vector2.Distance(position, destination) / impactRadius;
+            if (!target.IsAlive || normalizedDistance > 1f + 0.00001f) return;
+            if (normalizedDistance <= ExecuteRadiusFraction + 0.00001f && target is EnemyController enemy)
+            {
+                enemy.Eliminate();
+                return;
+            }
+            ApplyDamage(target, target.MaximumHealth * DamageFraction(normalizedDistance));
+        }
+
+        public static float DamageFraction(float normalizedDistance)
+        {
+            if (normalizedDistance <= ExecuteRadiusFraction + 0.00001f) return 1f;
+            return Mathf.Lerp(1f, 0.5f, Mathf.InverseLerp(ExecuteRadiusFraction, 1f, normalizedDistance));
         }
 
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = new Color(0.2f, 0.8f, 1f, 0.75f);
-            float radius = impactRadius >= 0f
-                ? impactRadius
-                : interactionSettings != null ? interactionSettings.Radius : 0f;
-            Gizmos.DrawWireSphere(transform.position, radius);
+            Gizmos.DrawWireSphere(transform.position, impactRadius);
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireSphere(transform.position, impactRadius * ExecuteRadiusFraction);
         }
     }
 }

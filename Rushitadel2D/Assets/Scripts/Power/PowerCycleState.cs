@@ -1,8 +1,4 @@
 namespace Rushitadel.Power
 {
-    public enum PowerCycleState
-    {
-        Depleting,
-        Recovering
-    }
+    public enum PowerCycleState { Ready, Recovering }
 }

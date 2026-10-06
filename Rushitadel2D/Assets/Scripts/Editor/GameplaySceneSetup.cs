@@ -7,6 +7,7 @@ using Rushitadel.Power;
 using Rushitadel.Progression;
 using Rushitadel.Spawning;
 using Rushitadel.Presentation;
+using Rushitadel.World;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -20,6 +21,7 @@ namespace Rushitadel.Editor
         private const string Prefabs = "Assets/Prefabs/";
         private static Material spriteMaterial;
         private static Sprite circle;
+        private static Sprite square;
 
         [MenuItem("Rushitadel 2D/Rebuild Gameplay Scene")]
         public static void Build()
@@ -34,14 +36,15 @@ namespace Rushitadel.Editor
                 AssetDatabase.CreateAsset(spriteMaterial, "Assets/Generated/SpriteUnlit.mat");
             }
             circle = CreateCircle();
+            square = CreateSquare();
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             Camera camera = new GameObject("Main Camera", typeof(Camera), typeof(AudioListener)).GetComponent<Camera>();
             camera.tag = "MainCamera";
-            camera.transform.position = new Vector3(0.73f, 0.85f, -10f);
+            camera.transform.position = new Vector3(0f, 0f, -10f);
             camera.orthographic = true;
-            camera.orthographicSize = 6.2f;
+            camera.orthographicSize = 5.4f;
             camera.clearFlags = CameraClearFlags.SolidColor;
-            camera.backgroundColor = Color.white;
+            camera.backgroundColor = new Color(0.35f, 0.4f, 0.65f);
             camera.nearClipPlane = 0.1f;
             camera.farClipPlane = 100f;
 
@@ -62,54 +65,89 @@ namespace Rushitadel.Editor
             Set(enemy, "experiencePickupPrefab", pickup.GetComponent<ExperiencePickup>());
             GameObject enemyPrefab = SavePrefab(enemyObject, "Enemy");
 
+            var hostileObject = new GameObject("enemyProjectile");
+            AttachVisual(hostileObject.transform, "Shell", new Color(1f, 0.24f, 0.12f), new Vector2(0.24f, 0.24f), 45, Vector2.zero);
+            hostileObject.AddComponent<EnemyProjectileController>();
+            var hostilePrefab = SavePrefab(hostileObject, "enemyProjectile");
+            var rangedObject = Object.Instantiate(enemyPrefab);
+            rangedObject.name = "RangedEnemy";
+            rangedObject.AddComponent<CullBehindCamera>();
+            Set(rangedObject.GetComponent<EnemyController>(), "moveSpeed", 0f);
+            Set(rangedObject.GetComponent<EnemyController>(), "contactDamage", 0f);
+            Set(rangedObject.AddComponent<EnemyRangedAttack>(), "projectilePrefab", hostilePrefab.GetComponent<EnemyProjectileController>());
+            var rangedPrefab = SavePrefab(rangedObject, "RangedEnemy");
+
             GameObject towerBulletObject = Visual("towerProjectile", circle, new Color(1f, 0.65f, 0.05f), new Vector2(0.1f, 0.22f), 40);
             towerBulletObject.AddComponent<ProjectileController>();
             GameObject towerBullet = SavePrefab(towerBulletObject, "towerProjectile");
-            GameObject playerBulletObject = Visual("playerProjectile", circle, new Color(0f, 0.6f, 1f), new Vector2(0.12f, 0.24f), 40);
-            Set(playerBulletObject.AddComponent<PlayerProjectileController>(), "interactionSettings", settings);
+            GameObject basicBulletObject = Visual("playerBasicProjectile", circle, new Color(0.2f, 0.8f, 1f), new Vector2(0.1f, 0.22f), 40);
+            basicBulletObject.AddComponent<ProjectileController>();
+            GameObject basicBullet = SavePrefab(basicBulletObject, "playerBasicProjectile");
+            GameObject playerBulletObject = new GameObject("playerProjectile");
+            AttachVisual(playerBulletObject.transform, "Outer Area", new Color(0.15f, 0.6f, 1f, 0.3f), Vector2.one, 42, Vector2.zero);
+            AttachVisual(playerBulletObject.transform, "Execute Core", new Color(0.7f, 0.9f, 1f, 0.8f), Vector2.one * PlayerProjectileController.ExecuteRadiusFraction, 43, Vector2.zero);
+            playerBulletObject.AddComponent<PlayerProjectileController>();
             GameObject playerBullet = SavePrefab(playerBulletObject, "playerProjectile");
 
-            Sprite citadelSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Image/Citadel2.png");
-            GameObject citadel = Visual("Citadel", citadelSprite, Color.white, new Vector2(20.05f, 11.27f), -10);
-            citadel.transform.position = new Vector3(0.601f, 0.85f, 0f);
-
-            // Keep the original seven weapons and stats; align their XY origins with the artwork.
-            GameObject towers = new GameObject("Tower");
-            CreateTower(towers.transform, "mainTower", new Vector2(0.6f, 1.65f), 3f, 25f, towerBullet);
-            float[] rows = { 4.25f, 2.3f, -0.55f };
-            for (int row = 0; row < rows.Length; row++)
-                for (int side = 0; side < 2; side++)
-                    CreateTower(towers.transform, $"Tower {row * 2 + side + 1}", new Vector2(side == 0 ? -3.1f : 4.4f, rows[row]), 4f, 50f, towerBullet);
+            const string backgroundPath = "Assets/Image/ScrollingBattlefield.png";
+            AssetDatabase.ImportAsset(backgroundPath);
+            var backgroundImporter = (TextureImporter)AssetImporter.GetAtPath(backgroundPath);
+            backgroundImporter.textureType = TextureImporterType.Sprite;
+            backgroundImporter.spriteImportMode = SpriteImportMode.Single;
+            backgroundImporter.mipmapEnabled = false;
+            backgroundImporter.filterMode = FilterMode.Point;
+            backgroundImporter.textureCompression = TextureImporterCompression.Uncompressed;
+            backgroundImporter.wrapMode = TextureWrapMode.Repeat;
+            backgroundImporter.SaveAndReimport();
+            Sprite background = AssetDatabase.LoadAssetAtPath<Sprite>(backgroundPath);
+            var loop = new GameObject("Looping Battlefield").AddComponent<LoopingBattlefield>();
+            var panels = new SpriteRenderer[3];
+            for (int i = 0; i < panels.Length; i++)
+            {
+                var panel = Visual("Ground Segment " + i, background, Color.white, new Vector2(19.2f, 10.8f), -10);
+                panel.transform.SetParent(loop.transform, false);
+                panels[i] = panel.GetComponent<SpriteRenderer>();
+            }
+            loop.Configure(camera, panels, 10.8f);
+            var boundaries = new GameObject("Cliff Boundaries").AddComponent<PlayfieldBoundary>();
+            boundaries.transform.SetParent(camera.transform, false);
+            boundaries.transform.localPosition = new Vector3(0f, 0f, 10f);
+            BoxCollider2D leftWall = CreateCliffWall(boundaries.transform, "Left Invisible Wall", -5.65f);
+            BoxCollider2D rightWall = CreateCliffWall(boundaries.transform, "Right Invisible Wall", 5.65f);
+            boundaries.Configure(leftWall, rightWall);
+            var rearHazard = CreatePressureZone(camera.transform, "Rear Theme Hazard", 1.2f, true);
+            var frontBarrier = CreatePressureZone(camera.transform, "Front Theme Barrier", 0.6f, false);
 
             GameObject player = new GameObject("Player");
-            player.transform.position = new Vector3(0f, -1.34f, 0f);
+            player.transform.position = new Vector3(0f, -1f, 0f);
             Rigidbody2D body = player.AddComponent<Rigidbody2D>();
             body.gravityScale = 0;
             body.constraints = RigidbodyConstraints2D.FreezeRotation;
-            player.AddComponent<CircleCollider2D>().radius = 0.25f;
-            PlayerController controller = player.AddComponent<PlayerController>();
-            Set(controller, "aimCamera", camera);
-            Set(controller, "playerBulletPrefab", playerBullet);
-            Transform shot = new GameObject("playerShotPos").transform;
-            shot.SetParent(player.transform, false);
-            shot.localPosition = new Vector3(0f, 0.3f, 0f);
-            Set(controller, "playerShotPos", shot);
+            player.AddComponent<CircleCollider2D>().radius = 0.65f;
+            player.AddComponent<PlayerHealth>();
+            player.AddComponent<PlayerController>();
             player.AddComponent<PlayerExperience>();
             PlayerPower power = player.AddComponent<PlayerPower>();
-            player.AddComponent<PlayerPowerShotController>().Configure(power, camera, shot, playerBullet);
-
-            Sprite playerSprite = AssetDatabase.LoadAllAssetsAtPath("Assets/Image/Player/PlayerAnimation.png")
-                .OfType<Sprite>().First(s => s.name == "PlayerAnimation_8");
-            GameObject visual = Visual("Player Visual", playerSprite, Color.white, new Vector2(3.2f, 1.8f), 100);
-            visual.transform.SetParent(player.transform, false);
-            visual.transform.localPosition = new Vector3(-0.015f, 0.665f, 0f);
-            visual.AddComponent<Animator>().runtimeAnimatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Animations/PlayerAnimation_8.controller");
-            visual.AddComponent<PlayerSpriteMotion>();
+            Transform rotatingBody = new GameObject("Rotating Body").transform;
+            rotatingBody.SetParent(player.transform, false);
+            player.AddComponent<PlayerTurretRig>().Configure(rotatingBody);
+            AttachVisual(rotatingBody, "Hull", new Color(0.16f, 0.19f, 0.3f), new Vector2(1.3f, 1.3f), 100, Vector2.zero);
+            AttachVisual(rotatingBody, "Armor", new Color(0.4f, 0.43f, 0.58f), new Vector2(1.08f, 1.08f), 101, Vector2.zero);
+            AttachVisual(rotatingBody, "Core Ring", new Color(0.2f, 0.08f, 0.38f), new Vector2(0.62f, 0.62f), 103, Vector2.zero);
+            AttachVisual(rotatingBody, "Power Core", new Color(0.65f, 0.25f, 1f), new Vector2(0.42f, 0.42f), 104, Vector2.zero);
+            for (int i = 0; i < PlayerTurretRig.TurretCount; i++)
+                CreateTower(rotatingBody, i + 1, towerBullet);
+            Transform shot = new GameObject("Power Shot Origin").transform;
+            shot.SetParent(player.transform, false);
+            player.AddComponent<PlayerPowerShotController>().Configure(power, null, shot, playerBullet);
+            player.AddComponent<PlayerAttackController>().Configure(null, player.transform, basicBullet);
+            PrefabUtility.SaveAsPrefabAsset(player, Prefabs + "Player.prefab");
 
             var systems = new GameObject("Gameplay Systems");
+            systems.AddComponent<ForwardPressureController>().Configure(camera, rearHazard, frontBarrier,
+                rearHazard.GetComponent<ThemePressureVisual>(), frontBarrier.GetComponent<ThemePressureVisual>());
             var spawner = systems.AddComponent<EnemySpawner>();
-            spawner.Configure(enemyPrefab);
-            spawner.SetEnemyCountModifier(power);
+            spawner.Configure(rangedPrefab);
             systems.AddComponent<GameplayHud>();
             EditorSceneManager.SaveScene(scene, "Assets/Scenes/inGame.unity");
             ConfigureTitle();
@@ -118,8 +156,8 @@ namespace Rushitadel.Editor
                 new EditorBuildSettingsScene("Assets/Scenes/inGame.unity", true)
             };
             EditorSettings.defaultBehaviorMode = EditorBehaviorMode.Mode2D;
-            PlayerSettings.defaultScreenWidth = 1280;
-            PlayerSettings.defaultScreenHeight = 720;
+            PlayerSettings.defaultScreenWidth = 1920;
+            PlayerSettings.defaultScreenHeight = 1080;
             AssetDatabase.SaveAssets();
             Debug.Log("RUSHITADEL_2D_BUILD_SUCCESS");
         }
@@ -136,15 +174,63 @@ namespace Rushitadel.Editor
             EditorSceneManager.SaveScene(title);
         }
 
-        private static void CreateTower(Transform root, string name, Vector2 position, float range, float damage, GameObject projectile)
+        private static BoxCollider2D CreateCliffWall(Transform parent, string name, float x)
         {
-            GameObject go = new GameObject(name);
-            go.transform.SetParent(root);
-            go.transform.position = position;
+            var wall = new GameObject(name);
+            wall.transform.SetParent(parent, false);
+            wall.transform.localPosition = new Vector3(x, 0f, 0f);
+            var collider = wall.AddComponent<BoxCollider2D>();
+            collider.size = new Vector2(0.5f, 40f);
+            collider.isTrigger = false;
+            return collider;
+        }
+
+        private static BoxCollider2D CreatePressureZone(Transform camera, string name, float depth, bool rear)
+        {
+            var root = new GameObject(name);
+            root.transform.SetParent(camera, false);
+            var box = root.AddComponent<BoxCollider2D>();
+            box.size = new Vector2(10.8f, depth);
+            box.isTrigger = rear;
+            var fill = Visual("Zone Fill", square, Color.white, box.size, 5);
+            fill.transform.SetParent(root.transform, false);
+            var details = new SpriteRenderer[16];
+            for (int i = 0; i < details.Length; i++)
+            {
+                var detail = Visual("Theme Detail " + i, square, Color.white, Vector2.one, 6);
+                detail.transform.SetParent(root.transform, false);
+                detail.transform.localPosition = new Vector3(-5.1f + i * 0.68f, rear ? depth * 0.5f - 0.22f : 0f, 0f);
+                details[i] = detail.GetComponent<SpriteRenderer>();
+            }
+            root.AddComponent<ThemePressureVisual>().Configure(fill.GetComponent<SpriteRenderer>(), details, square, circle, rear);
+            return box;
+        }
+
+        private static void CreateTower(Transform root, int slotId, GameObject projectile)
+        {
+            GameObject go = new GameObject($"T{slotId}");
+            go.transform.SetParent(root, false);
+            float angle = (slotId - 1) * 72f;
+            go.transform.localRotation = Quaternion.Euler(0f, 0f, -angle);
+            go.transform.localPosition = Quaternion.Euler(0f, 0f, -angle) * (Vector3.up * 0.55f);
+            AttachVisual(go.transform, "Mount", new Color(0.23f, 0.25f, 0.4f), new Vector2(0.32f, 0.32f), 102, Vector2.zero);
+            AttachVisual(go.transform, "Barrel", new Color(0.68f, 0.67f, 0.8f), new Vector2(0.18f, 0.46f), 103, new Vector2(0f, 0.12f));
+            AttachVisual(go.transform, "Emitter", new Color(0.64f, 0.2f, 1f), new Vector2(0.12f, 0.16f), 104, new Vector2(0f, 0.28f));
+            Transform muzzle = new GameObject("Muzzle").transform;
+            muzzle.SetParent(go.transform, false);
+            muzzle.localPosition = new Vector3(0f, 0.38f, 0f);
             var tower = go.AddComponent<TowerController>();
-            tower.Configure(go.transform, projectile);
-            Set(tower, "attackRange", range);
-            Set(tower, "damage", damage);
+            tower.Configure(muzzle, projectile);
+            var serialized = new SerializedObject(tower);
+            serialized.FindProperty("slotId").intValue = slotId;
+            serialized.ApplyModifiedPropertiesWithoutUndo();
+        }
+
+        private static void AttachVisual(Transform parent, string name, Color color, Vector2 size, int order, Vector2 offset)
+        {
+            GameObject visual = Visual(name, circle, color, size, order);
+            visual.transform.SetParent(parent, false);
+            visual.transform.localPosition = offset;
         }
 
         private static GameObject Visual(string name, Sprite sprite, Color color, Vector2 size, int order)
@@ -183,6 +269,27 @@ namespace Rushitadel.Editor
                 importer.textureType = TextureImporterType.Sprite;
                 importer.spritePixelsPerUnit = 32;
                 importer.alphaIsTransparency = true;
+                importer.SaveAndReimport();
+            }
+            return AssetDatabase.LoadAssetAtPath<Sprite>(path);
+        }
+
+        private static Sprite CreateSquare()
+        {
+            const string path = "Assets/Generated/Solid.png";
+            if (!File.Exists(path))
+            {
+                var texture = new Texture2D(1, 1);
+                texture.SetPixel(0, 0, Color.white);
+                texture.Apply();
+                File.WriteAllBytes(path, texture.EncodeToPNG());
+                Object.DestroyImmediate(texture);
+                AssetDatabase.ImportAsset(path);
+                var importer = (TextureImporter)AssetImporter.GetAtPath(path);
+                importer.textureType = TextureImporterType.Sprite;
+                importer.spritePixelsPerUnit = 1;
+                importer.filterMode = FilterMode.Point;
+                importer.textureCompression = TextureImporterCompression.Uncompressed;
                 importer.SaveAndReimport();
             }
             return AssetDatabase.LoadAssetAtPath<Sprite>(path);

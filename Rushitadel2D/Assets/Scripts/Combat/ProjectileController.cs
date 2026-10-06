@@ -1,92 +1,114 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Rushitadel.Combat
 {
+    /// <summary>Non-homing shell. Hits the first enemy or destructible hostile projectile.</summary>
     public sealed class ProjectileController : ProjectileBehaviour
     {
         [SerializeField, Min(0f)] private float speed = 10f;
-        [SerializeField, Min(0f)] private float hitDistance = 0.2f;
+        [FormerlySerializedAs("hitDistance")]
+        [SerializeField, Min(0f)] private float collisionRadius = 0.2f;
         [SerializeField, Min(0.1f)] private float lifetime = 5f;
-
-        private EnemyController target;
+        private readonly List<RaycastHit2D> hits = new();
+        private Vector3 direction;
         private float damage;
+        private float remainingDistance;
         private float remainingLifetime;
-        private Vector3 rangeCenter;
-        private float attackRange;
-        private Vector3 lastTargetPosition;
-        private bool isFlyingToLastPosition;
+        private bool flying;
+        private CircleCollider2D hitbox;
+        private readonly HashSet<IDamageable> damaged = new();
+        private int extraHits;
+        private bool splash, poison;
+        public bool CanHit(IDamageable target) => flying && !damaged.Contains(target);
+        public void SetModifiers(int pierce, bool explosion, bool toxin) { extraHits = pierce; splash = explosion; poison = toxin; }
+        public bool IsFlying => flying;
+        public Vector3 Direction => direction;
+        public float DistanceTravelled { get; private set; }
 
-        public void Launch(
-            EnemyController newTarget,
-            float newDamage,
-            Vector3 newRangeCenter,
-            float newAttackRange)
+        public void Launch(Vector3 newDirection, float newDamage, float maximumDistance)
         {
-            target = newTarget;
-            damage = newDamage;
-            rangeCenter = newRangeCenter;
-            attackRange = newAttackRange;
-            lastTargetPosition = newTarget != null ? newTarget.transform.position : transform.position;
-            isFlyingToLastPosition = false;
+            newDirection.z = 0f;
+            direction = newDirection.sqrMagnitude > 0f ? newDirection.normalized : Vector3.up;
+            damage = Mathf.Max(0f, newDamage);
+            remainingDistance = Mathf.Max(0f, maximumDistance);
             remainingLifetime = lifetime;
-
+            DistanceTravelled = 0f;
+            flying = true;
+            hitbox = GetComponent<CircleCollider2D>();
+            if (hitbox == null) hitbox = gameObject.AddComponent<CircleCollider2D>();
+            hitbox.isTrigger = true;
+            hitbox.radius = collisionRadius / Mathf.Max(0.0001f,
+                Mathf.Max(Mathf.Abs(transform.lossyScale.x), Mathf.Abs(transform.lossyScale.y)));
             PrepareBody();
+            FaceDirection(direction);
         }
 
         private void Update()
         {
+            if (!flying || Time.timeScale <= 0f) return;
             remainingLifetime -= Time.deltaTime;
-            if (remainingLifetime <= 0f)
+            if (remainingLifetime <= 0f || remainingDistance <= 0f)
             {
-                Destroy(gameObject);
+                Finish();
                 return;
             }
 
-            if (!IsValidTarget(target))
+            float step = Mathf.Min(speed * Time.deltaTime, remainingDistance);
+            Vector3 start = transform.position;
+            // Enemy movement is transform-driven. Synchronize before the swept collision query.
+            Physics2D.SyncTransforms();
+            hits.Clear();
+            Physics2D.CircleCast(start, collisionRadius, direction,
+                new ContactFilter2D { useTriggers = true }, hits, step);
+            IDamageable first = null;
+            float closestDistance = float.PositiveInfinity;
+            foreach (RaycastHit2D hit in hits)
             {
-                target = EnemyRegistry.FindClosest(rangeCenter, attackRange);
-                if (target == null)
-                {
-                    isFlyingToLastPosition = true;
-                }
-                else
-                {
-                    isFlyingToLastPosition = false;
-                }
+                var enemy = hit.collider.GetComponentInParent<EnemyController>();
+                var bullet = hit.collider.GetComponentInParent<EnemyProjectileController>();
+                IDamageable candidate = enemy != null && enemy.isActiveAndEnabled ? enemy :
+                    bullet != null && bullet.isActiveAndEnabled ? bullet : null;
+                if (candidate == null || !candidate.IsAlive || !CanHit(candidate) || hit.distance >= closestDistance) continue;
+                first = candidate;
+                closestDistance = hit.distance;
             }
 
-            if (!isFlyingToLastPosition)
+            float travelled = first != null ? closestDistance : step;
+            transform.position = start + direction * travelled;
+            DistanceTravelled += travelled;
+            remainingDistance = Mathf.Max(0f, remainingDistance - travelled);
+            if (first != null)
             {
-                lastTargetPosition = target.transform.position;
+                Hit(first);
             }
-
-            Vector3 destination = isFlyingToLastPosition ? lastTargetPosition : target.transform.position;
-            Vector3 offset = destination - transform.position;
-            float step = speed * Time.deltaTime;
-            if (offset.sqrMagnitude <= Mathf.Max(hitDistance * hitDistance, step * step))
-            {
-                if (!isFlyingToLastPosition && target != null && target.IsAlive)
-                {
-                    ApplyDamage(target, damage);
-                }
-
-                Destroy(gameObject);
-                return;
-            }
-
-            transform.position += offset.normalized * step;
-            FaceDirection(offset);
+            else if (remainingDistance <= 0f) Finish();
         }
 
-        private bool IsValidTarget(EnemyController candidate)
+        public void Hit(IDamageable target)
         {
-            if (candidate == null || !candidate.IsAlive)
+            if (!flying || target == null || !target.IsAlive || !CanHit(target)) return;
+            damaged.Add(target);
+            ApplyDamage(target, damage);
+            if (target is EnemyController enemy && enemy != null && enemy.IsAlive && poison)
             {
-                return false;
+                var effect = enemy.GetComponent<Rushitadel.Progression.PoisonEffect>();
+                if (effect == null) effect = enemy.gameObject.AddComponent<Rushitadel.Progression.PoisonEffect>();
+                effect.Refresh();
             }
+            if (splash)
+                foreach (var other in EnemyRegistry.FindAllWithinRadius(transform.position, .8f))
+                    if (other != null && other.IsAlive && !ReferenceEquals(other, target) && Vector2.Distance(other.transform.position, transform.position) <= .8f)
+                        other.TakeDamage(damage * .5f);
+            if (extraHits-- <= 0) Finish();
+        }
 
-            float rangeSquared = attackRange * attackRange;
-            return (candidate.transform.position - rangeCenter).sqrMagnitude <= rangeSquared;
+        private void Finish()
+        {
+            flying = false;
+            if (hitbox != null) hitbox.enabled = false;
+            Destroy(gameObject);
         }
     }
 }
