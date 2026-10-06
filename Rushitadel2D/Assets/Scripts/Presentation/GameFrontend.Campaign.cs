@@ -17,7 +17,7 @@ namespace Rushitadel.Presentation
         private int nextThemeSelection = -1;
         public void ShowBattle()
         {
-            NewPage("game", false); Time.timeScale = 1;
+            NewPage("game", false); Time.timeScale = IsTransitioning ? 0 : 1;
             var campaign = CampaignDirector.Instance;
             if (campaign == null) return;
             var top = Image(content, "Progress strip", 355, 15, 1210, 65, panel);
@@ -57,7 +57,7 @@ namespace Rushitadel.Presentation
             hpFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(260*h.NormalizedHealth),10);
             powerFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(260*p.NormalizedPower),10);
             xpFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(260*e.NormalizedGauge),10);
-            for (int i = 0; i < 5; i++) turretText[i].text = $"T{i+1}  화력 {d.State.augments[i*3]} · 속도 {d.State.augments[i*3+1]}\n관통 {d.State.augments[i*3+2]}";
+            for (int i = 0; i < 5; i++) turretText[i].text = $"T{i+1} {Rushitadel.Combat.TurretForms.Names[d.State.turretForms[i]]}\n화력 {d.State.augments[i*3]} · 속도 {d.State.augments[i*3+1]}";
             bool alive = d.Boss != null && d.Boss.Health.IsAlive && d.State.phase == RunPhase.Boss;
             bossFill.gameObject.SetActive(alive);
             bossText.text = alive ? $"절벽 감시자 {d.Stage}  {d.Boss.Health.CurrentHealth:0}/{d.Boss.Health.MaximumHealth:0}  {d.Boss.PatternLabel}" : "다음 위협: 절벽 좌·우 사격";
@@ -85,12 +85,13 @@ namespace Rushitadel.Presentation
             {
                 int kind = i; int rank = CampaignDirector.Rank(augmentSlot, kind);
                 Button(p, (augmentChoice == i ? "▶ 선택\n" : "") + CampaignDirector.AugmentNames[i] + $"\n\nT{augmentSlot} · 일반\n" + CampaignDirector.AugmentEffects[i] + $"\n현재 {rank} → {rank+1}",
-                    45+i*380, 280, 350, 285, () => { augmentChoice = kind; ShowAugments(); });
+                    45+i*380, 280, 350, 285, () => { augmentChoice = kind; ShowAugments(); },d.CanChooseStat(augmentSlot,kind));
             }
-            Label(p, "포탑은 정면 사격을 유지합니다. 증강은 선택한 T번호에만 적용됩니다.", 60, 615, 1080, 55, 24);
+            Label(p, "선택한 T번호에 적용 · 해당 변형에 효과가 없는 일반 강화는 선택할 수 없습니다.", 60, 615, 1080, 55, 24);
+            Button(p,"변형 포탑 선택",60,735,350,75,ShowTransformations);
             Button(p, "선택 확정", 780, 735, 350, 75, () => {
                 if (d.ChooseAugment(augmentSlot, augmentChoice)) { augmentChoice = -1; d.ReopenPage(); }
-            }, augmentChoice >= 0);
+            }, augmentChoice >= 0&&d.CanChooseStat(augmentSlot,augmentChoice));
             back = ShowPause;
         }
         public void ShowMaintenance()
@@ -124,6 +125,7 @@ namespace Rushitadel.Presentation
                     () => { webSelection = id; ShowMaintenance(); });
             }
             Label(p, "시작 연결: 관통 / 동력 / 지원\n관통 → 분산 → 폭발 → 독", 55, 620, 745, 70, 23);
+            Button(p,"플레이어 속성 발광",55,710,510,45,ShowElementSelection);
             if (webSelection >= 0)
             {
                 int id = webSelection;
@@ -159,7 +161,7 @@ namespace Rushitadel.Presentation
         private void ShowTurret(int slot)
         {
             Time.timeScale = 0; var d = CampaignDirector.Instance;
-            Confirm($"T{slot} · 보유 증강\n화력 {CampaignDirector.Rank(slot,0)} / 속도 {CampaignDirector.Rank(slot,1)} / 관통 {CampaignDirector.Rank(slot,2)}\n레벨업 시 추가 증강을 선택합니다.", d.ReopenPage, d.ReopenPage);
+            Confirm($"T{slot} · {Rushitadel.Combat.TurretForms.Names[CampaignDirector.Form(slot)]}\n화력 {CampaignDirector.Rank(slot,0)} / 속도 {CampaignDirector.Rank(slot,1)} / 관통 {CampaignDirector.Rank(slot,2)}\n변형은 고유 타격 상한을 사용합니다.\n레벨업 시 추가 증강을 선택합니다.", d.ReopenPage, d.ReopenPage);
         }
     }
 }

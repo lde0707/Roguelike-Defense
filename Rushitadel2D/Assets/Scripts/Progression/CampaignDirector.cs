@@ -17,6 +17,8 @@ namespace Rushitadel.Progression
         public RunPhase phase;
         public int spentXp, augmentsChosen, defeatedBosses, kills, usedThemes;
         public int[] augments = new int[15]; // T1..T5, damage / cadence / penetration
+        public int[] turretForms = new int[5];
+        public int transformationsChosen, element;
         public bool[] web = new bool[6];
         public int[] themeChoices = new int[2];
         public bool recovered;
@@ -47,6 +49,7 @@ namespace Rushitadel.Progression
         public void Initialize(RunData data)
         {
             Instance = this; State = data.campaign ?? new CampaignState(); Stage = data.stage; Round = data.wave;
+            if (State.turretForms == null || State.turretForms.Length != 5) State.turretForms = new int[5];
             State.usedThemes |= 1 << data.theme;
             spawner = FindFirstObjectByType<EnemySpawner>(); spawner.TakeCampaignControl();
             Initialized = true; ApplyBuild();
@@ -56,7 +59,37 @@ namespace Rushitadel.Progression
             else if (State.phase == RunPhase.Boss) BeginBoss();
             else ReopenPage();
         }
-        public void ApplyBuild() => PlayerHealth.Instance.SetMaximumHealth(HasWeb(5) ? 125 : 100);
+        public void ApplyBuild()
+        {
+            PlayerHealth.Instance.SetMaximumHealth(HasWeb(5) ? 125 : 100);
+            var art = PlayerHealth.Instance.GetComponent<Rushitadel.Presentation.ModularPlayerArt>();
+            if (art == null) art = PlayerHealth.Instance.gameObject.AddComponent<Rushitadel.Presentation.ModularPlayerArt>();
+            art.Refresh();
+        }
+        public static int Form(int slot) => Instance != null && Instance.Initialized ? Instance.State.turretForms[Mathf.Clamp(slot,1,5)-1] : 0;
+        public bool CanTransform(int slot, int form)
+        {
+            if (slot < 1 || slot > 5 || form < 1 || form > 16 || State.turretForms[slot-1] == form) return false;
+            for(int i=0;i<5;i++) if(i!=slot-1 && TurretForms.Support(form) && TurretForms.Support(State.turretForms[i])) return false;
+            return true;
+        }
+        public int[] OfferedForms(int slot)
+        {
+            // Stable for this level-up: reopening the menu does not reroll the offer.
+            var session=FindAnyObjectByType<RunSession>();int seed=session!=null?session.Seed:1;
+            var random=new System.Random(unchecked(seed*397+State.augmentsChosen*31+slot));
+            return Enumerable.Range(1,16).Where(f=>CanTransform(slot,f)).OrderBy(_=>random.Next()).Take(3).ToArray();
+        }
+        public bool ChooseTransformation(int slot,int form)
+        {
+            if(PendingAugments<=0 || !PlayerHealth.Instance.IsAlive || !CanTransform(slot,form))return false;
+            State.turretForms[slot-1]=form; State.transformationsChosen++; State.augmentsChosen++; ApplyBuild(); return true;
+        }
+        public bool SetElement(int element)
+        {
+            if(State.phase!=RunPhase.Maintenance || !State.recovered || element<0 || element>=TurretForms.ElementNames.Length)return false;
+            State.element=element; ApplyBuild(); SaveCheckpoint("안전 정비 · 속성 색상"); return true;
+        }
         private void OnDestroy()
         {
             if (PlayerHealth.Instance != null) PlayerHealth.Instance.Died -= Defeat;
@@ -118,8 +151,14 @@ namespace Rushitadel.Progression
         public bool ChooseAugment(int slot, int kind)
         {
             if (PendingAugments <= 0 || slot < 1 || slot > 5 || kind < 0 || kind > 2 || !PlayerHealth.Instance.IsAlive) return false;
+            if(!CanChooseStat(slot,kind))return false;
             State.augments[(slot-1)*3+kind]++; State.augmentsChosen++;
             return true;
+        }
+        public bool CanChooseStat(int slot,int kind)
+        {
+            int f=Form(slot);
+            return !(kind==2&&f>0 || kind==0&&TurretForms.Support(f) || kind==1&&f==6);
         }
         public bool CanBuy(int id, out string reason)
         {

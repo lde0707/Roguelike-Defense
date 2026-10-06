@@ -48,6 +48,25 @@ namespace Rushitadel.Presentation
             Check(SceneManager.GetActiveScene().name == "Title" && ui.CurrentPage == "title", "Editor Play begins at title");
             Check(!Find("ContinueButton").interactable, "Continue disabled without a valid save");
             Capture("title-default.png");
+            var background = GameObject.Find("Background").GetComponent<Image>();
+            float scrollBefore = background.material.GetFloat("_Scroll");
+            Vector2 buttonPosition = Find("StartButton").GetComponent<RectTransform>().anchoredPosition;
+            Time.timeScale = 0;
+            yield return new WaitForSecondsRealtime(.3f);
+            Check(background.material.GetFloat("_Scroll") > scrollBefore && Find("StartButton").GetComponent<RectTransform>().anchoredPosition == buttonPosition,
+                "Title background scrolls with unscaled time while buttons stay fixed");
+            Time.timeScale = 1;
+            Check(background.material != Find("StartButton").GetComponent<Image>().material,
+                "Cursor inversion excludes background and has no raycast overlay");
+            Capture("title-cursor-off.png");
+            Capture("title-cursor-inversion.png", new Vector2(960, 692));
+            var beforeLens = new Texture2D(2,2); beforeLens.LoadImage(File.ReadAllBytes(Path.Combine(output,"title-cursor-off.png")));
+            var afterLens = new Texture2D(2,2); afterLens.LoadImage(File.ReadAllBytes(Path.Combine(output,"title-cursor-inversion.png")));
+            Check(Vector4.Distance(beforeLens.GetPixel(960,692), afterLens.GetPixel(960,692)) > .3f,
+                "Rendered UI pixel changes color inside cursor circle");
+            Check(Vector4.Distance(beforeLens.GetPixel(1180,692), afterLens.GetPixel(1180,692)) < .02f,
+                "Rendered UI pixel outside cursor circle stays unchanged");
+            Destroy(beforeLens); Destroy(afterLens);
             foreach (var id in new[] {"Start", "Continue", "Settings", "Quit"})
             {
                 var button = Find(id + "Button");
@@ -64,6 +83,31 @@ namespace Rushitadel.Presentation
             Capture("quit-confirm.png"); Click("취소 Button"); yield return null;
             Check(ui.CurrentPage == "title", "Quit cancellation stays on title");
             Click("SettingsButton"); yield return null; Capture("settings-display.png");
+            var displayDraft = (SettingsData)typeof(GameFrontend).GetField("draft", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(ui);
+            var screenModes = new[] {"전체 화면", "테두리 없는 전체 화면", "창 모드"};
+            int oldMode = displayDraft.mode;
+            Click(screenModes[oldMode] + "  ▶ Button"); yield return null;
+            Check(displayDraft.mode == (oldMode + 1) % 3 && FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).Length == 0,
+                "Three-option setting retains click cycling");
+            Click(displayDraft.width + " × " + displayDraft.height + "  ▼ Button"); yield return null;
+            var list = FindFirstObjectByType<ScrollRect>();
+            Check(list != null && list.content.childCount == 5, "Resolution dropdown contains five curated choices");
+            Check(list.content.GetComponentsInChildren<Text>().Any(t => t.text.Contains("2560 × 1440")) &&
+                list.content.GetComponentsInChildren<Text>().Any(t => t.text.Contains("3840 × 2160")), "QHD and 4K offered");
+            float beforeScroll = list.verticalNormalizedPosition;
+            ExecuteEvents.Execute(list.gameObject, new PointerEventData(EventSystem.current) {scrollDelta = new Vector2(0, -1)}, ExecuteEvents.scrollHandler);
+            yield return null;
+            Check(list.verticalNormalizedPosition < beforeScroll, "Mouse wheel scrolls dropdown");
+            list.verticalScrollbar.value = 0; yield return null;
+            Check(list.verticalNormalizedPosition < .01f, "Scrollbar moves list to bottom");
+            Capture("settings-resolution-dropdown.png");
+            Click("3840 × 2160 Button"); yield return null;
+            Check(displayDraft.width == 3840 && displayDraft.height == 2160 && GameSettings.Saved.width != 3840,
+                "Dropdown selection changes draft only");
+            Click((displayDraft.fps < 0 ? "제한 없음" : displayDraft.fps.ToString()) + "  ▼ Button"); yield return null;
+            Check(FindFirstObjectByType<ScrollRect>() != null, "FPS uses scrollable dropdown");
+            GameObject.Find("Dropdown Dismiss").GetComponent<Button>().onClick.Invoke(); yield return null;
+            Check(FindFirstObjectByType<ScrollRect>() == null, "Click outside closes dropdown without selection");
             Click("사운드 Button"); yield return null;
             var sliders = FindObjectsByType<Slider>(FindObjectsSortMode.None);
             Check(sliders.Length == 3, "Three independent audio sliders");
@@ -92,8 +136,34 @@ namespace Rushitadel.Presentation
             Check(!Find("선택 확정 · 시작 Button").interactable, "Theme confirmation disabled until selection");
             FindObjectsByType<Button>(FindObjectsSortMode.None).First(b => b.GetComponent<RectTransform>().sizeDelta.y == 250).onClick.Invoke();
             yield return null; Capture("theme-select.png"); Click("선택 확정 · 시작 Button");
-            yield return new WaitForSecondsRealtime(1);
+            Check(GameFrontend.IsTransitioning && GameFrontend.BlocksGameplay && Time.timeScale == 0, "Shutter immediately blocks input and simulation");
+            typeof(GameFrontend).GetMethod("Load", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(ui, new object[] {"Title"});
+            yield return new WaitForSecondsRealtime(.12f);
+            Capture("shutter-closing.png");
+            yield return WaitForTransition();
+            Check(Time.timeScale == 1 && GameObject.Find("Dot Shutter") == null, "Shutter cleaned up and combat resumes after opening");
             Check(SceneManager.GetActiveScene().name == "inGame" && PlayerHealth.Instance.IsAlive, "New run loads gameplay");
+            Check(FindObjectsByType<TowerController>(FindObjectsSortMode.None).All(t => Mathf.Approximately(t.AttackRange, 3f)), "All five scene turrets have three-unit range");
+            foreach (var asset in new[] {"towerProjectile", "playerBasicProjectile", "enemyProjectile"})
+            {
+                var prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/" + asset + ".prefab");
+                Check(prefab != null, "Projectile prefab exists: " + asset);
+                var shot = Instantiate(prefab, new Vector3(100,100,0), Quaternion.identity);
+                Check(Vector3.Distance(shot.transform.localScale, prefab.transform.localScale * 1.2f) < .0001f,
+                    "Projectile visual enlarged twenty percent: " + asset);
+                Destroy(shot);
+            }
+            var areaPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/playerProjectile.prefab");
+            var area = Instantiate(areaPrefab, new Vector3(100,100,0), Quaternion.identity).GetComponent<PlayerProjectileController>();
+            area.LaunchArea(Vector3.up, new Vector3(100,101,0), 1f);
+            Check(Mathf.Approximately(area.transform.localScale.x, 2.4f) && Mathf.Approximately(area.ImpactRadius, 1f),
+                "Area projectile enlarged while damage radius stays unchanged");
+            Destroy(area.gameObject);
+            var rangePrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/towerProjectile.prefab");
+            var rangeShot = Instantiate(rangePrefab, new Vector3(100,100,0), Quaternion.identity).GetComponent<ProjectileController>();
+            rangeShot.Launch(Vector3.up, 1, 3);
+            yield return new WaitForSeconds(.4f);
+            Check(rangeShot == null && Mathf.Approximately(rangeShot.DistanceTravelled, 3f), "Turret shot stops at exactly three units");
             Check(RunStore.Read(1, out var saved, out _), "Theme confirmation writes slot atomically");
             var spawner = FindFirstObjectByType<EnemySpawner>(); spawner.enabled = false;
             foreach (var enemy in EnemyRegistry.ActiveEnemies.ToArray()) Destroy(enemy.gameObject);
@@ -107,12 +177,12 @@ namespace Rushitadel.Presentation
             Check(Time.timeScale == 0, "Pause freezes simulation");
             Click("설정 Button"); yield return null; Click("취소 Button"); yield return null;
             Check(ui.CurrentPage == "pause" && Time.timeScale == 0, "Settings returns to paused game");
-            Click("타이틀로 Button"); yield return null; Click("확인 Button"); yield return new WaitForSecondsRealtime(0.5f);
+            Click("타이틀로 Button"); yield return null; Click("확인 Button"); yield return WaitForTransition();
             Check(Find("ContinueButton").interactable, "Continue enabled with valid checkpoint");
             ExecuteEvents.Execute(Find("ContinueButton").gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerEnterHandler);
             yield return null; Capture("hover-Continue.png");
             Click("ContinueButton"); yield return null; Capture("slots-saved.png");
-            Click("불러오기 Button"); yield return new WaitForSecondsRealtime(0.4f);
+            Click("불러오기 Button"); yield return WaitForTransition();
             Check(PlayerHealth.Instance.CurrentHealth == 75 && PlayerHealth.Instance.GetComponent<PlayerExperience>().TotalExperience == 47, "Continue restores HP and XP");
             ui.ShowPause(); yield return null;
             SceneManager.LoadScene("Title"); yield return new WaitForSecondsRealtime(0.4f);
@@ -134,7 +204,7 @@ namespace Rushitadel.Presentation
             PlayerPrefs.DeleteKey(GameSettings.StorageKey); PlayerPrefs.Save();
             Debug.Log("RUSHITADEL_TITLE_UI_VALIDATION_SUCCESS"); EditorApplication.Exit(0);
         }
-        private void Capture(string filename)
+        private void Capture(string filename, Vector2? cursor = null)
         {
             if (SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Null) return;
             var canvas = GameFrontend.Instance.GetComponentInChildren<Canvas>();
@@ -144,7 +214,16 @@ namespace Rushitadel.Presentation
             var oldTarget = camera.targetTexture;
             camera.targetTexture = target;
             canvas.renderMode = RenderMode.ScreenSpaceCamera; canvas.worldCamera = camera; canvas.planeDistance = 1;
+            var shutter = GameObject.Find("Dot Shutter")?.GetComponent<Canvas>();
+            if (shutter != null) { shutter.renderMode = RenderMode.ScreenSpaceCamera; shutter.worldCamera = camera; shutter.planeDistance = .5f; }
             Canvas.ForceUpdateCanvases();
+            if (shutter != null)
+            {
+                var amount = typeof(GameFrontend).GetField("shutterAmount", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(GameFrontend.Instance);
+                typeof(GameFrontend).GetMethod("SetShutter", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(GameFrontend.Instance, new[] {amount});
+            }
+            typeof(GameFrontend).GetMethod("SetTitleCursor", BindingFlags.NonPublic | BindingFlags.Instance)
+                .Invoke(GameFrontend.Instance, new object[] {cursor ?? Vector2.zero, cursor.HasValue});
             var previous = RenderTexture.active;
             UnityEngine.Rendering.RenderPipeline.SubmitRenderRequest(camera,
                 new UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest {destination = target});
@@ -153,7 +232,27 @@ namespace Rushitadel.Presentation
             texture.ReadPixels(new Rect(0,0,1920,1080),0,0); texture.Apply();
             File.WriteAllBytes(Path.Combine(output, filename), texture.EncodeToPNG());
             RenderTexture.active = previous; camera.targetTexture = oldTarget; canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            if (shutter != null) shutter.renderMode = RenderMode.ScreenSpaceOverlay;
             Destroy(texture); Destroy(target);
+        }
+        private IEnumerator WaitForTransition()
+        {
+            float timeout = Time.realtimeSinceStartup + 20;
+            bool capturedOpening = false;
+            while (GameFrontend.IsTransitioning)
+            {
+                Check(Time.timeScale == 0, "Simulation remains frozen throughout shutter");
+                if (!capturedOpening && SceneManager.GetActiveScene().name == "inGame" && CampaignDirector.Instance != null && CampaignDirector.Instance.Initialized)
+                {
+                    capturedOpening = true;
+                    yield return new WaitForSecondsRealtime(.22f);
+                    Check(Time.timeScale == 0 && GameFrontend.IsTransitioning, "Gameplay stays frozen while scene is revealed");
+                    Capture("shutter-opening.png");
+                }
+                if (Time.realtimeSinceStartup > timeout) throw new Exception("Transition timed out");
+                yield return null;
+            }
+            yield return null;
         }
     }
 }

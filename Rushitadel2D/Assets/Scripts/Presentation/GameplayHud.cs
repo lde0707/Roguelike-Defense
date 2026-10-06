@@ -16,7 +16,7 @@ namespace Rushitadel.Presentation
         public bool Paused { get; private set; }
         private void Awake()
         {
-            Time.timeScale = 1f;
+            Time.timeScale = GameFrontend.IsTransitioning ? 0f : 1f;
             health = FindFirstObjectByType<PlayerHealth>();
             power = FindFirstObjectByType<PlayerPower>();
             experience = FindFirstObjectByType<PlayerExperience>();
@@ -30,9 +30,9 @@ namespace Rushitadel.Presentation
         {
             if (health != null && !health.IsAlive) return;
             Paused = value;
-            Time.timeScale = value ? 0f : 1f;
+            Time.timeScale = value || GameFrontend.IsTransitioning ? 0f : 1f;
         }
-        private void OnDestroy() => Time.timeScale = 1f;
+        private void OnDestroy() => Time.timeScale = GameFrontend.IsTransitioning ? 0f : 1f;
         private void OnGUI()
         {
             if (CampaignDirector.Instance != null) return;
@@ -50,7 +50,7 @@ namespace Rushitadel.Presentation
             GUI.Label(new Rect(30, 136, 300, 24), "ATTACHED TURRETS:  T1  T2  T3  T4  T5");
             if (power != null)
                 GUI.Label(new Rect(30, 164, 310, 24), $"RMB: {power.MaximumPower * 0.7f:0} POWER (70%) / INNER 30% KILL");
-            GUI.Box(new Rect(125, 675, 1030, 30), "WASD: Move   Left click: Aim/fire   Turrets: Forward (5 units)   Right click: Area shot + recoil   ESC: Pause");
+            GUI.Box(new Rect(125, 675, 1030, 30), "WASD: Move   Left click: Aim/fire   Turrets: Forward (3 units)   Right click: Area shot + recoil   ESC: Pause");
             var pressure = ForwardPressureController.Instance;
             if (pressure != null)
             {

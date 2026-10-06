@@ -1,0 +1,218 @@
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+namespace Rushitadel.Combat
+{
+    // World-space attacks. No projectile follows the rotating muzzle after launch.
+    public sealed class TransformationShot : ProjectileBehaviour
+    {
+        private static readonly List<TransformationShot> live=new();
+        private static int serial;
+        private static Sprite pixel;
+        private static Material effectMaterial;
+        private static Material EffectMaterial=>effectMaterial!=null?effectMaterial:effectMaterial=new Material(Shader.Find("Sprites/Default"));
+        private readonly HashSet<Component> hitIds=new();
+        private readonly HashSet<int> gateIds=new();
+        private Dictionary<Component,int> pelletHits;
+        private Vector2 origin,heading;
+        private float factor=1,life=2,travel,nextTick,budget=45;
+        private int form,slot,id,hitCount,ticks;
+        private bool finished,returning,derived,processedGate,fragment,wasAttached;
+        private Vector2 gateOrigin;
+        private bool hasGateOrigin;
+        private EnemyProjectileController attached;
+        private Color tint;
+        private SpriteRenderer sprite;
+        private CircleCollider2D hitbox;
+        public int Form => form;
+        public bool CanHit(EnemyProjectileController b)=>!finished && !Stationary && !wasAttached && (form!=9||hitCount<3) && b!=null && b.IsAlive && !hitIds.Contains(b) && (pelletHits==null || !pelletHits.TryGetValue(b,out int n) || n<(form==2?2:1));
+        private bool Stationary=>form==6||form==8||form==10||form==11||form==13||form==14||form==15;
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]private static void Reset(){live.Clear();serial=0;pixel=null;}
+        public static void Fire(int form,Vector2 position,Vector2 direction,float factor,int slot,Color tint)
+        {
+            int id=++serial, count=form==2?7:form==7?3:1;
+            var shared=form==2||form==7?new Dictionary<Component,int>():null;
+            for(int i=0;i<count;i++)
+            {
+                float angle=count==1?0:Mathf.Lerp(form==2?-30:-20,form==2?30:20,i/(float)(count-1));
+                Create(form,position,Quaternion.Euler(0,0,angle)*direction,factor,slot,tint,id,shared);
+            }
+        }
+        private static TransformationShot Create(int f,Vector2 p,Vector2 d,float power,int slot,Color c,int id,Dictionary<Component,int> pellets=null)
+        {
+            var go=new GameObject("ROT-"+f.ToString("00")+" shot");go.transform.position=p;
+            var shot=go.AddComponent<TransformationShot>();shot.form=f;shot.origin=p;shot.heading=d.normalized;shot.factor=power;shot.slot=slot;shot.tint=c;shot.id=id;shot.pelletHits=pellets;shot.budget=45*power;
+            shot.sprite=go.AddComponent<SpriteRenderer>();shot.sprite.sprite=Glyph;shot.sprite.sharedMaterial=EffectMaterial;shot.sprite.color=c;shot.sprite.sortingOrder=110;
+            shot.transform.localScale=f==4?new Vector3(.4f,.4f,1):f==3?new Vector3(.18f,.28f,1):new Vector3(.13f,.22f,1);
+            shot.FaceDirection(d);
+            if(shot.Stationary)
+            {
+                float reach=f==10?1.4f:f==13?1.6f:1.2f;
+                if(f!=6 && f!=11)go.transform.position=p+d*reach;
+                shot.life=f==8?1.2f:f==14?1:f==10?.8f:f==13||f==15?.7f:.08f;
+                shot.transform.localScale=f==8||f==14?new Vector3(.8f,.08f,1):f==10?new Vector3(.6f,.6f,1):f==13?new Vector3(1,.10f,1):f==15?new Vector3(.7f,.18f,1):new Vector3(.8f,.16f,1);
+                int cap=f==8||f==10?2:1;
+                var old=live.Where(x=>x!=null&&!x.finished&&x.form==f&&x.slot==slot).ToArray();
+                for(int i=0;i<=old.Length-cap;i++)old[i].Finish();
+            }
+            else {shot.hitbox=go.AddComponent<CircleCollider2D>();shot.hitbox.isTrigger=true;shot.hitbox.radius=.5f;}
+            shot.Decorate();live.Add(shot);return shot;
+        }
+        private void Decorate()
+        {
+            if(form==6||form==11)
+            {
+                sprite.enabled=false;float radius=form==6?1.8f:2,angle=form==6?22.5f:27.5f;
+                if(form==11)
+                {
+                    for(int ring=0;ring<3;ring++)
+                    {
+                        var points=new Vector2[9];for(int i=0;i<9;i++)points[i]=(Vector2)(Quaternion.Euler(0,0,Mathf.Lerp(-angle,angle,i/8f))*Vector2.up)*(radius-ring*.22f);
+                        DrawEffectLine(points,.025f);
+                    }
+                }
+                else for(int ray=0;ray<7;ray++)
+                {
+                    Vector2 d=Quaternion.Euler(0,0,Mathf.Lerp(-angle,angle,ray/6f))*Vector2.up;
+                    for(int piece=0;piece<3;piece++){float r=.3f+piece*.5f+(ray%2)*.1f;DrawEffectLine(new[]{d*r,d*(r+.18f)},.04f);}
+                }
+            }
+            else if(form==8||form==14||form==13||form==15)
+            {
+                sprite.enabled=false;float width=form==13?1:form==15?.7f:.8f;
+                DrawEffectLine(new[]{new Vector2(-width/2,-.12f),new Vector2(-width/2,.12f),new Vector2(width/2,.12f),new Vector2(width/2,-.12f)},.045f);
+                DrawEffectLine(new[]{new Vector2(-width/2,0),new Vector2(width/2,0)},.025f);
+                if(form==13||form==15)for(int i=0;i<5;i++){float x=Mathf.Lerp(-width/2,width/2,i/4f);DrawEffectLine(new[]{new Vector2(x,-.12f),new Vector2(x,.12f)},.025f);}
+            }
+            else if(form==4||form==10||form==9)
+            {
+                sprite.enabled=false;
+                if(form==9){DrawEffectLine(new[]{new Vector2(-.17f,.12f),new Vector2(0,-.1f),new Vector2(.17f,.12f)},.045f);return;}
+                int sides=12;float radius=form==10?.3f:.2f;
+                var points=new Vector2[sides+1];for(int i=0;i<=sides;i++){float angle=i*Mathf.PI*2/sides;float r=radius*(i%2==0?1:.75f);points[i]=new Vector2(Mathf.Cos(angle),Mathf.Sin(angle))*r;}
+                DrawEffectLine(points,.035f);
+            }
+        }
+        private void DrawEffectLine(Vector2[] points,float width)
+        {
+            var go=new GameObject("Pixel effect outline");go.transform.SetParent(transform,false);
+            // Cancel sprite scale, but preserve the shot's launch rotation.
+            go.transform.localScale=new Vector3(1/transform.localScale.x,1/transform.localScale.y,1);
+            var line=go.AddComponent<LineRenderer>();line.useWorldSpace=false;line.positionCount=points.Length;line.widthMultiplier=width;
+            line.sharedMaterial=EffectMaterial;line.startColor=line.endColor=new Color(tint.r,tint.g,tint.b,.7f);line.sortingOrder=111;
+            for(int i=0;i<points.Length;i++)line.SetPosition(i,new Vector3(Mathf.Round(points[i].x*32)/32,Mathf.Round(points[i].y*32)/32,0));
+        }
+        public static Sprite Glyph
+        {
+            get{if(pixel!=null)return pixel;var t=new Texture2D(5,5,TextureFormat.RGBA32,false){filterMode=FilterMode.Point};var p=new Color[25];for(int y=0;y<5;y++)for(int x=0;x<5;x++)p[y*5+x]=(x==0||x==4)&&(y==0||y==4)?Color.clear:Color.white;t.SetPixels(p);t.Apply();return pixel=Sprite.Create(t,new Rect(0,0,5,5),new Vector2(.5f,.5f),5);}
+        }
+        private bool InRange(Vector2 p)=>Vector2.Distance(p,origin)<=3.001f && (!hasGateOrigin||Vector2.Distance(p,gateOrigin)<=3.001f);
+        private EnemyProjectileController[] Nearby(Vector2 center,float radius)=>FindObjectsByType<EnemyProjectileController>(FindObjectsSortMode.None).Where(b=>b.IsAlive&&InRange(b.transform.position)&&Vector2.Distance(b.transform.position,center)<=radius).OrderBy(b=>Vector2.SqrMagnitude((Vector2)b.transform.position-center)).ThenBy(b=>b.GetEntityId().GetHashCode()).ToArray();
+        private void Update()
+        {
+            if(finished||Time.timeScale<=0)return;
+            life-=Time.deltaTime;
+            if(attached!=null)
+            {
+                if(!attached.IsAlive||!InRange(attached.transform.position)){Finish();return;}
+                transform.position=attached.transform.position;
+                while(ticks<6 && Time.time>=nextTick){attached.TakeDamage(25*factor);ticks++;nextTick+=.1f;}
+                if(ticks>=6)Finish();return;
+            }
+            if(wasAttached){Finish();return;}
+            if(Stationary){TickArea();if(life<=0)Finish();return;}
+            if(life<=0){EndFlight();return;}
+            float distance=Mathf.Min(8*Time.deltaTime,3-travel);
+            if(form==9&&!returning)distance=Mathf.Min(distance,1.5f-travel);
+            Vector2 start=transform.position, dir=returning?-heading:heading;
+            float previousTravel=travel;
+            TryGates(start,start+dir*distance);
+            Physics2D.SyncTransforms();
+            foreach(var h in Physics2D.CircleCastAll(start,form==4?.2f:.075f,dir,distance).OrderBy(h=>h.distance))
+            {
+                var b=h.collider.GetComponentInParent<EnemyProjectileController>();
+                if(b!=null && CanHit(b) && InRange(b.transform.position)){transform.position=start+dir*h.distance;travel=previousTravel+h.distance;Hit(b);if(finished||attached!=null)return;}
+                var e=h.collider.GetComponentInParent<EnemyController>();
+                if(e!=null && e.IsAlive && !hitIds.Contains(e) && InRange(e.transform.position)){hitIds.Add(e);e.TakeDamage(BaseDamage()*.25f*factor);if(form!=4&&form!=9){Finish();return;}}
+            }
+            transform.position=start+dir*distance;travel=previousTravel+distance;
+            if(form==9&&!returning&&travel>=1.4999f){returning=true;hitIds.Clear();hitCount=0;hitbox.enabled=true;}
+            if(travel>=2.9999f || !InRange(transform.position))EndFlight();
+            if(form==4||form==9)transform.Rotate(0,0,540*Time.deltaTime);
+        }
+        private float BaseDamage()=>fragment?10:form switch {1=>8,2=>8,3=>25,4=>22,5=>32,7=>4,9=>18,12=>20,16=>20,_=>3};
+        public void Hit(EnemyProjectileController target)
+        {
+            if(!CanHit(target)||!InRange(target.transform.position))return;
+            Component key=target;hitIds.Add(key);
+            if(pelletHits!=null){pelletHits.TryGetValue(key,out int n);pelletHits[key]=n+1;}
+            if(form==3&&!fragment)
+            {
+                if(!target.AttachDrill(this)){Finish();return;}
+                attached=target;wasAttached=true;nextTick=Time.time+.1f;life=.7f;ticks=0;hitbox.enabled=false;return;
+            }
+            if(form==5){Explode();return;}
+            target.TakeDamage(BaseDamage()*factor);
+            if(form==7)target.Corrode(derived?.75f:1.5f);
+            if(form==16&&!fragment)
+            {
+                Vector2 center=target.transform.position;
+                for(int i=0;i<2;i++) {var next=Nearby(center,.65f).FirstOrDefault(b=>!hitIds.Contains(b));if(next==null)break;hitIds.Add(next);FlashLine(center,next.transform.position,tint);next.TakeDamage((i==0?12:7)*factor);center=next.transform.position;}
+            }
+            if(form==12&&!fragment)
+            {
+                for(int sign=-1;sign<=1;sign+=2){var child=Create(12,transform.position,Quaternion.Euler(0,0,90*sign)*heading,factor,slot,tint,id);child.origin=origin;child.travel=travel;child.fragment=true;child.derived=true;child.hasGateOrigin=hasGateOrigin;child.gateOrigin=gateOrigin;child.hitIds.Add(key);}
+            }
+            hitCount++;int max=form==4?4:form==9?3:1;if(hitCount>=max) {if(form==9){hitbox.enabled=false;}else Finish();}
+        }
+        private void TickArea()
+        {
+            if(form==8||form==14)return;
+            if(Time.time<nextTick)return;nextTick=Time.time+(form==10?.2f:.1f);
+            int max=form==6?6:form==11?5:form==13?4:form==10?3:99;
+            float radius=form==6?1.8f:form==11?2:form==10?.3f:form==13?.55f:.4f;
+            int count=0;
+            foreach(var b in Nearby(transform.position,radius))
+            {
+                Component key=b;
+                if((form==13||form==11)&&hitIds.Contains(key))continue;
+                if((form==6||form==11)&&Vector2.Angle(heading,(Vector2)b.transform.position-origin)>(form==6?22.5f:27.5f))continue;
+                if(form==13&&hitIds.Count>=4)break;
+                if(form==6){b.TakeDamage(3*factor);b.Slow(.4f,1.2f);}
+                if(form==11){b.TakeDamage(12*factor);b.Push(heading);hitIds.Add(key);}
+                if(form==10)b.TakeDamage(9*factor);
+                if(form==13){b.TakeDamage(8*factor);b.Slow(.3f,.8f);hitIds.Add(key);}
+                if(form==15){float before=b.CurrentHealth;b.TakeDamage(Mathf.Min(budget/b.DamageMultiplier,15*factor));budget-=Mathf.Min(before-b.CurrentHealth,budget);if(budget<=0){Finish();break;}}
+                if(++count>=max)break;
+            }
+            if(form==10 && ++ticks>=4)Finish();
+        }
+        private void TryGates(Vector2 start,Vector2 end)
+        {
+            if(derived||processedGate||!TurretForms.Copyable(form))return;
+            foreach(var g in live.ToArray())
+            {
+                if(g==null||g.finished||!TurretForms.Support(g.form)||g.slot==slot)continue;
+                Vector2 point=g.transform.position, segment=end-start;
+                float t=segment.sqrMagnitude>0?Mathf.Clamp01(Vector2.Dot(point-start,segment)/segment.sqrMagnitude):0;
+                if(Vector2.Distance(start+segment*t,point)>.4f || !g.InRange(end))continue;
+                int max=g.form==8?3:1;if(!g.gateIds.Contains(id)&&g.gateIds.Count>=max)continue;
+                g.gateIds.Add(id);processedGate=true;
+                if(g.form==14)factor*=1.25f;
+                else
+                {
+                    var copy=Create(form,end+new Vector2(-heading.y,heading.x)*.07f,heading,factor*.5f,slot,tint,id,pelletHits);
+                    copy.origin=origin;copy.travel=travel+Vector2.Distance(start,end);copy.hitCount=hitCount;copy.returning=returning;copy.derived=true;copy.hasGateOrigin=true;copy.gateOrigin=g.origin;
+                    foreach(Component key in hitIds)copy.hitIds.Add(key);
+                }
+                break;
+            }
+        }
+        private void Explode(){foreach(var b in Nearby(transform.position,.65f).Take(8))b.TakeDamage(32*factor);Flash(transform.position,tint,1.3f);Finish();}
+        private void EndFlight(){if(form==5)Explode();else Finish();}
+        private void Finish(){if(finished)return;finished=true;if(hitbox!=null)hitbox.enabled=false;live.Remove(this);Destroy(gameObject);}
+        private void OnDestroy()=>live.Remove(this);
+        public static void Flash(Vector2 p,Color color,float size){var go=new GameObject("Pixel impact");go.transform.position=p;go.transform.localScale=Vector3.one*size;var s=go.AddComponent<SpriteRenderer>();s.sprite=Glyph;s.sharedMaterial=EffectMaterial;s.color=new Color(color.r,color.g,color.b,.35f);s.sortingOrder=109;Destroy(go,.09f);}
+        private static void FlashLine(Vector2 a,Vector2 b,Color color){var go=new GameObject("Chain arc");go.transform.position=(a+b)*.5f;go.transform.rotation=Quaternion.Euler(0,0,Mathf.Atan2(b.y-a.y,b.x-a.x)*Mathf.Rad2Deg-90);go.transform.localScale=new Vector3(.06f,Vector2.Distance(a,b),1);var s=go.AddComponent<SpriteRenderer>();s.sprite=Glyph;s.sharedMaterial=EffectMaterial;s.color=color;s.sortingOrder=111;Destroy(go,.08f);}
+    }
+}

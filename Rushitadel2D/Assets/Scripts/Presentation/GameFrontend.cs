@@ -14,7 +14,7 @@ namespace Rushitadel.Presentation
     public sealed partial class GameFrontend : MonoBehaviour
     {
         public static GameFrontend Instance { get; private set; }
-        public static bool BlocksGameplay => Instance != null && Instance.page != "game";
+        public static bool BlocksGameplay => Instance != null && (Instance.page != "game" || Instance.transitioning);
         private Canvas canvas;
         private RectTransform content, modal;
         private Font font;
@@ -57,17 +57,19 @@ namespace Rushitadel.Presentation
             if (Instance != this) return;
             SceneManager.sceneLoaded -= SceneReady;
             if (clickClip != null) Destroy(clickClip);
+            DisposeTitleMaterials();
             // The bundled font is a shared Resources asset, not an owned runtime object.
             Instance = null;
         }
         private void SceneReady(Scene scene, LoadSceneMode mode)
         {
-            loading = false; previewDeadline = 0;
+            if (!transitioning) loading = false;
+            previewDeadline = 0;
             if (scene.name == "Title")
             {
                 foreach (var old in FindObjectsByType<Canvas>(FindObjectsSortMode.None))
                     if (old != canvas && !old.transform.IsChildOf(transform)) old.gameObject.SetActive(false);
-                Time.timeScale = 1f; RunSession.Leave(); ShowTitle();
+                Time.timeScale = transitioning ? 0 : 1f; RunSession.Leave(); ShowTitle();
             }
             else if (scene.name == "inGame")
             {
@@ -91,6 +93,7 @@ namespace Rushitadel.Presentation
         }
         private void NewPage(string name, bool backdrop = true)
         {
+            EnsureTitleMaterials();
             page = name; back = null; dialogCancel = null;
             if (canvas == null)
             {
@@ -113,6 +116,7 @@ namespace Rushitadel.Presentation
                 art.rectTransform.offsetMin = art.rectTransform.offsetMax = Vector2.zero;
                 art.transform.SetAsFirstSibling();
                 art.raycastTarget = false;
+                art.material = titleBackgroundMaterial;
             }
             if (EventSystem.current == null)
                 new GameObject("UI Event System", typeof(EventSystem), typeof(InputSystemUIInputModule));
@@ -133,6 +137,7 @@ namespace Rushitadel.Presentation
         {
             var image = Rect(parent, name, x, y, w, h).gameObject.AddComponent<Image>();
             image.color = color;
+            if (page == "title" && name != "Background") image.material = titleCursorMaterial;
             if (sprite != null) image.sprite = Resources.Load<Sprite>("TitleUI/" + sprite);
             return image;
         }
@@ -140,6 +145,7 @@ namespace Rushitadel.Presentation
         {
             var label = Rect(parent, text, x, y, w, h).gameObject.AddComponent<Text>();
             label.font = font; label.text = text; label.fontSize = size; label.color = ink; label.alignment = align;
+            if (page == "title") label.material = titleCursorMaterial;
             label.raycastTarget = false; label.horizontalOverflow = HorizontalWrapMode.Wrap; label.verticalOverflow = VerticalWrapMode.Truncate;
             return label;
         }
@@ -259,9 +265,8 @@ namespace Rushitadel.Presentation
         }
         private void Load(string scene)
         {
-            if (loading) return; loading = true;
-            Time.timeScale = 1f;
-            SceneManager.LoadSceneAsync(scene);
+            if (loading) return;
+            StartCoroutine(TransitionTo(scene));
         }
     }
 }

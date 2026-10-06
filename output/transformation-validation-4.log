@@ -1,0 +1,2010 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.3f1 (c2eb47b3a2a9) revision 12774215'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0" at "2026-10-06T17:09:11.714147Z"
+OS: 'Windows 11  (10.0.22631) Core' Language: 'ko' Physical Memory: 32480 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-06T17:09:11Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Unity.exe
+-batchmode
+-projectPath
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+-executeMethod
+Rushitadel.Editor.TransformationValidation.Run
+-logFile
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/output/transformation-validation-4.log
+Successfully changed project path to: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [38932]  Target information:
+
+Player connection [38932]  * "[IP] 14.36.34.114 [Port] 55504 [Flags] 2 [Guid] 1870160570 [EditorId] 1870160570 [Version] 1048832 [Id] WindowsEditor(7,doeon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [38932] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [38932] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-45312" after 0.2 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-doun0"
+[Licensing::IpcConnector] LicenseClient-doun0 channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-doun0-6000.5.3 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 44660)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0-6000.5.3" at "2026-10-06T17:09:13.7028357Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 44660, path: "C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              102505448caf4a38af87b51d11d8ba18
+  Correlation Id:          f9f48bc18ed5463bc8c93c351812c740
+  External correlation Id: 6741705479294362087
+  Machine Id:              +Y9dLo+xTxeE++gkth21EHAEDmE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-doun0-6000.5.3" (connect: 0.56s, validation: 0.08s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0-6000.5.3-notifications" at "2026-10-06T17:09:13.7914228Z"
+[Licensing::Module] Connected to LicensingClient (PId: 44660, launch time: 0.03, total connection time: 0.65s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 14568939546096-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 2.11s
+[Licensing::Module] Licensing is initialized (took 1.59s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.5.3f1 (c2eb47b3a2a9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4060 Ti (ID=0x2803)
+    Vendor:          NVIDIA
+    VRAM:            7949 MB
+    App VRAM Budget: 7181 MB
+    Driver:          32.0.16.1088
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56312
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002420 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.321 seconds
+Domain Reload Profiling: 753ms
+	BeginReloadAssembly (128ms)
+		CreateAndSetChildDomain (12ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (226ms)
+		LoadAssemblies (111ms)
+		AnalyzeDomain (159ms)
+			TypeCache.Refresh (157ms)
+				TypeCache.ScanAssembly (146ms)
+	FinalizeReload (323ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (72ms)
+			ProcessInitializeOnLoadAttributes (78ms)
+			ProcessInitializeOnLoadMethodAttributes (113ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 65 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.2d.animation@15.1.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.animation@6d5a363ae647)
+    com.unity.2d.aseprite@5.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.aseprite@d13865913efa)
+    com.unity.2d.psdimporter@14.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.psdimporter@5d82044f9e43)
+    com.unity.2d.spriteshape@15.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.spriteshape@fcb7ec61a58b)
+    com.unity.2d.tilemap.extras@8.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.tilemap.extras@a80140457adc)
+    com.unity.2d.tooling@3.0.1 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.tooling@6f06ffb033c0)
+    com.unity.collab-proxy@2.12.4 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.collab-proxy@0b1559bcd34e)
+    com.unity.ide.rider@3.0.38 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.19.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.timeline@1.8.12 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.visualscripting@1.9.11 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.visualscripting@8bed5ad90189)
+    com.unity.2d.common@14.0.1 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.common@73badf92ba8b)
+    com.unity.searcher@4.9.4 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.29 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.test-framework.performance@8b56083ec0f0)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.sprite@053a968eab56)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.tilemap@592c6ccaefe1)
+    com.unity.multiplayer.center@1.0.1 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.multiplayer.center@b860850997d0)
+    com.unity.render-pipelines.universal@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.render-pipelines.universal@276396f56b3f)
+    com.unity.test-framework@1.7.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.test-framework@1405238725ab)
+    com.unity.ugui@2.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ugui@377fd60ad87b)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ext.nunit@44f7d31723bd)
+    com.unity.render-pipelines.core@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.render-pipelines.core@0733e3164aa3)
+    com.unity.shadergraph@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.shadergraph@8aa9acb51790)
+    com.unity.render-pipelines.universal-config@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.render-pipelines.universal-config@fdda01c80fe3)
+    com.unity.mathematics@1.4.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.mathematics@981956d94fb6)
+    com.unity.collections@6.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.collections@a43cabe808ca)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.04 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+DisplayProgressbar: Compiling Scripts
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+ExitCode: 4 Duration: 0s358ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+*** Tundra requires additional run (0.06 seconds), 0 items updated, 203 evaluated
+ExitCode: 0 Duration: 1s239ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+ExitCode: 0 Duration: 1s687ms
+Finished compiling graph: 1114 nodes, 22476 flattened edges (18526 ToBuild, 176 ToUse), maximum node priority 1274
+[ 600/1110  0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[ 861/1110  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[1102/1110  0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets\Scripts\Player\PlayerProjectileController.cs(67,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Player\PlayerProjectileController.cs(67,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(30,58): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(30,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(40,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(40,52): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(34,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(34,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Combat\TransformationShot.cs(64,127): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Combat\TransformationShot.cs(64,82): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\GameplayHud.cs(20,22): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\GameplayHud.cs(21,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\GameplayHud.cs(22,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Progression\CampaignProbe.cs(21,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\CampaignProbe.cs(21,52): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(54,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\ForwardPressureProbe.cs(27,24): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\ForwardPressureProbe.cs(28,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(130,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(130,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(141,73): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(141,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\RunSession.cs(45,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\RunSession.cs(56,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\RunSession.cs(56,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\RunSession.cs(57,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\RunSession.cs(57,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\RunSession.cs(68,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\RunSession.cs(68,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\ExperiencePickup.cs(22,32): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\CombatRulesProbe.cs(86,74): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\CombatRulesProbe.cs(86,31): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\CombatRulesProbe.cs(93,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\CombatRulesProbe.cs(93,38): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\CombatRulesProbe.cs(162,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\CombatRulesProbe.cs(188,67): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(48,65): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(48,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(49,65): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(49,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(62,68): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(62,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(80,57): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(80,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(90,65): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(90,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(91,213): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(91,175): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(95,149): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(95,111): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(96,109): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\TransformationProbe.cs(96,71): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(48,28): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(54,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(54,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(55,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(55,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(57,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(62,51): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(62,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(67,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(70,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(70,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(93,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(93,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(116,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(116,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(149,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(149,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(162,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(162,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(197,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(227,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(227,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(236,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(238,73): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(238,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(239,70): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(239,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(82,43): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(82,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(90,91): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(90,61): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(93,24): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(108,19): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(110,19): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(112,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(112,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(120,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(120,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(134,55): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(134,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(137,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(137,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(146,54): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(146,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(168,27): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(170,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(170,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(198,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(198,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(200,43): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(200,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\CampaignProbe.cs(48,50): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\CampaignProbe.cs(48,24): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(70,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(70,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(76,17): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(227,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(252,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+[1103/1110  0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets\Scripts\Editor\PortValidation.cs(26,75): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Editor\PortValidation.cs(26,21): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Editor\PortValidation.cs(27,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\PortValidation.cs(28,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\PortValidation.cs(29,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\PortValidation.cs(30,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\PortValidation.cs(31,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\GameplaySceneSetup.cs(173,17): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+[1104/1110  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 142 defines and 353 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[1105/1110  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 140 defines and 375 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[1106/1110  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[1107/1110  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[1108/1110  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[1109/1110  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (1.63 seconds), 10 items updated, 1110 evaluated
+Assets\Scripts\Player\PlayerProjectileController.cs(67,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Player\PlayerProjectileController.cs(67,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\TransformationProbe.cs(30,58): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(30,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(40,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(40,52): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\TransformationProbe.cs(34,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(34,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Combat\TransformationShot.cs(64,127): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Combat\TransformationShot.cs(64,82): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\GameplayHud.cs(20,22): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\GameplayHud.cs(21,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\GameplayHud.cs(22,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Progression\CampaignProbe.cs(21,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\CampaignProbe.cs(21,52): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\CampaignDirector.cs(54,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\ForwardPressureProbe.cs(27,24): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\ForwardPressureProbe.cs(28,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Progression\CampaignDirector.cs(130,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\CampaignDirector.cs(130,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\CampaignDirector.cs(141,73): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\CampaignDirector.cs(141,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\RunSession.cs(45,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\RunSession.cs(56,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\RunSession.cs(56,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\RunSession.cs(57,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\RunSession.cs(57,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\RunSession.cs(68,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\RunSession.cs(68,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\ExperiencePickup.cs(22,32): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\CombatRulesProbe.cs(86,74): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\CombatRulesProbe.cs(86,31): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\CombatRulesProbe.cs(93,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\CombatRulesProbe.cs(93,38): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\CombatRulesProbe.cs(162,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\CombatRulesProbe.cs(188,67): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Progression\TransformationProbe.cs(48,65): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(48,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\TransformationProbe.cs(49,65): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(49,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\TransformationProbe.cs(62,68): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(62,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\TransformationProbe.cs(80,57): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(80,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\TransformationProbe.cs(90,65): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(90,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\TransformationProbe.cs(91,213): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(91,175): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\TransformationProbe.cs(95,149): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(95,111): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\TransformationProbe.cs(96,109): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\TransformationProbe.cs(96,71): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(48,28): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(54,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(54,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(55,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(55,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(57,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(62,51): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(62,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(67,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(70,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(70,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(93,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(93,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(116,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(116,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(149,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(149,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(162,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(162,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(197,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(227,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(227,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(236,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(238,73): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(238,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(239,70): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(239,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(82,43): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(82,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(90,91): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(90,61): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(93,24): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(108,19): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(110,19): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(112,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(112,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(120,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(120,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(134,55): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(134,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(137,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(137,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(146,54): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(146,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(168,27): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(170,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(170,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(198,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(198,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(200,43): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(200,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\CampaignProbe.cs(48,50): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\CampaignProbe.cs(48,24): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\GameFrontend.cs(70,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\GameFrontend.cs(70,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\GameFrontend.cs(76,17): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\GameFrontend.cs(227,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\GameFrontend.cs(252,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(26,75): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Editor\PortValidation.cs(26,21): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Editor\PortValidation.cs(27,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(28,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(29,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(30,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(31,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\GameplaySceneSetup.cs(173,17): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+AssetDatabase: script compilation time: 3.748813s
+Begin MonoManager ReloadAssembly
+Importing 'GUID: e8ec884032c494141a843bd778611770 - Path: Assets/Resources/PlayerForms' with importer (DefaultImporter)
+Imported 'GUID: e8ec884032c494141a843bd778611770' -> (Import Result ID: '7ba6940d009fcc8202757c413aa60b31') in 0.021 seconds [static dependencies only]. Details - ImportResultOutputID=0cced744982e9f0b53e530dccd6e16bc DependenciesID=d1e66113b886ca38b7fdf8b8b79a64ce StaticDependenciesID=12e785400ccd8e99ec2e55eedaf8d659 
+Refreshing native plugins compatible for Editor in 5.93 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.83 ms, found 5 plugins.
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.092 seconds
+Domain Reload Profiling: 4334ms
+	BeginReloadAssembly (379ms)
+		DisableScriptedObjects (29ms)
+		CreateAndSetChildDomain (150ms)
+	RebuildCommonClasses (9ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (77ms)
+	LoadAllAssembliesAndSetupDomain (755ms)
+		LoadAssemblies (513ms)
+		AnalyzeDomain (232ms)
+			TypeCache.Refresh (152ms)
+				TypeCache.ScanAssembly (141ms)
+			BuildScriptInfoCaches (71ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (3093ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (2447ms)
+			ProcessInitializeOnLoadMethodAttributes (337ms)
+			AfterProcessingInitializeOnLoad (11ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
+Importing 'GUID: 305b683b7e1b7c74baf763614aa7f5a4 - Path: Assets/Resources/PlayerForms/ROT-07.png' with importer (TextureImporter)
+Imported 'GUID: 305b683b7e1b7c74baf763614aa7f5a4' -> (Import Result ID: '9b16def1b3c23d7dc67104111fb69509') in 0.169 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7740d38c4d1f19387bf1faea5229aa29 DependenciesID=602f3d8c9b4a3acb5c6fac41e7c52b1a StaticDependenciesID=d9c089bbd64cfd0ce305b5ddd4d599fd 
+Importing 'GUID: 6070bcf0e0b7ffd4bad2ae9027dd6896 - Path: Assets/Image/Player/Player_Retouched_20261007.png' with importer (TextureImporter)
+Imported 'GUID: 6070bcf0e0b7ffd4bad2ae9027dd6896' -> (Import Result ID: 'a9396f5f90e9bc7d4d179c66c52c8e8b') in 0.112 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d22a865944d4fe12ca5a714ec0590196 DependenciesID=1ce382d7961b8fb578ef307b6db59382 StaticDependenciesID=514a55541b748d05372dc4e8b511462d 
+Importing 'GUID: 41cb5ca74bee46e4bb6255139da3a833 - Path: Assets/Resources/PlayerForms/ROT-09.png' with importer (TextureImporter)
+Imported 'GUID: 41cb5ca74bee46e4bb6255139da3a833' -> (Import Result ID: 'ea181b9217291c482c3ed11bafc9404c') in 0.091 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=609e8c1e2bc9b054c08ee4d5c1507ce9 DependenciesID=dab4a0c4eb0d4d91e061407c60c109eb StaticDependenciesID=cdd51e805aae8b25d252a022236ff9c1 
+Importing 'GUID: 7390b1644f8c30a409d2541d4ea47c87 - Path: Assets/Resources/PlayerForms/ROT-04.png' with importer (TextureImporter)
+Imported 'GUID: 7390b1644f8c30a409d2541d4ea47c87' -> (Import Result ID: '85633212185c53fd527b4977979ad170') in 0.093 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2a028da1b8b8f1916f665504899b4e73 DependenciesID=00f45142a60c793b5bf5555e55f8e645 StaticDependenciesID=3ac6beac427e895352be9112046faa4e 
+Importing 'GUID: 145d2889f3e8fbb4d9d6204772d550ad - Path: Assets/Resources/PlayerForms/ROT-16.png' with importer (TextureImporter)
+Imported 'GUID: 145d2889f3e8fbb4d9d6204772d550ad' -> (Import Result ID: 'b8883117b805661c399609eb4e00ebd2') in 0.109 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=835296d961119283b8f3199840b48e49 DependenciesID=93aedf57b08c6e87e33c7afdf5242ed7 StaticDependenciesID=8ff0c6730ba139231d7c2ab03fd2c1cf 
+Importing 'GUID: 059b6b1ed79b65d409a7be5d2a86568d - Path: Assets/Resources/PlayerForms/ROT-10.png' with importer (TextureImporter)
+Imported 'GUID: 059b6b1ed79b65d409a7be5d2a86568d' -> (Import Result ID: '1b3920c34b2a53fb87575b0391f6f773') in 0.111 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ce4121cb759127c992ea89723a2f1255 DependenciesID=c8d2f7d2a766bf4fda44b790993a566e StaticDependenciesID=5e6dca6c4dd6c2ef6421f1aa86638a61 
+Importing 'GUID: 4565c093eb946f44bb32191daa17894c - Path: Assets/Resources/PlayerForms/Hull.png' with importer (TextureImporter)
+Imported 'GUID: 4565c093eb946f44bb32191daa17894c' -> (Import Result ID: '81879b93b3e02377b4c8e454985dcc0a') in 0.114 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8299047e406b58df54f021fde2c8770f DependenciesID=23dd692194b3dd2bd6543640ccd2183b StaticDependenciesID=af19388eab49ab848549a2af17b681f2 
+Importing 'GUID: 661d431a397388a4aa53b747cf95c693 - Path: Assets/Resources/PlayerForms/ROT-01.png' with importer (TextureImporter)
+Imported 'GUID: 661d431a397388a4aa53b747cf95c693' -> (Import Result ID: '1b07150d5ee001d071dda22377cfd024') in 0.109 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=26f03b9072b5b3198b18e46d779c2a19 DependenciesID=bd380909c793cb6b5c87a41e1bd90ad4 StaticDependenciesID=e106b6cb331a34cc7821af4326a63753 
+Importing 'GUID: 0813f09fb1bb2f543a3b224a7234ea3a - Path: Assets/Resources/PlayerForms/ROT-08.png' with importer (TextureImporter)
+Imported 'GUID: 0813f09fb1bb2f543a3b224a7234ea3a' -> (Import Result ID: 'd57b12d98efb28b5329c06b85dd99d4b') in 0.103 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=30b666380a5efc9a5a1223d82f2a5d43 DependenciesID=149e6738c52c212f4c15cdfc41944fb4 StaticDependenciesID=0c32306fb2389403aa8728330f12d355 
+Importing 'GUID: c8e35f875b0193648988b5aeaeba4721 - Path: Assets/Resources/PlayerForms/ROT-03.png' with importer (TextureImporter)
+Imported 'GUID: c8e35f875b0193648988b5aeaeba4721' -> (Import Result ID: 'e03927fba4af736f4c8c174e451a8459') in 0.108 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e6bbcfb6ea3127169c29f7c2024b5667 DependenciesID=0b35e5690a7edfca1e08d98c98516e15 StaticDependenciesID=05af6ad9cbe69da1e368ce43edaa5c98 
+Importing 'GUID: 599447b03084a8d4b9d0872e015a126f - Path: Assets/Resources/PlayerForms/ROT-11.png' with importer (TextureImporter)
+Imported 'GUID: 599447b03084a8d4b9d0872e015a126f' -> (Import Result ID: 'b16d01585b678b1050a0739276dbe68d') in 0.127 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a5b71c6e15d0195b36bf181497094a33 DependenciesID=7d54f0926a20c9f90e71c2dc0882d673 StaticDependenciesID=a31da33f8314b5fdd182800f10debf91 
+Importing 'GUID: 4b260522b2af709488f42774fe9fd2c4 - Path: Assets/Resources/PlayerForms/ROT-13.png' with importer (TextureImporter)
+Imported 'GUID: 4b260522b2af709488f42774fe9fd2c4' -> (Import Result ID: '7107bfaecfa4017a40e0dc1e26815249') in 0.104 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d5397239c209f848078fb3afd78d5bd3 DependenciesID=e9169d33078b101e6fb39519a0f1b628 StaticDependenciesID=512e46243782c5ef49413237aec7d66b 
+Importing 'GUID: 7c8e18bfa0ff48e48bdabfdaa1d0d420 - Path: Assets/Resources/PlayerForms/ROT-14.png' with importer (TextureImporter)
+Imported 'GUID: 7c8e18bfa0ff48e48bdabfdaa1d0d420' -> (Import Result ID: 'bf1b83bf1b520a92f74ef287d1ac8f88') in 0.100 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=85c2885658255b780e5dcb43012a4a4d DependenciesID=d59e0d9275a33e260959e5639ea251b7 StaticDependenciesID=5ae97eee36ae2428d0a3469d4fa15646 
+Importing 'GUID: 7c1fc42272cd01143a9f36637ba1bc21 - Path: Assets/Resources/PlayerForms/ROT-05.png' with importer (TextureImporter)
+Imported 'GUID: 7c1fc42272cd01143a9f36637ba1bc21' -> (Import Result ID: '3fa9359c32a20c31b1c2b63d340f6ec1') in 0.104 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5fd8083ecb2d113268411e7ff71ffff5 DependenciesID=e8033389c905ff91868148031443a3bd StaticDependenciesID=872e17c445858ec01ae7fc1e3ddacc4c 
+Importing 'GUID: 1dd03d44153dbb84fba09b0a6314908b - Path: Assets/Resources/PlayerForms/ROT-12.png' with importer (TextureImporter)
+Imported 'GUID: 1dd03d44153dbb84fba09b0a6314908b' -> (Import Result ID: '65d33104079512e651149f8cdc251782') in 0.077 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3ef7d6e606bda923a25ee84ad0bca6eb DependenciesID=ee8211d9c7f181072e27bfe1802557f0 StaticDependenciesID=d4db2fd6b2cf21bc38cc161b80e66b94 
+Importing 'GUID: dde57f57b2b5c324ea23af2a722c6903 - Path: Assets/Resources/PlayerForms/ROT-06.png' with importer (TextureImporter)
+Imported 'GUID: dde57f57b2b5c324ea23af2a722c6903' -> (Import Result ID: '065f1cd8b45369ecd4f50763e6a92c6d') in 0.082 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1aa6709814eefda7269fe65179ffa0c4 DependenciesID=23629ce53e07168e0c0f528de70a7c53 StaticDependenciesID=f0723ef460f4d6ad1c5b2531819b7bf1 
+Importing 'GUID: fdb10f356c1e60442a6357bed5959852 - Path: Assets/Resources/PlayerForms/ROT-15.png' with importer (TextureImporter)
+Imported 'GUID: fdb10f356c1e60442a6357bed5959852' -> (Import Result ID: '575f18e6366923234b0970ca54518594') in 0.091 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=593abd8319b8a81aeab9ddfc4c9f5a5a DependenciesID=eedbea64045e5578aed890906468279c StaticDependenciesID=49c0a56aab3112318f49ada32ee5a627 
+Importing 'GUID: 1ff833fe81ec79c4aaa06a8b78653b65 - Path: Assets/Resources/PlayerForms/ROT-02.png' with importer (TextureImporter)
+Imported 'GUID: 1ff833fe81ec79c4aaa06a8b78653b65' -> (Import Result ID: '66ba8f9e750a94114812f0790c63654a') in 0.092 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b542a3a10439284a8587d3567195864e DependenciesID=4407a5417e6eac298df0c1c174d7604a StaticDependenciesID=d2279ef2437e67095ee4642cc4da5717 
+Importing 'GUID: 3a074aad95d3b6a4fa109b12a8855747 - Path: Assets/Resources/PlayerForms/ElementSprite.shader' with importer (ShaderImporter)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Imported 'GUID: 3a074aad95d3b6a4fa109b12a8855747' -> (Import Result ID: '4a79e98ded4f318d7fe568cd8bcd3be2') in 0.155 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8f863adb49d84255d2aa2ed054127492 DependenciesID=c2c5f48878e396ad004750ab1d53a69e StaticDependenciesID=fa03850309cc5c32936c243079d64adc 
+Importing 'GUID: 2d803763df93ffc458a2897c9b8d5101 - Path: Assets/Resources/PlayerForms/PixelGlow.shader' with importer (ShaderImporter)
+Imported 'GUID: 2d803763df93ffc458a2897c9b8d5101' -> (Import Result ID: '7e124519f394557758efab1f97c0e8b6') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=923dad3f9ec0af2c19b751eccebb8353 DependenciesID=13d364adb41fe13ce9f0069872084033 StaticDependenciesID=ef9151c0d687196979c55e88e78c0d63 
+Starting new worker id: 0 with log in C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D/Logs/AssetImportWorkerHW0.log
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 3.95 ms, found 5 plugins.
+
+Asset Pipeline Refresh (id=39b42f969dc1b344fac37d869a1613de): Total: 11.874 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=21 (actual=21, local cache=0, cache server=0)
+		Asset DB Process Time: managed=79 ms, native=6048 ms
+		Asset DB Callback time: managed=381 ms, native=219 ms
+		Scripting: domain reloads=1, domain reload time=1319 ms, compile time=3752 ms, other=72 ms
+		Project Asset Count: scripts=1561, non-scripts=3130
+		Asset File Changes: new=1, changed=3, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 42.783ms
+	ApplyChangesToAssetFolders: 0.615ms
+	Scan: 334.274ms
+	Collect global state as custom dependencies: 2.497ms
+	OnSourceAssetsModified: 0.554ms
+	CategorizeScriptCompilationAssets: 46.436ms
+	ProcessAssetsWithTransientArtifactChanges: 71.375ms
+	CategorizeAssets: 55.018ms
+	CompileScripts: 3752.473ms
+	ImportOutOfDateAssets: 5427.525ms (3120.190ms without children)
+		ImportManagerImport: 2095.325ms (2.317ms without children)
+			UpdateCategorizedAssets: 0.294ms
+		UnloadImportedAssets: 0.979ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.625ms
+		ImportSchedulerStart: 210.365ms
+	PostProcessAllAssets: 543.218ms
+		ShaderAssetModifiedCallback 156.612ms
+		XRBuildSystem.XRAssetImported 1.806ms
+		SpriteAtlasDatabase.OnAssetPostprocessCallback 0.404ms
+		ComputeShaderImportPostprocess 0.095ms
+		VersionControlSettings.HiddenFilePostprocess 0.093ms
+		PostProcessCallbackCreateDeferredMaterials 0.091ms
+		MonoPostProcessAllAssets: 380.442ms
+			SyncVS.PostprocessSyncProject 174.458ms
+			AssetPostprocessor.OnPostprocessAllAssets 120.601ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 22.261ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 12.024ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.647ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 5.675ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 2.121ms
+			AssetChangedListener.OnPostprocessAllAssets 2.117ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.072ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.850ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.729ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.526ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.169ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.930ms
+			AssetProcessor.OnPostprocessAllAssets 0.825ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.804ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.613ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.546ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.443ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.428ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.393ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.349ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.331ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.327ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.323ms
+			AssetEvents.OnPostprocessAllAssets 0.306ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.291ms
+			PostProcessor.OnPostprocessAllAssets 0.260ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.258ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.248ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.223ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.191ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.187ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.160ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.146ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.142ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.140ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.109ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.084ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.069ms
+	PostAssetChangesProfiler: 16.094ms
+	UnloadStreamsBegin: 2.749ms
+	PersistCurrentRevisions: 0.460ms
+	GenerateScriptTypeHashes: 5.005ms
+	GenerateScriptTypeSerializationHashes: 12.500ms
+	Untracked: 1566.086ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 10.928ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Rushitadel2D
+Unloading 45 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7247 unused Assets / (8.7 MB). Loaded Objects now: 8143.
+Memory consumption went from 447.2 MB to 438.5 MB.
+Total: 17.060200 ms (FindLiveObjects: 0.772100 ms CreateObjectMapping: 2.844700 ms MarkObjects: 7.418200 ms  DeleteObjects: 6.022000 ms)
+
+Importing 'GUID: 4565c093eb946f44bb32191daa17894c - Path: Assets/Resources/PlayerForms/Hull.png' with importer (TextureImporter)
+Imported 'GUID: 4565c093eb946f44bb32191daa17894c' -> (Import Result ID: 'a5f3b5d3c5b56594d406a771bbca65fa') in 0.081 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed62aefc107221de9d5590b2ed5132ec DependenciesID=16ec8d067eb56a00dc2d6a66e4f07bd7 StaticDependenciesID=ad38b41d16b264cddd30c9c892eb23ad 
+Refreshing native plugins compatible for Editor in 2.55 ms, found 5 plugins.
+Asset Pipeline Refresh (id=f091985defb4877438710b5095acbd4a): Total: 0.225 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 661d431a397388a4aa53b747cf95c693 - Path: Assets/Resources/PlayerForms/ROT-01.png' with importer (TextureImporter)
+Imported 'GUID: 661d431a397388a4aa53b747cf95c693' -> (Import Result ID: '559449aba7f142690a043d68394d9522') in 0.066 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=450a883834afdd2397dd11f0d7a03895 DependenciesID=fac3b3d51f3f2ca99d568449700831fe StaticDependenciesID=40516dc0a5901f0b246af88b81a64148 
+Refreshing native plugins compatible for Editor in 3.41 ms, found 5 plugins.
+Asset Pipeline Refresh (id=36874e5b3f6d6d64ba57fb1aa0c9d472): Total: 0.155 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1ff833fe81ec79c4aaa06a8b78653b65 - Path: Assets/Resources/PlayerForms/ROT-02.png' with importer (TextureImporter)
+Imported 'GUID: 1ff833fe81ec79c4aaa06a8b78653b65' -> (Import Result ID: '9e7116512b3c870ef782fbb46cd45600') in 0.071 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=36033e8cf1c3901cdc114abcfc836516 DependenciesID=27212c374466d01fd880b428ed975a19 StaticDependenciesID=0f6e1d8b4f26bf44b8885dc13ca26f2e 
+Refreshing native plugins compatible for Editor in 2.80 ms, found 5 plugins.
+Asset Pipeline Refresh (id=bc96d06bcb4e147438ff27e909019568): Total: 0.177 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: c8e35f875b0193648988b5aeaeba4721 - Path: Assets/Resources/PlayerForms/ROT-03.png' with importer (TextureImporter)
+Imported 'GUID: c8e35f875b0193648988b5aeaeba4721' -> (Import Result ID: '28bbe0cee5f2a90f27f4bfea55c20971') in 0.066 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=077073ed60c9655b2b8a5649ab46d649 DependenciesID=82c825733c491dbb534938ee969c4478 StaticDependenciesID=b5adbfdb51097969e3e6571105ed5719 
+Refreshing native plugins compatible for Editor in 2.75 ms, found 5 plugins.
+Asset Pipeline Refresh (id=a65622fabdcfdf04d926958ee7b96007): Total: 0.153 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 7390b1644f8c30a409d2541d4ea47c87 - Path: Assets/Resources/PlayerForms/ROT-04.png' with importer (TextureImporter)
+Imported 'GUID: 7390b1644f8c30a409d2541d4ea47c87' -> (Import Result ID: 'bf99ec150f741fb67c264cf226ec1313') in 0.057 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b910c08972309c8dcdafa63e275489bb DependenciesID=a9cf26e9a1f9dd1a9d44f49ceffb8425 StaticDependenciesID=1dd2e09af4132c47ddeb1948eba78e8f 
+Refreshing native plugins compatible for Editor in 2.83 ms, found 5 plugins.
+Asset Pipeline Refresh (id=d97716139d0a66f449dd28f5f0de52af): Total: 0.140 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 7c1fc42272cd01143a9f36637ba1bc21 - Path: Assets/Resources/PlayerForms/ROT-05.png' with importer (TextureImporter)
+Imported 'GUID: 7c1fc42272cd01143a9f36637ba1bc21' -> (Import Result ID: 'd3b23cb38e86c9d16b473d22434ef09b') in 0.059 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9186f4bcde8e3a8750daed6e6f47dc51 DependenciesID=96fffd3ff41528ac748c5028acb695ef StaticDependenciesID=fbc85574c219b97eeca870dd197edb0a 
+Refreshing native plugins compatible for Editor in 3.25 ms, found 5 plugins.
+Asset Pipeline Refresh (id=e7deac6a4d7e9ee43bca96bf3fc76fce): Total: 0.137 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Worker ready: AssetImportWorkerHW0 0
+Importing 'GUID: dde57f57b2b5c324ea23af2a722c6903 - Path: Assets/Resources/PlayerForms/ROT-06.png' with importer (TextureImporter)
+Imported 'GUID: dde57f57b2b5c324ea23af2a722c6903' -> (Import Result ID: 'f2c6dadea4e875ac0a72348d09db5d20') in 0.062 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4e0fec5318566dfae374b18770459cd7 DependenciesID=5c2722fcfe8fcf7e0b89f08d805862e8 StaticDependenciesID=1e335dc76abe952d36d9710ea0b67277 
+Refreshing native plugins compatible for Editor in 3.56 ms, found 5 plugins.
+Asset Pipeline Refresh (id=fe59a8a00b5017e4bb535b3e4a9a5f3c): Total: 0.147 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 305b683b7e1b7c74baf763614aa7f5a4 - Path: Assets/Resources/PlayerForms/ROT-07.png' with importer (TextureImporter)
+Imported 'GUID: 305b683b7e1b7c74baf763614aa7f5a4' -> (Import Result ID: 'a550784ec7332e8843bc693e55b3612c') in 0.062 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=64aa866a00d60fbf84e109b7f3b8c1ec DependenciesID=ff9691d323ed3fd1309bdd2f1b3ac784 StaticDependenciesID=ea797484b7873e9b95ae5ba515517f39 
+Refreshing native plugins compatible for Editor in 3.50 ms, found 5 plugins.
+Asset Pipeline Refresh (id=b0d30107f4a745b41a929c549b9c6829): Total: 0.143 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 0813f09fb1bb2f543a3b224a7234ea3a - Path: Assets/Resources/PlayerForms/ROT-08.png' with importer (TextureImporter)
+Imported 'GUID: 0813f09fb1bb2f543a3b224a7234ea3a' -> (Import Result ID: '45ff17039de9a895a5fcad51bfd37d95') in 0.066 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6eb8b98fdc803dd04419b86d39def6b1 DependenciesID=9ebcb7afdfc87753da348f581c3549e2 StaticDependenciesID=236418d4f6a65ae474846b7388d3c824 
+Refreshing native plugins compatible for Editor in 3.03 ms, found 5 plugins.
+Asset Pipeline Refresh (id=3c634331d429ef74d8c209d12b2794a7): Total: 0.147 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 41cb5ca74bee46e4bb6255139da3a833 - Path: Assets/Resources/PlayerForms/ROT-09.png' with importer (TextureImporter)
+Imported 'GUID: 41cb5ca74bee46e4bb6255139da3a833' -> (Import Result ID: '6f70ccd45a3645eb0e3717fa5ed6eec8') in 0.062 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cf5015b13b149357b721b0ffa15e32da DependenciesID=12ab6f37aa4c079ee7e6255145a7840e StaticDependenciesID=19fd5aadd2aa914b39ca904509d7f29b 
+Refreshing native plugins compatible for Editor in 3.86 ms, found 5 plugins.
+Asset Pipeline Refresh (id=060c69ef725e6e54caf3f8b3aa70cfce): Total: 0.145 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 059b6b1ed79b65d409a7be5d2a86568d - Path: Assets/Resources/PlayerForms/ROT-10.png' with importer (TextureImporter)
+Imported 'GUID: 059b6b1ed79b65d409a7be5d2a86568d' -> (Import Result ID: 'c5d05b1c564c6d16986b8274aba938ee') in 0.071 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5ce4f20f06084c906cf012678c9c4ad7 DependenciesID=d48de9f64ba84756cd19e767a23f203f StaticDependenciesID=64213b1cc90f20e1f22cdb0f727a5fa5 
+Refreshing native plugins compatible for Editor in 3.31 ms, found 5 plugins.
+Asset Pipeline Refresh (id=4540fe7cf7ac94d42b85c4542bd68c95): Total: 0.158 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 599447b03084a8d4b9d0872e015a126f - Path: Assets/Resources/PlayerForms/ROT-11.png' with importer (TextureImporter)
+Imported 'GUID: 599447b03084a8d4b9d0872e015a126f' -> (Import Result ID: 'e0c2486169e7aaaeb36268fb3d481922') in 0.064 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8842dc73847c58a400e7c11210b9dfed DependenciesID=21a3438db7dc98aabded8ab38234cf83 StaticDependenciesID=598cf3fe65ebfb5ef50bbcdeed4326ce 
+Refreshing native plugins compatible for Editor in 2.57 ms, found 5 plugins.
+Asset Pipeline Refresh (id=60f0e68ebe669f74c8bea94994f95368): Total: 0.153 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1dd03d44153dbb84fba09b0a6314908b - Path: Assets/Resources/PlayerForms/ROT-12.png' with importer (TextureImporter)
+Imported 'GUID: 1dd03d44153dbb84fba09b0a6314908b' -> (Import Result ID: '0a4ed51f14d118ef747ac2640694a700') in 0.057 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d4a77a19509e909163e274f42e725382 DependenciesID=bf9e95eaca41c515605a84c2c646110a StaticDependenciesID=e394a6528d2eb1b1e4992559803871e6 
+Refreshing native plugins compatible for Editor in 3.23 ms, found 5 plugins.
+Asset Pipeline Refresh (id=161d9780c7d0aca4b817c9bc15f8d66c): Total: 0.137 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 4b260522b2af709488f42774fe9fd2c4 - Path: Assets/Resources/PlayerForms/ROT-13.png' with importer (TextureImporter)
+Imported 'GUID: 4b260522b2af709488f42774fe9fd2c4' -> (Import Result ID: '910bcdc0a44271c7b36a221f05723506') in 0.065 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1c3f76b9ec151435c8dba82e25fbdec7 DependenciesID=a7960e1d8f42bd780ac4411678d723e9 StaticDependenciesID=ee1eb236d0d16b82b5d412cb5c37482a 
+Refreshing native plugins compatible for Editor in 3.49 ms, found 5 plugins.
+Asset Pipeline Refresh (id=6231ef5ca664d1445ae8b157af02ce7b): Total: 0.147 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 7c8e18bfa0ff48e48bdabfdaa1d0d420 - Path: Assets/Resources/PlayerForms/ROT-14.png' with importer (TextureImporter)
+Imported 'GUID: 7c8e18bfa0ff48e48bdabfdaa1d0d420' -> (Import Result ID: '848519ec0f5240cc0f658dcf9474c201') in 0.063 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=78a59f123f2ae512bd2ebc9199ee9a41 DependenciesID=29c01824f5ac5e9a9e56e6ec018b89d7 StaticDependenciesID=f90ae78f4d4a80ea727a95a50c4a9fea 
+Refreshing native plugins compatible for Editor in 2.87 ms, found 5 plugins.
+Asset Pipeline Refresh (id=6cca9c914dc50d945b1522969810f899): Total: 0.147 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: fdb10f356c1e60442a6357bed5959852 - Path: Assets/Resources/PlayerForms/ROT-15.png' with importer (TextureImporter)
+Imported 'GUID: fdb10f356c1e60442a6357bed5959852' -> (Import Result ID: 'aec98e1be46aa25a0b5554770f491a53') in 0.061 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c4cba415a3c604e9dbbe01d7b4c930da DependenciesID=24ad394f4bd0435c4804325d7c17be39 StaticDependenciesID=528b75dee0634100440cb426db8f343e 
+Refreshing native plugins compatible for Editor in 2.66 ms, found 5 plugins.
+Asset Pipeline Refresh (id=f451ce1cddbbead4799cd92ab62eed40): Total: 0.149 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 145d2889f3e8fbb4d9d6204772d550ad - Path: Assets/Resources/PlayerForms/ROT-16.png' with importer (TextureImporter)
+Imported 'GUID: 145d2889f3e8fbb4d9d6204772d550ad' -> (Import Result ID: '88deb521c38afaf05479568e7f9de2c1') in 0.062 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cacd9b169f70b887b0cfede43d14d031 DependenciesID=8d491feab88dd357862fc3dbed06e51a StaticDependenciesID=03abd279420b395e5605ff2bfe91f148 
+Refreshing native plugins compatible for Editor in 3.83 ms, found 5 plugins.
+Asset Pipeline Refresh (id=1c0dca5cf8a929042acc6f49ce857cd4): Total: 0.154 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+TRANSFORMATION_IMPORT_OK
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Editor.TransformationValidation:Run () (at Assets/Scripts/Editor/TransformationValidation.cs:19)
+
+(Filename: Assets/Scripts/Editor/TransformationValidation.cs Line: 19)
+
+Opening scene 'Assets/Scenes/Title.unity'
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Title.unity'
+	Deserialize:            11.019 ms
+	Integration:            246.149 ms
+	Integration of assets:  0.029 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   257.207 ms
+Unloading 34 unused Assets / (4.2 MB). Loaded Objects now: 8259.
+Memory consumption went from 409.7 MB to 405.5 MB.
+Total: 7.603300 ms (FindLiveObjects: 0.402800 ms CreateObjectMapping: 0.848800 ms MarkObjects: 6.202000 ms  DeleteObjects: 0.148700 ms)
+
+[Project] Loading completed in 19.315 seconds
+	Project init time: 				15.879 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		1.825 seconds
+		Asset Database init time: 		0.259 seconds
+		Global illumination init time: 	0.003 seconds
+		Assemblies load time: 			0.802 seconds
+		Unity extensions init time: 	0.023 seconds
+		Asset Database refresh time: 	11.874 seconds
+	Scene opening time: 			3.157 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1791306571018,"processId":45312,"projectLoad":19.3149563,"projectInit":15.8788415,"templateInit":0.0,"packageManagerInit":1.8249437,"assetDatabaseInit":0.2586916,"globalIlluminationInit":0.0026647,"assembliesLoad":0.8016786,"unityExtensionsInit":0.0225185,"assetDatabaseRefresh":11.8737812,"sceneOpening":3.1571285}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1791306571018,"processId":45312,"editorVersion":"6000.5.3f1 (c2eb47b3a2a9)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
+SpriteAtlasPacking completed in 0.004330 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.901 ms
+	Integration:            430.431 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   432.343 ms
+[Licensing::Client] Successfully resolved entitlement details
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+Created GICache directory at C:/Users/doun0/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.035s, timestamps: [19.817 - 19.853]
+[Licensing::Client] Successfully resolved entitlement details
+Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.138000 ms
+Loaded scene 'Assets/Scenes/inGame.unity'
+	Deserialize:            33.815 ms
+	Integration:            249.755 ms
+	Integration of assets:  3.302 ms
+	Thread Wait Time:       0.003 ms
+	Total Operation Time:   286.874 ms
+Unloading 14 unused Assets / (31.3 KB). Loaded Objects now: 8569.
+Memory consumption went from 439.4 MB to 439.4 MB.
+Total: 9.630100 ms (FindLiveObjects: 0.408100 ms CreateObjectMapping: 0.809200 ms MarkObjects: 8.343700 ms  DeleteObjects: 0.068600 ms)
+
+FORM PASS: five modular sockets
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:51)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 6
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 11
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 12
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 13
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 14
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 15
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: sprite 16
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:52)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: direct HP form 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:57)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: direct HP form 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:57)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: direct HP form 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:57)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: corrosion 30 percent
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: direct HP form 12
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:57)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: direct HP form 16
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:57)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: shotgun seven pellets capped at two hits
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:63)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: drill six real timed ticks
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:65)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: disc four target cap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: explosion eight target cap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:69)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: cold real cone tick and slow
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:71)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: boomerang outward and return hits
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:73)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: saw four timed ticks
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: shock damage and push
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:77)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: push global immunity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:78)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: split creates exactly two fragments
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:80)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: net once only and slow
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:82)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: foam actual HP budget 45
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:84)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: chain 20 12 7 with hard cap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:86)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: copy gate duplicates once
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:91)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: no recursive copying
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:91)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: overcharge real damage 125 percent
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:92)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: stationary cap 8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:95)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: stationary cap 10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:95)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: stationary cap 13
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:95)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: stationary cap 14
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:95)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: stationary cap 15
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:95)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: moving shot ends at range three
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:96)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 6
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 6
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 11
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 11
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 12
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 12
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 13
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 13
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 14
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 14
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 15
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 15
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: choose form 16
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: visual linked 16
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: support limited to one slot
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:99)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: fire emission
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: ice emission
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:101)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: save transformed build 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:103)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+FORM PASS: restore form and element
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe:Check (bool,string) (at Assets/Scripts/Progression/TransformationProbe.cs:19)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:103)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 19)
+
+RUSHITADEL_TRANSFORMATION_VALIDATION_SUCCESS
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Progression.TransformationProbe/<Start>d__9:MoveNext () (at Assets/Scripts/Progression/TransformationProbe.cs:108)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Progression/TransformationProbe.cs Line: 108)
+
+MonoPathRemapper: Attempts to remap: 47244; Successful remaps: 22872
+Serialized file version minimum: 23, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-doun0-6000.5.3-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-doun0-6000.5.3 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791306579300,"processId":45312,"allocatedMemory":18024588,"memoryLabels":[{"Default":220043},{"Permanent":15516},{"NewDelete":67307},{"Thread":4205176},{"Manager":819589},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":854623},{"Material":24},{"GfxDevice":57848},{"Animation":952},{"Audio":368},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":2256},{"Input":42840},{"JobScheduler":256},{"TextLib":280},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1590852},{"BaseObject":1676256},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":6970},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":70774},{"StaticString":3808},{"Utility":2673238},{"Curl":2498},{"PoolAlloc":2360},{"AI":80},{"TypeTree":14869},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":25384},{"WebRequest":10549},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":72},{"CoreStats":13688},{"Identifiers":6768},{"Gui":128},{"EditorUtility":113280},{"VersionControl":8},{"Undo":931},{"AssetDatabase":5026556},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":38929},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

@@ -19,8 +19,8 @@ namespace Rushitadel.Presentation
         {
             settingsBefore = GameSettings.Saved.Copy(); draft = settingsBefore.Copy();
             settingsReturn = returnTo; settingsTab = 0;
-            resolutions = Screen.resolutions.Select(r => new Vector2Int(r.width, r.height)).Distinct().ToArray();
-            if (resolutions.Length == 0) resolutions = new[] {new Vector2Int(Screen.width, Screen.height)};
+            resolutions = new[] {new Vector2Int(1280, 720), new Vector2Int(1600, 900),
+                new Vector2Int(1920, 1080), new Vector2Int(2560, 1440), new Vector2Int(3840, 2160)};
             DrawSettings();
         }
         private void DrawSettings()
@@ -37,17 +37,20 @@ namespace Rushitadel.Presentation
             }
             if (settingsTab == 0)
             {
-                Choice(p, "해상도", draft.width + " × " + draft.height, 215, () => {
-                    int at = Array.FindIndex(resolutions, r => r.x == draft.width && r.y == draft.height);
-                    var r = resolutions[(at + 1) % resolutions.Length]; draft.width = r.x; draft.height = r.y; DrawSettings(); });
+                DropdownChoice(p, "해상도", resolutions.Select(r => r.x + " × " + r.y).ToArray(),
+                    Array.FindIndex(resolutions, r => r.x == draft.width && r.y == draft.height),
+                    draft.width + " × " + draft.height, 215,
+                    i => { draft.width = resolutions[i].x; draft.height = resolutions[i].y; DrawSettings(); });
                 Choice(p, "화면 모드", new[] {"전체 화면", "테두리 없는 전체 화면", "창 모드"}[draft.mode], 315,
                     () => { draft.mode = (draft.mode + 1) % 3; DrawSettings(); });
-                Choice(p, "FPS 제한", draft.fps < 0 ? "제한 없음" : draft.fps.ToString(), 415,
-                    () => { draft.fps = FrameCaps[(Array.IndexOf(FrameCaps, draft.fps) + 1) % FrameCaps.Length]; DrawSettings(); });
+                DropdownChoice(p, "FPS 제한", FrameCaps.Select(f => f < 0 ? "제한 없음" : f.ToString()).ToArray(),
+                    Array.IndexOf(FrameCaps, draft.fps), draft.fps < 0 ? "제한 없음" : draft.fps.ToString(), 415,
+                    i => { draft.fps = FrameCaps[i]; DrawSettings(); });
                 Choice(p, "수직 동기화", draft.vsync ? "ON" : "OFF", 515,
                     () => { draft.vsync = !draft.vsync; DrawSettings(); });
                 Label(p, "표시 변경 후 15초 안에 유지 여부를 확인하세요.\n수직 동기화 ON에서는 모니터 주사율이 FPS 제한보다 우선합니다." +
-                    (Application.isEditor ? "\n에디터에서는 해상도·화면 모드가 Game 창 크기를 바꾸지 않습니다." : ""), 50, 620, 1100, 105, 23);
+                    "\n전체 화면은 모니터 지원 해상도만 적용할 수 있습니다." +
+                    (Application.isEditor ? "\n에디터에서는 Game 창 크기가 바뀌지 않습니다." : ""), 50, 610, 1100, 135, 23);
             }
             else if (settingsTab == 1)
             {
@@ -59,7 +62,7 @@ namespace Rushitadel.Presentation
             }
             else
             {
-                Label(p, "이동                         W / A / S / D\n조준                         마우스 방향\n원거리 공격              마우스 좌클릭\n동력 범위 공격          마우스 우클릭 · 동력 70%\n일시정지 / 뒤로        ESC\n포탑                         정면 자동 사격 · 약 5유닛", 75, 205, 1050, 390, 30);
+                Label(p, "이동                         W / A / S / D\n조준                         마우스 방향\n원거리 공격              마우스 좌클릭\n동력 범위 공격          마우스 우클릭 · 동력 70%\n일시정지 / 뒤로        ESC\n포탑                         정면 자동 사격 · 약 3유닛", 75, 205, 1050, 390, 30);
                 Label(p, "고정 조작 안내 · 키 재지정은 현재 기획 범위에 없습니다.", 75, 630, 1050, 65, 24);
             }
             Button(p, "취소", 650, 760, 220, 65, CancelSettings);
@@ -73,6 +76,53 @@ namespace Rushitadel.Presentation
         {
             Label(p, label, 75, y, 400, 70, 30);
             Button(p, value + "  ▶", 510, y, 590, 70, change);
+        }
+        private void DropdownChoice(Transform p, string title, string[] options, int selected, string value, float y, Action<int> choose)
+        {
+            if (options.Length <= 3)
+            {
+                Choice(p, title, value, y, () => choose((selected + 1) % options.Length));
+                return;
+            }
+            Label(p, title, 75, y, 400, 70, 30);
+            Button(p, value + "  ▼", 510, y, 590, 70, () =>
+            {
+                CloseDialog();
+                var group = content.GetComponent<CanvasGroup>();
+                if (group == null) group = content.gameObject.AddComponent<CanvasGroup>();
+                group.interactable = false;
+                modal = Rect(canvas.transform, "Settings Dropdown", 0, 0, 1920, 1080);
+                CenterPage(modal);
+                var blocker = Image(modal, "Dropdown Dismiss", 0, 0, 1920, 1080, Color.clear);
+                blocker.gameObject.AddComponent<Button>().onClick.AddListener(CloseDialog);
+                dialogCancel = CloseDialog;
+                var border = Image(modal, title + " List", 870, 110 + y + 72, 590, 222, ink);
+                Image(border.transform, "List Background", 3, 3, 584, 216, panel);
+                var viewport = Rect(border.transform, "Viewport", 3, 3, 556, 216);
+                viewport.gameObject.AddComponent<RectMask2D>();
+                var rows = Rect(viewport, "Options", 0, 0, 556, options.Length * 72);
+                var scroll = border.gameObject.AddComponent<ScrollRect>();
+                scroll.viewport = viewport; scroll.content = rows;
+                scroll.horizontal = false; scroll.vertical = true;
+                scroll.movementType = ScrollRect.MovementType.Clamped;
+                scroll.inertia = false; scroll.scrollSensitivity = 48;
+                var track = Image(border.transform, "Scrollbar", 562, 3, 25, 216, new Color32(63, 72, 75, 255));
+                var handle = Image(track.transform, "Handle", 0, 0, 25, 216, ink);
+                handle.rectTransform.sizeDelta = Vector2.zero;
+                handle.rectTransform.anchoredPosition = Vector2.zero;
+                var bar = track.gameObject.AddComponent<Scrollbar>();
+                bar.handleRect = handle.rectTransform; bar.targetGraphic = handle;
+                bar.direction = Scrollbar.Direction.BottomToTop;
+                scroll.verticalScrollbar = bar;
+                for (int i = 0; i < options.Length; i++)
+                {
+                    int index = i;
+                    Button(rows, (selected == i ? "▶ " : "") + options[i], 0, i * 72, 556, 72,
+                        () => { CloseDialog(); choose(index); });
+                }
+                Canvas.ForceUpdateCanvases();
+                scroll.verticalNormalizedPosition = 1f;
+            });
         }
         private void Volume(Transform p, string title, float value, float y, Action<float> set)
         {
@@ -100,6 +150,12 @@ namespace Rushitadel.Presentation
         }
         private void ApplySettings()
         {
+            if (!Application.isEditor && draft.mode == 0 &&
+                !Screen.resolutions.Any(r => r.width == draft.width && r.height == draft.height))
+            {
+                Error("모니터가 지원하지 않는 전체 화면 해상도입니다.\n다른 해상도 또는 창 모드를 선택하세요.");
+                return;
+            }
             bool displayChanged = draft.width != settingsBefore.width || draft.height != settingsBefore.height || draft.mode != settingsBefore.mode;
             GameSettings.Apply(draft);
             if (displayChanged)

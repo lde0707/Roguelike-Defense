@@ -27,6 +27,8 @@ namespace Rushitadel.Combat
         public Vector3 Direction => direction;
         public float DistanceTravelled { get; private set; }
 
+        private void Awake() => transform.localScale *= 1.2f;
+
         public void Launch(Vector3 newDirection, float newDamage, float maximumDistance)
         {
             newDirection.z = 0f;

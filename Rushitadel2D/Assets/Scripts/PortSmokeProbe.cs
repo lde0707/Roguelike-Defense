@@ -84,7 +84,7 @@ namespace Rushitadel
             rig.enabled = false;
 
             TowerController active = towers[0];
-            Check(towers.All(t => Mathf.Approximately(t.AttackRange, 5f)), "All five turret ranges are 5 world units");
+            Check(towers.All(t => Mathf.Approximately(t.AttackRange, 3f)), "All five turret ranges are 3 world units");
             SetField(active, "nextShotTime", 0f);
             Vector3 forward = active.transform.up;
             active.enabled = true;
@@ -134,10 +134,10 @@ namespace Rushitadel
             SetField(beyondRange, "moveSpeed", 0f);
             var limited = Instantiate(shellPrefab, new Vector3(20f, 0f, 0f), Quaternion.identity).GetComponent<ProjectileController>();
             SetField(limited, "speed", 1000f);
-            limited.Launch(Vector3.right, 25f, 5f);
+            limited.Launch(Vector3.right, 25f, 3f);
             yield return new WaitForSeconds(0.05f);
-            Check(limited == null && Mathf.Approximately(limited.DistanceTravelled, 5f) && beyondRange.CurrentHealth == 100f,
-                "Shell stops at exactly 5 units and cannot hit enemy beyond range");
+            Check(limited == null && Mathf.Approximately(limited.DistanceTravelled, 3f) && beyondRange.CurrentHealth == 100f,
+                "Shell stops at exactly 3 units and cannot hit enemy beyond range");
             Destroy(beyondRange.gameObject);
 
             var basicAttack = player.GetComponent<PlayerAttackController>();

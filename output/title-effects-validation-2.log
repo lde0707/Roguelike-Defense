@@ -1,0 +1,1884 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.3f1 (c2eb47b3a2a9) revision 12774215'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0" at "2026-10-06T04:52:05.1307474Z"
+OS: 'Windows 11  (10.0.22631) Core' Language: 'ko' Physical Memory: 32480 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-06T04:52:05Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Unity.exe
+-batchmode
+-projectPath
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+-executeMethod
+Rushitadel.Editor.TitleUiValidation.Run
+-logFile
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/output/title-effects-validation-2.log
+Successfully changed project path to: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [24748]  Target information:
+
+Player connection [24748]  * "[IP] 14.36.34.114 [Port] 55504 [Flags] 2 [Guid] 2493474898 [EditorId] 2493474898 [Version] 1048832 [Id] WindowsEditor(7,doeon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [24748] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [24748] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-31264" after 0.3 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-doun0"
+[Licensing::IpcConnector] LicenseClient-doun0 channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-doun0-6000.5.3 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 5172)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0-6000.5.3" at "2026-10-06T04:52:07.3295587Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 5172, path: "C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              75539ffae77641979aa57dcb34fbf506
+  Correlation Id:          4b84f7beed7562a5f2ae1ec08074e8e9
+  External correlation Id: 1983879311677073432
+  Machine Id:              +Y9dLo+xTxeE++gkth21EHAEDmE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-doun0-6000.5.3" (connect: 0.57s, validation: 0.04s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0-6000.5.3-notifications" at "2026-10-06T04:52:07.3766002Z"
+[Licensing::Module] Connected to LicensingClient (PId: 5172, launch time: 0.03, total connection time: 0.61s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 14568939546096-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 2.27s
+[Licensing::Module] Licensing is initialized (took 1.70s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.5.3f1 (c2eb47b3a2a9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4060 Ti (ID=0x2803)
+    Vendor:          NVIDIA
+    VRAM:            7949 MB
+    App VRAM Budget: 7181 MB
+    Driver:          32.0.16.1088
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002434 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.323 seconds
+Domain Reload Profiling: 778ms
+	BeginReloadAssembly (130ms)
+		CreateAndSetChildDomain (4ms)
+	RebuildCommonClasses (5ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (240ms)
+		LoadAssemblies (121ms)
+		AnalyzeDomain (176ms)
+			TypeCache.Refresh (174ms)
+				TypeCache.ScanAssembly (162ms)
+	FinalizeReload (326ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (80ms)
+			ProcessInitializeOnLoadMethodAttributes (115ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 65 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.2d.animation@15.1.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.animation@6d5a363ae647)
+    com.unity.2d.aseprite@5.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.aseprite@d13865913efa)
+    com.unity.2d.psdimporter@14.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.psdimporter@5d82044f9e43)
+    com.unity.2d.spriteshape@15.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.spriteshape@fcb7ec61a58b)
+    com.unity.2d.tilemap.extras@8.0.3 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.tilemap.extras@a80140457adc)
+    com.unity.2d.tooling@3.0.1 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.tooling@6f06ffb033c0)
+    com.unity.collab-proxy@2.12.4 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.collab-proxy@0b1559bcd34e)
+    com.unity.ide.rider@3.0.38 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.19.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.timeline@1.8.12 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.visualscripting@1.9.11 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.visualscripting@8bed5ad90189)
+    com.unity.2d.common@14.0.1 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.common@73badf92ba8b)
+    com.unity.searcher@4.9.4 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.29 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.test-framework.performance@8b56083ec0f0)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.sprite@053a968eab56)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.2d.tilemap@592c6ccaefe1)
+    com.unity.multiplayer.center@1.0.1 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.multiplayer.center@b860850997d0)
+    com.unity.render-pipelines.universal@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.render-pipelines.universal@276396f56b3f)
+    com.unity.test-framework@1.7.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.test-framework@1405238725ab)
+    com.unity.ugui@2.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ugui@377fd60ad87b)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.ext.nunit@44f7d31723bd)
+    com.unity.render-pipelines.core@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.render-pipelines.core@0733e3164aa3)
+    com.unity.shadergraph@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.shadergraph@8aa9acb51790)
+    com.unity.render-pipelines.universal-config@17.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.render-pipelines.universal-config@fdda01c80fe3)
+    com.unity.mathematics@1.4.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.mathematics@981956d94fb6)
+    com.unity.collections@6.5.0 (location: C:\Users\doun0\Desktop\File\GitHub\Roguelike-Defense\Rushitadel2D\Library\PackageCache\com.unity.collections@a43cabe808ca)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.04 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 2s213ms
+[ 861/1110  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[1102/1110  1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets\Scripts\Player\PlayerProjectileController.cs(67,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Player\PlayerProjectileController.cs(67,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\GameplayHud.cs(20,22): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\GameplayHud.cs(21,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\GameplayHud.cs(22,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(40,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(40,52): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\CampaignProbe.cs(21,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\CampaignProbe.cs(21,52): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(51,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Progression\ExperiencePickup.cs(22,32): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(104,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(104,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(115,73): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\CampaignDirector.cs(115,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\RunSession.cs(45,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\ForwardPressureProbe.cs(27,24): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\ForwardPressureProbe.cs(28,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\RunSession.cs(56,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\RunSession.cs(56,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\RunSession.cs(57,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\RunSession.cs(57,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\RunSession.cs(68,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\RunSession.cs(68,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Progression\CampaignProbe.cs(48,50): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Progression\CampaignProbe.cs(48,24): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\CombatRulesProbe.cs(86,74): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\CombatRulesProbe.cs(86,31): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\CombatRulesProbe.cs(93,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\CombatRulesProbe.cs(93,38): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\CombatRulesProbe.cs(162,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\CombatRulesProbe.cs(188,67): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(82,43): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(82,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(90,91): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(90,61): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(93,24): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(108,19): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(110,19): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(112,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(112,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(120,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(120,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(134,55): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(134,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(137,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(137,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(141,54): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(141,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(163,27): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(165,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(165,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(193,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(193,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(195,43): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\TitleUiProbe.cs(195,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(48,28): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(54,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(54,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(55,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(55,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(57,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(62,51): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(62,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(67,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(70,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(70,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(93,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(93,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(116,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(116,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(149,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(149,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(162,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(162,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(197,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(227,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(227,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(236,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\PortSmokeProbe.cs(238,73): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(238,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\PortSmokeProbe.cs(239,70): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\PortSmokeProbe.cs(239,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(69,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(69,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(75,17): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(226,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Presentation\GameFrontend.cs(251,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+[1104/1110  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 142 defines and 353 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[1105/1110  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 140 defines and 375 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[1108/1110  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[1109/1110  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+*** Tundra build success (2.13 seconds), 6 items updated, 1110 evaluated
+Assets\Scripts\Player\PlayerProjectileController.cs(67,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Player\PlayerProjectileController.cs(67,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\GameplayHud.cs(20,22): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\GameplayHud.cs(21,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\GameplayHud.cs(22,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(40,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(40,52): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\CampaignProbe.cs(21,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\CampaignProbe.cs(21,52): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\CampaignDirector.cs(51,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Progression\ExperiencePickup.cs(22,32): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Progression\CampaignDirector.cs(104,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\CampaignDirector.cs(104,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\CampaignDirector.cs(115,73): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\CampaignDirector.cs(115,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\RunSession.cs(45,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\ForwardPressureProbe.cs(27,24): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\ForwardPressureProbe.cs(28,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\RunSession.cs(56,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\RunSession.cs(56,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\RunSession.cs(57,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\RunSession.cs(57,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\RunSession.cs(68,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\RunSession.cs(68,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Progression\CampaignProbe.cs(48,50): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Progression\CampaignProbe.cs(48,24): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\CombatRulesProbe.cs(86,74): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\CombatRulesProbe.cs(86,31): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\CombatRulesProbe.cs(93,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\CombatRulesProbe.cs(93,38): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\CombatRulesProbe.cs(162,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\CombatRulesProbe.cs(188,67): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(82,43): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(82,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(90,91): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(90,61): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(93,24): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(108,19): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(110,19): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(112,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(112,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(120,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(120,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(134,55): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(134,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(137,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(137,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(141,54): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(141,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(163,27): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(165,81): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(165,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(193,39): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(193,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(195,43): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\TitleUiProbe.cs(195,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(48,28): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(54,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(54,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(55,62): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(55,17): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(57,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(62,51): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(62,19): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(67,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(70,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(70,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(93,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(93,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(116,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(116,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(149,69): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(149,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(162,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(162,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(197,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(227,53): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(227,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(236,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\PortSmokeProbe.cs(238,73): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(238,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\PortSmokeProbe.cs(239,70): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\PortSmokeProbe.cs(239,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\GameFrontend.cs(69,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Presentation\GameFrontend.cs(69,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Presentation\GameFrontend.cs(75,17): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\GameFrontend.cs(226,23): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Presentation\GameFrontend.cs(251,13): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+AssetDatabase: script compilation time: 2.706101s
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 3.25 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 4.74 ms, found 5 plugins.
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.714 seconds
+Domain Reload Profiling: 3835ms
+	BeginReloadAssembly (321ms)
+		DisableScriptedObjects (25ms)
+		CreateAndSetChildDomain (140ms)
+	RebuildCommonClasses (7ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (80ms)
+	LoadAllAssembliesAndSetupDomain (691ms)
+		LoadAssemblies (398ms)
+		AnalyzeDomain (252ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (156ms)
+			BuildScriptInfoCaches (78ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (2716ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (2048ms)
+			ProcessInitializeOnLoadMethodAttributes (299ms)
+			AfterProcessingInitializeOnLoad (12ms)
+		AwakeInstancesAfterBackupRestoration (41ms)
+Starting new worker id: 0 with log in C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D/Logs/AssetImportWorkerHW0.log
+Refreshing native plugins compatible for Editor in 3.44 ms, found 5 plugins.
+
+Asset Pipeline Refresh (id=fa75d37888349c94da7756085d4be3ba): Total: 7.719 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=3468 ms
+		Asset DB Callback time: managed=195 ms, native=60 ms
+		Scripting: domain reloads=1, domain reload time=1206 ms, compile time=2709 ms, other=79 ms
+		Project Asset Count: scripts=1560, non-scripts=3110
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 47.794ms
+	ApplyChangesToAssetFolders: 0.640ms
+	Scan: 173.384ms
+	Collect global state as custom dependencies: 3.327ms
+	OnSourceAssetsModified: 1.018ms
+	CategorizeScriptCompilationAssets: 61.641ms
+	ProcessAssetsWithTransientArtifactChanges: 96.279ms
+	CategorizeAssets: 53.888ms
+	CompileScripts: 2708.572ms
+	ImportOutOfDateAssets: 2874.179ms (2740.757ms without children)
+		UnloadImportedAssets: 0.757ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.724ms
+		ImportSchedulerStart: 131.893ms
+	PostProcessAllAssets: 197.477ms
+		XRBuildSystem.XRAssetImported 1.380ms
+		VCAutoAddAssetPostprocess 0.996ms
+		MonoPostProcessAllAssets: 194.580ms
+			AssetPostprocessor.OnPostprocessAllAssets 134.108ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 15.180ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 8.014ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 5.937ms
+			SyncVS.PostprocessSyncProject 2.676ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 2.123ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 1.757ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.618ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.319ms
+			AssetChangedListener.OnPostprocessAllAssets 1.026ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.998ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.972ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.621ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.538ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.518ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.469ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.423ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.380ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.379ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.304ms
+			AssetProcessor.OnPostprocessAllAssets 0.298ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.274ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.267ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.251ms
+			AssetEvents.OnPostprocessAllAssets 0.250ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.244ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.242ms
+			PostProcessor.OnPostprocessAllAssets 0.217ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.197ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.184ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.164ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.162ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.155ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.152ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.130ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.120ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.116ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.110ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.092ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.058ms
+	PostAssetChangesProfiler: 11.793ms
+	UnloadStreamsBegin: 2.566ms
+	PersistCurrentRevisions: 0.133ms
+	GenerateScriptTypeHashes: 2.310ms
+	GenerateScriptTypeSerializationHashes: 3.587ms
+	Untracked: 1474.236ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Scanning for USB devices : 11.825ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Rushitadel2D
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7222 unused Assets / (8.3 MB). Loaded Objects now: 8132.
+Memory consumption went from 433.9 MB to 425.6 MB.
+Total: 19.377700 ms (FindLiveObjects: 1.197100 ms CreateObjectMapping: 3.158600 ms MarkObjects: 7.328200 ms  DeleteObjects: 7.690300 ms)
+
+Asset Pipeline Refresh (id=7b5cf1dd6273b294facec92e3920e096): Total: 0.153 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Importing 'GUID: 22e4dafdb5a3ad144abdaee774100032 - Path: Assets/Resources/TitleUI/Background.png' with importer (TextureImporter)
+Imported 'GUID: 22e4dafdb5a3ad144abdaee774100032' -> (Import Result ID: '65b9a17ab35956252a2c87829b930dd3') in 0.128 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e57f0b416777c4bb1af201478a9d4196 DependenciesID=a88a4a260236e2bddead7c919d019d54 StaticDependenciesID=3b65b281c94cf36864c742105fa13042 
+Refreshing native plugins compatible for Editor in 3.41 ms, found 5 plugins.
+Asset Pipeline Refresh (id=3e187dd327cd51e479ba28d44f0b21df): Total: 0.213 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: fced75514bafb744e86f805b9ea92f48 - Path: Assets/Resources/TitleUI/Continue_Hover.png' with importer (TextureImporter)
+Imported 'GUID: fced75514bafb744e86f805b9ea92f48' -> (Import Result ID: 'ae07e40a8e18fe184f1027d346944344') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bbba98a7a317d84e218d5a9db1f2551b DependenciesID=f19609313258364f8f46e464abe1f909 StaticDependenciesID=d5f18ec545555d2c001d7b1c6e19a805 
+Refreshing native plugins compatible for Editor in 3.42 ms, found 5 plugins.
+Asset Pipeline Refresh (id=1dac6baec598ef24db712e39681b0d98): Total: 0.075 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1ffbbd82c99dfa240a7ea2b739cad45b - Path: Assets/Resources/TitleUI/Continue_Normal.png' with importer (TextureImporter)
+Imported 'GUID: 1ffbbd82c99dfa240a7ea2b739cad45b' -> (Import Result ID: '6e50dd01a09bfe5d35678a65ef9fe084') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2de3f0892fa068237278f8eac62f4613 DependenciesID=cd8af0620aebc04cbdfd03957fd59830 StaticDependenciesID=2dcddbc759e678dc5844359cd395aab1 
+Refreshing native plugins compatible for Editor in 3.29 ms, found 5 plugins.
+Asset Pipeline Refresh (id=94e46331b4cc95c4697c1443ae63dbb8): Total: 0.079 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: a2d063e8c14943e4280e64ce57ab6d20 - Path: Assets/Resources/TitleUI/Continue_Pressed.png' with importer (TextureImporter)
+Imported 'GUID: a2d063e8c14943e4280e64ce57ab6d20' -> (Import Result ID: '549f97679fb5524259ba680fbee42742') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bf729c33fcf93824854b1d37178ed153 DependenciesID=24d81f17ce1230368da96003ad720577 StaticDependenciesID=0060fb1e96cfcc8101dff4ee66d28b1b 
+Refreshing native plugins compatible for Editor in 2.98 ms, found 5 plugins.
+Asset Pipeline Refresh (id=34900b8977f9615468361b209085f1a0): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f5bd253f05ae82e4d8b0fe3904921203 - Path: Assets/Resources/TitleUI/Logo.png' with importer (TextureImporter)
+Imported 'GUID: f5bd253f05ae82e4d8b0fe3904921203' -> (Import Result ID: '351e5eed9a52f583756b7e1bc1507538') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=aa9a0592db8382d3e1b8ff2040e9ad96 DependenciesID=7591774b298e66473b00f2ffe541b6ec StaticDependenciesID=32b480621c5544e74b4eee8a86b26d7a 
+Refreshing native plugins compatible for Editor in 3.78 ms, found 5 plugins.
+Asset Pipeline Refresh (id=bfeded9660321564f8abc9d7058b5351): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1b0fc215d2d37c845be3b7263e6bb561 - Path: Assets/Resources/TitleUI/Quit_Hover.png' with importer (TextureImporter)
+Imported 'GUID: 1b0fc215d2d37c845be3b7263e6bb561' -> (Import Result ID: 'efed47509b4380bc40a36e191d19a8a6') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f0031261ef414f062c9e12c84f85965a DependenciesID=0050aa465b0b6fb3c355db97af956f4c StaticDependenciesID=ad12b4fb9504fee11b10103dd44f2163 
+Refreshing native plugins compatible for Editor in 3.45 ms, found 5 plugins.
+Asset Pipeline Refresh (id=76ea133272d66cf47a7fb458609f002f): Total: 0.071 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8d23e803f23c9464ba9f825b092d24ec - Path: Assets/Resources/TitleUI/Quit_Normal.png' with importer (TextureImporter)
+Imported 'GUID: 8d23e803f23c9464ba9f825b092d24ec' -> (Import Result ID: '42db8ea2ed16386812b620ac1411f20e') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b3f9a8c1c9bf152bce77c99e9a8cf9e5 DependenciesID=bd200446feb7b5d1c02b2d1b556dab2a StaticDependenciesID=73f013db0e4b4721757c5319c3cfd46c 
+Refreshing native plugins compatible for Editor in 3.35 ms, found 5 plugins.
+Asset Pipeline Refresh (id=13ddff283d43746459d36ce832b3bf4c): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f348b129c575d754abb1913906dfb2e9 - Path: Assets/Resources/TitleUI/Quit_Pressed.png' with importer (TextureImporter)
+Imported 'GUID: f348b129c575d754abb1913906dfb2e9' -> (Import Result ID: '8ba241e06313093157134e483b7b05d2') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a8950e8bbaca2ec8e123b5b1b6e847d9 DependenciesID=bf8b6a0a6324ae557cd618fab39a434f StaticDependenciesID=8843df6eedaccd03c822ec9007c23224 
+Refreshing native plugins compatible for Editor in 3.11 ms, found 5 plugins.
+Asset Pipeline Refresh (id=9bd09c4c7600d2a439a3e2ea786c621b): Total: 0.061 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 0956606296add4246b3fb057956dbc05 - Path: Assets/Resources/TitleUI/Settings_Hover.png' with importer (TextureImporter)
+Imported 'GUID: 0956606296add4246b3fb057956dbc05' -> (Import Result ID: 'd42c041816088f5bb072a18f456fc241') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0a032377097a65eafb90d179e4848dee DependenciesID=0e00695d51a22c9bc5bc248642173df8 StaticDependenciesID=9000eb84a605f31dfe3340f53a4d5ccf 
+Refreshing native plugins compatible for Editor in 2.56 ms, found 5 plugins.
+Asset Pipeline Refresh (id=a709b0fb731c82441aec9e3829d33314): Total: 0.062 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 8f99719bb89bc774a8da0f4e68c5ea19 - Path: Assets/Resources/TitleUI/Settings_Normal.png' with importer (TextureImporter)
+Imported 'GUID: 8f99719bb89bc774a8da0f4e68c5ea19' -> (Import Result ID: 'abfe9dc38bd4d5022ad5165ecf3884ee') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5c2c73f2346c6bc31e4913e226993b6e DependenciesID=212d876217caa12ba809970f53cdd55c StaticDependenciesID=476f7a141a2716e0db941515fbdfb0d8 
+Refreshing native plugins compatible for Editor in 3.43 ms, found 5 plugins.
+Asset Pipeline Refresh (id=e5c4bd15c7f15374ea736001ec4313e9): Total: 0.059 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Worker ready: AssetImportWorkerHW0 0
+Importing 'GUID: 2b3fd167a7100fc47a67e027da3b5717 - Path: Assets/Resources/TitleUI/Settings_Pressed.png' with importer (TextureImporter)
+Imported 'GUID: 2b3fd167a7100fc47a67e027da3b5717' -> (Import Result ID: '7119e903a6d29483fc50bfe8f47027d1') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5c97fea7d9b8b3bcb2d102a180f9c605 DependenciesID=7ab97f3a5d305b42a054d3c5048ddea3 StaticDependenciesID=6752abe7a110ae0c198ddc8698bcb427 
+Refreshing native plugins compatible for Editor in 2.91 ms, found 5 plugins.
+Asset Pipeline Refresh (id=5811c79da7e5cf44a88c7d12ffe5d017): Total: 0.063 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 21ad1c52364603d4298db375b239d690 - Path: Assets/Resources/TitleUI/Start_Hover.png' with importer (TextureImporter)
+Imported 'GUID: 21ad1c52364603d4298db375b239d690' -> (Import Result ID: 'e77ed80d70371555c355b1f2b387a947') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fa709abb2913f08eb777823cad3802bd DependenciesID=7ed4cadffdd454ef594780376a8a2684 StaticDependenciesID=2c93828d566bf43b8e045a4da36ca8e8 
+Refreshing native plugins compatible for Editor in 3.66 ms, found 5 plugins.
+Asset Pipeline Refresh (id=11fe2f74abafe834fa88d317f8f201d0): Total: 0.059 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 6d23f7ada4ecf404f9da62e91ef67a04 - Path: Assets/Resources/TitleUI/Start_Normal.png' with importer (TextureImporter)
+Imported 'GUID: 6d23f7ada4ecf404f9da62e91ef67a04' -> (Import Result ID: 'fb3fe0b6e90a779a98d30082f0aff1ea') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0ca9f324fcbd334ad7f6959e478b4ab6 DependenciesID=7f0a810fe4a3c2c80dee7f39610d6a8f StaticDependenciesID=132e2a85d2878f3d42d56e58fda2350a 
+Refreshing native plugins compatible for Editor in 2.58 ms, found 5 plugins.
+Asset Pipeline Refresh (id=24b6320251ac42b49a358bc6fc90e85c): Total: 0.057 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 132abc48b1ffa744ba09a684032c29a8 - Path: Assets/Resources/TitleUI/Start_Pressed.png' with importer (TextureImporter)
+Imported 'GUID: 132abc48b1ffa744ba09a684032c29a8' -> (Import Result ID: '39597bafbf49891dd889f232243f99b1') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b1fda74f947b628d6e64b886ab7aec60 DependenciesID=a6f236eda15c8dcb6c8b7e2e3eef2165 StaticDependenciesID=4e047179adc733c979f65cce2b631192 
+Refreshing native plugins compatible for Editor in 2.99 ms, found 5 plugins.
+Asset Pipeline Refresh (id=15bd230ab9f9926489fa1f597f372143): Total: 0.059 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+TITLE_UI_ASSETS_READY
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Editor.TitleUiSetup:Prepare () (at Assets/Scripts/Editor/TitleUiSetup.cs:49)
+Rushitadel.Editor.TitleUiValidation:Run () (at Assets/Scripts/Editor/TitleUiValidation.cs:11)
+
+(Filename: Assets/Scripts/Editor/TitleUiSetup.cs Line: 49)
+
+Opening scene 'Assets/Scenes/Title.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Title.unity'
+	Deserialize:            7.891 ms
+	Integration:            243.245 ms
+	Integration of assets:  0.025 ms
+	Thread Wait Time:       0.012 ms
+	Total Operation Time:   251.174 ms
+Unloading 32 unused Assets / (16.4 KB). Loaded Objects now: 8250.
+Memory consumption went from 408.9 MB to 408.8 MB.
+Total: 9.453100 ms (FindLiveObjects: 0.435100 ms CreateObjectMapping: 0.891100 ms MarkObjects: 8.073200 ms  DeleteObjects: 0.052700 ms)
+
+[Project] Loading completed in 14.110 seconds
+	Project init time: 				11.841 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		1.986 seconds
+		Asset Database init time: 		0.215 seconds
+		Global illumination init time: 	0.003 seconds
+		Assemblies load time: 			0.828 seconds
+		Unity extensions init time: 	0.021 seconds
+		Asset Database refresh time: 	7.719 seconds
+	Scene opening time: 			2.020 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1791262339227,"processId":31264,"projectLoad":14.1095326,"projectInit":11.8406868,"templateInit":0.0,"packageManagerInit":1.9861262,"assetDatabaseInit":0.2146677,"globalIlluminationInit":0.0029766,"assembliesLoad":0.8278678,"unityExtensionsInit":0.0210486,"assetDatabaseRefresh":7.7189313,"sceneOpening":2.0204663}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1791262339227,"processId":31264,"editorVersion":"6000.5.3f1 (c2eb47b3a2a9)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
+SpriteAtlasPacking completed in 0.005307 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.024 ms
+	Integration:            357.598 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   359.634 ms
+[Licensing::Client] Successfully resolved entitlement details
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+Created GICache directory at C:/Users/doun0/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.030s, timestamps: [14.547 - 14.577]
+[Licensing::Client] Successfully resolved entitlement details
+PASS: Editor Play begins at title
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:48)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Continue disabled without a valid save
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:49)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Title background scrolls with unscaled time while buttons stay fixed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:56)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Cursor inversion excludes background and has no raycast overlay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:59)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Rendered UI pixel changes color inside cursor circle
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:65)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Rendered UI pixel outside cursor circle stays unchanged
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Start owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:73)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Start hover swap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:77)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Continue owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:73)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Settings owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:73)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Settings hover swap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:77)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Quit owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:73)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Quit hover swap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:77)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: QuitButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:81)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Quit confirmation text
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:82)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:83)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Quit cancellation stays on title
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:84)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:85)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 테두리 없는 전체 화면  ▶ Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:89)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Three-option setting retains click cycling
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:90)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 1920 × 1080  ▼ Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:92)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Resolution dropdown contains five curated choices
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:94)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: QHD and 4K offered
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:95)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Mouse wheel scrolls dropdown
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Scrollbar moves list to bottom
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:102)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 3840 × 2160 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Dropdown selection changes draft only
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 60  ▼ Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: FPS uses scrollable dropdown
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:108)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Click outside closes dropdown without selection
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:110)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 사운드 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:111)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Three independent audio sliders
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:113)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Audio previews immediately
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Cancel restores audio
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:118)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:119)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 사운드 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:119)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 적용 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:121)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Settings persist and reload
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:123)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 조작 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:123)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:124)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 적용 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:127)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Display timeout reverts
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:132)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: StartButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:133)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Theme confirmation disabled until selection
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:136)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 선택 확정 · 시작 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:138)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.271800 ms
+Loaded scene 'Assets/Scenes/inGame.unity'
+	Deserialize:            13.462 ms
+	Integration:            213.734 ms
+	Integration of assets:  2.603 ms
+	Thread Wait Time:       20.253 ms
+	Total Operation Time:   250.053 ms
+Unloading 41 unused Assets / (70.6 KB). Loaded Objects now: 8742.
+Memory consumption went from 452.0 MB to 451.9 MB.
+Total: 11.061500 ms (FindLiveObjects: 0.505300 ms CreateObjectMapping: 0.947600 ms MarkObjects: 9.442000 ms  DeleteObjects: 0.166000 ms)
+
+PASS: New run loads gameplay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:140)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: All five scene turrets have three-unit range
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:141)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Projectile prefab exists: towerProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:145)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Projectile visual enlarged twenty percent: towerProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:147)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Projectile prefab exists: playerBasicProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:145)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Projectile visual enlarged twenty percent: playerBasicProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:147)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Projectile prefab exists: enemyProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:145)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Projectile visual enlarged twenty percent: enemyProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:147)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Area projectile enlarged while damage radius stays unchanged
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:154)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Turret shot stops at exactly three units
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:161)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Theme confirmation writes slot atomically
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Safe checkpoint saves live player data: 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:169)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Previous good save backup retained
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:170)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Pause freezes simulation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:172)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 설정 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:173)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:173)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Settings returns to paused game
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:174)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 타이틀로 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:175)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 확인 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:175)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.708000 ms
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.521 ms
+	Integration:            198.427 ms
+	Integration of assets:  0.099 ms
+	Thread Wait Time:       29.944 ms
+	Total Operation Time:   230.991 ms
+Unloading 59 unused Assets / (37.4 KB). Loaded Objects now: 8474.
+Memory consumption went from 454.2 MB to 454.1 MB.
+Total: 9.345200 ms (FindLiveObjects: 0.396100 ms CreateObjectMapping: 0.730100 ms MarkObjects: 8.107700 ms  DeleteObjects: 0.110800 ms)
+
+PASS: Continue enabled with valid checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:176)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: ContinueButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:179)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 불러오기 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:180)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+Unloading 23 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.312900 ms
+Loaded scene 'Assets/Scenes/inGame.unity'
+	Deserialize:            6.005 ms
+	Integration:            245.496 ms
+	Integration of assets:  1.804 ms
+	Thread Wait Time:       28.366 ms
+	Total Operation Time:   281.672 ms
+Unloading 40 unused Assets / (69.8 KB). Loaded Objects now: 8742.
+Memory consumption went from 452.6 MB to 452.5 MB.
+Total: 13.353500 ms (FindLiveObjects: 0.492000 ms CreateObjectMapping: 1.019100 ms MarkObjects: 11.518900 ms  DeleteObjects: 0.320900 ms)
+
+PASS: Continue restores HP and XP
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:181)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.928900 ms
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            3.011 ms
+	Integration:            460.107 ms
+	Integration of assets:  0.124 ms
+	Thread Wait Time:       13.014 ms
+	Total Operation Time:   476.257 ms
+Unloading 59 unused Assets / (39.8 KB). Loaded Objects now: 8549.
+Memory consumption went from 454.3 MB to 454.2 MB.
+Total: 16.871100 ms (FindLiveObjects: 0.749700 ms CreateObjectMapping: 1.343300 ms MarkObjects: 14.559800 ms  DeleteObjects: 0.217200 ms)
+
+PASS: Corrupt data rejected without deleting original
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Unsupported schema rejected
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Non-finite save values rejected
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:189)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: StartButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:192)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Overwrite asks before replacing slot
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:195)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:41)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:196)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: Overwrite cancellation preserves slot
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:197)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+PASS: No UI runtime errors
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:42)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:198)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 42)
+
+RUSHITADEL_TITLE_UI_VALIDATION_SUCCESS
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:200)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 200)
+
+MonoPathRemapper: Attempts to remap: 47588; Successful remaps: 22872
+Serialized file version minimum: 23, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-doun0-6000.5.3-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-doun0-6000.5.3 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791262346630,"processId":31264,"allocatedMemory":17925156,"memoryLabels":[{"Default":218704},{"Permanent":15516},{"NewDelete":67307},{"Thread":4205176},{"Manager":819589},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":852831},{"Material":24},{"GfxDevice":57608},{"Animation":952},{"Audio":368},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":2744},{"Input":42840},{"JobScheduler":256},{"TextLib":280},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1590852},{"BaseObject":1629568},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":6970},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":40486},{"StaticString":3808},{"Utility":2673238},{"Curl":2498},{"PoolAlloc":2360},{"AI":80},{"TypeTree":14869},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":16024},{"WebRequest":552},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":72},{"CoreStats":13688},{"Identifiers":6768},{"Gui":128},{"EditorUtility":113184},{"VersionControl":8},{"Undo":931},{"AssetDatabase":5026436},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":38929},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

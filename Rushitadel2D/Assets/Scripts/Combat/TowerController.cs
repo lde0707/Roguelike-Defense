@@ -11,7 +11,7 @@ namespace Rushitadel.Combat
         private void Awake() => owner = GetComponentInParent<PlayerHealth>();
 
         [Header("Attack Settings")]
-        [SerializeField, Min(0f)] private float attackRange = 5f;
+        [SerializeField, Min(0f)] private float attackRange = 3f;
         public float AttackRange => attackRange;
         [SerializeField, Min(0.01f)] private float shotInterval = 0.5f;
         [SerializeField, Min(0f)] private float damage = 25f;
@@ -20,6 +20,8 @@ namespace Rushitadel.Combat
         [SerializeField] private Transform shotPos;
         [SerializeField] private GameObject projectilePrefab;
         private float nextShotTime;
+        private bool alternate;
+        public event System.Action Fired;
 
         public void Configure(Transform newShotPos, GameObject newProjectilePrefab)
         {
@@ -39,12 +41,24 @@ namespace Rushitadel.Combat
             }
 
             Fire();
-            nextShotTime = Time.time + shotInterval / (1 + .2f * Rushitadel.Progression.CampaignDirector.Rank(slotId, 1));
+            int form = Rushitadel.Progression.CampaignDirector.Form(slotId);
+            nextShotTime = Time.time + (form > 0 ? TurretForms.Intervals[form] : shotInterval) / (form==6 ? 1 : 1 + .2f * Rushitadel.Progression.CampaignDirector.Rank(slotId, 1));
         }
 
         private void Fire()
         {
             Transform origin = shotPos != null ? shotPos : transform;
+            Fired?.Invoke();
+            int form = Rushitadel.Progression.CampaignDirector.Form(slotId);
+            if(form>0)
+            {
+                float mult=1+.25f*Rushitadel.Progression.CampaignDirector.Rank(slotId,0);
+                int element=Rushitadel.Progression.CampaignDirector.Instance.State.element;
+                Vector3 pos=origin.position;
+                if(form==1) { alternate=!alternate; pos+=transform.right*(alternate?.06f:-.06f); }
+                TransformationShot.Fire(form,pos,transform.up,mult,slotId,TurretForms.ElementColor(element));
+                return;
+            }
             GameObject projectileObject = Instantiate(projectilePrefab, origin.position, Quaternion.identity);
             projectileObject.SetActive(true);
 

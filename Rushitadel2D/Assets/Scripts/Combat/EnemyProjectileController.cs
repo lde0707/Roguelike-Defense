@@ -23,9 +23,28 @@ namespace Rushitadel.Combat
         public float CurrentHealth => health;
         public Vector2 Direction => direction;
         public int BounceCount { get; private set; }
+        private float slowUntil, slowAmount, vulnerableUntil, pushedUntil;
+        private Object attachedDrill;
+        public float SpeedMultiplier => Time.time<slowUntil ? 1-slowAmount : 1;
+        public float DamageMultiplier => Time.time<vulnerableUntil?1.3f:1;
+        public void Slow(float amount,float duration)
+        {
+            if(maximumHealth>=80)amount*=.5f;
+            if(Time.time>=slowUntil || amount>=slowAmount){slowAmount=amount; slowUntil=Time.time+duration;}
+        }
+        public void Corrode(float duration) => vulnerableUntil=Time.time+duration;
+        public bool AttachDrill(Object drill){if(attachedDrill!=null)return false; attachedDrill=drill; return true;}
+        public void Push(Vector2 heading)
+        {
+            if(Time.time<pushedUntil)return; pushedUntil=Time.time+1;
+            var next=(Vector2)transform.position+heading*(maximumHealth>=80?.1f:.35f);
+            if(PlayfieldBoundary.Instance!=null && PlayfieldBoundary.Instance.Contains(transform.position))next=PlayfieldBoundary.Instance.ClampPlayer(next,collisionRadius);
+            transform.position=next;
+        }
 
         private void Awake()
         {
+            transform.localScale *= 1.2f;
             health = maximumHealth;
             hitbox = GetComponent<CircleCollider2D>();
             hitbox.isTrigger = true;
@@ -46,7 +65,7 @@ namespace Rushitadel.Combat
             if (!flying || !IsAlive || Time.timeScale <= 0f) return;
             remainingLifetime -= Time.deltaTime;
             if (remainingLifetime <= 0f) { Finish(); return; }
-            Advance(speed * Time.deltaTime);
+            Advance(speed * SpeedMultiplier * Time.deltaTime);
         }
 
         // Bounded substeps handle entry + several ricochets in a single fast frame.
@@ -67,23 +86,28 @@ namespace Rushitadel.Combat
                     new ContactFilter2D { useTriggers = true }, hits, segment);
                 PlayerHealth player = null;
                 ProjectileController friendly = null;
+                TransformationShot transformed = null;
                 float closest = float.PositiveInfinity;
                 foreach (RaycastHit2D hit in hits)
                 {
                     var candidatePlayer = hit.collider.GetComponentInParent<PlayerHealth>();
                     var candidateShot = hit.collider.GetComponentInParent<ProjectileController>();
+                    var candidateForm = hit.collider.GetComponentInParent<TransformationShot>();
                     if ((candidatePlayer == null || !candidatePlayer.IsAlive) &&
-                        (candidateShot == null || !candidateShot.IsFlying || !candidateShot.CanHit(this))) continue;
+                        (candidateShot == null || !candidateShot.IsFlying || !candidateShot.CanHit(this)) &&
+                        (candidateForm==null || !candidateForm.CanHit(this))) continue;
                     if (hit.distance >= closest) continue;
                     closest = hit.distance;
                     player = candidatePlayer;
                     friendly = candidateShot;
+                    transformed = candidateForm;
                 }
-                if (player != null || friendly != null)
+                if (player != null || friendly != null || transformed != null)
                 {
                     transform.position = start + direction * closest;
                     travel -= closest;
-                    if (friendly != null) friendly.Hit(this);
+                    if (transformed!=null) transformed.Hit(this);
+                    else if (friendly != null) friendly.Hit(this);
                     else { player.TakeDamage(damage); Finish(); }
                     continue;
                 }
@@ -102,7 +126,7 @@ namespace Rushitadel.Combat
         public void TakeDamage(float amount)
         {
             if (!IsAlive || Time.timeScale <= 0f || !float.IsFinite(amount) || amount <= 0f) return;
-            health = Mathf.Max(0f, health - amount);
+            health = Mathf.Max(0f, health - amount*DamageMultiplier);
             if (!IsAlive) Finish();
         }
 

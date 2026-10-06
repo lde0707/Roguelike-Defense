@@ -26,7 +26,7 @@ namespace Rushitadel.Player
             // Allow any visible mouse destination to be reached before timeout.
             remainingLifetime = Mathf.Max(lifetime, Vector3.Distance(transform.position, destination) / Mathf.Max(0.01f, speed) + 0.5f);
             flying = true;
-            transform.localScale = Vector3.one * (impactRadius * 2f);
+            transform.localScale = Vector3.one * (impactRadius * 2f * 1.2f);
             PrepareBody();
         }
 
@@ -51,6 +51,7 @@ namespace Rushitadel.Player
                 ApplyAreaDamage();
                 flying = false;
                 transform.position = destination;
+                transform.localScale = Vector3.one * (impactRadius * 2f);
                 // Briefly hold the two visible circles at impact so the actual radius is readable.
                 Destroy(gameObject, 0.12f);
             }

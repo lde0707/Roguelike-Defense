@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Rushitadel.Combat.TowerController
   slotId: 4
-  attackRange: 5
+  attackRange: 3
   shotInterval: 0.5
   damage: 25
   shotPos: {fileID: 1897643001}
@@ -2149,7 +2149,7 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Rushitadel.Combat.TowerController
   slotId: 2
-  attackRange: 5
+  attackRange: 3
   shotInterval: 0.5
   damage: 25
   shotPos: {fileID: 9630243}
@@ -2786,7 +2786,7 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Rushitadel.Combat.TowerController
   slotId: 5
-  attackRange: 5
+  attackRange: 3
   shotInterval: 0.5
   damage: 25
   shotPos: {fileID: 1313223708}
@@ -2840,7 +2840,7 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Rushitadel.Combat.TowerController
   slotId: 1
-  attackRange: 5
+  attackRange: 3
   shotInterval: 0.5
   damage: 25
   shotPos: {fileID: 2038207130}
@@ -3661,7 +3661,7 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Rushitadel.Combat.TowerController
   slotId: 3
-  attackRange: 5
+  attackRange: 3
   shotInterval: 0.5
   damage: 25
   shotPos: {fileID: 808133588}
