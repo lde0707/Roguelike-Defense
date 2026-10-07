@@ -1,0 +1,19 @@
+Generation method: built-in image_gen, one call per design. Export: nearest-neighbor center sampling to exact 48x48, preserving alpha. Originals retained.
+
+SHARED PROMPT
+Use case: stylized-concept. Asset type: actual tiny 48x48 pixel-art player spacecraft sprite for top-down roguelike shooter. Create ONE spacecraft only, perfectly orthographic overhead view, nose facing screen top. A new design in a cohesive game family: silver white armor, dark charcoal blue mechanical recesses, bright violet reactor, thick dark one-pixel silhouette outline, highly readable chunky pixel clusters with a restrained 12-color palette, bilateral symmetry. Draw as if on an EXACT 48x48 logical pixel grid, enlarged with nearest-neighbor, with no subpixel detail. Entire silhouette occupies 40x40 logical pixels centered with four pixels of transparent margin. GENUINELY TRANSPARENT alpha background, not black and not painted checkerboard. No floor, no environment, no glow outside silhouette, no shadows outside silhouette, no text, no labels, no border, no UI, no watermark, no gradients, no antialiasing, no perspective, no 3D render. Simplify details to survive export at 48x48. 
+
++01-orbit
+Design: Compact circular saucer gunship with a prominent single round purple central reactor, segmented silver armor ring, one short forward cannon and two short shoulder cannons. A round disk silhouette.
+
+02-lance
+Design: Fast interceptor with a sharp triangular wedge silhouette, long narrow silver nose, two swept back delta wings and twin compact engines. A vertical violet cockpit slit at center, two small inset wing guns.
+
+03-crescent
+Design: Wide crescent-shaped spacecraft with two long forward pointing curved silver prongs around a clear U-shaped notch, round violet reactor behind the notch, chunky rear central engine. Distinct elegant crescent silhouette.
+
+04-bastion
+Design: Heavy armored gunship with broad square beveled hull, large left and right rectangular weapon pods aiming upward, small recessed purple hexagonal reactor and two rear engine blocks. A sturdy compact rectangular fortress silhouette.
+
+05-crosswing
+Design: Compact cruciform spacecraft with four short angular outrigger arms arranged in a plus shape, diamond silver center armor around a violet diamond reactor, slender forward cannon and two rear thruster tips. A clear cross-shaped silhouette.

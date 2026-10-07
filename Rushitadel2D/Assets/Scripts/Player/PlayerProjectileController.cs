@@ -28,6 +28,7 @@ namespace Rushitadel.Player
             flying = true;
             transform.localScale = Vector3.one * (impactRadius * 2f * 1.2f);
             PrepareBody();
+            Rushitadel.Presentation.ProjectileArt.Set(gameObject,"PlayerPower",Vector2.one*(impactRadius*2),Color.white,3);
         }
 
         private void Update()
@@ -49,6 +50,7 @@ namespace Rushitadel.Player
             if (remainingDistance <= step + Mathf.Epsilon)
             {
                 ApplyAreaDamage();
+                Rushitadel.Presentation.ProjectileArt.Burst(destination,"BlastRing",Vector2.one*(impactRadius*2),new Color(1,.83f,.48f),.18f);
                 flying = false;
                 transform.position = destination;
                 transform.localScale = Vector3.one * (impactRadius * 2f);

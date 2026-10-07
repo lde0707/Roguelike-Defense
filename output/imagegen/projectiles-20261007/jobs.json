@@ -1,0 +1,296 @@
+[
+  [
+    "PlayerBasic",
+    "플레이어 기본탄",
+    16,
+    "One small spearhead energy bolt, warm ivory point, muted brass shoulder, dark blue-gray outline, tiny mauve central notch. Long narrow shape pointing UP."
+  ],
+  [
+    "PlayerPower",
+    "플레이어 동력탄",
+    32,
+    "One round power orb. Three nested broken bronze rings around warm ivory central reactor, muted dusty teal internal energy, dark hollow gaps, restrained translucent outer rim. Perfect circular silhouette, center small and bright."
+  ],
+  [
+    "TowerBasic",
+    "기본 포탑탄",
+    16,
+    "One short stubby ballistic capsule, round warm pale gold nose, plum band at rear, dark metallic edges. Points UP. Distinct from long spearhead player bolt."
+  ],
+  [
+    "ROT-01",
+    "쌍열 연사 타원탄",
+    16,
+    "One tiny elongated oval slug with pale ivory leading tip and antique gold rear stripe. Very simple small ellipse, UP."
+  ],
+  [
+    "ROT-02",
+    "부채 산탄 알갱이",
+    16,
+    "One compact diamond pellet with beveled bronze sides and ivory point, squat robust silhouette. UP. ONE pellet only, not seven pellets."
+  ],
+  [
+    "ROT-03",
+    "부착 드릴탄",
+    24,
+    "One chunky pointed drill projectile. Three distinct diagonal bronze screw flights, dark steel core, plum collar at bottom. Mechanical spiral unmistakable. UP."
+  ],
+  [
+    "ROT-04",
+    "관통 원반",
+    24,
+    "One circular spinning metal cutting disc, exactly six broad teeth, antique brass edge, muted blue steel face, small warm ivory hub. Flat topdown circular disc."
+  ],
+  [
+    "ROT-05",
+    "폭발 구체탄",
+    24,
+    "One heavy round explosive orb enclosed in four muted plum armor petals separated by brass seams, tiny ivory central hot spot. Dark outer rim. Clearly round, no tail."
+  ],
+  [
+    "ROT-06",
+    "냉각 부채",
+    32,
+    "One 45-degree fan of cold spray, narrow source at BOTTOM CENTER, spreading UPWARD to a curved wide front. Sparse stepped dusty ice-blue crystalline streaks and three pale frost chips; transparent gaps, no dense filled triangle."
+  ],
+  [
+    "ROT-07",
+    "부식 방울",
+    16,
+    "One viscous sage green acid droplet pointing UP, bulbous front at top, tapering drip trail down, two dark olive cracks and one tiny cream glint. Muted rather than neon."
+  ],
+  [
+    "ROT-08",
+    "복제 표식문",
+    32,
+    "One horizontal rectangular duplication energy gate, width three times its height, bronze corner brackets with dusty lavender energy rails. Open transparent central passage with two small inward chevrons. Flat topdown, NO text."
+  ],
+  [
+    "ROT-09",
+    "귀환 부메랑",
+    24,
+    "One thick V-shaped mechanical boomerang, two broad crescent tips pointing UP and outward, muted plum broad faces with bronze cutting edges and dark center joint. Strong V silhouette."
+  ],
+  [
+    "ROT-10",
+    "잔류 톱날",
+    24,
+    "One round stationary spinning saw, eight chunky alternating teeth, dark steel face and bronze edge, small mauve circular hub. Different from the six-tooth lighter disc."
+  ],
+  [
+    "ROT-11",
+    "충격 파동",
+    32,
+    "One thick 55-degree crescent shockwave arc moving UP. Two separated nested shallow arcs, pale muted sand-gold fronts, smoky mauve trailing pixels, transparent interior. Wide short horizontal silhouette."
+  ],
+  [
+    "ROT-12",
+    "십자 분열 원탄",
+    16,
+    "One compact cross-tipped splitting projectile, ivory upward point, bronze central shaft, two visible short horizontal side fins in plum. UP."
+  ],
+  [
+    "ROT-13",
+    "감속 그물",
+    32,
+    "One short HORIZONTAL mesh barrier four times wider than tall. Exactly three diamond mesh openings between small hooked bronze endpoints, dusty teal threads, transparent holes. Flat topdown."
+  ],
+  [
+    "ROT-14",
+    "과충전 표식문",
+    32,
+    "One broad rectangular overcharge gate, width three times height, chunky brass squared electrodes left and right, warm ivory short zigzag conducting rails above and below. Fully open transparent center. Not a filled block."
+  ],
+  [
+    "ROT-15",
+    "봉합 포말벽",
+    32,
+    "One HORIZONTAL low wall of five overlapping round foam lobes, dusty warm ivory and muted sage shadows, dark thin pixel outlines, small gaps, width three times height. Not liquid puddle."
+  ],
+  [
+    "ROT-16",
+    "연쇄 전극탄",
+    16,
+    "One flying two-pronged electrode dart, bronze fork tips and dusty pale teal electrical spark between them, dark stem with plum collar. UP."
+  ],
+  [
+    "S3-01",
+    "삼연장 버스트탄",
+    16,
+    "One thick burst cartridge, blunt gold beveled nose, three tiny stacked plum bands at rear, ivory highlight. UP. ONE bullet only, not triple guns."
+  ],
+  [
+    "S3-02",
+    "머신건 탄",
+    16,
+    "One needle-thin rapid machinegun round with copper-brown tip and warm pale tracer tail of two detached square pixels. UP. Very narrow."
+  ],
+  [
+    "S3-03",
+    "확산 산탄",
+    16,
+    "One squat hexagonal buckshot pellet, dusty copper and charcoal steel, warm ivory square center. Tiny sturdy hexagon. ONE pellet only."
+  ],
+  [
+    "S3-04",
+    "저격 철갑탄",
+    24,
+    "One long slender armor-piercing sniper dart with sharply pointed ivory tip, dark blue steel shaft, two bronze stabilizing fins at bottom. UP. Long dart rather than beam."
+  ],
+  [
+    "S3-05",
+    "레일 관통탄",
+    32,
+    "One narrow straight rail energy lance oriented UP, long pale teal core, parallel dark bronze guide traces, two sparse square sparks. Tall narrow luminous rail, no muzzle or gun."
+  ],
+  [
+    "S3-06",
+    "대구경 폭발탄",
+    24,
+    "One large heavy cannon shell, round pointed bronze nose, muted oxblood-plum segmented body, dark steel rim and single warm fuse slit. UP. Broad heavy shell."
+  ],
+  [
+    "S3-07",
+    "곡사 유탄",
+    24,
+    "One short round grenade projectile with muted olive body, bronze equator band, small warm fuse at top and dark mechanical seams. Topdown compact lobbed grenade, no perspective."
+  ],
+  [
+    "S3-08",
+    "도탄 탄환",
+    16,
+    "One angular ricochet crystal bullet, off-center diamond facets in bronze and dusty lavender, white front tip, small hooked rear fin. UP."
+  ],
+  [
+    "S3-09",
+    "화염 분사",
+    32,
+    "One 50-degree short flame cone, source BOTTOM CENTER spreading UP, three chunky curled flame tongues in muted ochre, rust, warm cream. Transparent gaps, no photographic fire or blur."
+  ],
+  [
+    "S3-10",
+    "산성 분사",
+    32,
+    "One short fan of acid spray spreading UP from BOTTOM CENTER, three thick tapering sage and olive streams terminating in round droplets, transparent gaps. Subdued green no neon."
+  ],
+  [
+    "S3-11",
+    "냉각 방사",
+    32,
+    "One broad frosty cone opening UP from BOTTOM CENTER, pale desaturated blue-white ice shards over sparse dusty lavender wisps. Three prominent angular crystal tips. Transparent holes."
+  ],
+  [
+    "S3-12",
+    "파쇄 표식탄",
+    16,
+    "One small tagging dart shaped like a short spear with two bracket-like side fins, muted crimson-plum body, antique gold point, pale ivory center. UP."
+  ],
+  [
+    "S3-13",
+    "전격 코일 전류",
+    32,
+    "One jagged electrical arc oriented VERTICALLY from bottom center to top center. Four sharp stepped bends and two short branches, pale dusty teal inner pixels and desaturated lavender edge. No endpoint orbs."
+  ],
+  [
+    "S3-14",
+    "충격파",
+    32,
+    "One wide expanding crescent shockwave opening toward UP, heavy pale ivory leading arch with two separated bronze after-arcs and sparse dark lavender chunks. Transparent negative space."
+  ],
+  [
+    "S3-15",
+    "추적 미사일",
+    24,
+    "One compact guided missile pointing UP, slim dark steel body, muted plum fins, bronze pointed warhead and small warm cream exhaust at bottom. Two unmistakable triangular tail fins."
+  ],
+  [
+    "LegacyShield",
+    "방패 지원 토큰",
+    24,
+    "One hexagonal shield pickup projectile, dark steel six-sided frame, antique brass rim, muted dusty teal translucent center and small ivory center diamond. Flat topdown token, not UI button."
+  ],
+  [
+    "WebPierce",
+    "관통 강화탄",
+    16,
+    "One long sharply pointed narrow ivory dart with two bronze parallel side edges and dusty plum rear. UP. Clear elongated penetrating silhouette."
+  ],
+  [
+    "WebSpread",
+    "분산 보조탄",
+    16,
+    "One lightweight small arrow projectile with a forked bronze tail and ivory arrowhead, muted pale teal central shaft. UP."
+  ],
+  [
+    "WebBlast",
+    "폭발 강화탄",
+    16,
+    "One short capsule with a round segmented bronze explosive nose, plum rear and a bright tiny ivory fuse slit. UP."
+  ],
+  [
+    "WebPoison",
+    "맹독 강화탄",
+    16,
+    "One poison-coated spearhead bullet, muted sage-green coating around bronze inner core, two round dark olive bubble details, ivory nose. UP."
+  ],
+  [
+    "SplitFragment",
+    "십자 분열 파편",
+    16,
+    "One tiny thin triangular shrapnel shard, bronze cutting edge and dark steel back, one ivory leading pixel. UP. Clearly smaller simpler than a full bullet."
+  ],
+  [
+    "MicroMissile",
+    "분리 소형 유도탄",
+    16,
+    "One tiny miniature missile pointing UP, pale bronze pointed body, two small plum fins and just one ivory exhaust pixel. Compact thin silhouette."
+  ],
+  [
+    "PrismRound",
+    "프리즘 약실 특수탄",
+    16,
+    "One compact faceted prism bullet UP, muted teal, muted rust and dusty lilac three facets with a restrained ivory center. No rainbow neon."
+  ],
+  [
+    "BlastRing",
+    "원형 폭발 효과",
+    32,
+    "One circular expanding explosion shock ring, broken warm cream and ochre rim, five tiny dark bronze debris pixels, fully transparent large hollow center. Flat topdown pixel effect, no huge fireball."
+  ],
+  [
+    "ResidualField",
+    "잔류 피해 영역",
+    32,
+    "One circular scorched residual damage field, sparse cracked charcoal islands with dim burnt amber seams and faded dusty rust edge, mostly transparent open center. Topdown flat ground effect."
+  ],
+  [
+    "AcidPool",
+    "산성 웅덩이",
+    32,
+    "One flat round acid puddle with irregular five-lobed edge, muted olive and sage translucent patches, three darker bubble rings, sparse ivory glints. Transparent outer background."
+  ],
+  [
+    "PoisonStatus",
+    "독·부식 상태",
+    24,
+    "One small open ring of three sage-green poisonous droplets and dark olive cracks arranged around a EMPTY TRANSPARENT center to overlay an enemy projectile. Sparse visual status effect."
+  ],
+  [
+    "IceShell",
+    "냉각 외피",
+    24,
+    "One broken circular ice shell with six pale desaturated blue crystal plates, dark lavender shadows, large transparent central hole to show target beneath. Sparse topdown status overlay."
+  ],
+  [
+    "TargetMark",
+    "취약·화력 연계 표식",
+    24,
+    "One open crosshair mark composed of four separated angular bracket corners, muted plum outer pixels, antique brass and pale ivory edges. Transparent central hole. Not letters or numbers."
+  ],
+  [
+    "ShieldHalo",
+    "육각 보호막",
+    32,
+    "One thin hexagonal protective energy barrier outline, muted dusty teal six edges, tiny bronze corner nodes, mostly transparent center. Restrained faint secondary hexagonal outline."
+  ]
+]

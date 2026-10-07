@@ -164,8 +164,8 @@ namespace Rushitadel
                 "Visible power orb matches its actual damage radius");
             Check(!attack.TryFire(aim) && Mathf.Approximately(power.CurrentPower, 60f), "Insufficient power blocks another shot without spending");
             yield return new WaitForSeconds(0.15f);
-            Check(before.y - body.position.y > 0.12f && before.y - body.position.y < 0.22f && Mathf.Abs(body.position.x - before.x) < 0.01f,
-                "Right click produces a brief small recoil opposite aim");
+            Check(Vector2.Distance(before, body.position) < 0.01f,
+                "Right click does not displace the player");
             yield return new WaitForSeconds(0.3f);
             Check(center == null && middle.CurrentHealth > 29.9f && middle.CurrentHealth < 30.1f,
                 "Inner target instantly dies; outer target takes maximum-HP proportional falloff damage");
@@ -175,7 +175,7 @@ namespace Rushitadel
                 "Power area destroys central enemy bullets and damages edge bullet HP");
             Vector2 after = body.position;
             yield return new WaitForSeconds(0.15f);
-            Check(Vector2.Distance(after, body.position) < 0.01f, "Recoil ends without persistent drift");
+            Check(Vector2.Distance(after, body.position) < 0.01f, "Power shot causes no delayed drift");
             foreach (var enemy in new[] { middle, rim, outside }) Object.DestroyImmediate(enemy.gameObject);
             Object.DestroyImmediate(rimBullet.gameObject);
             yield return new WaitForSeconds(0.5f); // Let XP from the central kill finish collecting.

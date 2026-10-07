@@ -1,0 +1,22 @@
+Method: built-in image_gen; one generation per complete player design. Export to 48x48 PNG with nearest-neighbor sampling and preserved transparency.
+Planning references: Rushitadel_시스템_상세기획서_v2.txt (player structure and rotation); docs/제작자료_아카이브_20261007/01_게임_아트_UI_통합정리.md (compact circular player, five attached turrets, simple silhouettes and restrained detail).
+User override: original silver armor and purple core palette is not required.
+Scope assumption: five designs of the complete player, each with exactly five attached turrets, continuing the initial player craft request.
+
+SHARED PROMPT
+Use case: stylized-concept. Asset: ONE complete player unit sprite for a top-down rotating bullet-interception game. CRITICAL game design: exactly ONE central compact round-bodied hovering craft with exactly FIVE clearly distinct attached turret modules spaced at equal 72-degree intervals around the rim, each short barrel points radially OUTWARD. Turrets at twelve o'clock, upper-right, lower-right, lower-left, upper-left. Count five and only five: top, right-up, right-down, left-down, left-up. They are attached to and overlap the perimeter, not separate drones. NO sixth bottom cannon. Orthographic straight overhead, no perspective. Entire craft should rotate naturally; no aerodynamic nose or elongated fighter wings. Art direction: VERY SIMPLE intentional true low-resolution pixel art, designed on a 48 by 48 pixel logical canvas enlarged with nearest neighbor. Think clean readable arcade tank sprite, broad flat shapes, maximum 7 solid colors, single dark outline, ONE flat highlight and ONE flat shadow tone per material, NO gradients. Central body about 24-28 logical pixels across; each turret only 5-7 pixels wide with a stubby barrel of 3-5 pixels. Complete silhouette about 40x40 pixels centered in the 48x48 canvas. Each turret is a simple shape with one muzzle, no vents, no bolts, no intricate armor panels, no cables, no stripes, no decorative lights. Center has one small unlit simple hub instead of a glowing reactor. Turret count and simplicity matter far more than decoration. Genuinely transparent alpha background. No shadow on ground, no glow, no particles, no text, no UI, no watermark, no reference sheet, no extra objects. NEW standalone design, do not reuse earlier silver armor purple reactor styling. 
+
+01-mint-disc
+Variant: A smooth solid circular mint-green body, deep teal shadow and dark ink outline, small cream center cap. Five simple dark teal rounded-square turret housings each with a short cream blunt barrel. Restrained friendly utility-machine design. Round uninterrupted main hull, not concentric ornamental rings.
+
+02-sand-pentagon
+Variant: A compact softly beveled pentagonal sand-yellow body, ochre shadow, dark brown outline, small rust red pentagonal center hatch. Exactly five chunky brown trapezoid turret modules at its five vertices, each a short wide ochre cannon. Sturdy construction-equipment character, extremely simple broad planes.
+
+03-coral-petal
+Variant: A compact coral-red five-lobed rounded body, dark burgundy outlines, pale peach highlights, small cream center hub. Exactly five petal-shaped armor lobes; each lobe contains ONE tiny burgundy round turret with one short cream barrel directed outward. Rounded flower-like fivefold silhouette, playful but mechanical, no extra prongs.
+
+04-blue-ring
+Variant: A simple blue circular ring chassis with five thick radial structural spokes connecting to a tiny warm yellow central hub. Dark navy outline, muted cobalt body, pale blue highlights. Exactly five small rectangular blue gun pods embedded in the ring perimeter, each with ONE short navy barrel. Five broad open cutouts between the hub and ring, no ornamental small holes. Ring with modest width, clean silhouette.
+
+05-ivory-shield
+Variant: A squat compact circular armored body divided into five broad rounded ivory shield plates, olive-gray shadow and deep green outline, small flat orange center hatch. Exactly five compact deep green square turret housings seated at the five seams between plates, each one short wide ivory barrel. Each turret barely extends past the body; heavy protected pillbox feel. Only five large plates, no small panel line details.

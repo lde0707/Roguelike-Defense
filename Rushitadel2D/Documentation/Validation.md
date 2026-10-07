@@ -1,5 +1,7 @@
 # Unity 전투 검증
 
+2026-10-07 변경: 우클릭 강공격의 플레이어 넉백과 시각적 뒤로 밀림을 제거했다. 아래 2026-10-05 검증 기록의 우클릭 반동 항목은 이전 동작이며, 현재 `CombatRulesProbe`는 발사 후 위치가 유지되는지 검사한다. 이번 변경 후 전체 Play Mode 검사는 재실행하지 않았다.
+
 검증일: 2026-10-05. Unity 6000.5.3f1, Batch Editor + 실제 Play Mode. 결과: PASS.
 
 `PortValidation.BuildAndRun`으로 씬·프리팹을 생성하고 `PortValidation.Run`으로 최종 코드를 검증했다. 총 194개 검사가 통과했다. 원본 로그: `.work/forward-20261005/unity-validation-final.log`.

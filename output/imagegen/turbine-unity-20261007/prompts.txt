@@ -1,0 +1,76 @@
+Game asset, genuine transparent background. Draw exactly ONE SEPARATE detachable turret module for the supplied turbine player spacecraft. Reference is STYLE/COLOR only: muted plum painted armor, aged bronze collars, dark blue-gray frame, warm cream-yellow small energy apertures. STRICT TOP-DOWN orthographic sprite aiming straight UP. A tiny turret designed for a 24x24 logical pixel grid, enlarged nearest-neighbor, readable chunky pixel clusters, 12-16 flat colors, dark 1-pixel outline, simple three-tone matte bevel shading. The turret has a common round dark mounting joint at bottom center and a characteristic functional muzzle at the top. Entire sprite centered within 20x22 logical pixels, generous transparent surrounding space. Moderate coherent mechanical detail suitable for a 48px player, NO spacecraft hull, NO five-turret arrangement, NO wings, NO other objects, NO projectiles, NO action beams, NO text, NO grid, NO ground shadow, NO background/checkerboard, NO soft glow. Only a tiny cream-yellow aperture for light; plum and brass armor remain matte. One single module only. Distinct silhouette requirement: 
+
+[
+  [
+    "Hull",
+    "EDIT the reference into a modular 48x48 pixel-art turbine HULL ONLY. Keep exactly five clockwise curved muted plum armor blades with bronze edge bands, blue-gray central frame and tiny warm ivory reactor. REMOVE all five gun assemblies completely, leaving only five small dark socket recesses flush with the blades. No gun barrels, no luminous lights outside center. Central reactor at exact canvas center. Preserve the fivefold pinwheel outline with notches, no added wings. Simplify to a strict 48x48 logical pixel grid enlarged nearest neighbor, palette 16 colors, crisp chunky pixels, no tiny scratches or soft edges. True transparent alpha background. Full hull centered with 3 logical pixels clear margin, flat top-down. One hull only, no labels."
+  ],
+  [
+    "Default",
+    "A single short conventional straight cannon, rectangular bronze sleeve, one cream vertical slit at muzzle, plum angular breech. This is the neutral untransformed cannon."
+  ],
+  [
+    "ROT-01",
+    "Twin rapid-fire gun. TWO clearly separate short parallel barrels, side by side, divided by a dark central gap. Compact rectangular plum breech, bronze two-ring collars. Exactly two muzzles."
+  ],
+  [
+    "ROT-02",
+    "Fan shotgun. ONE broad flattened trapezoid muzzle spreading outward across the front, a dark wide horizontal muzzle mouth and three chunky divider teeth. Compact wedge profile, no long barrels."
+  ],
+  [
+    "ROT-03",
+    "Attachment drill launcher. One short thick spiraled conical drill-shaped muzzle pointing upward, three big alternating bronze spiral bands on a dark shaft, heavy plum base. Broad mechanical drill unmistakable at small size."
+  ],
+  [
+    "ROT-04",
+    "Piercing disc launcher. One broad HORIZONTAL SLIT muzzle at top, wide thin slot with squared lips, small semicircular disc magazine behind it. NO exposed giant saw blade, no wheel projectile. A flat slot ejects discs forward."
+  ],
+  [
+    "ROT-05",
+    "Explosive orb cannon. One very thick short circular-bore barrel, rounded chunky plum spherical breech, broad bronze rim around one large warm pale round opening. Distinct fat bulb silhouette."
+  ],
+  [
+    "ROT-06",
+    "Cooling spray nozzle. Wide comb-shaped nozzle with FIVE blunt cooling fins aligned across its top edge, dark slit below teeth, rectangular compact cold apparatus. Cream light only, keep common plum/bronze material."
+  ],
+  [
+    "ROT-07",
+    "Corrosion mist nozzle. THREE short diverging stub nozzles: center points up, left up-left, right up-right, attached to one squat bulbous reservoir. Short forked triple sprayer, not spacecraft hull."
+  ],
+  [
+    "ROT-08",
+    "Replication marker gate emitter. Strong U-SHAPED square portal nozzle, open transparent central square and open top, two tall parallel bronze prongs joined by plum bottom bridge. Sparse tiny cream squares on inner edges. NO barrel."
+  ],
+  [
+    "ROT-09",
+    "Returning boomerang launcher. Distinct broad CRESCENT muzzle cradling a thick V-shaped bronze guide at its front. Two curved plum jaws, open upward. No projectile flying loose."
+  ],
+  [
+    "ROT-10",
+    "Stationary saw deployer. A chunky recessed circular housing with SIX blunt notch teeth along its bronze outer rim, dark circular center and one small frontal output notch. Clearly a gear-socket nozzle, not a large spinning saw outside the turret."
+  ],
+  [
+    "ROT-11",
+    "Shockwave emitter. One short broad FLAT PLATE muzzle, thick horizontal bronze rectangular pressure plate over two dark supports, compact plum rectangular base. Blunt wide solid rectangle instead of tube."
+  ],
+  [
+    "ROT-12",
+    "Cross split cannon. One short blocky barrel with prominent PLUS-SHAPED dark groove across its squared muzzle housing. Four bronze lobes around the cross opening, small plum base. Cross shape must read instantly."
+  ],
+  [
+    "ROT-13",
+    "Slow-net launcher. Two outward CURVED HOOK ends forming an open wide fork nozzle, two or three thick dark grid lines between hooks, small plum base. Sparse grid and hooks are the identifying shapes."
+  ],
+  [
+    "ROT-14",
+    "Overcharge marker emitter. CLOSED square electrode frame containing a single warm cream diamond capacitor, two chunky bronze side plates, tiny plum base. A compact closed square rather than the open U of the replication emitter."
+  ],
+  [
+    "ROT-15",
+    "Sealant foam nozzle. Round soft-looking triple bubble mouth, three unequal blunt round nozzle lobes clustered at top, rounded plum reservoir and bronze neck. Bubble-cluster silhouette, no loose bubbles or projectiles."
+  ],
+  [
+    "ROT-16",
+    "Chain conductor gun. Exactly TWO separated electrode prongs opening like a narrow tuning fork, stepped bronze coil bands on prongs and a clear transparent central gap. Thin angular fork silhouette, small plum insulated base. NO lightning outside sprite."
+  ]
+]

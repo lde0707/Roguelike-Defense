@@ -22,14 +22,19 @@ namespace Rushitadel.Combat
         private int extraHits;
         private bool splash, poison;
         public bool CanHit(IDamageable target) => flying && !damaged.Contains(target);
-        public void SetModifiers(int pierce, bool explosion, bool toxin) { extraHits = pierce; splash = explosion; poison = toxin; }
+        public void SetModifiers(int pierce, bool explosion, bool toxin)
+        {
+            extraHits = pierce; splash = explosion; poison = toxin;
+            string special=toxin?"WebPoison":explosion?"WebBlast":pierce>0?"WebPierce":null;
+            if(special!=null) Rushitadel.Presentation.ProjectileArt.Set(gameObject,special,new Vector2(.12f,.24f),Color.white);
+        }
         public bool IsFlying => flying;
         public Vector3 Direction => direction;
         public float DistanceTravelled { get; private set; }
 
         private void Awake() => transform.localScale *= 1.2f;
 
-        public void Launch(Vector3 newDirection, float newDamage, float maximumDistance)
+        public void Launch(Vector3 newDirection, float newDamage, float maximumDistance, string visual="TowerBasic")
         {
             newDirection.z = 0f;
             direction = newDirection.sqrMagnitude > 0f ? newDirection.normalized : Vector3.up;
@@ -45,6 +50,7 @@ namespace Rushitadel.Combat
                 Mathf.Max(Mathf.Abs(transform.lossyScale.x), Mathf.Abs(transform.lossyScale.y)));
             PrepareBody();
             FaceDirection(direction);
+            Rushitadel.Presentation.ProjectileArt.Set(gameObject,visual,new Vector2(.12f,.24f),Color.white);
         }
 
         private void Update()
@@ -100,9 +106,12 @@ namespace Rushitadel.Combat
                 effect.Refresh();
             }
             if (splash)
+            {
+                Rushitadel.Presentation.ProjectileArt.Burst(transform.position,"BlastRing",Vector2.one*1.6f,new Color(1,.83f,.48f),.18f);
                 foreach (var other in EnemyRegistry.FindAllWithinRadius(transform.position, .8f))
                     if (other != null && other.IsAlive && !ReferenceEquals(other, target) && Vector2.Distance(other.transform.position, transform.position) <= .8f)
                         other.TakeDamage(damage * .5f);
+            }
             if (extraHits-- <= 0) Finish();
         }
 

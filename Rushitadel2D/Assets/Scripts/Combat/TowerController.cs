@@ -22,6 +22,7 @@ namespace Rushitadel.Combat
         private float nextShotTime;
         private bool alternate;
         public event System.Action Fired;
+        public Vector3 MuzzlePosition => shotPos != null ? shotPos.position : transform.position;
 
         public void Configure(Transform newShotPos, GameObject newProjectilePrefab)
         {

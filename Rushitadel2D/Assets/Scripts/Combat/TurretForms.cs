@@ -9,6 +9,6 @@ namespace Rushitadel.Combat
         public static bool Support(int id) => id == 8 || id == 14;
         public static bool Copyable(int id) => id >= 1 && id <= 5 || id == 7 || id == 9 || id == 12 || id == 16;
         public static readonly string[] ElementNames={"기본","불꽃","얼음","전기","독","물"};
-        public static Color ElementColor(int id) => id switch {1=>new Color(1,.28f,.055f),2=>new Color(.25f,.85f,1),3=>new Color(1,.83f,.15f),4=>new Color(.4f,1,.2f),5=>new Color(.15f,.55f,1),_=>new Color(.65f,.25f,1)};
+        public static Color ElementColor(int id) => id switch {1=>new Color(1,.28f,.055f),2=>new Color(.25f,.85f,1),3=>new Color(1,.83f,.15f),4=>new Color(.4f,1,.2f),5=>new Color(.15f,.55f,1),_=>new Color(1f,.83f,.48f)};
     }
 }

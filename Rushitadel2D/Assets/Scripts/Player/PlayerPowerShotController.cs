@@ -18,9 +18,8 @@ namespace Rushitadel.Player
         [Header("Power Shot")]
         [SerializeField, Range(0.01f, 1f)] private float powerCostFraction = 0.7f;
         [SerializeField, Min(0.01f)] private float diameterMultiplier = 1.5f;
-        [SerializeField, Min(0f)] private float recoilDistance = 0.18f;
-        [SerializeField, Min(0.01f)] private float recoilDuration = 0.12f;
         private PlayerController movement;
+        public event System.Action<Vector2> Fired;
         public float AttackRadius => movement.BodyRadius * diameterMultiplier;
 
         private void Awake()
@@ -93,7 +92,7 @@ namespace Rushitadel.Player
             }
 
             projectile.LaunchArea(direction, destination, AttackRadius);
-            movement.ApplyRecoil(direction, recoilDistance, recoilDuration);
+            Fired?.Invoke(direction);
             return true;
         }
 

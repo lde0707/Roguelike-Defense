@@ -17,6 +17,7 @@ namespace Rushitadel.Player
         [SerializeField, Min(0f)] private float attackRange = 8f;
         private PlayerHealth health;
         private float nextShotTime;
+        public event System.Action<Vector2> Fired;
 
         private void Awake()
         {
@@ -58,11 +59,12 @@ namespace Rushitadel.Player
             shot.SetActive(true);
             var projectile = shot.GetComponent<ProjectileController>();
             if (projectile == null) projectile = shot.AddComponent<ProjectileController>();
-            projectile.Launch(Quaternion.Euler(0,0,i*12) * direction, damage, attackRange);
+            projectile.Launch(Quaternion.Euler(0,0,i*12) * direction, damage, attackRange, i==0?"PlayerBasic":"WebSpread");
             projectile.SetModifiers(Rushitadel.Progression.CampaignDirector.HasWeb(0) ? 1 : 0,
                 Rushitadel.Progression.CampaignDirector.HasWeb(2), Rushitadel.Progression.CampaignDirector.HasWeb(3));
             }
             nextShotTime = Time.time + shotInterval;
+            Fired?.Invoke(direction.normalized);
             return true;
         }
     }
