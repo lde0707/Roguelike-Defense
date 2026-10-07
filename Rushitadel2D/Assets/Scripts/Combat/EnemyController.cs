@@ -53,7 +53,7 @@ namespace Rushitadel.Combat
             }
 
             transform.position += offset.normalized * Mathf.Min(moveSpeed * Time.deltaTime, offset.magnitude - stoppingDistance);
-            transform.up = offset.normalized;
+            if(moveSpeed > 0) transform.up = offset.normalized;
         }
 
         public void TakeDamage(float amount)

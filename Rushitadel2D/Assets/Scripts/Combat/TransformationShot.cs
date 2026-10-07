@@ -23,7 +23,12 @@ namespace Rushitadel.Combat
         private EnemyProjectileController attached;
         private Color tint;
         private SpriteRenderer sprite;
-        private CircleCollider2D hitbox;
+        private Collider2D hitbox;
+        public override void FitVisualCollision(Vector2 size)
+        {
+            if(Stationary)return; // Area outlines, not their decorative center icons, define these attacks.
+            base.FitVisualCollision(size);hitbox=visualHitbox;
+        }
         public int Form => form;
         public bool CanHit(EnemyProjectileController b)=>!finished && !Stationary && !wasAttached && (form!=9||hitCount<3) && b!=null && b.IsAlive && !hitIds.Contains(b) && (pelletHits==null || !pelletHits.TryGetValue(b,out int n) || n<(form==2?2:1));
         private bool Stationary=>form==6||form==8||form==10||form==11||form==13||form==14||form==15;
@@ -55,8 +60,10 @@ namespace Rushitadel.Combat
                 var old=live.Where(x=>x!=null&&!x.finished&&x.form==f&&x.slot==slot).ToArray();
                 for(int i=0;i<=old.Length-cap;i++)old[i].Finish();
             }
-            else {shot.hitbox=go.AddComponent<CircleCollider2D>();shot.hitbox.isTrigger=true;shot.hitbox.radius=.5f;}
-            shot.Decorate();live.Add(shot);return shot;
+            else {var circle=go.AddComponent<CircleCollider2D>();circle.isTrigger=true;circle.radius=.5f;shot.hitbox=circle;}
+            if(shot.Stationary)shot.Decorate();
+            Rushitadel.Presentation.ProjectileArt.Transformation(go,f,c);
+            live.Add(shot);return shot;
         }
         private void Decorate()
         {
@@ -128,7 +135,7 @@ namespace Rushitadel.Combat
             float previousTravel=travel;
             TryGates(start,start+dir*distance);
             Physics2D.SyncTransforms();
-            foreach(var h in Physics2D.CircleCastAll(start,form==4?.2f:.075f,dir,distance).OrderBy(h=>h.distance))
+            foreach(var h in Physics2D.CapsuleCastAll(start,CastSize(form==4?.2f:.075f),CastDirection,transform.eulerAngles.z,dir,distance).OrderBy(h=>h.distance))
             {
                 var b=h.collider.GetComponentInParent<EnemyProjectileController>();
                 if(b!=null && CanHit(b) && InRange(b.transform.position)){transform.position=start+dir*h.distance;travel=previousTravel+h.distance;Hit(b);if(finished||attached!=null)return;}
@@ -161,7 +168,7 @@ namespace Rushitadel.Combat
             }
             if(form==12&&!fragment)
             {
-                for(int sign=-1;sign<=1;sign+=2){var child=Create(12,transform.position,Quaternion.Euler(0,0,90*sign)*heading,factor,slot,tint,id);child.origin=origin;child.travel=travel;child.fragment=true;child.derived=true;child.hasGateOrigin=hasGateOrigin;child.gateOrigin=gateOrigin;child.hitIds.Add(key);}
+                for(int sign=-1;sign<=1;sign+=2){var child=Create(12,transform.position,Quaternion.Euler(0,0,90*sign)*heading,factor,slot,tint,id);child.origin=origin;child.travel=travel;child.fragment=true;child.derived=true;child.hasGateOrigin=hasGateOrigin;child.gateOrigin=gateOrigin;child.hitIds.Add(key);Rushitadel.Presentation.ProjectileArt.Transformation(child.gameObject,12,tint,true);}
             }
             hitCount++;int max=form==4?4:form==9?3:1;if(hitCount>=max) {if(form==9){hitbox.enabled=false;}else Finish();}
         }
@@ -171,6 +178,7 @@ namespace Rushitadel.Combat
             if(Time.time<nextTick)return;nextTick=Time.time+(form==10?.2f:.1f);
             int max=form==6?6:form==11?5:form==13?4:form==10?3:99;
             float radius=form==6?1.8f:form==11?2:form==10?.3f:form==13?.55f:.4f;
+            if(form==10)radius=GetComponent<Rushitadel.Presentation.ProjectileVisual>().DisplaySize.x*.5f;
             int count=0;
             foreach(var b in Nearby(transform.position,radius))
             {
@@ -198,11 +206,12 @@ namespace Rushitadel.Combat
                 if(Vector2.Distance(start+segment*t,point)>.4f || !g.InRange(end))continue;
                 int max=g.form==8?3:1;if(!g.gateIds.Contains(id)&&g.gateIds.Count>=max)continue;
                 g.gateIds.Add(id);processedGate=true;
-                if(g.form==14)factor*=1.25f;
+                if(g.form==14){factor*=1.25f;GetComponent<Rushitadel.Presentation.ProjectileVisual>()?.Overcharge();}
                 else
                 {
                     var copy=Create(form,end+new Vector2(-heading.y,heading.x)*.07f,heading,factor*.5f,slot,tint,id,pelletHits);
                     copy.origin=origin;copy.travel=travel+Vector2.Distance(start,end);copy.hitCount=hitCount;copy.returning=returning;copy.derived=true;copy.hasGateOrigin=true;copy.gateOrigin=g.origin;
+                    copy.GetComponent<Rushitadel.Presentation.ProjectileVisual>()?.SmallerCopy();
                     foreach(Component key in hitIds)copy.hitIds.Add(key);
                 }
                 break;
@@ -212,7 +221,7 @@ namespace Rushitadel.Combat
         private void EndFlight(){if(form==5)Explode();else Finish();}
         private void Finish(){if(finished)return;finished=true;if(hitbox!=null)hitbox.enabled=false;live.Remove(this);Destroy(gameObject);}
         private void OnDestroy()=>live.Remove(this);
-        public static void Flash(Vector2 p,Color color,float size){var go=new GameObject("Pixel impact");go.transform.position=p;go.transform.localScale=Vector3.one*size;var s=go.AddComponent<SpriteRenderer>();s.sprite=Glyph;s.sharedMaterial=EffectMaterial;s.color=new Color(color.r,color.g,color.b,.35f);s.sortingOrder=109;Destroy(go,.09f);}
-        private static void FlashLine(Vector2 a,Vector2 b,Color color){var go=new GameObject("Chain arc");go.transform.position=(a+b)*.5f;go.transform.rotation=Quaternion.Euler(0,0,Mathf.Atan2(b.y-a.y,b.x-a.x)*Mathf.Rad2Deg-90);go.transform.localScale=new Vector3(.06f,Vector2.Distance(a,b),1);var s=go.AddComponent<SpriteRenderer>();s.sprite=Glyph;s.sharedMaterial=EffectMaterial;s.color=color;s.sortingOrder=111;Destroy(go,.08f);}
+        public static void Flash(Vector2 p,Color color,float size)=>Rushitadel.Presentation.ProjectileArt.Burst(p,"BlastRing",Vector2.one*size,color,.15f);
+        private static void FlashLine(Vector2 a,Vector2 b,Color color)=>Rushitadel.Presentation.ProjectileArt.Arc(a,b,color);
     }
 }

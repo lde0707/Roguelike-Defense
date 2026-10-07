@@ -30,7 +30,7 @@ namespace Rushitadel.Progression
         public int Stage { get; private set; } = 1;
         public int Round { get; private set; } = 1;
         public int Spawned { get; private set; }
-        public int SpawnBudget => 8 + Stage * 2 + Round * 2;
+        public int SpawnBudget => 10 + Stage * 2 + Round * 2;
         public int Wallet => Mathf.Max(0, Experience.TotalExperience - State.spentXp);
         public int PendingAugments => Mathf.Max(0, Experience.CompletedThresholds - State.augmentsChosen);
         public PlayerExperience Experience => PlayerHealth.Instance.GetComponent<PlayerExperience>();
@@ -107,7 +107,7 @@ namespace Rushitadel.Progression
                 {
                     var enemy = spawner.SpawnCampaignEnemy(Stage);
                     if (enemy != null) Spawned++;
-                    nextSpawn = Time.time + 1.7f;
+                    nextSpawn = Time.time + Mathf.Max(1.1f,1.65f-.1f*Stage-.05f*Round);
                 }
                 if (Spawned >= SpawnBudget && !EnemyRegistry.ActiveEnemies.Any(e => e != null && e.IsAlive))
                 {

@@ -7,6 +7,15 @@ namespace Rushitadel.Presentation
     // Visual children use world sizes. They never resize the projectile or its hitbox.
     public static class ProjectileArt
     {
+        public const float ThicknessMultiplier = 1.2f;
+        public const float FriendlySizeMultiplier = 3f;
+        public const float HostileSizeMultiplier = 2f;
+        // Preserve long-axis reach; round projectiles grow evenly. Visuals only.
+        public static Vector2 Thicker(Vector2 size)
+        {
+            if(Mathf.Abs(size.x-size.y)<=Mathf.Max(size.x,size.y)*.1f)return size*ThicknessMultiplier;
+            return size.x<size.y?new Vector2(size.x*ThicknessMultiplier,size.y):new Vector2(size.x,size.y*ThicknessMultiplier);
+        }
         private static readonly Dictionary<string, Sprite> sprites = new();
         private static Material material;
         public static Material Material
@@ -15,8 +24,8 @@ namespace Rushitadel.Presentation
             {
                 if(material==null)
                 {
-                    material=new Material(Resources.Load<Shader>("PlayerForms/ElementSprite"));
-                    material.SetColor("_ElementColor",Color.white);
+                    material=new Material(Resources.Load<Shader>("ProjectileArt/FactionProjectile"));
+                    material.SetFloat("_Hostile",0);
                 }
                 return material;
             }
@@ -47,7 +56,7 @@ namespace Rushitadel.Presentation
                 foreach(var renderer in target.GetComponentsInChildren<SpriteRenderer>())renderer.enabled=false;
                 view=target.AddComponent<ProjectileVisual>();
             }
-            view.Configure(name,size,tint,mode,offset);
+            view.Configure(name,mode==5?size:Thicker(size)*FriendlySizeMultiplier,tint,mode,offset);
             return view;
         }
         public static void Transformation(GameObject target,int form,Color tint,bool fragment=false)
@@ -56,10 +65,10 @@ namespace Rushitadel.Presentation
             {
                 1=>new(.085f,.16f),2=>new(.11f,.13f),3=>new(.18f,.28f),
                 4=>Vector2.one*.4f,5=>Vector2.one*.26f,
-                6=>new(1.49f,1.8f),7=>new(.12f,.18f),
-                8=>new(.8f,.26f),9=>Vector2.one*.34f,10=>Vector2.one*.6f,
-                11=>new(2.08f,.46f),12=>new(.14f,.23f),
-                13=>new(1,.26f),14=>new(.8f,.26f),15=>new(.7f,.3f),_=>new(.13f,.22f)
+                6=>new(.18f,.3f),7=>new(.12f,.18f),
+                8=>Vector2.one*.24f,9=>Vector2.one*.34f,10=>Vector2.one*.6f,
+                11=>new(.55f,.18f),12=>new(.14f,.23f),
+                13=>Vector2.one*.22f,14=>Vector2.one*.24f,15=>Vector2.one*.25f,_=>new(.13f,.22f)
             };
             Vector2 offset=form==6?new Vector2(0,.9f):form==11?new Vector2(0,1.77f):Vector2.zero;
             int mode=form==10?1:form==3?2:form==8||form==14?3:form==6||form==11?4:0;
@@ -73,7 +82,7 @@ namespace Rushitadel.Presentation
         public static void Arc(Vector2 from,Vector2 to,Color tint)
         {
             Vector2 delta=to-from;
-            Burst((from+to)*.5f,"S3-13",new Vector2(.09f,delta.magnitude),tint,.1f,
+            Burst((from+to)*.5f,"S3-13",new Vector2(.09f*ThicknessMultiplier,delta.magnitude),tint,.1f,
                 Mathf.Atan2(delta.y,delta.x)*Mathf.Rad2Deg-90);
         }
         public static void Status(GameObject target,string name,float duration,float size)
@@ -102,6 +111,7 @@ namespace Rushitadel.Presentation
         private int mode;
         public string AssetName {get;private set;}
         public SpriteRenderer Renderer=>image;
+        public Vector2 DisplaySize=>size*scale;
 
         public void Configure(string name,Vector2 worldSize,Color color,int animation,Vector2 worldOffset)
         {
@@ -113,9 +123,10 @@ namespace Rushitadel.Presentation
             }
             image.sprite=ProjectileArt.Load(name);
             AssetName=name;size=worldSize;offset=worldOffset;tint=color;mode=animation;
+            if(mode!=5)GetComponent<ProjectileBehaviour>()?.FitVisualCollision(DisplaySize);
             Present();
         }
-        public void SmallerCopy(){scale=.72f;opacity=.72f;Present();}
+        public void SmallerCopy(){scale=.72f;opacity=.72f;GetComponent<ProjectileBehaviour>()?.FitVisualCollision(DisplaySize);Present();}
         public void Overcharge()
         {
             if(chargedOutline!=null)return;

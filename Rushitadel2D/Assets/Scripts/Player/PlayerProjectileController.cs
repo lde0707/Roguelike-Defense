@@ -29,6 +29,7 @@ namespace Rushitadel.Player
             transform.localScale = Vector3.one * (impactRadius * 2f * 1.2f);
             PrepareBody();
             Rushitadel.Presentation.ProjectileArt.Set(gameObject,"PlayerPower",Vector2.one*(impactRadius*2),Color.white,3);
+            impactRadius=GetComponent<Rushitadel.Presentation.ProjectileVisual>().DisplaySize.x*.5f;
         }
 
         private void Update()
@@ -64,7 +65,7 @@ namespace Rushitadel.Player
             // Cursor screen/world conversion can shift an exact rim point by a few floating-point ULPs.
             foreach (EnemyController enemy in EnemyRegistry.FindAllWithinRadius(destination, impactRadius * 1.00001f))
             {
-                DamageTarget(enemy, enemy.transform.position);
+                DamageTarget(enemy, EnemyRegistry.DamagePosition(enemy, destination));
             }
             foreach (var bullet in FindObjectsByType<EnemyProjectileController>(FindObjectsSortMode.None))
                 DamageTarget(bullet, bullet.transform.position);

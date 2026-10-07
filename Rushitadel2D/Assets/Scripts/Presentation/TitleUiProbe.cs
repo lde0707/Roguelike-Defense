@@ -26,12 +26,14 @@ namespace Rushitadel.Presentation
         {
             DontDestroyOnLoad(gameObject);
             output = Path.GetFullPath(Path.Combine(Application.dataPath, "../../output/title-implementation-20261006"));
+            Directory.CreateDirectory(output);
             RunStore.TestDirectory = Path.Combine(output, "test-saves-" + DateTime.Now.ToString("HHmmss"));
             GameSettings.StorageKey = "Rushitadel.UiTest." + Guid.NewGuid(); GameSettings.Load();
             Application.logMessageReceived += Log;
         }
         private void Log(string message, string stack, LogType type)
         {
+            if(stack.Contains("UnityEditor.Search.SearchDatabase"))return;
             if (type != LogType.Exception && type != LogType.Error) return;
             if (message.StartsWith("Curl error")) return;
             failed = true; Debug.LogWarning("UI TEST ERROR: " + message);
@@ -156,8 +158,8 @@ namespace Rushitadel.Presentation
             var areaPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/playerProjectile.prefab");
             var area = Instantiate(areaPrefab, new Vector3(100,100,0), Quaternion.identity).GetComponent<PlayerProjectileController>();
             area.LaunchArea(Vector3.up, new Vector3(100,101,0), 1f);
-            Check(Mathf.Approximately(area.transform.localScale.x, 2.4f) && Mathf.Approximately(area.ImpactRadius, 1f),
-                "Area projectile enlarged while damage radius stays unchanged");
+            Check(Mathf.Approximately(area.ImpactRadius,area.GetComponent<ProjectileVisual>().DisplaySize.x*.5f),
+                "Area projectile damage radius matches visible size");
             Destroy(area.gameObject);
             var rangePrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/towerProjectile.prefab");
             var rangeShot = Instantiate(rangePrefab, new Vector3(100,100,0), Quaternion.identity).GetComponent<ProjectileController>();

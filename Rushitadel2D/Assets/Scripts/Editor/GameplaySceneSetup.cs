@@ -116,7 +116,6 @@ namespace Rushitadel.Editor
             BoxCollider2D rightWall = CreateCliffWall(boundaries.transform, "Right Invisible Wall", 5.65f);
             boundaries.Configure(leftWall, rightWall);
             var rearHazard = CreatePressureZone(camera.transform, "Rear Theme Hazard", 1.2f, true);
-            var frontBarrier = CreatePressureZone(camera.transform, "Front Theme Barrier", 0.6f, false);
 
             GameObject player = new GameObject("Player");
             player.transform.position = new Vector3(0f, -1f, 0f);
@@ -144,8 +143,8 @@ namespace Rushitadel.Editor
             PrefabUtility.SaveAsPrefabAsset(player, Prefabs + "Player.prefab");
 
             var systems = new GameObject("Gameplay Systems");
-            systems.AddComponent<ForwardPressureController>().Configure(camera, rearHazard, frontBarrier,
-                rearHazard.GetComponent<ThemePressureVisual>(), frontBarrier.GetComponent<ThemePressureVisual>());
+            systems.AddComponent<ForwardPressureController>().Configure(camera, rearHazard, null,
+                rearHazard.GetComponent<ThemePressureVisual>(), null);
             var spawner = systems.AddComponent<EnemySpawner>();
             spawner.Configure(rangedPrefab);
             systems.AddComponent<GameplayHud>();

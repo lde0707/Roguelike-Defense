@@ -18,8 +18,8 @@ namespace Rushitadel.Presentation
             public float Age, Duration;
             public int Mode;
         }
-        private readonly Puff[] pool = new Puff[32];
-        private int cursor;
+        private readonly Puff[] pool = new Puff[40];
+        private int cursor, trailCursor;
         private Material effectMaterial;
         private SpriteRenderer core, wake;
         private MaterialPropertyBlock wakeProperties;
@@ -36,6 +36,9 @@ namespace Rushitadel.Presentation
         public float ShotFlash => flash;
         public int ActivePuffs { get; private set; }
         public int ShotsShown { get; private set; }
+        public int MovementTrailsShown { get; private set; }
+        public int ActiveMovementPuffs { get; private set; }
+        public Vector2 LastTrailDirection { get; private set; }
 
         public void Configure(ModularPlayerArt owner)
         {
@@ -106,11 +109,13 @@ namespace Rushitadel.Presentation
         private void Emit(Vector3 position, Vector2 direction, Vector2 size, float duration, int mode)
         {
             if (!initialized) return;
-            var p = pool[cursor++ % pool.Length];
+            // Reserve eight slots for movement so rapid turret fire cannot erase the wake.
+            var p = mode==3 ? pool[32+trailCursor++%8] : pool[cursor++%32];
             p.Position = position;
             p.Rotation = Quaternion.Euler(0,0,Mathf.Atan2(direction.y,direction.x)*Mathf.Rad2Deg-90);
             p.Size = size; p.Age = 0; p.Duration = duration; p.Mode = mode;
             p.Sprite.enabled = true;
+            p.Sprite.sortingOrder=mode==3?96:109;
             Present(p);
         }
 
@@ -120,7 +125,7 @@ namespace Rushitadel.Presentation
             p.Sprite.transform.SetPositionAndRotation(p.Position, p.Rotation);
             p.Sprite.transform.localScale = new Vector3(p.Size.x,p.Size.y,1) * (p.Mode == 1 ? 1 : Mathf.Lerp(1,.7f,t));
             Color c = art.EmissionColor;
-            c.a = p.Mode == 3 ? .22f : .65f;
+            c.a = p.Mode == 3 ? .16f : .65f;
             p.Sprite.color = c;
             p.Properties.SetFloat("_Progress", t);
             p.Properties.SetFloat("_Mode", p.Mode);
@@ -133,12 +138,16 @@ namespace Rushitadel.Presentation
             if (Time.timeScale <= 0 || health == null || !health.IsAlive)
             {
                 lastPosition = transform.position;
+                if(health==null||!health.IsAlive)ClearMovementTrail();
                 return;
             }
             float dt = Time.deltaTime;
             if (dt <= 0) return;
             clock += dt;
-            Vector3 velocity = Vector3.ClampMagnitude((transform.position-lastPosition)/dt, 4);
+            Vector3 delta=transform.position-lastPosition;
+            bool teleported=delta.sqrMagnitude>1;
+            Vector3 velocity = teleported?Vector3.zero:Vector3.ClampMagnitude(delta/dt, 4);
+            if(teleported)ClearMovementTrail();
             lastPosition = transform.position;
             float blend = 1-Mathf.Exp(-9*dt);
             drift = Vector3.Lerp(drift, -velocity*.007f, blend);
@@ -154,18 +163,36 @@ namespace Rushitadel.Presentation
             tint.a=.075f+Mathf.Clamp01(velocity.magnitude)*.025f; wake.color=tint;
             if (velocity.sqrMagnitude>.16f && clock>=nextTrail)
             {
-                nextTrail=clock+.10f;
+                nextTrail=clock+.085f;
                 Vector3 back=-velocity.normalized;
-                Emit(transform.position+back*.47f,back,new Vector2(.18f,.3f),.24f,3);
+                Vector3 side=new Vector3(-back.y,back.x,0);
+                float scale=Mathf.Abs(transform.lossyScale.x);
+                float offset=(MovementTrailsShown%2==0?1:-1)*.23f*scale;
+                Emit(transform.position+back*(.52f*scale)+side*offset,back,new Vector2(.12f,.42f),.32f,3);
+                LastTrailDirection=back;
+                MovementTrailsShown++;
             }
-            ActivePuffs=0;
+            ActivePuffs=0;ActiveMovementPuffs=0;
             foreach(var p in pool)
             {
                 if(!p.Sprite.enabled) continue;
                 p.Age+=dt;
                 if(p.Age>=p.Duration) { p.Sprite.enabled=false; continue; }
                 Present(p); ActivePuffs++;
+                if(p.Mode==3)ActiveMovementPuffs++;
             }
+        }
+
+        private void ClearMovementTrail()
+        {
+            foreach(var p in pool)if(p!=null&&p.Mode==3)p.Sprite.enabled=false;
+            ActiveMovementPuffs=0;
+        }
+
+        private void OnDisable()
+        {
+            foreach(var p in pool)if(p!=null)p.Sprite.enabled=false;
+            ActiveMovementPuffs=ActivePuffs=0;lastPosition=transform.position;
         }
 
         private void OnDestroy()

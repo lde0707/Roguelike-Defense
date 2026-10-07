@@ -225,3 +225,5 @@ PASS: Restart after pursuit defeat resets player, camera advance and distance
 PASS: No runtime errors
 RUSHITADEL_2D_VALIDATION_SUCCESS
 ```
+
+2026-10-07 변경: 위 로그는 당시 전방 장벽/5색 프로토타입 기준의 과거 기록이다. 현재 전방 장벽은 비활성화되고 상단 이동 제한은 제거되었다. 후방은 덩굴·용암·결빙·전기 쓰나미의 4종 12프레임 애니메이션으로 교체했다. 현재 규칙과 검증은 ThemePursuitAnimation.md 및 output/pressure-art-validation.log를 참조한다.

@@ -25,6 +25,16 @@ namespace Rushitadel.Combat
         public int BounceCount { get; private set; }
         private float slowUntil, slowAmount, vulnerableUntil, pushedUntil;
         private Object attachedDrill;
+        private int maximumBounces = int.MaxValue;
+        public int MaximumBounces=>maximumBounces;
+        public void ConfigureBoss(float hp, float velocity, float radius, float seconds, int bounces, float hitDamage=12)
+        {
+            maximumHealth=health=hp; speed=velocity; collisionRadius=radius;
+            lifetime=seconds; maximumBounces=bounces; damage=hitDamage;
+            hitbox.radius=radius/Mathf.Max(.0001f,Mathf.Abs(transform.lossyScale.x));
+        }
+        public void SetHeading(Vector2 value) { direction=value.normalized; FaceDirection(direction); }
+        public void Despawn() => Finish();
         public float SpeedMultiplier => Time.time<slowUntil ? 1-slowAmount : 1;
         public float DamageMultiplier => Time.time<vulnerableUntil?1.3f:1;
         public void Slow(float amount,float duration)
@@ -38,7 +48,7 @@ namespace Rushitadel.Combat
         {
             if(Time.time<pushedUntil)return; pushedUntil=Time.time+1;
             var next=(Vector2)transform.position+heading*(maximumHealth>=80?.1f:.35f);
-            if(PlayfieldBoundary.Instance!=null && PlayfieldBoundary.Instance.Contains(transform.position))next=PlayfieldBoundary.Instance.ClampPlayer(next,collisionRadius);
+            if(PlayfieldBoundary.Instance!=null && PlayfieldBoundary.Instance.Contains(transform.position))next=PlayfieldBoundary.Instance.ClampPlayer(next,WallExtent(collisionRadius));
             transform.position=next;
         }
 
@@ -78,11 +88,11 @@ namespace Rushitadel.Combat
                 float wallDistance = travel;
                 Vector2 normal = Vector2.zero;
                 bool wallHit = boundary != null && boundary.TryGetExitHit(start, direction,
-                    collisionRadius, travel, out wallDistance, out normal);
+                    WallExtent(collisionRadius), travel, out wallDistance, out normal);
                 float segment = wallHit ? wallDistance : travel;
                 Physics2D.SyncTransforms();
                 hits.Clear();
-                Physics2D.CircleCast(start, collisionRadius, direction,
+                Physics2D.CapsuleCast(start, CastSize(collisionRadius), CastDirection, transform.eulerAngles.z, direction,
                     new ContactFilter2D { useTriggers = true }, hits, segment);
                 PlayerHealth player = null;
                 ProjectileController friendly = null;
@@ -114,6 +124,7 @@ namespace Rushitadel.Combat
                 transform.position = start + direction * segment;
                 travel -= segment;
                 if (!wallHit) break;
+                if(BounceCount >= maximumBounces) { Finish(); break; }
                 direction = Vector2.Reflect(direction, normal).normalized;
                 // Separate from the surface to avoid a repeated zero-distance collision.
                 transform.position += (Vector3)(normal * 0.0001f);
@@ -135,6 +146,7 @@ namespace Rushitadel.Combat
             health = 0f;
             flying = false;
             hitbox.enabled = false;
+            if(visualHitbox!=null)visualHitbox.enabled=false;
             Destroy(gameObject); // Projectiles never drop enemy XP.
         }
     }

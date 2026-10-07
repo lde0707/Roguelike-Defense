@@ -35,7 +35,12 @@ namespace Rushitadel.World
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void ResetInstance() => Instance = null;
-        private void Awake() => Instance = this;
+        private void Awake() { Instance = this; RemoveFrontBarrier(); }
+        private void RemoveFrontBarrier()
+        {
+            if(frontBarrier!=null)frontBarrier.gameObject.SetActive(false);
+            if(frontVisual!=null)frontVisual.gameObject.SetActive(false);
+        }
         private void OnDestroy() { if (Instance == this) Instance = null; }
 
         public void Configure(Camera camera, BoxCollider2D rear, BoxCollider2D front,
@@ -46,6 +51,7 @@ namespace Rushitadel.World
             frontBarrier = front;
             rearVisual = rearArt;
             frontVisual = frontArt;
+            RemoveFrontBarrier();
             RefreshAnchors();
             SetTheme(theme);
         }
@@ -64,7 +70,6 @@ namespace Rushitadel.World
             appliedTheme = value;
             themeApplied = true;
             rearVisual.ApplyTheme(value);
-            frontVisual.ApplyTheme(value);
         }
 
         public void RefreshAnchors()
@@ -72,11 +77,8 @@ namespace Rushitadel.World
             float halfHeight = gameplayCamera.orthographicSize;
             // Both objects are camera children. z=10 puts them on the XY gameplay plane.
             rearHazard.transform.localPosition = new Vector3(0f, -halfHeight + rearDepth * 0.5f, 10f);
-            frontBarrier.transform.localPosition = new Vector3(0f, halfHeight - frontInset - frontDepth * 0.5f, 10f);
             rearHazard.size = new Vector2(rearHazard.size.x, rearDepth);
-            frontBarrier.size = new Vector2(frontBarrier.size.x, frontDepth);
             rearVisual.SetSize(rearHazard.size);
-            frontVisual.SetSize(frontBarrier.size);
         }
 
         private void Update()
@@ -85,6 +87,7 @@ namespace Rushitadel.World
             if (gameplayCamera == null || Time.timeScale <= 0f || player == null || !player.IsAlive) return;
             if (!themeApplied || appliedTheme != theme) SetTheme(theme);
             float advance = HoldAdvance ? 0 : forwardSpeed * Time.deltaTime;
+            advance=Mathf.Max(advance,player.transform.position.y-gameplayCamera.transform.position.y-1.5f);
             gameplayCamera.transform.position += Vector3.up * advance;
             DistanceTravelled += advance;
             RefreshAnchors();
@@ -104,7 +107,7 @@ namespace Rushitadel.World
 
         public Vector2 ClampPlayer(Vector2 position, float radius)
         {
-            position.y = Mathf.Clamp(position.y, Bottom + radius, frontBarrier.bounds.min.y - radius);
+            position.y = Mathf.Max(position.y, Bottom + radius);
             return position;
         }
 
