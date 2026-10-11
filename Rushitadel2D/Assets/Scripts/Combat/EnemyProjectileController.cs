@@ -18,6 +18,8 @@ namespace Rushitadel.Combat
         private float health;
         private float remainingLifetime;
         private bool flying;
+        private EnemyController rewardOwner;
+        public void SetRewardOwner(EnemyController owner) => rewardOwner = owner;
         public bool IsAlive => health > 0f;
         public float MaximumHealth => maximumHealth;
         public float CurrentHealth => health;
@@ -146,7 +148,11 @@ namespace Rushitadel.Combat
         {
             if (!IsAlive || Time.timeScale <= 0f || !float.IsFinite(amount) || amount <= 0f) return;
             health = Mathf.Max(0f, health - amount*DamageMultiplier);
-            if (!IsAlive) Finish();
+            if (!IsAlive)
+            {
+                if (rewardOwner != null) rewardOwner.RewardInterception(maximumHealth, transform.position);
+                Finish();
+            }
         }
 
         private void Finish()
@@ -155,7 +161,7 @@ namespace Rushitadel.Combat
             flying = false;
             hitbox.enabled = false;
             if(visualHitbox!=null)visualHitbox.enabled=false;
-            Destroy(gameObject); // Projectiles never drop enemy XP.
+            Destroy(gameObject); // Expiry, wall limits and player impact never grant interception XP.
         }
     }
 }

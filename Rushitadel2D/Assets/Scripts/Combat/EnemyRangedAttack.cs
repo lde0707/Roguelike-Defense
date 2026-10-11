@@ -15,6 +15,10 @@ namespace Rushitadel.Combat
         private Vector2 lockedAim;
         private int volley;
         private SpriteRenderer art;
+        // Shared scaled-time clock gives each encounter an actual, overlapping attack opening.
+        public const float FiringSeconds = 2.8f, ReloadSeconds = 1.4f;
+        public static bool IsReloadWindow(float time) => Mathf.Repeat(time, FiringSeconds + ReloadSeconds) >= FiringSeconds;
+        public bool IsReloading => IsReloadWindow(Time.time);
         public EnemyProjectileController ProjectilePrefab => projectilePrefab;
         private void Awake() => owner = GetComponent<EnemyController>();
         private void OnEnable() => nextShotTime = Time.time + initialDelay;
@@ -24,14 +28,26 @@ namespace Rushitadel.Combat
             if (Time.timeScale <= 0f || !owner.IsAlive || target == null || !target.IsAlive ||
                 projectilePrefab == null) return;
             var archetype=GetComponent<EnemyArchetype>();
+            if (art == null) art = GetComponent<SpriteRenderer>();
+            if (IsReloading)
+            {
+                charging = false;
+                if (art != null) art.color = new Color(.55f, .65f, .75f);
+                nextShotTime = Mathf.Max(nextShotTime, Time.time);
+                return;
+            }
+            if (!charging && art != null) art.color = Color.white;
             Vector2 aim=((Vector2)target.transform.position-(Vector2)transform.position).normalized;
             if(archetype!=null && !charging)transform.up=-aim;
             if(Time.time<nextShotTime)return;
             if(!charging)
             {
+                float windup = archetype!=null&&(archetype.Elite||archetype.Variant==3)?.85f:.4f;
+                // Never display a charge that would fire inside the shared reload window.
+                if (Mathf.Repeat(Time.time, FiringSeconds + ReloadSeconds) + windup >= FiringSeconds) return;
                 lockedAim=aim;charging=true;
-                nextShotTime=Time.time+(archetype!=null&&(archetype.Elite||archetype.Variant==3)?.85f:.4f);
-                art=GetComponent<SpriteRenderer>();art.color=new Color(1,.7f,.5f);return;
+                nextShotTime=Time.time+windup;
+                if(art!=null)art.color=new Color(1,.7f,.5f);return;
             }
             charging=false;if(art!=null)art.color=Color.white;
             if(archetype==null){Emit(lockedAim,null,0,0,4);nextShotTime=Time.time+shotInterval;return;}
@@ -52,6 +68,7 @@ namespace Rushitadel.Combat
             var shot = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             shot.gameObject.SetActive(true);
             shot.ConfigureBoss(archetype!=null?archetype.BulletHealth:24,speed,.12f,7,bounces,archetype!=null&&archetype.Elite?16:10);
+            shot.SetRewardOwner(owner);
             shot.Launch(direction);
             var pressure=Rushitadel.World.ForwardPressureController.Instance;
             var theme=pressure!=null?pressure.Theme:Rushitadel.World.PressureTheme.Grass;

@@ -78,7 +78,7 @@ namespace Rushitadel.Progression
         private void Respawn(int i)
         {
             var shot=Instantiate(prefab,transform.position+(Vector3)homes[i],Quaternion.identity);
-            shot.gameObject.SetActive(true);shot.ConfigureBoss(Kind==BossKind.Ice?160:100,0,.28f,10000,0,0);shot.Launch(Vector2.up);
+            shot.gameObject.SetActive(true);shot.ConfigureBoss(Kind==BossKind.Ice?160:100,0,.28f,10000,0,0);shot.SetRewardOwner(Health);shot.Launch(Vector2.up);
             BossArt.Shot(shot.gameObject,Kind==BossKind.Ice?"Ice/01-ring-boomerang":"Butterfly/Drone",Kind==BossKind.Ice?1.35f:.65f,false);
             if(Kind==BossKind.Ice)
             {
@@ -107,7 +107,7 @@ namespace Rushitadel.Progression
         {
             if(prefab==null||Health==null||!Health.IsAlive||bullets.Count(x=>x!=null)>=110)return null;
             var shot=Instantiate(prefab,from,Quaternion.identity);shot.gameObject.SetActive(true);
-            shot.ConfigureBoss(hp*(1.35f+.15f*(stage-1)),speed*(1+.06f*(stage-1)),radius,7,bounces);shot.Launch(direction);
+            shot.ConfigureBoss(hp*(1.35f+.15f*(stage-1)),speed*(1+.06f*(stage-1)),radius,7,bounces);shot.SetRewardOwner(Health);shot.Launch(direction);
             BossArt.Shot(shot.gameObject,asset,radius*2.5f,true,true);
             var motion=shot.gameObject.AddComponent<BossShotMotion>();motion.Owner=this;motion.Turn=turn;motion.ReturnAfter=returnAfter;motion.SplitAfter=splitAfter;motion.ChildArt=child;
             bullets.Add(shot);ShotsFired++;return shot;

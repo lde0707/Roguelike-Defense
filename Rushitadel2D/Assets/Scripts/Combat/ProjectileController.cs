@@ -22,6 +22,7 @@ namespace Rushitadel.Combat
         private int extraHits;
         private bool splash, poison;
         private bool playerWeb;
+        private bool interceptionPierceUsed;
         public void EnablePlayerWeb(){playerWeb=true;speed*=Rushitadel.Progression.RandomPlayerWeb.Stat(5,.1f);}
         public bool CanHit(IDamageable target) => flying && !damaged.Contains(target);
         public void SetModifiers(int pierce, bool explosion, bool toxin)
@@ -44,6 +45,7 @@ namespace Rushitadel.Combat
             remainingDistance = Mathf.Max(0f, maximumDistance);
             remainingLifetime = lifetime;
             DistanceTravelled = 0f;
+            interceptionPierceUsed = false;
             flying = true;
             hitbox = GetComponent<CircleCollider2D>();
             if (hitbox == null) hitbox = gameObject.AddComponent<CircleCollider2D>();
@@ -116,6 +118,14 @@ namespace Rushitadel.Combat
                 foreach (var other in EnemyRegistry.FindAllWithinRadius(transform.position, .8f))
                     if (other != null && other.IsAlive && !ReferenceEquals(other, target) && Vector2.Distance(other.transform.position, transform.position) <= .8f)
                         other.TakeDamage(damage * .5f);
+            }
+            // Player basic shots get ONE free pass only after breaking a light bullet.
+            // Heavy bullets and surviving bullets still consume normal pierce charges.
+            if (playerWeb && !interceptionPierceUsed && target is EnemyProjectileController intercepted &&
+                !intercepted.IsAlive && intercepted.MaximumHealth <= 50f)
+            {
+                interceptionPierceUsed = true;
+                return;
             }
             if (extraHits-- <= 0) Finish();
         }

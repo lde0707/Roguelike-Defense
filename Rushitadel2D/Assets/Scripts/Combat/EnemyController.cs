@@ -16,9 +16,26 @@ namespace Rushitadel.Combat
 
         private float currentHealth;
         private int dropValue = 20;
+        private int interceptionXp;
+        private float interceptionCredit;
+        public int InterceptionXpPaid => interceptionXp;
+        public int InterceptionXpLimit => Mathf.FloorToInt(dropValue * .4f);
+        // One finite budget per enemy; destroying its bullets never creates extra XP.
+        public void RewardInterception(float bulletHealth, Vector3 position)
+        {
+            if (!IsAlive || Time.timeScale <= 0 || interceptionXp >= InterceptionXpLimit) return;
+            interceptionCredit += Mathf.Clamp(bulletHealth / 24f, .5f, 3f);
+            int grant = Mathf.Min(Mathf.FloorToInt(interceptionCredit), InterceptionXpLimit - interceptionXp);
+            if (grant < 2 && grant < InterceptionXpLimit - interceptionXp) return;
+            if (grant <= 0) return;
+            interceptionCredit -= grant;
+            interceptionXp += grant;
+            SpawnExperience(grant, position);
+        }
         public void ConfigureRun(float hp, int xp, bool stationary = false)
         {
-            maxHealth = currentHealth = hp; dropValue = xp;
+            maxHealth = currentHealth = hp; dropValue = Mathf.Max(0, xp);
+            interceptionXp = 0; interceptionCredit = 0;
             if (stationary) { moveSpeed = 0; contactDamage = 0; }
         }
 
@@ -83,19 +100,20 @@ namespace Rushitadel.Combat
 
         private void Die()
         {
-            SpawnExperience();
+            SpawnExperience(dropValue - interceptionXp, transform.position);
             Destroy(gameObject);
         }
 
-        private void SpawnExperience()
+        private void SpawnExperience(int value, Vector3 position)
         {
+            if (value <= 0) return;
             if (experiencePickupPrefab != null)
             {
-                var pickup = Instantiate(experiencePickupPrefab, transform.position, Quaternion.identity);
-                pickup.gameObject.SetActive(true); pickup.SetValue(dropValue);
+                var pickup = Instantiate(experiencePickupPrefab, position, Quaternion.identity);
+                pickup.gameObject.SetActive(true); pickup.SetValue(value);
             }
             else new GameObject("Blue XP", typeof(CircleCollider2D), typeof(SpriteRenderer), typeof(ExperiencePickup))
-                { transform = { position = transform.position } }.GetComponent<ExperiencePickup>().SetValue(dropValue);
+                { transform = { position = position } }.GetComponent<ExperiencePickup>().SetValue(value);
         }
 
 
