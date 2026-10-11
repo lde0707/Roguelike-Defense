@@ -1,111 +1,71 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Rushitadel.Progression;
-
 namespace Rushitadel.Presentation
 {
     public sealed partial class GameFrontend
     {
-        [Serializable] private sealed class WebIconCatalog { public string source,sheet; public WebIconNode[] nodes; }
-        [Serializable] private sealed class WebIconNode { public string id,branch,kind,rarity,title,description,effect,role,note; public int sourceRow; }
-        private WebIconCatalog webCatalog;
         private int selectedWebIcon=-1;
-        private bool showLegacyWeb;
-        private RectTransform webDetails;
-        private Image[] webBorders;
-        private readonly Color[] webBranchColors={new Color32(108,188,204,255),new Color32(211,182,105,255),new Color32(210,137,95,255),new Color32(154,192,101,255),new Color32(176,147,205,255),new Color32(209,191,123,255)};
-
+        private PlayerWebGraph previewWeb;
+        private static readonly string[] WebIcons={"Survival","Mobility","Firepower","RapidTraining","PierceExtend","ExtraTrajectory","PowerAmp","EfficientCharge","Survival","HealLink","Command","Firepower","Pierce","Survival","BlastArea","EfficientCharge","Firepower","Survival","Command","Mobility","PowerAmp","Command","Survival","Mobility","Pierce","Scatter","ResidualBlast","Venom","StatusTransfer","HealLink","BlastArea","Survival","Survival","HealLink","Firepower","PierceStable","ExtraTrajectory","Mobility","HealLink","EfficientCharge"};
+        private static Color WebColor(int id)=>RandomPlayerWeb.Category(id)==0?new Color32(113,186,203,255):RandomPlayerWeb.Category(id)==1?new Color32(217,153,107,255):new Color32(188,154,213,255);
         private void ShowWebTree(CampaignDirector d)
         {
-            Time.timeScale=0; NewPage("maintenance",false);
+            Time.timeScale=0;NewPage("maintenance",false);
             Image(content,"Web background",0,0,1920,1080,new Color32(22,28,35,255)).raycastTarget=false;
             DrawWebTree(d);
         }
-
         private void DrawWebTree(CampaignDirector d)
         {
-            if(webCatalog==null) webCatalog=JsonUtility.FromJson<WebIconCatalog>(Resources.Load<TextAsset>("WebIcons/Catalog").text);
-            Label(content,"PLAYER WEB",65,38,850,65,44);
-            Label(content,"중앙 하단에서 시작 · 아이콘을 클릭해 증강 확인",68,107,1150,40,24);
-            Label(content,"보유 XP  "+(d!=null?d.Wallet.ToString():"0"),1460,45,390,60,30,TextAnchor.MiddleRight);
-            Label(content,"엑셀 기획 24종\n효과 연결 준비 중",1460,160,375,75,24);
-            Button(content,"현재 강화 6종",1460,260,375,60,()=>{showLegacyWeb=true;ShowMaintenance();},d!=null);
-            Button(content,"플레이어 속성",1460,338,375,60,ShowElementSelection,d!=null);
-            if(d!=null&&!string.IsNullOrEmpty(d.SaveError))
-                Button(content,"저장 실패 · 재시도",1460,415,375,50,()=>{d.SaveCheckpoint("Web 저장 재시도");ShowMaintenance();});
-            var root=new Vector2(960,910);
-            var rootBox=Image(content,"Web root",root.x-42,root.y-42,84,84,ink);
-            Image(rootBox.transform,"Root fill",4,4,76,76,panel).raycastTarget=false;
-            Label(rootBox.transform,"시작",0,0,84,84,23,TextAnchor.MiddleCenter);
-            var positions=new Vector2[24];
-            for(int branch=0;branch<6;branch++)
+            var graph=d!=null?d.State.playerWeb:(previewWeb??=RandomPlayerWeb.Generate(731));
+            Label(content,"PLAYER WEB",65,35,1000,60,40);
+            Label(content,"시작 → 두 갈래 분기 · 연결된 노드 구매 · 클릭으로 효과 확인",65,103,1280,45,23);
+            Label(content,"후보 가중치: 기본 60% · 외형 25% · 특수 15%   (첫 분기는 기본 능력)",65,151,1250,35,21);
+            Label(content,"보유 XP  "+(d!=null?d.Wallet:0),1450,45,400,55,29);
+            var root=new Vector2(730,925);
+            for(int i=0;i<graph.nodes.Length;i++)
             {
-                float x=150+branch*235;
-                positions[branch]=new Vector2(x,730);
-                positions[6+branch*3]=new Vector2(x,535);
-                positions[7+branch*3]=new Vector2(x-55,300);
-                positions[8+branch*3]=new Vector2(x+55,405);
-                WebWire(root,positions[branch],webBranchColors[branch]*.52f);
-                WebWire(positions[branch],positions[6+branch*3],webBranchColors[branch]*.65f);
-                WebWire(positions[6+branch*3],positions[7+branch*3],webBranchColors[branch]*.65f);
-                WebWire(positions[6+branch*3],positions[8+branch*3],webBranchColors[branch]*.65f);
-                Label(content,webCatalog.nodes[6+branch*3].branch, x-75,195,150,40,26,TextAnchor.MiddleCenter).color=webBranchColors[branch];
+                var n=graph.nodes[i];var parent=n.parent<0?root:new Vector2(graph.nodes[n.parent].x,graph.nodes[n.parent].y);
+                bool open=n.parent<0||graph.nodes[n.parent].owned;
+                WebWire(parent,new Vector2(n.x,n.y),WebColor(n.upgrade)*(n.owned?1:open?.65f:.28f));
             }
-            rootBox.transform.SetAsLastSibling();
-            webBorders=new Image[24];
-            for(int i=0;i<24;i++)
+            var rb=Image(content,"Web root",root.x-30,root.y-30,60,60,ink);
+            Image(rb.transform,"Root fill",3,3,54,54,panel).raycastTarget=false;
+            Label(rb.transform,"시작",0,0,60,60,20,TextAnchor.MiddleCenter);
+            for(int i=0;i<graph.nodes.Length;i++)
             {
-                int id=i; var n=webCatalog.nodes[i]; var pos=positions[i];
-                var b=Button(content,"",pos.x-38,pos.y-38,76,76,()=>SelectWebIcon(id));
-                b.name="Web Icon "+n.id;
-                webBorders[i]=b.GetComponent<Image>();
-                var art=Image(b.transform,"Icon",6,6,64,64,Color.white);
-                art.sprite=Resources.Load<Sprite>("WebIcons/"+n.id); art.raycastTarget=false; art.preserveAspect=true;
+                int index=i;var n=graph.nodes[i];bool open=n.parent<0||graph.nodes[n.parent].owned;
+                var b=Button(content,"",n.x-28,n.y-28,56,56,()=>{selectedWebIcon=index;ShowWebTree(d);});
+                b.name="Web Node "+index;b.GetComponent<Image>().color=n.owned?new Color32(161,211,144,255):WebColor(n.upgrade)*(open?1:.5f);
+                var art=Image(b.transform,"Icon",6,6,44,44,Color.white);
+                art.sprite=Resources.Load<Sprite>("WebIcons/"+WebIcons[n.upgrade]);art.raycastTarget=false;art.preserveAspect=true;
+                if(n.owned)Label(b.transform,"✓",36,-8,25,25,18);
             }
-            webDetails=Rect(content,"Web details",1430,490,430,430);
-            Image(webDetails,"Details border",0,0,430,430,ink).raycastTarget=false;
-            Image(webDetails,"Details fill",3,3,424,424,panel).raycastTarget=false;
-            string next=d==null?"안전 정비에서 XP 사용":d.Round<3?$"다음 ROUND {d.Round+1}":d.Stage<3?"다음 스테이지 테마 선택":"런 완료";
-            Label(content,next,65,995,1080,45,25);
-            Button(content,d!=null&&d.Stage==3&&d.Round==3?"런 완료":"출발",1460,975,375,65,()=>d?.Depart(),d!=null);
-            Label(content,"선은 UI 배치 제안입니다. 미정 수치와 선행 조건은 아직 구매에 적용되지 않습니다.",65,1043,1300,26,19);
-            SelectWebIcon(selectedWebIcon);
+            var detail=Rect(content,"Web details",1430,490,430,430);
+            Image(detail,"Details border",0,0,430,430,ink).raycastTarget=false;
+            Image(detail,"Details fill",3,3,424,424,panel).raycastTarget=false;
+            if(selectedWebIcon>=0&&selectedWebIcon<graph.nodes.Length)
+            {
+                var n=graph.nodes[selectedWebIcon];
+                Label(detail,RandomPlayerWeb.Titles[n.upgrade],22,20,385,45,27);
+                Label(detail,RandomPlayerWeb.CategoryName(n.upgrade)+" · "+n.cost+" XP",22,75,385,35,22);
+                int rank=RandomPlayerWeb.Rank(d?.State,n.upgrade);
+                Label(detail,RandomPlayerWeb.Effects[n.upgrade],22,120,385,140,23);
+                Label(detail,"누적 "+rank+" / "+RandomPlayerWeb.MaxRank(n.upgrade)+(RandomPlayerWeb.Category(n.upgrade)==0?"단계 · 중복 가능":"단계"),22,265,385,35,22);
+                string reason="전투 런에서 구매 가능";bool can=d!=null&&d.CanBuyNode(selectedWebIcon,out reason);
+                Label(detail,reason,22,303,385,35,22);
+                Button(detail,n.owned?"획득 완료":"노드 구매",22,340,385,65,()=>{d.BuyNode(selectedWebIcon);ShowWebTree(d);},can);
+            }
+            else Label(detail,"아이콘을 선택하세요\n\n클릭은 확인만 합니다.\n구매 버튼으로 XP를 사용합니다.",25,35,380,300,26);
+            if(d!=null&&!string.IsNullOrEmpty(d.SaveError))Button(content,"저장 실패 · 재시도",1450,390,390,65,()=>{d.SaveCheckpoint("Web 저장 재시도");ShowWebTree(d);});
+            Button(content,"출발",1450,975,390,65,()=>d?.Depart(),d!=null);
+            Label(content,"구매한 경로는 유지됩니다 · 새 게임마다 모양과 증강 구성이 달라집니다",65,1000,1300,40,23);
         }
-
         private void WebWire(Vector2 a,Vector2 b,Color color)
         {
             var delta=new Vector2(b.x-a.x,a.y-b.y);
-            var wire=Image(content,"Web connection",a.x,a.y,delta.magnitude,4,color);
-            wire.raycastTarget=false;
-            wire.rectTransform.pivot=new Vector2(0,.5f);
-            wire.rectTransform.localRotation=Quaternion.Euler(0,0,Mathf.Atan2(delta.y,delta.x)*Mathf.Rad2Deg);
-        }
-
-        private void SelectWebIcon(int id)
-        {
-            selectedWebIcon=id;
-            for(int i=0;i<webBorders.Length;i++) webBorders[i].color=i==id?Color.white:webBranchColors[i<6?i:(i-6)/3];
-            // Keep the frame; replace only the selected node's details, never the tree.
-            for(int i=webDetails.childCount-1;i>=2;i--)
-            {
-                var child=webDetails.GetChild(i).gameObject;child.SetActive(false);
-                if(Application.isPlaying)Destroy(child);else DestroyImmediate(child);
-            }
-            if(id<0||id>=webCatalog.nodes.Length)
-            {
-                Label(webDetails,"아이콘을 선택하세요",25,35,380,55,29);
-                Label(webDetails,"이름 · 효과 · 역할을\n여기에서 확인할 수 있습니다.\n\n클릭만으로 XP가 소비되지 않습니다.",25,115,380,220,24);
-                return;
-            }
-            var n=webCatalog.nodes[id];
-            var icon=Image(webDetails,"Selected icon",23,20,64,64,Color.white);icon.sprite=Resources.Load<Sprite>("WebIcons/"+n.id);icon.raycastTarget=false;
-            Label(webDetails,n.title,103,22,300,46,28);
-            Label(webDetails,n.branch+" · "+n.rarity+" · "+n.kind,103,68,300,36,20);
-            Label(webDetails,n.description,25,117,380,77,23);
-            Label(webDetails,n.effect,25,201,380,78,24).color=webBranchColors[id<6?id:(id-6)/3];
-            Label(webDetails,"역할: "+n.role,25,285,380,47,21);
-            Label(webDetails,"기획 노드 · 효과 연결 준비 중\n비용 미정 / XP 소비 없음",25,344,380,62,21);
+            var wire=Image(content,"Web connection",a.x,a.y,delta.magnitude,3,color);wire.raycastTarget=false;
+            wire.rectTransform.pivot=new Vector2(0,.5f);wire.rectTransform.localRotation=Quaternion.Euler(0,0,Mathf.Atan2(delta.y,delta.x)*Mathf.Rad2Deg);
         }
     }
 }

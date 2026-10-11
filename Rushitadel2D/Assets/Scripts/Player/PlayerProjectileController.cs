@@ -18,6 +18,7 @@ namespace Rushitadel.Player
 
         public void LaunchArea(Vector3 newDirection, Vector3 newDestination, float radius)
         {
+            speed*=Rushitadel.Progression.RandomPlayerWeb.Stat(36,.1f);
             newDirection.z = 0f;
             direction = newDirection.sqrMagnitude > 0f ? newDirection.normalized : Vector3.up;
             destination = newDestination;

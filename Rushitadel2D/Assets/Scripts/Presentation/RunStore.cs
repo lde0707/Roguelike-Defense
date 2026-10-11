@@ -39,16 +39,21 @@ namespace Rushitadel.Presentation
             if (data.version == 1) { data.campaign = new(); data.version = 2; }
             if (data.slot != slot || slot < 1 || slot > 3 || !Guid.TryParse(data.runId, out _) || !DateTime.TryParse(data.savedUtc, out _) || data.theme < 0 || data.theme > 4 || data.stage < 1 || data.stage > 3 || data.wave < 1 || data.wave > 3 || data.experience < 0 || string.IsNullOrEmpty(data.checkpoint)) return false;
             var c = data.campaign;
+            if(c!=null&&!Rushitadel.Progression.RandomPlayerWeb.Valid(c.playerWeb))return false;
             if (c == null || c.augments == null || c.augments.Length != 15 || c.web == null || c.web.Length != 6 || c.themeChoices == null || c.themeChoices.Length != 2 || c.spentXp < 0 || c.spentXp > data.experience || c.augmentsChosen < 0 || c.augmentsChosen > data.experience / 100 || c.defeatedBosses < 0 || c.defeatedBosses > 3 || c.usedThemes < 0 || c.usedThemes > 31 || !Enum.IsDefined(typeof(Rushitadel.Progression.RunPhase), c.phase)) return false;
             int ranks = 0; foreach (int rank in c.augments) { if (rank < 0 || rank > 10000) return false; ranks += rank; }
+            if(c.turretUpgrades==null)c.turretUpgrades=new int[30];
+            if(c.turretUpgrades.Length!=30)return false;
+            for(int i=0;i<30;i++){int r=c.turretUpgrades[i];if(r<0||r>Rushitadel.Progression.TurretAugments.Caps[i%6])return false;ranks+=r;}
             if (c.turretForms == null) c.turretForms = new int[5]; // Older saves have no modular visuals.
             if(c.turretForms.Length!=5 || c.element<0 || c.element>5 || c.transformationsChosen<0 || c.transformationsChosen>c.augmentsChosen)return false;
             int support=0; foreach(int form in c.turretForms) { if(form<0 || form>16)return false; if(Rushitadel.Combat.TurretForms.Support(form))support++; }
-            if(support>1 || ranks + c.transformationsChosen != c.augmentsChosen) return false;
+            if(support>1 || c.completionRewards<0 || (long)ranks + c.transformationsChosen + c.completionRewards != c.augmentsChosen) return false;
             for (int i = 1; i <= 3; i++) if (c.web[i] && !c.web[i-1]) return false;
             foreach (int theme in c.themeChoices) if (theme < 0 || theme > 4) return false;
             foreach (float v in new[] {data.health, data.power, data.playerX, data.playerY, data.cameraY, data.distance, data.seconds, data.turretAngle}) if (!float.IsFinite(v)) return false;
-            if (data.health <= 0 || data.health > (c.web[5] ? 125 : 100) || data.power < 0 || data.power > 100 || Math.Abs(data.playerX) > 5.4f || Math.Abs(data.playerY - data.cameraY) > 5f || data.distance < 0 || data.seconds < 0) return false;
+            if (data.health <= 0 || data.health > Rushitadel.Progression.RandomPlayerWeb.MaximumHealth(c) || data.power < 0 || data.power > Rushitadel.Progression.RandomPlayerWeb.MaximumPower(c) || Math.Abs(data.playerX) > 5.4f || Math.Abs(data.playerY - data.cameraY) > 5f || data.distance < 0 || data.seconds < 0) return false;
+            if(c.playerWeb!=null && System.Linq.Enumerable.Sum(System.Linq.Enumerable.Where(c.playerWeb.nodes,n=>n.owned),n=>n.cost)>c.spentXp)return false;
             error = null; return true;
         }
         private static RunData Decode(string text, int slot)

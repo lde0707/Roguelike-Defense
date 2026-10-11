@@ -122,6 +122,7 @@ namespace Rushitadel.Presentation
             for(int i=0;i<echoes.Length;i++)
             {
                 echoes[i].transform.localPosition=localOffset;
+                echoes[i].color=new Color(.5f,.5f,.55f,(i==0?.055f:.025f)*(RandomPlayerWeb.Has(23)?2.5f:1));
                 echoes[i].transform.localRotation=Quaternion.Euler(0,0,2.8f*(i+1));
             }
             lightSource.intensity=.13f+flight.ShotFlash*.22f;

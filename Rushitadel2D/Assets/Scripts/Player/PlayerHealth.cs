@@ -37,8 +37,10 @@ namespace Rushitadel.Player
         {
             if (!IsAlive || Time.timeScale <= 0f || !float.IsFinite(amount) ||
                 amount <= 0f || Time.time < invulnerableUntil) return;
-            invulnerableUntil = Time.time + invulnerabilitySeconds;
-            ApplyDamage(amount);
+            invulnerableUntil = Time.time + invulnerabilitySeconds+.04f*Rushitadel.Progression.RandomPlayerWeb.Rank(13);
+            amount*=1-.04f*Rushitadel.Progression.RandomPlayerWeb.Rank(8)-.05f*Rushitadel.Progression.RandomPlayerWeb.Rank(22);
+            var web=GetComponent<Rushitadel.Progression.PlayerWebRuntime>();
+            ApplyDamage(web!=null?web.Absorb(amount):amount);
         }
 
         public void TakeEnvironmentalDamage(float amount)
@@ -72,7 +74,7 @@ namespace Rushitadel.Player
         public float Heal(float amount)
         {
             if (!IsAlive || !float.IsFinite(amount) || amount <= 0f) return 0f;
-            float restored = Mathf.Min(amount, maximumHealth - currentHealth);
+            float restored = Mathf.Min(amount*Rushitadel.Progression.RandomPlayerWeb.Stat(33,.15f), maximumHealth - currentHealth);
             currentHealth += restored;
             if (restored > 0f) HealthChanged?.Invoke(currentHealth, maximumHealth);
             return restored;

@@ -47,7 +47,7 @@ namespace Rushitadel.Player
             if (!health.IsAlive) { body.linearVelocity = Vector2.zero; return; }
             float recoilStep = Mathf.Min(recoilRemaining, Time.fixedDeltaTime);
             Vector2 next = body.position + (recoilStep > 0f ? recoilVelocity * recoilStep :
-                moveInput * (moveSpeed * (Rushitadel.Progression.CampaignDirector.HasWeb(5) ? 1.1f : 1f) * Time.fixedDeltaTime));
+                moveInput * (moveSpeed * (Rushitadel.Progression.CampaignDirector.HasWeb(5) ? 1.1f : 1f) * Rushitadel.Progression.RandomPlayerWeb.MoveMultiplier * Time.fixedDeltaTime));
             recoilRemaining = Mathf.Max(0f, recoilRemaining - recoilStep);
             next.x = Mathf.Clamp(next.x, minimumPosition.x, maximumPosition.x);
             var pressure = ForwardPressureController.Instance;
@@ -60,7 +60,7 @@ namespace Rushitadel.Player
         public void ApplyRecoil(Vector2 firingDirection, float distance, float duration)
         {
             if (!health.IsAlive || Time.timeScale <= 0f || duration <= 0f) return;
-            recoilVelocity = -firingDirection.normalized * Mathf.Max(0f, distance) / duration;
+            recoilVelocity = -firingDirection.normalized * Mathf.Max(0f, distance) * Mathf.Max(.4f,1-.15f*Rushitadel.Progression.RandomPlayerWeb.Rank(37)) / duration;
             recoilRemaining = duration;
         }
 

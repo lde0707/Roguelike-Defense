@@ -18,12 +18,15 @@ namespace Rushitadel.Progression
         public int spentXp, augmentsChosen, defeatedBosses, kills, usedThemes;
         public int[] augments = new int[15]; // T1..T5, damage / cadence / penetration
         public int[] turretForms = new int[5];
+        public int[] turretUpgrades = new int[30];
         public int transformationsChosen, element;
+        public int completionRewards;
         public bool[] web = new bool[6];
+        public PlayerWebGraph playerWeb;
         public int[] themeChoices = new int[2];
         public bool recovered;
     }
-    public sealed class CampaignDirector : MonoBehaviour
+    public sealed partial class CampaignDirector : MonoBehaviour
     {
         public static CampaignDirector Instance { get; private set; }
         public CampaignState State { get; private set; }
@@ -49,6 +52,9 @@ namespace Rushitadel.Progression
         public void Initialize(RunData data)
         {
             Instance = this; State = data.campaign ?? new CampaignState(); Stage = data.stage; Round = data.wave;
+            RandomPlayerWeb.Ensure(State,data.seed);
+            State.element=0; // Player attributes have been removed; old saves retain no active attribute.
+            if(State.turretUpgrades==null)State.turretUpgrades=new int[30];
             if (State.turretForms == null || State.turretForms.Length != 5) State.turretForms = new int[5];
             State.usedThemes |= 1 << data.theme;
             spawner = FindFirstObjectByType<EnemySpawner>(); spawner.TakeCampaignControl();
@@ -61,7 +67,9 @@ namespace Rushitadel.Progression
         }
         public void ApplyBuild()
         {
-            PlayerHealth.Instance.SetMaximumHealth(HasWeb(5) ? 125 : 100);
+            PlayerHealth.Instance.SetMaximumHealth(RandomPlayerWeb.MaximumHealth(State));
+            PlayerHealth.Instance.GetComponent<PlayerPower>().SetMaximumPower(RandomPlayerWeb.MaximumPower(State));
+            if(PlayerHealth.Instance.GetComponent<PlayerWebRuntime>()==null)PlayerHealth.Instance.gameObject.AddComponent<PlayerWebRuntime>();
             var art = PlayerHealth.Instance.GetComponent<Rushitadel.Presentation.ModularPlayerArt>();
             if (art == null) art = PlayerHealth.Instance.gameObject.AddComponent<Rushitadel.Presentation.ModularPlayerArt>();
             art.Refresh();
@@ -70,6 +78,7 @@ namespace Rushitadel.Progression
         public bool CanTransform(int slot, int form)
         {
             if (slot < 1 || slot > 5 || form < 1 || form > 16 || State.turretForms[slot-1] == form) return false;
+            if(State.turretForms[slot-1]!=0)return false;
             for(int i=0;i<5;i++) if(i!=slot-1 && TurretForms.Support(form) && TurretForms.Support(State.turretForms[i])) return false;
             return true;
         }
@@ -88,7 +97,7 @@ namespace Rushitadel.Progression
         public bool SetElement(int element)
         {
             if(State.phase!=RunPhase.Maintenance || !State.recovered || element<0 || element>=TurretForms.ElementNames.Length)return false;
-            State.element=element; ApplyBuild(); SaveCheckpoint("안전 정비 · 속성 색상"); return true;
+            return false; // Standalone player element selection is no longer available.
         }
         private void OnDestroy()
         {
@@ -157,11 +166,14 @@ namespace Rushitadel.Progression
         }
         public bool CanChooseStat(int slot,int kind)
         {
+            if(slot<1||slot>5||kind<0||kind>2||NeedsFirstForms)return false;
             int f=Form(slot);
             return !(kind==2&&f>0 || kind==0&&TurretForms.Support(f) || kind==1&&f==6);
         }
         public bool CanBuy(int id, out string reason)
         {
+            reason="플레이어 강화 6종은 사용하지 않습니다."; return false;
+/*
             reason = "구매 가능";
             if (id < 0 || id >= 6 || State.phase != RunPhase.Maintenance) { reason = "정비에서만 구매 가능"; return false; }
             if (State.web[id]) { reason = "획득 완료"; return false; }
@@ -169,6 +181,7 @@ namespace Rushitadel.Progression
             if (id != 0 && id != 4 && id != 5 && !State.web[id-1]) { reason = WebNames[id-1] + " 연결 필요"; return false; }
             if (Wallet < WebCosts[id]) { reason = "XP 부족"; return false; }
             return true;
+*/
         }
         public bool BuyWeb(int id)
         {
@@ -179,7 +192,7 @@ namespace Rushitadel.Progression
         public void Recover(int type)
         {
             if (State.phase != RunPhase.Maintenance || State.recovered) return;
-            if (type == 0) PlayerHealth.Instance.Heal(PlayerHealth.Instance.MaximumHealth * .3f);
+            if (type == 0) PlayerHealth.Instance.Heal(PlayerHealth.Instance.MaximumHealth * .3f+5*RandomPlayerWeb.Rank(38));
             if (type == 1) { var power = PlayerHealth.Instance.GetComponent<PlayerPower>(); power.RestorePower(power.CurrentPower + 50, false); }
             State.recovered = true; SaveCheckpoint("안전 정비 · 회복 확정");
         }

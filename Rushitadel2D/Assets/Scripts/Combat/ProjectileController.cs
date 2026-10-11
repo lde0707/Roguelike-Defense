@@ -21,6 +21,8 @@ namespace Rushitadel.Combat
         private readonly HashSet<IDamageable> damaged = new();
         private int extraHits;
         private bool splash, poison;
+        private bool playerWeb;
+        public void EnablePlayerWeb(){playerWeb=true;speed*=Rushitadel.Progression.RandomPlayerWeb.Stat(5,.1f);}
         public bool CanHit(IDamageable target) => flying && !damaged.Contains(target);
         public void SetModifiers(int pierce, bool explosion, bool toxin)
         {
@@ -98,7 +100,10 @@ namespace Rushitadel.Combat
         {
             if (!flying || target == null || !target.IsAlive || !CanHit(target)) return;
             damaged.Add(target);
-            ApplyDamage(target, damage);
+            float webDamage=1;
+            if(playerWeb)webDamage=target is EnemyProjectileController?Rushitadel.Progression.RandomPlayerWeb.Stat(12,.12f)*(target.MaximumHealth>=80?Rushitadel.Progression.RandomPlayerWeb.Stat(35,.15f):1):Rushitadel.Progression.RandomPlayerWeb.Stat(34,.12f);
+            ApplyDamage(target, damage*webDamage);
+            if(playerWeb)ApplyWebHit(target);
             if (target is EnemyController enemy && enemy != null && enemy.IsAlive && poison)
             {
                 var effect = enemy.GetComponent<Rushitadel.Progression.PoisonEffect>();
@@ -121,6 +126,23 @@ namespace Rushitadel.Combat
             if (hitbox != null) hitbox.enabled = false;
             if (visualHitbox != null) visualHitbox.enabled = false;
             Destroy(gameObject);
+        }
+        private void ApplyWebHit(IDamageable target)
+        {
+            var player=Rushitadel.Player.PlayerHealth.Instance;
+            if(target is EnemyProjectileController&&!target.IsAlive)player?.GetComponent<Rushitadel.Progression.PlayerWebRuntime>()?.Reclaim();
+            var bullets=FindObjectsByType<EnemyProjectileController>(FindObjectsSortMode.None);
+            if(Rushitadel.Progression.RandomPlayerWeb.Has(26))
+            {
+                int count=0;
+                foreach(var b in bullets){if(count>=8)break;if(b.IsAlive&&!ReferenceEquals(b,target)&&Vector2.Distance(b.transform.position,transform.position)<=.8f){b.TakeDamage(damage*.35f);count++;}}
+                foreach(var e in EnemyRegistry.FindAllWithinRadius(transform.position,.8f)){if(count>=8)break;if(e!=null&&e.IsAlive&&!ReferenceEquals(e,target)){e.TakeDamage(damage*.35f);count++;}}
+                Rushitadel.Presentation.ProjectileArt.Burst(transform.position,"BlastRing",Vector2.one*1.6f,new Color(.7f,.85f,1,.5f),.15f);
+            }
+            if(Rushitadel.Progression.RandomPlayerWeb.Has(28))
+            {
+                int count=0;foreach(var b in bullets){if(count>=2)break;if(b.IsAlive&&!ReferenceEquals(b,target)&&Vector2.Distance(b.transform.position,transform.position)<=.9f){b.TakeDamage(damage*.25f);Rushitadel.Presentation.ProjectileArt.Arc(transform.position,b.transform.position,new Color(.7f,.85f,1));count++;}}
+            }
         }
     }
 }

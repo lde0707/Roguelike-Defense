@@ -32,7 +32,9 @@ namespace Rushitadel.Presentation
             if (health == null) return;
             lastSaved = data; elapsed = data.seconds;
             UnityEngine.Random.InitState(data.seed);
-            health.SetMaximumHealth(data.campaign != null && data.campaign.web[5] ? 125 : 100);
+            RandomPlayerWeb.Ensure(data.campaign,data.seed);
+            health.SetMaximumHealth(RandomPlayerWeb.MaximumHealth(data.campaign));
+            health.GetComponent<PlayerPower>().SetMaximumPower(RandomPlayerWeb.MaximumPower(data.campaign));
             health.RestoreHealth(data.health);
             health.GetComponent<PlayerPower>().RestorePower(data.power, data.recovering);
             health.GetComponent<PlayerExperience>().RestoreExperience(data.experience);

@@ -43,7 +43,7 @@ namespace Rushitadel.Combat
 
             Fire();
             int form = Rushitadel.Progression.CampaignDirector.Form(slotId);
-            nextShotTime = Time.time + (form > 0 ? TurretForms.Intervals[form] : shotInterval) / (form==6 ? 1 : 1 + .2f * Rushitadel.Progression.CampaignDirector.Rank(slotId, 1));
+            nextShotTime = Time.time + (form > 0 ? TurretForms.Intervals[form] : shotInterval) / (form==6 ? 1 : 1 + .2f * Rushitadel.Progression.CampaignDirector.Rank(slotId, 1)+.1f*Rushitadel.Progression.TurretAugments.Rank(slotId,1));
         }
 
         private void Fire()
@@ -53,7 +53,7 @@ namespace Rushitadel.Combat
             int form = Rushitadel.Progression.CampaignDirector.Form(slotId);
             if(form>0)
             {
-                float mult=1+.25f*Rushitadel.Progression.CampaignDirector.Rank(slotId,0);
+                float mult=1+.25f*Rushitadel.Progression.CampaignDirector.Rank(slotId,0)+.15f*Rushitadel.Progression.TurretAugments.Rank(slotId,0);
                 int element=Rushitadel.Progression.CampaignDirector.Instance.State.element;
                 Vector3 pos=origin.position;
                 if(form==1) { alternate=!alternate; pos+=transform.right*(alternate?.06f:-.06f); }

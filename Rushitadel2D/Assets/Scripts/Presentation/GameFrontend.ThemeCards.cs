@@ -7,11 +7,17 @@ namespace Rushitadel.Presentation
     public sealed partial class GameFrontend
     {
         private static readonly string[] ThemeCardAssets={"Grass","Fire","Ice","Water","WaterElectric"};
+        private void ExpandThemePanel(RectTransform panelRect)
+        {
+            panelRect.anchoredPosition=new Vector2(240,-110);
+            panelRect.sizeDelta=new Vector2(1440,860);
+            ((RectTransform)panelRect.Find("Panel Fill")).sizeDelta=new Vector2(1434,854);
+        }
         private void ThemeCard(Transform parent,int theme,bool selected,float x,float y,float width,float height,Action choose)
         {
             var button=Button(parent,Themes[theme],x,y,width,height,choose);
             button.GetComponent<Image>().color=selected?ink:new Color32(85,101,105,255);
-            var art=Image(button.transform,"Theme Illustration",4,4,width-8,height-8,Color.white);
+            var art=Image(button.transform,"Theme Illustration",4,4,width-8,height-62,Color.white);
             art.sprite=Resources.Load<Sprite>("ThemeCards/"+ThemeCardAssets[theme]);
             art.raycastTarget=false;art.transform.SetSiblingIndex(1);
             var band=Image(button.transform,"Title backing",4,height-58,width-8,54,new Color(.07f,.10f,.13f,.94f));

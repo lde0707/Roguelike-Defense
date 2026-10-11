@@ -30,7 +30,7 @@ namespace Rushitadel.Power
         private void Update()
         {
             if (Time.timeScale <= 0f || (health != null && !health.IsAlive)) return;
-            SetPower(Mathf.MoveTowards(currentPower, maximumPower, recoveryPerSecond * (Rushitadel.Progression.CampaignDirector.HasWeb(4) ? 1.5f : 1f) * Time.deltaTime));
+            SetPower(Mathf.MoveTowards(currentPower, maximumPower, recoveryPerSecond * (Rushitadel.Progression.CampaignDirector.HasWeb(4) ? 1.5f : 1f) * Rushitadel.Progression.RandomPlayerWeb.Stat(7,.12f) * Time.deltaTime));
             if (state == PowerCycleState.Recovering && NormalizedPower >= recoveryThreshold)
                 ChangeState(PowerCycleState.Ready);
         }
@@ -40,6 +40,7 @@ namespace Rushitadel.Power
             SetPower(value);
             ChangeState(recovering && NormalizedPower < recoveryThreshold ? PowerCycleState.Recovering : PowerCycleState.Ready);
         }
+        public void SetMaximumPower(float value){maximumPower=Mathf.Max(1,value);SetPower(currentPower);}
 
         public bool TrySpend(float amount)
         {

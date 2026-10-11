@@ -136,7 +136,10 @@ namespace Rushitadel.Presentation
             var newButton = FindObjectsByType<Button>(FindObjectsSortMode.None).Where(b => b.name == "새 게임 Button").OrderBy(b => b.transform.position.y).Last();
             newButton.onClick.Invoke(); yield return null;
             Check(!Find("선택 확정 · 시작 Button").interactable, "Theme confirmation disabled until selection");
-            FindObjectsByType<Button>(FindObjectsSortMode.None).First(b => b.GetComponent<RectTransform>().sizeDelta.y == 250).onClick.Invoke();
+            var themeCards=FindObjectsByType<Button>(FindObjectsSortMode.None).Where(b=>b.transform.Find("Theme Illustration")!=null).ToArray();
+            Check(themeCards.Length==2 && themeCards.All(b=>b.GetComponent<RectTransform>().sizeDelta==new Vector2(630,374)),"Larger theme selection cards");
+            Check(!FindObjectsByType<Text>(FindObjectsSortMode.None).Any(t=>t.text.Contains("총 3스테이지")||t.text.Contains("XP Web을 구매")),"Theme footer explanation removed");
+            themeCards[0].onClick.Invoke();
             yield return null; Capture("theme-select.png"); Click("선택 확정 · 시작 Button");
             Check(GameFrontend.IsTransitioning && GameFrontend.BlocksGameplay && Time.timeScale == 0, "Shutter immediately blocks input and simulation");
             typeof(GameFrontend).GetMethod("Load", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(ui, new object[] {"Title"});

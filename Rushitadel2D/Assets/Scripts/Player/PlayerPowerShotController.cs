@@ -20,7 +20,8 @@ namespace Rushitadel.Player
         [SerializeField, Min(0.01f)] private float diameterMultiplier = 1.5f;
         private PlayerController movement;
         public event System.Action<Vector2> Fired;
-        public float AttackRadius => movement.BodyRadius * diameterMultiplier;
+        public float AttackRadius => movement.BodyRadius * diameterMultiplier * Rushitadel.Progression.RandomPlayerWeb.Stat(14,.08f);
+        public float CostFraction=>Mathf.Max(.5f,powerCostFraction-.04f*Rushitadel.Progression.RandomPlayerWeb.Rank(15));
 
         private void Awake()
         {
@@ -73,7 +74,7 @@ namespace Rushitadel.Player
             Vector3 direction = destination - origin.position;
             direction.z = 0f;
             direction = direction.sqrMagnitude > 0f ? direction.normalized : transform.up;
-            if (!power.TrySpend(power.MaximumPower * powerCostFraction))
+            if (!power.TrySpend(power.MaximumPower * CostFraction))
             {
                 return false;
             }

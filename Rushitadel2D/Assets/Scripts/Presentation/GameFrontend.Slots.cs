@@ -47,17 +47,18 @@ namespace Rushitadel.Presentation
         private void ShowThemes()
         {
             NewPage("themes"); var p = Panel("스테이지 테마 선택");
+            ExpandThemePanel(p);
             Label(p, "두 후보 중 하나를 선택하세요. 확정 후 안전 저장하고 전투를 시작합니다.", 50, 115, 1100, 65, 25);
             for (int i = 0; i < 2; i++)
             {
                 int theme = candidates[i];
-                ThemeCard(p, theme, chosenTheme == theme, 75 + i * 555, 230, 495, 250,
+                ThemeCard(p, theme, chosenTheme == theme, 60 + i * 690, 230, 630, 374,
                     () => { chosenTheme = theme; ShowThemes(); });
             }
-            Label(p, "총 3스테이지 · 각 3라운드 마지막에 보스가 등장합니다.\n라운드 종료 후 안전 정비에서 XP Web을 구매할 수 있습니다.", 75, 525, 1050, 100, 24);
             Button(p, "돌아가기", 75, 720, 330, 75, () => ShowSlots(true));
-            Button(p, "선택 확정 · 시작", 630, 720, 495, 75, () => {
+            Button(p, "선택 확정 · 시작", 750, 720, 630, 75, () => {
                 var data = new RunData { slot = newSlot, theme = chosenTheme, seed = UnityEngine.Random.Range(1, int.MaxValue), runId = Guid.NewGuid().ToString() };
+                Rushitadel.Progression.RandomPlayerWeb.Ensure(data.campaign,data.seed);
                 if (!RunStore.Write(data, out string error)) { Error(error, ShowThemes); return; }
                 RunSession.Pending = data; Load("inGame");
             }, chosenTheme >= 0);

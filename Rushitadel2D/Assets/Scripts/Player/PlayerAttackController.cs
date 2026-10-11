@@ -52,18 +52,21 @@ namespace Rushitadel.Player
             direction.z = 0f;
             if (direction.sqrMagnitude < 0.0001f) return false;
 
-            int spread = Rushitadel.Progression.CampaignDirector.HasWeb(1) ? 1 : 0;
+            int spread = Rushitadel.Progression.CampaignDirector.HasWeb(1)||Rushitadel.Progression.RandomPlayerWeb.Has(25) ? 1 : 0;
+            float shotDamage=damage*Rushitadel.Progression.RandomPlayerWeb.DamageMultiplier*(Rushitadel.Progression.RandomPlayerWeb.Has(25)?.55f:1);
+            if(Random.value<Rushitadel.Progression.RandomPlayerWeb.CritChance)shotDamage*=1.5f+.15f*Rushitadel.Progression.RandomPlayerWeb.Rank(11);
             for (int i = -spread; i <= spread; i++)
             {
             GameObject shot = Instantiate(projectilePrefab, origin.position, Quaternion.identity);
             shot.SetActive(true);
             var projectile = shot.GetComponent<ProjectileController>();
             if (projectile == null) projectile = shot.AddComponent<ProjectileController>();
-            projectile.Launch(Quaternion.Euler(0,0,i*12) * direction, damage, attackRange, i==0?"PlayerBasic":"WebSpread");
-            projectile.SetModifiers(Rushitadel.Progression.CampaignDirector.HasWeb(0) ? 1 : 0,
-                Rushitadel.Progression.CampaignDirector.HasWeb(2), Rushitadel.Progression.CampaignDirector.HasWeb(3));
+            projectile.Launch(Quaternion.Euler(0,0,i*12) * direction, shotDamage, attackRange*Rushitadel.Progression.RandomPlayerWeb.Stat(4,.08f), i==0?"PlayerBasic":"WebSpread");
+            projectile.SetModifiers((Rushitadel.Progression.CampaignDirector.HasWeb(0) ? 1 : 0)+Rushitadel.Progression.RandomPlayerWeb.Rank(24),
+                Rushitadel.Progression.CampaignDirector.HasWeb(2), Rushitadel.Progression.CampaignDirector.HasWeb(3)||Rushitadel.Progression.RandomPlayerWeb.Has(27));
+            projectile.EnablePlayerWeb();
             }
-            nextShotTime = Time.time + shotInterval;
+            nextShotTime = Time.time + shotInterval/Rushitadel.Progression.RandomPlayerWeb.CadenceMultiplier;
             Fired?.Invoke(direction.normalized);
             return true;
         }
