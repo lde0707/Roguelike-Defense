@@ -14,7 +14,8 @@ namespace Rushitadel.Combat
             if(sprites.TryGetValue(path,out var found))return found;
             var texture=Resources.Load<Texture2D>(path);
             if(texture==null){Debug.LogError("Missing enemy projectile: "+path);return null;}
-            return sprites[path]=Sprite.Create(texture,new Rect(2,2,28,28),Vector2.one*.5f,32,0,SpriteMeshType.FullRect);
+            int border=texture.width>=56?4:2;
+            return sprites[path]=Sprite.Create(texture,new Rect(border,border,texture.width-border*2,texture.height-border*2),Vector2.one*.5f,texture.width,0,SpriteMeshType.FullRect);
         }
         public static void Apply(EnemyProjectileController shot,PressureTheme theme,int variant)
         {

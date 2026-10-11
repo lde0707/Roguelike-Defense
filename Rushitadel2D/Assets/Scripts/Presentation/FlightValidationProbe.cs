@@ -56,12 +56,12 @@ namespace Rushitadel.Presentation
             var art=player.GetComponent<ModularPlayerArt>();var fx=art.Flight;
             Check(art.VisibleTurrets==5,"five modular turrets");
             var hull=Resources.Load<Texture2D>("PlayerForms/Hull");
-            Check(hull.width==48 && hull.height==48,"48x48 hull");
+            Check(hull.width==80 && hull.height==80,"40px logical hull at exact 2x");
             for(int form=0;form<=16;form++)
             {
                 string name=form==0?"Default":"ROT-"+form.ToString("00");
                 var texture=Resources.Load<Texture2D>("PlayerForms/"+name);
-                Check(texture!=null && texture.width==24 && texture.height==24 && texture.filterMode==FilterMode.Point,name+" 24px point sprite");
+                Check(texture!=null && texture.width==40 && texture.height==40 && texture.filterMode==FilterMode.Point,name+" 20px logical point sprite at exact 2x");
                 director.State.turretForms[0]=form;director.ApplyBuild();
                 Check(towers.First(t=>t.SlotId==1).GetComponent<TurretVisual>().DisplayedForm==form,"bound form "+form);
                 int before=fx.ShotsShown;
@@ -107,8 +107,8 @@ namespace Rushitadel.Presentation
                     for(int index=0;index<7;index++)
                     {
                         var sprite=EnemyProjectileArt.Load(EnemyProjectileArt.PathFor((Rushitadel.World.PressureTheme)theme,index));
-                        Check(sprite!=null && sprite.texture.width==32 && sprite.texture.height==32 && sprite.texture.filterMode==FilterMode.Point,
-                            "32px enemy sprite " + theme + "/" + index);
+                        Check(sprite!=null && sprite.texture.width==56 && sprite.texture.height==56 && sprite.texture.filterMode==FilterMode.Point,
+                            "28px logical enemy sprite at exact 2x " + theme + "/" + index);
                         var bullet = new GameObject("Review bullet").AddComponent<EnemyProjectileController>();
                         bullet.transform.position=player.transform.position+new Vector3((index-3)*1.1f,3,0);
                         bullet.ConfigureBoss(30,0,.1f,100,0);bullet.Launch(Vector2.down);

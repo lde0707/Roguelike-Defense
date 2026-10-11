@@ -1,4 +1,4 @@
-param([string]$Manifest='enemies.json', [string]$OutputDirectory='output/imagegen/combat-retro-20261007', [ValidateSet(1,2)][int]$PixelScale=1)
+param([string]$Manifest='enemies.json', [string]$OutputDirectory='output/imagegen/combat-retro-20261007', [ValidateSet(1,2)][int]$PixelScale=1, [switch]$RefinedGrid)
 $ErrorActionPreference='Stop'
 Add-Type -AssemblyName System.Drawing
 Add-Type -ReferencedAssemblies System.Drawing.Common,System.Drawing.Primitives -TypeDefinition @'
@@ -29,7 +29,7 @@ public static class RetroBounds {
   }
   return output;
  }
- private static int Quantize(double value) { return System.Math.Min(255,(int)System.Math.Round(value/32)*32); }
+ private static int Quantize(double value) { return System.Math.Min(255,(int)System.Math.Round(value/16)*16); }
  public static Rectangle Get(Bitmap b) {
   int l=b.Width,r=-1,t=b.Height,d=-1;
   for(int y=0;y<b.Height;y++)for(int x=0;x<b.Width;x++)if(b.GetPixel(x,y).A>100){l=System.Math.Min(l,x);r=System.Math.Max(r,x);t=System.Math.Min(t,y);d=System.Math.Max(d,y);}
@@ -50,6 +50,12 @@ $sg.InterpolationMode='NearestNeighbor';$sg.PixelOffsetMode='Half'
 $font=[System.Drawing.Font]::new('Arial',8)
 $i=0
 foreach($item in $items){
+ if($RefinedGrid){
+  $PixelScale=2
+  $sizes=@{48=80;24=40;32=56;64=108;16=28}
+  $item.width=$sizes[[int]$item.width];$item.height=$sizes[[int]$item.height]
+  if(!$item.width -or !$item.height){throw 'Unsupported refined grid size'}
+ }
  $dest=Join-Path $root ('Rushitadel2D/Assets/Resources/'+$item.key+'.png')
  $backup=Join-Path $out ('backups/'+$item.key+'.png')
  $original=Join-Path $out ('originals/'+$item.key+'.png')
@@ -60,7 +66,8 @@ foreach($item in $items){
  $bounds=[RetroBounds]::Get($src)
  $l=$bounds.X;$top=$bounds.Y;$r=$bounds.Right-1;$bottom=$bounds.Bottom-1
  if($PixelScale -gt 1){
- $bmp=[RetroBounds]::Pixelize($src,$bounds,[int]$item.width,[int]$item.height,2,$PixelScale,[bool]$item.beam)
+ $pixelPad=2;if($RefinedGrid){$pixelPad=4}
+ $bmp=[RetroBounds]::Pixelize($src,$bounds,[int]$item.width,[int]$item.height,$pixelPad,$PixelScale,[bool]$item.beam)
  } else {
  $bmp=[System.Drawing.Bitmap]::new([int]$item.width,[int]$item.height)
  $g=[System.Drawing.Graphics]::FromImage($bmp);$g.InterpolationMode='NearestNeighbor';$g.PixelOffsetMode='Half'
@@ -88,7 +95,8 @@ foreach($item in $items){
   $tiny.Save($logicalPath,[System.Drawing.Imaging.ImageFormat]::Png);$tiny.Dispose()
  }
  $cx=($i%5)*160;$cy=[int][Math]::Floor($i/5)*130
- $pw=96;$ph=96;if($item.beam){$pw=144;$ph=36}
+ $previewScale=[Math]::Max(1,[Math]::Floor([Math]::Min(144.0/$bmp.Width,96.0/$bmp.Height)))
+ $pw=[int]($bmp.Width*$previewScale);$ph=[int]($bmp.Height*$previewScale)
  $sg.DrawImage($bmp,[System.Drawing.Rectangle]::new(($cx+8),($cy+5),$pw,$ph))
  $label=$item.key.Replace('EnemyProjectiles/','EP/').Replace('ProjectileArt/','P/').Replace('EnemyArt/','E/').Replace('BossArt/','B/')
  $sg.DrawString($label,$font,[System.Drawing.Brushes]::White,[single]($cx+4),[single]($cy+105))
