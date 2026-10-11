@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: a8ef94ec4c54b8f41b2f3008e4a48347
+guid: 847231bf9386e7640b69a3e7b2bb186e
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -5450622724363923879
     second: ROT-13_0
-  - first:
-      213: -8399330820746605886
-    second: ROT-13_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -106,10 +103,10 @@ TextureImporter:
       name: ROT-13_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 1221
-        height: 958
+        x: 1
+        y: 12
+        width: 30
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,28 +117,6 @@ TextureImporter:
       bones: []
       spriteID: 95ecd95c28f7b54b0800000000000000
       internalID: -5450622724363923879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-13_1
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 359
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ca886ebe159f6b80800000000000000
-      internalID: -8399330820746605886
       vertices: []
       indices: 
       edges: []

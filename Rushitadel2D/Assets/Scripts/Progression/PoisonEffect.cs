@@ -5,7 +5,7 @@ namespace Rushitadel.Progression
     public sealed class PoisonEffect : MonoBehaviour
     {
         private float remaining, tick;
-        public void Refresh() { remaining = 3; }
+        public void Refresh() { remaining = 3; Rushitadel.Presentation.ProjectileArt.Status(gameObject,"PoisonStatus",3,.6f); }
         private void Update()
         {
             if (Time.timeScale <= 0 || remaining <= 0) return;

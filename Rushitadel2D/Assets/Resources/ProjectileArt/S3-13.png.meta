@@ -1,40 +1,10 @@
 fileFormatVersion: 2
-guid: 3d5a4981d116e6749a4dd614d80b54f9
+guid: 140213b784606664a83d843b282165bf
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -6879906345796035096
     second: S3-13_0
-  - first:
-      213: -5846885754826428512
-    second: S3-13_1
-  - first:
-      213: 5386291659066304813
-    second: S3-13_2
-  - first:
-      213: -8393067232031928993
-    second: S3-13_3
-  - first:
-      213: -5926777905384860376
-    second: S3-13_4
-  - first:
-      213: 5018766444887142077
-    second: S3-13_5
-  - first:
-      213: -4131237244168232817
-    second: S3-13_6
-  - first:
-      213: 5572449030450141010
-    second: S3-13_7
-  - first:
-      213: 3053621612065990489
-    second: S3-13_8
-  - first:
-      213: -3170004152035765673
-    second: S3-13_9
-  - first:
-      213: -8974331161822745730
-    second: S3-13_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -102,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -133,10 +103,10 @@ TextureImporter:
       name: S3-13_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 0
-        width: 2109
-        height: 652
+        x: 11
+        y: 1
+        width: 10
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,226 +117,6 @@ TextureImporter:
       bones: []
       spriteID: 8ed1fda31a9a580a0800000000000000
       internalID: -6879906345796035096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_1
-      rect:
-        serializedVersion: 2
-        x: 88
-        y: 643
-        width: 275
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0af67455260bbdea0800000000000000
-      internalID: -5846885754826428512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_2
-      rect:
-        serializedVersion: 2
-        x: 454
-        y: 626
-        width: 66
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d29eb43e9b3ffba40800000000000000
-      internalID: 5386291659066304813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_3
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 411
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f5d04c222d5d58b80800000000000000
-      internalID: -8393067232031928993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_4
-      rect:
-        serializedVersion: 2
-        x: 94
-        y: 369
-        width: 16
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 825d6ee75eadfbda0800000000000000
-      internalID: -5926777905384860376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_5
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 228
-        width: 6
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dbee526bd7d36a540800000000000000
-      internalID: 5018766444887142077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_6
-      rect:
-        serializedVersion: 2
-        x: 1985
-        y: 192
-        width: 13
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f802d7a5d95eaa6c0800000000000000
-      internalID: -4131237244168232817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 144
-        width: 18
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25753fc7ed0555d40800000000000000
-      internalID: 5572449030450141010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_8
-      rect:
-        serializedVersion: 2
-        x: 263
-        y: 65
-        width: 24
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95726a96da4a06a20800000000000000
-      internalID: 3053621612065990489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_9
-      rect:
-        serializedVersion: 2
-        x: 342
-        y: 85
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7521565e402e104d0800000000000000
-      internalID: -3170004152035765673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S3-13_10
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 63
-        width: 15
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7b26da3b55c47380800000000000000
-      internalID: -8974331161822745730
       vertices: []
       indices: 
       edges: []

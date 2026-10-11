@@ -10,8 +10,6 @@ namespace Rushitadel.Combat
         private static readonly List<TransformationShot> live=new();
         private static int serial;
         private static Sprite pixel;
-        private static Material effectMaterial;
-        private static Material EffectMaterial=>effectMaterial!=null?effectMaterial:effectMaterial=new Material(Shader.Find("Sprites/Default"));
         private readonly HashSet<Component> hitIds=new();
         private readonly HashSet<int> gateIds=new();
         private Dictionary<Component,int> pelletHits;
@@ -23,7 +21,6 @@ namespace Rushitadel.Combat
         private bool hasGateOrigin;
         private EnemyProjectileController attached;
         private Color tint;
-        private SpriteRenderer sprite;
         private Collider2D hitbox;
         private int Upgrade=>TurretAugments.UniqueRank(slot);
         private void Damage(EnemyProjectileController target,float amount)
@@ -35,7 +32,7 @@ namespace Rushitadel.Combat
         }
         public override void FitVisualCollision(Vector2 size)
         {
-            if(Stationary)return; // Area outlines, not their decorative center icons, define these attacks.
+            if(Stationary)return; // Area attacks use TickArea and gate checks instead of moving hitboxes.
             base.FitVisualCollision(size);hitbox=visualHitbox;
         }
         public int Form => form;
@@ -56,7 +53,6 @@ namespace Rushitadel.Combat
         {
             var go=new GameObject("ROT-"+f.ToString("00")+" shot");go.transform.position=p;
             var shot=go.AddComponent<TransformationShot>();shot.form=f;shot.origin=p;shot.heading=d.normalized;shot.factor=power;shot.slot=slot;shot.tint=c;shot.id=id;shot.pelletHits=pellets;shot.budget=45*power;
-            shot.sprite=go.AddComponent<SpriteRenderer>();shot.sprite.sprite=Glyph;shot.sprite.sharedMaterial=EffectMaterial;shot.sprite.color=c;shot.sprite.sortingOrder=110;
             shot.transform.localScale=f==4?new Vector3(.4f,.4f,1):f==3?new Vector3(.18f,.28f,1):new Vector3(.13f,.22f,1);
             shot.FaceDirection(d);
             if(shot.Stationary)
@@ -73,53 +69,8 @@ namespace Rushitadel.Combat
                 for(int i=0;i<=old.Length-cap;i++)old[i].Finish();
             }
             else {var circle=go.AddComponent<CircleCollider2D>();circle.isTrigger=true;circle.radius=.5f;shot.hitbox=circle;}
-            if(shot.Stationary)shot.Decorate();
             Rushitadel.Presentation.ProjectileArt.Transformation(go,f,c);
             live.Add(shot);return shot;
-        }
-        private void Decorate()
-        {
-            if(form==6||form==11)
-            {
-                sprite.enabled=false;float radius=form==6?1.8f:2,angle=form==6?22.5f:27.5f;
-                if(form==11)
-                {
-                    for(int ring=0;ring<3;ring++)
-                    {
-                        var points=new Vector2[9];for(int i=0;i<9;i++)points[i]=(Vector2)(Quaternion.Euler(0,0,Mathf.Lerp(-angle,angle,i/8f))*Vector2.up)*(radius-ring*.22f);
-                        DrawEffectLine(points,.025f);
-                    }
-                }
-                else for(int ray=0;ray<7;ray++)
-                {
-                    Vector2 d=Quaternion.Euler(0,0,Mathf.Lerp(-angle,angle,ray/6f))*Vector2.up;
-                    for(int piece=0;piece<3;piece++){float r=.3f+piece*.5f+(ray%2)*.1f;DrawEffectLine(new[]{d*r,d*(r+.18f)},.04f);}
-                }
-            }
-            else if(form==8||form==14||form==13||form==15)
-            {
-                sprite.enabled=false;float width=form==13?1:form==15?.7f:.8f;
-                DrawEffectLine(new[]{new Vector2(-width/2,-.12f),new Vector2(-width/2,.12f),new Vector2(width/2,.12f),new Vector2(width/2,-.12f)},.045f);
-                DrawEffectLine(new[]{new Vector2(-width/2,0),new Vector2(width/2,0)},.025f);
-                if(form==13||form==15)for(int i=0;i<5;i++){float x=Mathf.Lerp(-width/2,width/2,i/4f);DrawEffectLine(new[]{new Vector2(x,-.12f),new Vector2(x,.12f)},.025f);}
-            }
-            else if(form==4||form==10||form==9)
-            {
-                sprite.enabled=false;
-                if(form==9){DrawEffectLine(new[]{new Vector2(-.17f,.12f),new Vector2(0,-.1f),new Vector2(.17f,.12f)},.045f);return;}
-                int sides=12;float radius=form==10?.3f:.2f;
-                var points=new Vector2[sides+1];for(int i=0;i<=sides;i++){float angle=i*Mathf.PI*2/sides;float r=radius*(i%2==0?1:.75f);points[i]=new Vector2(Mathf.Cos(angle),Mathf.Sin(angle))*r;}
-                DrawEffectLine(points,.035f);
-            }
-        }
-        private void DrawEffectLine(Vector2[] points,float width)
-        {
-            var go=new GameObject("Pixel effect outline");go.transform.SetParent(transform,false);
-            // Cancel sprite scale, but preserve the shot's launch rotation.
-            go.transform.localScale=new Vector3(1/transform.localScale.x,1/transform.localScale.y,1);
-            var line=go.AddComponent<LineRenderer>();line.useWorldSpace=false;line.positionCount=points.Length;line.widthMultiplier=width;
-            line.sharedMaterial=EffectMaterial;line.startColor=line.endColor=new Color(tint.r,tint.g,tint.b,.7f);line.sortingOrder=111;
-            for(int i=0;i<points.Length;i++)line.SetPosition(i,new Vector3(Mathf.Round(points[i].x*32)/32,Mathf.Round(points[i].y*32)/32,0));
         }
         public static Sprite Glyph
         {
@@ -233,7 +184,7 @@ namespace Rushitadel.Combat
         private void EndFlight(){if(form==5)Explode();else Finish();}
         private void Finish(){if(finished)return;finished=true;if(hitbox!=null)hitbox.enabled=false;live.Remove(this);Destroy(gameObject);}
         private void OnDestroy()=>live.Remove(this);
-        public static void Flash(Vector2 p,Color color,float size)=>Rushitadel.Presentation.ProjectileArt.Burst(p,"BlastRing",Vector2.one*size,color,.15f);
+        public static void Flash(Vector2 p,Color color,float size)=>Rushitadel.Presentation.ProjectileArt.Burst(p,"BlastRing",Vector2.one*size,color,.18f);
         private static void FlashLine(Vector2 a,Vector2 b,Color color)=>Rushitadel.Presentation.ProjectileArt.Arc(a,b,color);
     }
 }

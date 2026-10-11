@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: bbf00759678c01d40b4fbb1577cf8643
+guid: b1f8d61ce6ea25745967b26eec286ae9
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 413562855166941012
     second: ROT-05_0
-  - first:
-      213: 1170072998070029831
-    second: ROT-05_1
-  - first:
-      213: -9178376087543350390
-    second: ROT-05_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -109,10 +103,10 @@ TextureImporter:
       name: ROT-05_0
       rect:
         serializedVersion: 2
-        x: 483
-        y: 1083
-        width: 23
-        height: 10
+        x: 1
+        y: 1
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,50 +117,6 @@ TextureImporter:
       bones: []
       spriteID: 4579582c9354db500800000000000000
       internalID: 413562855166941012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-05_1
-      rect:
-        serializedVersion: 2
-        x: 505
-        y: 1061
-        width: 69
-        height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70e8d33413fec3010800000000000000
-      internalID: 1170072998070029831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-05_2
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 55
-        width: 1026
-        height: 963
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8bf907d39bdf9080800000000000000
-      internalID: -9178376087543350390
       vertices: []
       indices: 
       edges: []

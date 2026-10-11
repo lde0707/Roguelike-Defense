@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: ab5f738c8f704244a8cf98cf6136cca8
+guid: 04d9b0895dbe1f84ab62a587807bc1ba
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1971295021794248091
     second: ROT-02_0
-  - first:
-      213: -6475348268996836226
-    second: ROT-02_1
-  - first:
-      213: 8386485684030767895
-    second: ROT-02_2
-  - first:
-      213: 5414185359549919909
-    second: ROT-02_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -112,10 +103,10 @@ TextureImporter:
       name: ROT-02_0
       rect:
         serializedVersion: 2
-        x: 434
-        y: 202
-        width: 386
-        height: 860
+        x: 2
+        y: 1
+        width: 11
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,72 +117,6 @@ TextureImporter:
       bones: []
       spriteID: 56a357e3f9d84a4e0800000000000000
       internalID: -1971295021794248091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-02_1
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 931
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e74c085ae01f226a0800000000000000
-      internalID: -6475348268996836226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-02_2
-      rect:
-        serializedVersion: 2
-        x: 786
-        y: 706
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7138d8ecb48c26470800000000000000
-      internalID: 8386485684030767895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-02_3
-      rect:
-        serializedVersion: 2
-        x: 799
-        y: 708
-        width: 33
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a2f71026ec032b40800000000000000
-      internalID: 5414185359549919909
       vertices: []
       indices: 
       edges: []

@@ -1,37 +1,10 @@
 fileFormatVersion: 2
-guid: 61b0753895c0db347885578f33025de5
+guid: 60485095475df5b4fb3c0ab8adb82c81
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -837983175385749407
     second: ROT-03_0
-  - first:
-      213: -7372897378980069079
-    second: ROT-03_1
-  - first:
-      213: 4006216133825274737
-    second: ROT-03_2
-  - first:
-      213: -4681061100139869280
-    second: ROT-03_3
-  - first:
-      213: 7659444220057609357
-    second: ROT-03_4
-  - first:
-      213: -9214353669728210726
-    second: ROT-03_5
-  - first:
-      213: -4727403423651338497
-    second: ROT-03_6
-  - first:
-      213: 3694665892354467807
-    second: ROT-03_7
-  - first:
-      213: 4749768732652243311
-    second: ROT-03_8
-  - first:
-      213: -6075831999283259763
-    second: ROT-03_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -130,10 +103,10 @@ TextureImporter:
       name: ROT-03_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 39
-        width: 1033
-        height: 1081
+        x: 6
+        y: 1
+        width: 12
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,204 +117,6 @@ TextureImporter:
       bones: []
       spriteID: 168e067edb2ee54f0800000000000000
       internalID: -837983175385749407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-03_1
-      rect:
-        serializedVersion: 2
-        x: 426
-        y: 1009
-        width: 55
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9210c78a5e43ea990800000000000000
-      internalID: -7372897378980069079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-03_2
-      rect:
-        serializedVersion: 2
-        x: 155
-        y: 680
-        width: 43
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 173281e0950f89730800000000000000
-      internalID: 4006216133825274737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-03_3
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 555
-        width: 41
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ab83421bb7890fb0800000000000000
-      internalID: -4681061100139869280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-03_4
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 433
-        width: 37
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d84e379cfefcb4a60800000000000000
-      internalID: 7659444220057609357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-03_5
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 403
-        width: 23
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ad07809382a002080800000000000000
-      internalID: -9214353669728210726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-03_6
-      rect:
-        serializedVersion: 2
-        x: 1034
-        y: 302
-        width: 9
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff6eb4f02a3e46eb0800000000000000
-      internalID: -4727403423651338497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-03_7
-      rect:
-        serializedVersion: 2
-        x: 528
-        y: 199
-        width: 277
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fd72a8dcd07164330800000000000000
-      internalID: 3694665892354467807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-03_8
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 88
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f698efa3f719ae140800000000000000
-      internalID: 4749768732652243311
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ROT-03_9
-      rect:
-        serializedVersion: 2
-        x: 496
-        y: 71
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d8615cfdcfe4eaba0800000000000000
-      internalID: -6075831999283259763
       vertices: []
       indices: 
       edges: []

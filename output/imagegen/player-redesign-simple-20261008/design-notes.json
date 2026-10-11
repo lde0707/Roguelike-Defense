@@ -1,0 +1,26 @@
+{
+  "revision": "simple-v2",
+  "userDirection": "화려함과 묘사를 줄이되 문양과 최소한의 디테일은 남긴다.",
+  "size": [
+    48,
+    48
+  ],
+  "turrets": 5,
+  "paletteMaximum": 12,
+  "style": "짙은 1px 외곽선, 큰 무광 색면, 2~3단계 명암. 본체 문양 1개와 소수의 홈. 짧은 회색 포신.",
+  "research": [
+    {
+      "title": "Reassembly — 회전 포탑과 모듈",
+      "url": "https://www.anisopteragames.com/large-ships/",
+      "application": "본체와 포신 방향을 분명히 나눈다."
+    },
+    {
+      "title": "Nova Drift — 공식 아트 가이드",
+      "url": "https://blog.novadrift.io/customskins/",
+      "application": "큰 기하학 실루엣을 사용하되 우리 게임에 맞춰 평면 도트로 표현한다."
+    }
+  ],
+  "scope": "5종 외형 시안과 합성 스프라이트. Unity 실사용 아트 교체는 수행하지 않음.",
+  "generation": "built-in image_gen",
+  "files": "originals: 생성 원본 / sprites48: 48×48 투명 PNG / previews: 8배 확대 / overview.png: 비교 이미지 / prompts.json: 생성 프롬프트"
+}

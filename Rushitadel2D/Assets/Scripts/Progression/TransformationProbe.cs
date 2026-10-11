@@ -35,9 +35,13 @@ namespace Rushitadel.Progression
         }
         private void Awake()
         {
-            DontDestroyOnLoad(gameObject);output=Path.GetFullPath(Path.Combine(Application.dataPath,"../../output/transformation-20261007"));Directory.CreateDirectory(output);
+            DontDestroyOnLoad(gameObject);
+            Application.runInBackground=true;
+            output=Environment.GetEnvironmentVariable("RUSHITADEL_VALIDATION_OUTPUT");
+            if(string.IsNullOrEmpty(output))output=Path.GetFullPath(Path.Combine(Application.dataPath,"../../output/transformation-20261007"));
+            Directory.CreateDirectory(output);
             RunStore.TestDirectory=Path.Combine(output,"test-saves");
-            Application.logMessageReceived+=(msg,stack,type)=>{if((type==LogType.Error||type==LogType.Exception)&&!msg.StartsWith("Curl error"))EditorApplication.delayCall+=()=>EditorApplication.Exit(1);};
+            Application.logMessageReceived+=(msg,stack,type)=>{if((type==LogType.Error||type==LogType.Exception)&&!msg.StartsWith("Curl error")&&!stack.Contains("UnityEditor.Search."))EditorApplication.delayCall+=()=>EditorApplication.Exit(1);};
         }
         private IEnumerator Start()
         {
@@ -49,6 +53,14 @@ namespace Rushitadel.Progression
             foreach(var e in FindObjectsByType<EnemyController>(FindObjectsSortMode.None))Destroy(e.gameObject);
             GameFrontend.Instance.ShowBattle();Time.timeScale=1;yield return null;Clear();
             Check(PlayerHealth.Instance.GetComponent<ModularPlayerArt>().VisibleTurrets==5,"five modular sockets");
+            var projectileTextures=Resources.LoadAll<Texture2D>("ProjectileArt");
+            Check(projectileTextures.Length==49,"all 49 projectile and VFX assets imported");
+            foreach(var texture in projectileTextures)
+            {
+                Check((texture.width==16||texture.width==24||texture.width==32)&&texture.width==texture.height&&texture.filterMode==FilterMode.Point,texture.name+" pixel dimensions and filter");
+                Check(texture.GetPixels32().Any(p=>p.a==0)&&texture.GetPixels32().Any(p=>p.a>128),texture.name+" visible art and transparency");
+                Check(ProjectileArt.Load(texture.name)!=null,texture.name+" runtime sprite");
+            }
             for(int f=1;f<=16;f++)Check(ModularPlayerArt.LoadSprite("ROT-"+f.ToString("00"),true)!=null,"sprite "+f);
             foreach(int f in new[]{1,4,7,12,16})
             {
@@ -106,6 +118,7 @@ namespace Rushitadel.Progression
             {
                 d.State.turretForms[0]=f;d.ApplyBuild();Clear();Call(firingTower,"Fire");
                 Check(FindObjectsByType<TransformationShot>(FindObjectsSortMode.None).Any(s=>s.Form==f),"live turret firing "+f);
+                Check(FindObjectsByType<TransformationShot>(FindObjectsSortMode.None).Where(s=>s.Form==f).All(s=>s.GetComponent<ProjectileVisual>().AssetName=="ROT-"+f.ToString("00")),"projectile visual binding "+f);
             }
             Clear();Check(d.OfferedForms(1).SequenceEqual(d.OfferedForms(1))&&d.OfferedForms(1).Length==3,"stable three-choice offer");
             d.State.turretForms=new[]{1,3,4,13,16};d.State.element=0;d.ApplyBuild();GameFrontend.Instance.ShowBattle();Time.timeScale=0;
@@ -115,6 +128,22 @@ namespace Rushitadel.Progression
             GameFrontend.Instance.ShowBattle();Time.timeScale=1;
             var camera=Camera.main;float oldSize=camera.orthographicSize;var oldPosition=camera.transform.position;
             var canvas=GameFrontend.Instance.GetComponentInChildren<Canvas>();canvas.enabled=false;
+            yield return null;
+            var player=PlayerHealth.Instance;
+            var aim=camera.WorldToScreenPoint(player.transform.position+Vector3.up*3);
+            Check(player.GetComponent<PlayerAttackController>().TryFire(aim),"manual projectile launch");
+            var manual=FindObjectsByType<ProjectileController>(FindObjectsSortMode.None).First(p=>p.GetComponent<ProjectileVisual>()?.AssetName=="PlayerBasic");
+            var physicalScale=manual.transform.localScale;
+            float physicalRadius=manual.GetComponent<CircleCollider2D>().radius;
+            manual.SetModifiers(1,true,true);
+            Check(manual.GetComponent<ProjectileVisual>().AssetName=="WebPoison"&&manual.transform.localScale==physicalScale&&manual.GetComponent<CircleCollider2D>().radius==physicalRadius,"modifier art leaves collision unchanged");
+            player.GetComponent<Rushitadel.Power.PlayerPower>().RestorePower(100,false);
+            Vector3 playerPosition=player.transform.position;
+            Check(player.GetComponent<PlayerPowerShotController>().TryFire(aim),"power projectile launch");
+            Check(FindObjectsByType<PlayerProjectileController>(FindObjectsSortMode.None).Any(p=>p.GetComponent<ProjectileVisual>()?.AssetName=="PlayerPower"),"power projectile art");
+            yield return new WaitForSeconds(.16f);
+            Check(Vector3.Distance(playerPosition,player.transform.position)<.001f,"right click still has no knockback");
+            Clear();
             for(int page=0;page<4;page++)
             {
                 for(int i=0;i<5;i++)d.State.turretForms[i]=1+(page*4+i)%16;

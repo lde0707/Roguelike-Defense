@@ -1,0 +1,19 @@
+{
+  "generatedWith": "built-in image_gen",
+  "export": "nearest-neighbor, binary alpha, 12-color maximum",
+  "assets": [
+    {
+      "id": "01-halo-sleek",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 991,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    }
+  ]
+}

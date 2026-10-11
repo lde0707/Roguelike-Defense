@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e319cbc684b5a249be1e3149673816f
+guid: b6c8a5fdce82e9e41a5ca5ce77ff55f1
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -103,10 +103,10 @@ TextureImporter:
       name: SplitFragment_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 103
-        width: 548
-        height: 1136
+        x: 3
+        y: 1
+        width: 9
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 8d408e651b4c8084385e669f4599bb0f
+guid: 495f1c8884ba7b142bfe889176be3b97
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4740467126512432022
     second: WebPierce_0
-  - first:
-      213: -5693348063346523347
-    second: WebPierce_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -106,10 +103,10 @@ TextureImporter:
       name: WebPierce_0
       rect:
         serializedVersion: 2
-        x: 224
-        y: 88
-        width: 829
-        height: 1137
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,28 +117,6 @@ TextureImporter:
       bones: []
       spriteID: a6c4fc6b34a763eb0800000000000000
       internalID: -4740467126512432022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WebPierce_1
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 1199
-        width: 62
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d23829dd91a2df0b0800000000000000
-      internalID: -5693348063346523347
       vertices: []
       indices: 
       edges: []

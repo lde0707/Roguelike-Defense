@@ -4,7 +4,7 @@ using Rushitadel.Combat;
 
 namespace Rushitadel.Presentation
 {
-    // Visual children use world sizes. They never resize the projectile or its hitbox.
+    // Visual children use world sizes; moving projectile hitboxes follow their displayed size.
     public static class ProjectileArt
     {
         public const float ThicknessMultiplier = 1.2f;
@@ -122,6 +122,8 @@ namespace Rushitadel.Presentation
                 properties=new MaterialPropertyBlock();
             }
             image.sprite=ProjectileArt.Load(name);
+            // The source crescent opens upward; flip its bow to face outward.
+            image.flipY=name=="ROT-11"||name=="S3-14";
             AssetName=name;size=worldSize;offset=worldOffset;tint=color;mode=animation;
             if(mode!=5)GetComponent<ProjectileBehaviour>()?.FitVisualCollision(DisplaySize);
             Present();

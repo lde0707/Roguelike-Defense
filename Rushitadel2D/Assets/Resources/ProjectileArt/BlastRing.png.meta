@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e1a8c2007cd7fdf4998b693617c8cc50
+guid: f88fe2bb1c29fb64696521690bf0e1ff
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -23,66 +23,6 @@ TextureImporter:
   - first:
       213: -3297854897143284948
     second: BlastRing_6
-  - first:
-      213: 9219133511923604510
-    second: BlastRing_7
-  - first:
-      213: -1717533777095422036
-    second: BlastRing_8
-  - first:
-      213: 4109336284346255876
-    second: BlastRing_9
-  - first:
-      213: 2449435018336602453
-    second: BlastRing_10
-  - first:
-      213: 7544438415183953384
-    second: BlastRing_11
-  - first:
-      213: 3122262368226832963
-    second: BlastRing_12
-  - first:
-      213: 1838311843386814254
-    second: BlastRing_13
-  - first:
-      213: 6098142931375880614
-    second: BlastRing_14
-  - first:
-      213: 1793548329930431029
-    second: BlastRing_15
-  - first:
-      213: -6941889623399934619
-    second: BlastRing_16
-  - first:
-      213: 6802998484450898460
-    second: BlastRing_17
-  - first:
-      213: -4158486854107051105
-    second: BlastRing_18
-  - first:
-      213: 2761955020433817603
-    second: BlastRing_19
-  - first:
-      213: 283960639850417058
-    second: BlastRing_20
-  - first:
-      213: -3182709712959051129
-    second: BlastRing_21
-  - first:
-      213: 7943075139386172376
-    second: BlastRing_22
-  - first:
-      213: -5270305129014379772
-    second: BlastRing_23
-  - first:
-      213: 2376692719086621215
-    second: BlastRing_24
-  - first:
-      213: 7733820505053140751
-    second: BlastRing_25
-  - first:
-      213: 545080350403468286
-    second: BlastRing_26
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -150,7 +90,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -181,10 +121,10 @@ TextureImporter:
       name: BlastRing_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 0
-        width: 1232
-        height: 1184
+        x: 1
+        y: 13
+        width: 8
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +143,10 @@ TextureImporter:
       name: BlastRing_1
       rect:
         serializedVersion: 2
-        x: 731
-        y: 1119
-        width: 27
-        height: 67
+        x: 4
+        y: 21
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +165,10 @@ TextureImporter:
       name: BlastRing_2
       rect:
         serializedVersion: 2
-        x: 773
-        y: 1107
-        width: 7
-        height: 8
+        x: 12
+        y: 24
+        width: 9
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +187,10 @@ TextureImporter:
       name: BlastRing_3
       rect:
         serializedVersion: 2
-        x: 813
-        y: 1075
-        width: 12
-        height: 12
+        x: 20
+        y: 13
+        width: 11
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,10 +209,10 @@ TextureImporter:
       name: BlastRing_4
       rect:
         serializedVersion: 2
-        x: 840
-        y: 1047
-        width: 7
-        height: 11
+        x: 4
+        y: 5
+        width: 9
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,10 +231,10 @@ TextureImporter:
       name: BlastRing_5
       rect:
         serializedVersion: 2
-        x: 1064
-        y: 800
+        x: 12
+        y: 2
         width: 9
-        height: 15
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,10 +253,10 @@ TextureImporter:
       name: BlastRing_6
       rect:
         serializedVersion: 2
-        x: 219
-        y: 535
-        width: 6
-        height: 159
+        x: 20
+        y: 6
+        width: 9
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,446 +267,6 @@ TextureImporter:
       bones: []
       spriteID: c2bfdfe917aab32d0800000000000000
       internalID: -3297854897143284948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_7
-      rect:
-        serializedVersion: 2
-        x: 1201
-        y: 657
-        width: 9
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1c1b138511f0ff70800000000000000
-      internalID: 9219133511923604510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_8
-      rect:
-        serializedVersion: 2
-        x: 121
-        y: 528
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: caf0e7e21281a28e0800000000000000
-      internalID: -1717533777095422036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_9
-      rect:
-        serializedVersion: 2
-        x: 1126
-        y: 259
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 40a0513149b470930800000000000000
-      internalID: 4109336284346255876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_10
-      rect:
-        serializedVersion: 2
-        x: 1129
-        y: 257
-        width: 11
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5590b58eb242ef120800000000000000
-      internalID: 2449435018336602453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_11
-      rect:
-        serializedVersion: 2
-        x: 1138
-        y: 257
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8edb9d634ca33b860800000000000000
-      internalID: 7544438415183953384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_12
-      rect:
-        serializedVersion: 2
-        x: 1114
-        y: 231
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 342fab9d411845b20800000000000000
-      internalID: 3122262368226832963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_13
-      rect:
-        serializedVersion: 2
-        x: 1066
-        y: 209
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e2fe67bb1eef28910800000000000000
-      internalID: 1838311843386814254
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_14
-      rect:
-        serializedVersion: 2
-        x: 1112
-        y: 207
-        width: 10
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a9f73ecfa4f0a450800000000000000
-      internalID: 6098142931375880614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_15
-      rect:
-        serializedVersion: 2
-        x: 1082
-        y: 165
-        width: 11
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 53a9ff414b6f3e810800000000000000
-      internalID: 1793548329930431029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_16
-      rect:
-        serializedVersion: 2
-        x: 1089
-        y: 175
-        width: 8
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 565d64fca2479af90800000000000000
-      internalID: -6941889623399934619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_17
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 102
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c127739e31b196e50800000000000000
-      internalID: 6802998484450898460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_18
-      rect:
-        serializedVersion: 2
-        x: 729
-        y: 111
-        width: 12
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9b41d12d361a46c0800000000000000
-      internalID: -4158486854107051105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_19
-      rect:
-        serializedVersion: 2
-        x: 874
-        y: 111
-        width: 29
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3008096257f645620800000000000000
-      internalID: 2761955020433817603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_20
-      rect:
-        serializedVersion: 2
-        x: 484
-        y: 95
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ab0a7c82b4d0f300800000000000000
-      internalID: 283960639850417058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_21
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 95
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 78ae3e7f06eb4d3d0800000000000000
-      internalID: -3182709712959051129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_22
-      rect:
-        serializedVersion: 2
-        x: 322
-        y: 71
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d3695b41c87b3e60800000000000000
-      internalID: 7943075139386172376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_23
-      rect:
-        serializedVersion: 2
-        x: 534
-        y: 79
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 40bbd2f886d1cd6b0800000000000000
-      internalID: -5270305129014379772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_24
-      rect:
-        serializedVersion: 2
-        x: 642
-        y: 55
-        width: 13
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f125a6d8f65bbf020800000000000000
-      internalID: 2376692719086621215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_25
-      rect:
-        serializedVersion: 2
-        x: 547
-        y: 39
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f07135816cc045b60800000000000000
-      internalID: 7733820505053140751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlastRing_26
-      rect:
-        serializedVersion: 2
-        x: 694
-        y: 42
-        width: 8
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: efb18d3d0b3809700800000000000000
-      internalID: 545080350403468286
       vertices: []
       indices: 
       edges: []

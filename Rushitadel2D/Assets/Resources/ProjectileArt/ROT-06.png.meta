@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: bb3a8f6cf75e98d4a903e61bedeee370
+guid: 6b10889f2c7900840af8bfeed0405d1c
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 6238642573459584426
     second: ROT-06_0
+  - first:
+      213: -4383231311534471294
+    second: ROT-06_1
+  - first:
+      213: -7321020590010793764
+    second: ROT-06_2
+  - first:
+      213: 5022412639854555753
+    second: ROT-06_3
+  - first:
+      213: -430954909015865431
+    second: ROT-06_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +84,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -103,10 +115,10 @@ TextureImporter:
       name: ROT-06_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 103
-        width: 548
-        height: 1136
+        x: 2
+        y: 18
+        width: 16
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,6 +129,94 @@ TextureImporter:
       bones: []
       spriteID: aa5ffa7ed5c149650800000000000000
       internalID: 6238642573459584426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROT-06_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 11
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2874e937852ab23c0800000000000000
+      internalID: -4383231311534471294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROT-06_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd00613df82866a90800000000000000
+      internalID: -7321020590010793764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROT-06_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 18
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96276f1afa133b540800000000000000
+      internalID: 5022412639854555753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ROT-06_4
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 11
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a706e52bc0f40af0800000000000000
+      internalID: -430954909015865431
       vertices: []
       indices: 
       edges: []

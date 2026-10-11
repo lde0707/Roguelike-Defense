@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 6ed36bf0ce3dc1b4ab01c54d54887343
+guid: b125682699249534f9de054e294155f8
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4754952122048455827
     second: PlayerBasic_0
-  - first:
-      213: -4189303821878707451
-    second: PlayerBasic_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -106,10 +103,10 @@ TextureImporter:
       name: PlayerBasic_0
       rect:
         serializedVersion: 2
-        x: 224
-        y: 88
-        width: 829
-        height: 1137
+        x: 5
+        y: 2
+        width: 6
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,28 +117,6 @@ TextureImporter:
       bones: []
       spriteID: d6bdf41ec34030eb0800000000000000
       internalID: -4754952122048455827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerBasic_1
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 1199
-        width: 62
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50bbbb0be5a9cd5c0800000000000000
-      internalID: -4189303821878707451
       vertices: []
       indices: 
       edges: []

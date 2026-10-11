@@ -1,0 +1,14 @@
+{
+  "tool": "built-in image_gen",
+  "logicalSize": [
+    48,
+    48
+  ],
+  "jobs": [
+    {
+      "id": "01-halo-sleek",
+      "name": "유선형 고리",
+      "prompt": "Edit the supplied player spacecraft sprite into a visibly SLEEKER, LIGHTER version of the SAME design. Preserve identity: orthographic overhead, muted powder lavender body, blue-gray gun housings, five pale blue window panels, tiny ivory ring emblem at the center, EXACTLY FIVE attached outward-facing turrets in the same radial positions. Retain the simple restrained pixel-art style and small surface markings, not a detailed illustration.\nShape changes: make the broad outer ring armor about one third thinner; shrink the central round hub by about one quarter; make the five inner window openings longer and more open, shaped as elongated rounded teardrops with a subtle clockwise sweep. Outer silhouette still a balanced circular rotor overall, with five gently swept streamlined shoulders along the ring, not a star. Turret bases become compact narrow oval/teardrop fairings instead of large bulbous balls, each about 30% smaller; slim short barrels, dark readable muzzle. The five fairings and outer armor flow very slightly clockwise to imply rotation. Gentle tapered ends with soft small tips, no huge spikes. Make the machine look light and aerodynamic, not thick and tank-like. Keep all five turret modules attached and clearly countable. Preserve a strong readable 48x48 logical-pixel silhouette; clear 1px blue-charcoal outline, large clean flat color clusters, 2-3 tone shading, restrained ~12-color palette, just one small highlight per main surface. Less shiny than the reference, no glowing trim, no gold, no extra gears, no greebles, no elaborate texture. Important: preserve the faint blue inset panels and center ring symbol, but leave more breathing room between hub and rim. Square canvas, full ship centered with margin, isolated on genuine transparent alpha, no labels, no scenery, no shadow, no comparison layout, one finished game sprite enlarged nearest-neighbor."
+    }
+  ]
+}

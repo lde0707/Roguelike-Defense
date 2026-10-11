@@ -1,0 +1,10 @@
+[
+  {
+    "id": "01-pebble",
+    "prompt": "Create a companion 48x48 pixel-art game spacecraft sprite in the same soft, simple style as this reference. Change the flower body into a continuous circular flying-saucer hull, pale warm gray / ivory. Exactly five compact rounded gray turret modules around perimeter: top, upper right, lower right, lower left, upper left. Very short rounded barrels. Hull looks like a smooth flat pebble with a soft curved edge, not a pentagon and not petals. A small slate oval panel in center with one cream dash, two tiny vent marks. 12 colors, flat 2-tone shading with a single small curved highlight, muted medium-slate outline, broad clean unadorned surfaces. No intricate armor or gold trim. Crisp chunky pixels designed at 48x48 then enlarged; gentle stair-step curves, no blur. Top-down centered sprite with transparent background. Entire small ship visible, no labels, no scenery."
+  },
+  {
+    "id": "03-breeze",
+    "prompt": "Create a companion 48x48 pixel-art game spacecraft sprite in the same soft, simple style as this reference. Change the flower hull into a clockwise swirl of exactly FIVE ROUND-ENDED curved bean-shaped wings, with open gaps between wings and a small round central hub. Muted sage mint color, gentle gray teal shadow, small ivory dot painted in center, only two tiny vent marks. Five tiny rounded gray turrets attached to the outside of the five wings, with very short barrels. All wing ends fully rounded and blunt; airy soft pinwheel silhouette, not pointed blades. 12 colors, flat 2-tone shading, muted medium-slate outline, broad plain surfaces and one tiny highlight. No intricate armor, no gold, no shiny trim. Crisp logical48x48 pixel clusters enlarged nearest-neighbor. Top-down isolated single complete sprite, true transparent background, no text, no scenery."
+  }
+]
