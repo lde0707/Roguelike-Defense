@@ -30,9 +30,17 @@ namespace Rushitadel.Combat
         public void Slow(float amount,float duration)
         {
             if(maximumHealth>=80)amount*=.5f;
-            if(Time.time>=slowUntil || amount>=slowAmount){slowAmount=amount; slowUntil=Time.time+duration;}
+            if(Time.time>=slowUntil || amount>=slowAmount)
+            {
+                slowAmount=amount; slowUntil=Time.time+duration;
+                Rushitadel.Presentation.ProjectileArt.Status(gameObject,"IceShell",duration,collisionRadius*2.5f);
+            }
         }
-        public void Corrode(float duration) => vulnerableUntil=Time.time+duration;
+        public void Corrode(float duration)
+        {
+            vulnerableUntil=Time.time+duration;
+            Rushitadel.Presentation.ProjectileArt.Status(gameObject,"PoisonStatus",duration,collisionRadius*2.5f);
+        }
         public bool AttachDrill(Object drill){if(attachedDrill!=null)return false; attachedDrill=drill; return true;}
         public void Push(Vector2 heading)
         {

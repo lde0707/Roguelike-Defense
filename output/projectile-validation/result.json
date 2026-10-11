@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-08",
+  "unity": "6000.5.3f1",
+  "entryPoint": "Rushitadel.Editor.TransformationValidation.Run",
+  "result": "PASS",
+  "passedChecks": 268,
+  "spriteAssets": 49,
+  "workbookRowMappings": 131,
+  "rightClickKnockback": false,
+  "log": "unity.log",
+  "scope": "Current player, basic turret and ROT-01..16 visuals plus existing combat regression tests. Unimplemented S3 mechanics remain design assets only."
+}

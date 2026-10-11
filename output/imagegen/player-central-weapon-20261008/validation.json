@@ -1,0 +1,71 @@
+{
+  "generatedWith": "built-in image_gen",
+  "export": "nearest-neighbor, binary alpha, 16-color maximum",
+  "assets": [
+    {
+      "id": "01-lance",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 967,
+      "transparent": true,
+      "paletteMax": 16,
+      "previewScale": 8
+    },
+    {
+      "id": "02-twin",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 1076,
+      "transparent": true,
+      "paletteMax": 16,
+      "previewScale": 8
+    },
+    {
+      "id": "03-iris",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 1008,
+      "transparent": true,
+      "paletteMax": 16,
+      "previewScale": 8
+    },
+    {
+      "id": "04-rail",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 977,
+      "transparent": true,
+      "paletteMax": 16,
+      "previewScale": 8
+    },
+    {
+      "id": "05-capsule",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 1038,
+      "transparent": true,
+      "paletteMax": 16,
+      "previewScale": 8
+    }
+  ]
+}

@@ -1,0 +1,1864 @@
+{
+  "method": "Built-in image_gen; nearest-neighbor pixel export; transparent RGBA",
+  "assets": [
+    {
+      "id": "PlayerBasic",
+      "name": "플레이어 기본탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/PlayerBasic.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One small spearhead energy bolt, warm ivory point, muted brass shoulder, dark blue-gray outline, tiny mauve central notch. Long narrow shape pointing UP."
+    },
+    {
+      "id": "PlayerPower",
+      "name": "플레이어 동력탄",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/PlayerPower.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One round power orb. Three nested broken bronze rings around warm ivory central reactor, muted dusty teal internal energy, dark hollow gaps, restrained translucent outer rim. Perfect circular silhouette, center small and bright."
+    },
+    {
+      "id": "TowerBasic",
+      "name": "기본 포탑탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/TowerBasic.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One short stubby ballistic capsule, round warm pale gold nose, plum band at rear, dark metallic edges. Points UP. Distinct from long spearhead player bolt."
+    },
+    {
+      "id": "ROT-01",
+      "name": "쌍열 연사 타원탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-01.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One tiny elongated oval slug with pale ivory leading tip and antique gold rear stripe. Very simple small ellipse, UP."
+    },
+    {
+      "id": "ROT-02",
+      "name": "부채 산탄 알갱이",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-02.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One compact diamond pellet with beveled bronze sides and ivory point, squat robust silhouette. UP. ONE pellet only, not seven pellets."
+    },
+    {
+      "id": "ROT-03",
+      "name": "부착 드릴탄",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-03.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One chunky pointed drill projectile. Three distinct diagonal bronze screw flights, dark steel core, plum collar at bottom. Mechanical spiral unmistakable. UP."
+    },
+    {
+      "id": "ROT-04",
+      "name": "관통 원반",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-04.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One circular spinning metal cutting disc, exactly six broad teeth, antique brass edge, muted blue steel face, small warm ivory hub. Flat topdown circular disc."
+    },
+    {
+      "id": "ROT-05",
+      "name": "폭발 구체탄",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-05.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One heavy round explosive orb enclosed in four muted plum armor petals separated by brass seams, tiny ivory central hot spot. Dark outer rim. Clearly round, no tail."
+    },
+    {
+      "id": "ROT-06",
+      "name": "냉각 부채",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-06.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One 45-degree fan of cold spray, narrow source at BOTTOM CENTER, spreading UPWARD to a curved wide front. Sparse stepped dusty ice-blue crystalline streaks and three pale frost chips; transparent gaps, no dense filled triangle."
+    },
+    {
+      "id": "ROT-07",
+      "name": "부식 방울",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-07.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One viscous sage green acid droplet pointing UP, bulbous front at top, tapering drip trail down, two dark olive cracks and one tiny cream glint. Muted rather than neon."
+    },
+    {
+      "id": "ROT-08",
+      "name": "복제 표식문",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-08.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One horizontal rectangular duplication energy gate, width three times its height, bronze corner brackets with dusty lavender energy rails. Open transparent central passage with two small inward chevrons. Flat topdown, NO text."
+    },
+    {
+      "id": "ROT-09",
+      "name": "귀환 부메랑",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-09.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One thick V-shaped mechanical boomerang, two broad crescent tips pointing UP and outward, muted plum broad faces with bronze cutting edges and dark center joint. Strong V silhouette."
+    },
+    {
+      "id": "ROT-10",
+      "name": "잔류 톱날",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-10.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One round stationary spinning saw, eight chunky alternating teeth, dark steel face and bronze edge, small mauve circular hub. Different from the six-tooth lighter disc."
+    },
+    {
+      "id": "ROT-11",
+      "name": "충격 파동",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-11.png",
+      "use": "runtime",
+      "renderFlipY": true,
+      "design": "One thick 55-degree crescent shockwave arc moving UP. Two separated nested shallow arcs, pale muted sand-gold fronts, smoky mauve trailing pixels, transparent interior. Wide short horizontal silhouette."
+    },
+    {
+      "id": "ROT-12",
+      "name": "십자 분열 원탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-12.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One compact cross-tipped splitting projectile, ivory upward point, bronze central shaft, two visible short horizontal side fins in plum. UP."
+    },
+    {
+      "id": "ROT-13",
+      "name": "감속 그물",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-13.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One short HORIZONTAL mesh barrier four times wider than tall. Exactly three diamond mesh openings between small hooked bronze endpoints, dusty teal threads, transparent holes. Flat topdown."
+    },
+    {
+      "id": "ROT-14",
+      "name": "과충전 표식문",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-14.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One broad rectangular overcharge gate, width three times height, chunky brass squared electrodes left and right, warm ivory short zigzag conducting rails above and below. Fully open transparent center. Not a filled block."
+    },
+    {
+      "id": "ROT-15",
+      "name": "봉합 포말벽",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-15.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One HORIZONTAL low wall of five overlapping round foam lobes, dusty warm ivory and muted sage shadows, dark thin pixel outlines, small gaps, width three times height. Not liquid puddle."
+    },
+    {
+      "id": "ROT-16",
+      "name": "연쇄 전극탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ROT-16.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One flying two-pronged electrode dart, bronze fork tips and dusty pale teal electrical spark between them, dark stem with plum collar. UP."
+    },
+    {
+      "id": "S3-01",
+      "name": "삼연장 버스트탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-01.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One thick burst cartridge, blunt gold beveled nose, three tiny stacked plum bands at rear, ivory highlight. UP. ONE bullet only, not triple guns."
+    },
+    {
+      "id": "S3-02",
+      "name": "머신건 탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-02.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One needle-thin rapid machinegun round with copper-brown tip and warm pale tracer tail of two detached square pixels. UP. Very narrow."
+    },
+    {
+      "id": "S3-03",
+      "name": "확산 산탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-03.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One squat hexagonal buckshot pellet, dusty copper and charcoal steel, warm ivory square center. Tiny sturdy hexagon. ONE pellet only."
+    },
+    {
+      "id": "S3-04",
+      "name": "저격 철갑탄",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-04.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One long slender armor-piercing sniper dart with sharply pointed ivory tip, dark blue steel shaft, two bronze stabilizing fins at bottom. UP. Long dart rather than beam."
+    },
+    {
+      "id": "S3-05",
+      "name": "레일 관통탄",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-05.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One narrow straight rail energy lance oriented UP, long pale teal core, parallel dark bronze guide traces, two sparse square sparks. Tall narrow luminous rail, no muzzle or gun."
+    },
+    {
+      "id": "S3-06",
+      "name": "대구경 폭발탄",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-06.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One large heavy cannon shell, round pointed bronze nose, muted oxblood-plum segmented body, dark steel rim and single warm fuse slit. UP. Broad heavy shell."
+    },
+    {
+      "id": "S3-07",
+      "name": "곡사 유탄",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-07.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One short round grenade projectile with muted olive body, bronze equator band, small warm fuse at top and dark mechanical seams. Topdown compact lobbed grenade, no perspective."
+    },
+    {
+      "id": "S3-08",
+      "name": "도탄 탄환",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-08.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One angular ricochet crystal bullet, off-center diamond facets in bronze and dusty lavender, white front tip, small hooked rear fin. UP."
+    },
+    {
+      "id": "S3-09",
+      "name": "화염 분사",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-09.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One 50-degree short flame cone, source BOTTOM CENTER spreading UP, three chunky curled flame tongues in muted ochre, rust, warm cream. Transparent gaps, no photographic fire or blur."
+    },
+    {
+      "id": "S3-10",
+      "name": "산성 분사",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-10.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One short fan of acid spray spreading UP from BOTTOM CENTER, three thick tapering sage and olive streams terminating in round droplets, transparent gaps. Subdued green no neon."
+    },
+    {
+      "id": "S3-11",
+      "name": "냉각 방사",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-11.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One broad frosty cone opening UP from BOTTOM CENTER, pale desaturated blue-white ice shards over sparse dusty lavender wisps. Three prominent angular crystal tips. Transparent holes."
+    },
+    {
+      "id": "S3-12",
+      "name": "파쇄 표식탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-12.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One small tagging dart shaped like a short spear with two bracket-like side fins, muted crimson-plum body, antique gold point, pale ivory center. UP."
+    },
+    {
+      "id": "S3-13",
+      "name": "전격 코일 전류",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-13.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One jagged electrical arc oriented VERTICALLY from bottom center to top center. Four sharp stepped bends and two short branches, pale dusty teal inner pixels and desaturated lavender edge. No endpoint orbs."
+    },
+    {
+      "id": "S3-14",
+      "name": "충격파",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-14.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": true,
+      "design": "One wide expanding crescent shockwave opening toward UP, heavy pale ivory leading arch with two separated bronze after-arcs and sparse dark lavender chunks. Transparent negative space."
+    },
+    {
+      "id": "S3-15",
+      "name": "추적 미사일",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/S3-15.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One compact guided missile pointing UP, slim dark steel body, muted plum fins, bronze pointed warhead and small warm cream exhaust at bottom. Two unmistakable triangular tail fins."
+    },
+    {
+      "id": "LegacyShield",
+      "name": "방패 지원 토큰",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/LegacyShield.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One hexagonal shield pickup projectile, dark steel six-sided frame, antique brass rim, muted dusty teal translucent center and small ivory center diamond. Flat topdown token, not UI button."
+    },
+    {
+      "id": "WebPierce",
+      "name": "관통 강화탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/WebPierce.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One long sharply pointed narrow ivory dart with two bronze parallel side edges and dusty plum rear. UP. Clear elongated penetrating silhouette."
+    },
+    {
+      "id": "WebSpread",
+      "name": "분산 보조탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/WebSpread.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One lightweight small arrow projectile with a forked bronze tail and ivory arrowhead, muted pale teal central shaft. UP."
+    },
+    {
+      "id": "WebBlast",
+      "name": "폭발 강화탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/WebBlast.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One short capsule with a round segmented bronze explosive nose, plum rear and a bright tiny ivory fuse slit. UP."
+    },
+    {
+      "id": "WebPoison",
+      "name": "맹독 강화탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/WebPoison.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One poison-coated spearhead bullet, muted sage-green coating around bronze inner core, two round dark olive bubble details, ivory nose. UP."
+    },
+    {
+      "id": "SplitFragment",
+      "name": "십자 분열 파편",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/SplitFragment.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One tiny thin triangular shrapnel shard, bronze cutting edge and dark steel back, one ivory leading pixel. UP. Clearly smaller simpler than a full bullet."
+    },
+    {
+      "id": "MicroMissile",
+      "name": "분리 소형 유도탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/MicroMissile.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One tiny miniature missile pointing UP, pale bronze pointed body, two small plum fins and just one ivory exhaust pixel. Compact thin silhouette."
+    },
+    {
+      "id": "PrismRound",
+      "name": "프리즘 약실 특수탄",
+      "pixels": 16,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/PrismRound.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One compact faceted prism bullet UP, muted teal, muted rust and dusty lilac three facets with a restrained ivory center. No rainbow neon."
+    },
+    {
+      "id": "BlastRing",
+      "name": "원형 폭발 효과",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/BlastRing.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One circular expanding explosion shock ring, broken warm cream and ochre rim, five tiny dark bronze debris pixels, fully transparent large hollow center. Flat topdown pixel effect, no huge fireball."
+    },
+    {
+      "id": "ResidualField",
+      "name": "잔류 피해 영역",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ResidualField.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One circular scorched residual damage field, sparse cracked charcoal islands with dim burnt amber seams and faded dusty rust edge, mostly transparent open center. Topdown flat ground effect."
+    },
+    {
+      "id": "AcidPool",
+      "name": "산성 웅덩이",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/AcidPool.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One flat round acid puddle with irregular five-lobed edge, muted olive and sage translucent patches, three darker bubble rings, sparse ivory glints. Transparent outer background."
+    },
+    {
+      "id": "PoisonStatus",
+      "name": "독·부식 상태",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/PoisonStatus.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One small open ring of three sage-green poisonous droplets and dark olive cracks arranged around a EMPTY TRANSPARENT center to overlay an enemy projectile. Sparse visual status effect."
+    },
+    {
+      "id": "IceShell",
+      "name": "냉각 외피",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/IceShell.png",
+      "use": "runtime",
+      "renderFlipY": false,
+      "design": "One broken circular ice shell with six pale desaturated blue crystal plates, dark lavender shadows, large transparent central hole to show target beneath. Sparse topdown status overlay."
+    },
+    {
+      "id": "TargetMark",
+      "name": "취약·화력 연계 표식",
+      "pixels": 24,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/TargetMark.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One open crosshair mark composed of four separated angular bracket corners, muted plum outer pixels, antique brass and pale ivory edges. Transparent central hole. Not letters or numbers."
+    },
+    {
+      "id": "ShieldHalo",
+      "name": "육각 보호막",
+      "pixels": 32,
+      "file": "Rushitadel2D/Assets/Resources/ProjectileArt/ShieldHalo.png",
+      "use": "prepared-for-unimplemented-design",
+      "renderFlipY": false,
+      "design": "One thin hexagonal protective energy barrier outline, muted dusty teal six edges, tiny bronze corner nodes, mostly transparent center. Restrained faint secondary hexagonal outline."
+    }
+  ],
+  "sourceCoverage": [
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 5,
+      "id": "ROT-01",
+      "name": "쌍열 연사포",
+      "art": [
+        "ROT-01"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 6,
+      "id": "ROT-02",
+      "name": "부채 산탄포",
+      "art": [
+        "ROT-02"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 7,
+      "id": "ROT-03",
+      "name": "부착 드릴포",
+      "art": [
+        "ROT-03"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 8,
+      "id": "ROT-04",
+      "name": "관통 원반포",
+      "art": [
+        "ROT-04"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 9,
+      "id": "ROT-05",
+      "name": "폭발 구체포",
+      "art": [
+        "ROT-05"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 10,
+      "id": "ROT-06",
+      "name": "냉각 분사포",
+      "art": [
+        "ROT-06"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 11,
+      "id": "ROT-07",
+      "name": "부식 분무포",
+      "art": [
+        "ROT-07"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 12,
+      "id": "ROT-08",
+      "name": "복제 표식포",
+      "art": [
+        "ROT-08"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 13,
+      "id": "ROT-09",
+      "name": "귀환 부메랑포",
+      "art": [
+        "ROT-09"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 14,
+      "id": "ROT-10",
+      "name": "잔류 톱날포",
+      "art": [
+        "ROT-10"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 15,
+      "id": "ROT-11",
+      "name": "충격 파동포",
+      "art": [
+        "ROT-11"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 16,
+      "id": "ROT-12",
+      "name": "십자 분열포",
+      "art": [
+        "ROT-12"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 17,
+      "id": "ROT-13",
+      "name": "감속 그물포",
+      "art": [
+        "ROT-13"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 18,
+      "id": "ROT-14",
+      "name": "과충전 표식포",
+      "art": [
+        "ROT-14"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 19,
+      "id": "ROT-15",
+      "name": "봉합 포말포",
+      "art": [
+        "ROT-15"
+      ]
+    },
+    {
+      "book": "Rushitadel_회전포탑_변형증강.xlsx",
+      "sheet": "회전형 변형",
+      "row": 20,
+      "id": "ROT-16",
+      "name": "연쇄 도체포",
+      "art": [
+        "ROT-16"
+      ]
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 4,
+      "id": "S3-01",
+      "name": "삼연장 버스트",
+      "art": [
+        "S3-01"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 5,
+      "id": "S3-02",
+      "name": "머신건 포탑",
+      "art": [
+        "S3-02"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 6,
+      "id": "S3-03",
+      "name": "확산 산탄포",
+      "art": [
+        "S3-03"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 7,
+      "id": "S3-04",
+      "name": "스나이퍼 포탑",
+      "art": [
+        "S3-04"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 8,
+      "id": "S3-05",
+      "name": "레일 포대",
+      "art": [
+        "S3-05"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 9,
+      "id": "S3-06",
+      "name": "거대 대포",
+      "art": [
+        "S3-06"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 10,
+      "id": "S3-07",
+      "name": "유탄 발사기",
+      "art": [
+        "S3-07"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 11,
+      "id": "S3-08",
+      "name": "도탄포",
+      "art": [
+        "S3-08"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 12,
+      "id": "S3-09",
+      "name": "화염 분사포",
+      "art": [
+        "S3-09"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 13,
+      "id": "S3-10",
+      "name": "산성 분사포",
+      "art": [
+        "S3-10"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 14,
+      "id": "S3-11",
+      "name": "냉각 방사포",
+      "art": [
+        "S3-11"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 15,
+      "id": "S3-12",
+      "name": "파쇄 표식포",
+      "art": [
+        "S3-12"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 16,
+      "id": "S3-13",
+      "name": "전격 코일포",
+      "art": [
+        "S3-13"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 17,
+      "id": "S3-14",
+      "name": "충격파 포탑",
+      "art": [
+        "S3-14"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "02_포탑변형",
+      "row": 18,
+      "id": "S3-15",
+      "name": "추적 미사일포",
+      "art": [
+        "S3-15"
+      ],
+      "note": "Artwork prepared; existing ROT combat rules are not replaced by v2 S3 mechanics."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 4,
+      "id": "S3-01/L01",
+      "name": "버스트 압축",
+      "art": [
+        "S3-01"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 5,
+      "id": "S3-01/L02",
+      "name": "추가 약실",
+      "art": [
+        "S3-01"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 6,
+      "id": "S3-01/L03",
+      "name": "버스트 재가동",
+      "art": [
+        "S3-01"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 7,
+      "id": "S3-01/L04",
+      "name": "프리즘 약실",
+      "art": [
+        "PrismRound"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 8,
+      "id": "S3-02/L01",
+      "name": "탄띠 급탄",
+      "art": [
+        "S3-02"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 9,
+      "id": "S3-02/L02",
+      "name": "냉각 순환",
+      "art": [
+        "S3-02"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 10,
+      "id": "S3-02/L03",
+      "name": "레드라인",
+      "art": [
+        "S3-02"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 11,
+      "id": "S3-03/L01",
+      "name": "산탄 확장",
+      "art": [
+        "S3-03"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 12,
+      "id": "S3-03/L02",
+      "name": "집속 초크",
+      "art": [
+        "S3-03"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 13,
+      "id": "S3-03/L03",
+      "name": "넓은 포구",
+      "art": [
+        "S3-03"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 14,
+      "id": "S3-04/L01",
+      "name": "연속 저격",
+      "art": [
+        "S3-04"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 15,
+      "id": "S3-04/L02",
+      "name": "처치 전환",
+      "art": [
+        "S3-04"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 16,
+      "id": "S3-04/L03",
+      "name": "철갑 저격",
+      "art": [
+        "S3-04"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 17,
+      "id": "S3-05/L01",
+      "name": "관통 증폭",
+      "art": [
+        "S3-05"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 18,
+      "id": "S3-05/L02",
+      "name": "직선 붕괴",
+      "art": [
+        "BlastRing"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 19,
+      "id": "S3-05/L03",
+      "name": "중심선 고정",
+      "art": [
+        "S3-05"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 20,
+      "id": "S3-06/L01",
+      "name": "초대형 탄두",
+      "art": [
+        "S3-06"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 21,
+      "id": "S3-06/L02",
+      "name": "충격 중심",
+      "art": [
+        "S3-06"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 22,
+      "id": "S3-06/L03",
+      "name": "연쇄 폭발",
+      "art": [
+        "BlastRing"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 23,
+      "id": "S3-07/L01",
+      "name": "고각 사격",
+      "art": [
+        "S3-07"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 24,
+      "id": "S3-07/L02",
+      "name": "다중 유탄",
+      "art": [
+        "S3-07"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 25,
+      "id": "S3-07/L03",
+      "name": "지연 신관",
+      "art": [
+        "S3-07"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 26,
+      "id": "S3-07/L04",
+      "name": "탄착 잔류",
+      "art": [
+        "ResidualField"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 27,
+      "id": "S3-08/L01",
+      "name": "추가 도탄",
+      "art": [
+        "S3-08"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 28,
+      "id": "S3-08/L02",
+      "name": "도탄 보존",
+      "art": [
+        "S3-08"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 29,
+      "id": "S3-08/L03",
+      "name": "역도탄",
+      "art": [
+        "S3-08"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 30,
+      "id": "S3-08/L04",
+      "name": "밀집 반사",
+      "art": [
+        "S3-08"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 31,
+      "id": "S3-09/L01",
+      "name": "고온 화염",
+      "art": [
+        "S3-09"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 32,
+      "id": "S3-09/L02",
+      "name": "화염 확장",
+      "art": [
+        "S3-09"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 33,
+      "id": "S3-09/L03",
+      "name": "연소 폭발",
+      "art": [
+        "BlastRing"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 34,
+      "id": "S3-09/L04",
+      "name": "소각",
+      "art": [
+        "S3-09"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 35,
+      "id": "S3-10/L01",
+      "name": "부식 강화",
+      "art": [
+        "S3-10"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 36,
+      "id": "S3-10/L02",
+      "name": "부식 누적",
+      "art": [
+        "S3-10"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 37,
+      "id": "S3-10/L03",
+      "name": "산성 웅덩이",
+      "art": [
+        "AcidPool"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 38,
+      "id": "S3-10/L04",
+      "name": "부식 전파",
+      "art": [
+        "PoisonStatus"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 39,
+      "id": "S3-11/L01",
+      "name": "저온 강화",
+      "art": [
+        "S3-11"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 40,
+      "id": "S3-11/L02",
+      "name": "급속 냉각",
+      "art": [
+        "S3-11"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 41,
+      "id": "S3-11/L03",
+      "name": "빙결 파쇄",
+      "art": [
+        "IceShell"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 42,
+      "id": "S3-11/L04",
+      "name": "냉기 확산",
+      "art": [
+        "IceShell"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 43,
+      "id": "S3-12/L01",
+      "name": "표식 증폭",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 44,
+      "id": "S3-12/L02",
+      "name": "표식 전이",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 45,
+      "id": "S3-12/L03",
+      "name": "집중 표식",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 46,
+      "id": "S3-12/L04",
+      "name": "대형 표식",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 47,
+      "id": "S3-13/L01",
+      "name": "연쇄 증폭",
+      "art": [
+        "S3-13"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 48,
+      "id": "S3-13/L02",
+      "name": "전류 보존",
+      "art": [
+        "S3-13"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 49,
+      "id": "S3-13/L03",
+      "name": "감전 누적",
+      "art": [
+        "S3-13"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 50,
+      "id": "S3-13/L04",
+      "name": "전류 폭발",
+      "art": [
+        "BlastRing"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 51,
+      "id": "S3-14/L01",
+      "name": "충격 범위",
+      "art": [
+        "S3-14"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 52,
+      "id": "S3-14/L02",
+      "name": "반복 충격",
+      "art": [
+        "S3-14"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 53,
+      "id": "S3-14/L03",
+      "name": "방벽 충격",
+      "art": [
+        "S3-14"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 54,
+      "id": "S3-15/L01",
+      "name": "대형 탄두",
+      "art": [
+        "S3-15"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 55,
+      "id": "S3-15/L02",
+      "name": "집요한 추적",
+      "art": [
+        "S3-15"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 56,
+      "id": "S3-15/L03",
+      "name": "약점 추적",
+      "art": [
+        "S3-15"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "04_변형전용",
+      "row": 57,
+      "id": "S3-15/L04",
+      "name": "분리 탄두",
+      "art": [
+        "MicroMissile"
+      ],
+      "note": "Visual mapping only. Count, timing, size and damage modifiers reuse the corresponding base sprite."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 4,
+      "name": "전투 학습",
+      "art": [
+        "TowerBasic"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 5,
+      "name": "현장 수익",
+      "art": [
+        "TowerBasic"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 6,
+      "name": "생존 강화",
+      "art": [
+        "TowerBasic"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 7,
+      "name": "속사 훈련",
+      "art": [
+        "TowerBasic"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 8,
+      "name": "화력 훈련",
+      "art": [
+        "TowerBasic"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 9,
+      "name": "기동 훈련",
+      "art": [
+        "TowerBasic"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 10,
+      "name": "연속 관통",
+      "art": [
+        "WebPierce"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 11,
+      "name": "관통 연장",
+      "art": [
+        "WebPierce"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 12,
+      "name": "관통 안정화",
+      "art": [
+        "WebPierce"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 13,
+      "name": "분산 화살",
+      "art": [
+        "WebSpread"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 14,
+      "name": "추가 궤적",
+      "art": [
+        "WebSpread"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 15,
+      "name": "상태 전달",
+      "art": [
+        "WebSpread"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 16,
+      "name": "잔류 폭발",
+      "art": [
+        "WebBlast",
+        "BlastRing",
+        "ResidualField"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 17,
+      "name": "폭발 영역 확장",
+      "art": [
+        "WebBlast",
+        "BlastRing",
+        "ResidualField"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 18,
+      "name": "잔류 증폭",
+      "art": [
+        "WebBlast",
+        "BlastRing",
+        "ResidualField"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 19,
+      "name": "맹독",
+      "art": [
+        "WebPoison",
+        "PoisonStatus"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 20,
+      "name": "독성 농축",
+      "art": [
+        "WebPoison",
+        "PoisonStatus"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 21,
+      "name": "감염 전이",
+      "art": [
+        "WebPoison",
+        "PoisonStatus"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 22,
+      "name": "현장 지휘",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 23,
+      "name": "화력 연계",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 24,
+      "name": "회복 연계",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 25,
+      "name": "효율 충전",
+      "art": [
+        "PlayerPower",
+        "BlastRing"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 26,
+      "name": "절약 회로",
+      "art": [
+        "PlayerPower",
+        "BlastRing"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "01_플레이어Web",
+      "row": 27,
+      "name": "동력 증폭",
+      "art": [
+        "PlayerPower",
+        "BlastRing"
+      ],
+      "note": "Numerical upgrades reuse base art. Proposed gameplay effects are not implemented by this art task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 4,
+      "id": "UC-01",
+      "name": "선제 제압",
+      "art": [
+        "TowerBasic"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 5,
+      "id": "UC-02",
+      "name": "마무리 사격",
+      "art": [
+        "TargetMark",
+        "BlastRing"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 6,
+      "id": "UC-03",
+      "name": "취약 대상 추적",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 7,
+      "id": "UC-04",
+      "name": "복합 반응",
+      "art": [
+        "BlastRing"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 8,
+      "id": "UC-05",
+      "name": "최전선 요격",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 9,
+      "id": "UC-06",
+      "name": "강적 고정",
+      "art": [
+        "TargetMark"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 10,
+      "id": "UC-07",
+      "name": "잔당 정리",
+      "art": [
+        "SplitFragment"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 11,
+      "id": "UC-08",
+      "name": "교차 사격",
+      "art": [
+        "TargetMark",
+        "BlastRing"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 12,
+      "id": "UC-09",
+      "name": "독립 사격",
+      "art": [
+        "TowerBasic"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_증강_정리본v2.xlsx",
+      "sheet": "03_포탑공통",
+      "row": 13,
+      "id": "UC-10",
+      "name": "과부하 운용",
+      "art": [
+        "TowerBasic",
+        "BlastRing"
+      ],
+      "note": "Shared impact/target overlay or base projectile; numeric behavior remains a gameplay implementation task."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 5,
+      "id": "S3-01",
+      "name": "삼연장 점사",
+      "art": [
+        "S3-01"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 6,
+      "id": "S3-03",
+      "name": "확산 산탄",
+      "art": [
+        "ROT-02"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 7,
+      "id": "S3-04",
+      "name": "파쇄 드릴",
+      "art": [
+        "ROT-03"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 8,
+      "id": "S3-05",
+      "name": "레일 절단",
+      "art": [
+        "S3-05"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 9,
+      "id": "S3-06",
+      "name": "폭발 대포",
+      "art": [
+        "S3-06"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 10,
+      "id": "S3-07",
+      "name": "잔류 유탄",
+      "art": [
+        "S3-07"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 11,
+      "id": "S3-10",
+      "name": "부식 분사",
+      "art": [
+        "ROT-07"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 12,
+      "id": "S3-11",
+      "name": "냉각 분사",
+      "art": [
+        "S3-11"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 13,
+      "id": "S3-13",
+      "name": "연쇄 전격",
+      "art": [
+        "S3-13"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 14,
+      "id": "S3-14",
+      "name": "밀어내기 파동",
+      "art": [
+        "ROT-11"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 15,
+      "id": "S3-16",
+      "name": "복제 지원문",
+      "art": [
+        "ROT-08"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    },
+    {
+      "book": "Rushitadel_포탑_요격돌파_증강기획.xlsx",
+      "sheet": "변형증강",
+      "row": 16,
+      "id": "S3-18",
+      "name": "방패 지원탄",
+      "art": [
+        "LegacyShield"
+      ],
+      "note": "Legacy ID namespace: S3-04 here is a drill, unlike the v2 sniper."
+    }
+  ]
+}

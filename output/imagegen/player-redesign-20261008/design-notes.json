@@ -1,0 +1,65 @@
+{
+  "purpose": "플레이어 비행체 5종 외형 시안. 48×48 합성 스프라이트; 기존 Unity 리소스 교체 전 디자인 검토용.",
+  "approach": "중간 수준 디테일: 큰 장갑 면, 한 겹의 주요 접합선, 어두운 포구. 5개 방사형 포탑 및 회전 중심을 유지. 무광 장갑과 24색 이하 최종 팔레트.",
+  "research": [
+    {
+      "game": "Reassembly",
+      "source": "https://www.anisopteragames.com/large-ships/",
+      "verified": "개발자는 커서를 추적하는 각 포탑의 제한된 회전 속도와 연속적인 사격 패턴을 설명한다.",
+      "inferenceForOurDesign": "본체 장갑과 포탑 기부를 나누고 짧은 포신으로 방사형 발사 방향을 드러낸다. 우리 게임은 기존 기획대로 본체 회전에 따라 정면 발사한다."
+    },
+    {
+      "game": "Reassembly",
+      "source": "https://www.anisopteragames.com/",
+      "verified": "블록 조립, 추진기 배치와 질량 분포, 모듈별 파괴와 무기 구성을 강조한다.",
+      "inferenceForOurDesign": "다섯 반복 포탑을 같은 시각 규칙으로 묶어 변형 증강의 부품 교체를 읽기 쉽게 한다."
+    },
+    {
+      "game": "Nova Drift",
+      "source": "https://blog.novadrift.io/customskins/",
+      "verified": "개발자의 아트 가이드는 단순 기하학, 각진 형태, 발광을 설명하며 본체와 외부 장갑의 중심 정렬을 권한다.",
+      "inferenceForOurDesign": "큰 실루엣과 정렬된 중심을 채택한다. 우리 게임의 무광 도트 질감에 맞춰 코어의 소수 픽셀에만 밝기를 모은다."
+    },
+    {
+      "game": "Space Pirates and Zombies",
+      "source": "https://minmax-games.com/SpacePiratesAndZombies/SPAZ_1/",
+      "verified": "공식 소개는 탑다운 우주전, 다양한 기체와 구성 부품을 명시한다.",
+      "inferenceForOurDesign": "같은 무기 수를 유지해도 장갑의 질량과 외형으로 기체별 느낌을 구별한다."
+    }
+  ],
+  "gameReferences": [
+    "output/projectile-validation/detail-0.png",
+    "output/imagegen/turbine-pixel48-20261007/turbine-pixel-preview-8x.png",
+    "docs/제작자료_아카이브_20261007/01_게임_아트_UI_통합정리.md",
+    "docs/제작자료_아카이브_20261007/04_얼음고리_보스.md",
+    "docs/제작자료_아카이브_20261007/05_나비_보스.md"
+  ],
+  "themes": [
+    {
+      "id": "01-citadel",
+      "name": "성채",
+      "identity": "오각 방벽, 아이보리와 남색, 짧은 사각 포탑. 안정적인 기본 기체."
+    },
+    {
+      "id": "02-gale",
+      "name": "질풍",
+      "identity": "휘어진 5엽 날개, 청록과 황동, 가는 창형 포탑. 회전과 민첩함."
+    },
+    {
+      "id": "03-bloom",
+      "name": "기계연꽃",
+      "identity": "둥근 다섯 장갑 잎, 자주와 청동, 둥근 포탑. 유기적인 기계 감성."
+    },
+    {
+      "id": "04-anvil",
+      "name": "철갑",
+      "identity": "넓고 짧은 방사형 장갑, 적갈과 모래색, 두꺼운 포탑. 중량감."
+    },
+    {
+      "id": "05-orbit",
+      "name": "환륜",
+      "identity": "빈 창이 있는 외곽 고리, 회보라와 상아, 소형 마름모 포탑. 정밀한 부유 기계."
+    }
+  ],
+  "delivery": "각 기체별 실제 48×48 투명 PNG, 8배 확대 PNG, 생성 원본, 비교용 이미지, 프롬프트. 실제 런타임 포탑 분리나 장착점 조정은 선택 후 별도 적용 단계."
+}

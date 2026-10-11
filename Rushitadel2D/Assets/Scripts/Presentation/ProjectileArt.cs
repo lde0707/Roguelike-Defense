@@ -112,6 +112,8 @@ namespace Rushitadel.Presentation
                 properties=new MaterialPropertyBlock();
             }
             image.sprite=ProjectileArt.Load(name);
+            // The source crescent opens upward; flip its bow to face outward.
+            image.flipY=name=="ROT-11"||name=="S3-14";
             AssetName=name;size=worldSize;offset=worldOffset;tint=color;mode=animation;
             Present();
         }

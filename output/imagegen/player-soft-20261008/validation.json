@@ -1,0 +1,71 @@
+{
+  "generatedWith": "built-in image_gen",
+  "export": "nearest-neighbor, binary alpha, 12-color maximum",
+  "assets": [
+    {
+      "id": "01-pebble",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 984,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    },
+    {
+      "id": "02-clover",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 1005,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    },
+    {
+      "id": "03-breeze",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 901,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    },
+    {
+      "id": "04-pods",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 841,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    },
+    {
+      "id": "05-halo",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 1138,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    }
+  ]
+}

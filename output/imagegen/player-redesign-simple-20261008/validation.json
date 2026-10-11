@@ -1,0 +1,71 @@
+{
+  "generatedWith": "built-in image_gen",
+  "export": "nearest-neighbor, binary alpha, 12-color maximum",
+  "assets": [
+    {
+      "id": "01-citadel",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 859,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    },
+    {
+      "id": "02-gale",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 592,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    },
+    {
+      "id": "03-bloom",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 903,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    },
+    {
+      "id": "04-anvil",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 785,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    },
+    {
+      "id": "05-orbit",
+      "width": 48,
+      "height": 48,
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "opaquePixels": 892,
+      "transparent": true,
+      "paletteMax": 12,
+      "previewScale": 8
+    }
+  ]
+}

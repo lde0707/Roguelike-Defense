@@ -8,6 +8,13 @@ namespace Rushitadel.Editor
     {
         public static void Run()
         {
+            Application.runInBackground=true;
+            double deadline=EditorApplication.timeSinceStartup+180;
+            EditorApplication.update+=()=>
+            {
+                if(EditorApplication.timeSinceStartup>deadline){Debug.LogError("Transformation validation timed out");EditorApplication.Exit(1);}
+                if(EditorApplication.isPlaying){EditorApplication.isPaused=false;EditorApplication.QueuePlayerLoopUpdate();}
+            };
             foreach(string guid in AssetDatabase.FindAssets("t:Texture2D",new[]{"Assets/Resources/PlayerForms"}))
             {
                 var importer=(TextureImporter)AssetImporter.GetAtPath(AssetDatabase.GUIDToAssetPath(guid));
