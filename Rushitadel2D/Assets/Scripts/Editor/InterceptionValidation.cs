@@ -87,6 +87,47 @@ namespace Rushitadel.Editor
                 p.Hit(Bullet(null)); Check(!p.IsFlying, "Augment pierce still has finite hit count");
                 Check(!EnemyRangedAttack.IsReloadWindow(2.79f) && EnemyRangedAttack.IsReloadWindow(2.81f) &&
                     EnemyRangedAttack.IsReloadWindow(4.19f) && !EnemyRangedAttack.IsReloadWindow(4.21f), "Shared 2.8s attack / 1.4s reload cycle");
+                Clear();
+                var circuit = new WaveVolley();
+                var core = Bullet(null); var escort = Bullet(null, 70);
+                circuit.Add(core, true); circuit.Add(escort, false);
+                core.TakeDamage(100);
+                Check(circuit.Broken && escort.CounterArmed && Mathf.Approximately(escort.CurrentHealth,35), "Core kill halves its own formation HP and arms reflection");
+                circuit.BreakCore(); Check(escort.CurrentHealth == 35, "Core break cannot halve HP repeatedly");
+                Check(circuit.ClaimReturn() && circuit.ClaimReturn() && circuit.ClaimReturn() && !circuit.ClaimReturn(), "Formation limited to three counter ricochets");
+                var expired = new WaveVolley(); core=Bullet(null); escort=Bullet(null);
+                expired.Add(core,true); expired.Add(escort,false); core.Despawn();
+                Check(!expired.Broken && !escort.CounterArmed, "Despawn never triggers counter circuit");
+                Clear();
+                var boundary = new GameObject("Test boundaries").AddComponent<PlayfieldBoundary>();
+                var left = new GameObject("Left wall").AddComponent<BoxCollider2D>(); left.transform.position=new Vector3(-1.5f,0,0);left.size=new Vector2(1,20);
+                var right = new GameObject("Right wall").AddComponent<BoxCollider2D>(); right.transform.position=new Vector3(1.5f,0,0);right.size=new Vector2(1,20);
+                boundary.Configure(left,right); Physics2D.SyncTransforms();
+                circuit=new WaveVolley(); core=Bullet(null); core.transform.position=new Vector3(0,5,0); escort=Bullet(null);
+                escort.Launch(Vector2.right);circuit.Add(core,true);circuit.Add(escort,false);core.TakeDamage(100);
+                typeof(EnemyProjectileController).GetMethod("Advance",BindingFlags.Instance|BindingFlags.NonPublic).Invoke(escort,new object[]{2f});
+                var reflectedShot=UnityEngine.Object.FindAnyObjectByType<ProjectileController>();
+                Check(!escort.IsAlive && reflectedShot!=null && reflectedShot.Direction.x<-.99f && circuit.ReturnCount==1,
+                    "Actual wall contact creates friendly reflected projectile and removes hostile");
+                UnityEngine.Object.DestroyImmediate(reflectedShot.gameObject);
+                var emitter=Enemy(); emitter.transform.position=new Vector3(-2,3,0);
+                circuit=new WaveVolley(); core=Bullet(emitter);core.transform.position=new Vector3(0,5,0);escort=Bullet(emitter);
+                escort.Launch(Vector2.right);circuit.Add(core,true);circuit.Add(escort,false);core.TakeDamage(100);
+                typeof(EnemyProjectileController).GetMethod("Advance",BindingFlags.Instance|BindingFlags.NonPublic).Invoke(escort,new object[]{2f});
+                reflectedShot=UnityEngine.Object.FindAnyObjectByType<ProjectileController>();
+                Check(reflectedShot!=null && reflectedShot.Direction.x<0 && reflectedShot.Direction.y>0,
+                    "Counter ricochet locks emitter position once instead of continuing downward");
+                for(int pattern=0;pattern<5;pattern++)
+                {
+                    int count=WavePattern.Count(pattern,true);
+                    Check(count>=3 && count<=7, "Pattern bullet budget " + pattern);
+                    for(int i=0;i<count;i++)
+                    {
+                        Vector2 heading=WavePattern.Direction(Vector2.down,pattern,i,count,3);
+                        Check(Mathf.Abs(heading.magnitude-1)<.001f && Vector2.Dot(heading,Vector2.down)>.5f,
+                            "Readable forward heading " + pattern + "/" + i);
+                    }
+                }
                 Debug.Log("INTERCEPTION VALIDATION SUCCESS"); EditorApplication.Exit(0);
             }
             catch (Exception ex) { Debug.LogException(ex); EditorApplication.Exit(1); }

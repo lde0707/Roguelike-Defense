@@ -92,7 +92,7 @@ namespace Rushitadel.Presentation
                 }
             }
             element=CampaignDirector.Instance!=null?CampaignDirector.Instance.State.element:0;
-            EmissionColor=TurretForms.ElementColor(element);
+            EmissionColor=new Color(.65f,.55f,.8f);
             material.SetColor("_ElementColor",EmissionColor);
             lightSource.color=EmissionColor;
             foreach(var turret in turrets) turret.Refresh();
@@ -125,7 +125,7 @@ namespace Rushitadel.Presentation
                 echoes[i].color=new Color(.5f,.5f,.55f,(i==0?.055f:.025f)*(RandomPlayerWeb.Has(23)?2.5f:1));
                 echoes[i].transform.localRotation=Quaternion.Euler(0,0,2.8f*(i+1));
             }
-            lightSource.intensity=.13f+flight.ShotFlash*.22f;
+            lightSource.intensity=.06f+flight.ShotFlash*.12f;
         }
 
         private void OnDestroy() { if(material!=null) Destroy(material); }

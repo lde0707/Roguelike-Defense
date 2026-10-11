@@ -1,0 +1,312 @@
+{
+  "generator": "built-in image_gen",
+  "reference": "Battlefields/grass.png and newly generated PlayerForms/Hull.png",
+  "assets": [
+    {
+      "asset": "PlayerForms/Hull.png",
+      "width": 48,
+      "height": 48,
+      "prompt": "Round rotation-friendly 48x48 matte slate-blue hull, five recessed sockets, violet core, dark stepped outlines; grass battlefield as style reference."
+    },
+    {
+      "asset": "PlayerForms/Default.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, short single straight cannon. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-01.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, short twin-barrel alternating repeater. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-02.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, wide fan-shaped shotgun muzzle. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-04.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, horizontal disc launcher slit. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-03.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, compact spiral drill nose. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-05.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, round bomb mortar opening. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-06.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, short three-slot cooling spray nozzle. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-07.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, three small corrosion nozzle holes. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-08.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, square replication gate sight. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-09.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, two-prong curved boomerang fork. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-10.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, small toothed saw launcher. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-11.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, wide crescent shockwave mouth. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-12.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, cross-shaped split barrel. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-13.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, square mesh net launcher. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-14.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, small coil with double charge prongs. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-15.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, rounded foam dispenser with two holes. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "PlayerForms/ROT-16.png",
+      "width": 24,
+      "height": 24,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down modular gun turret facing EXACTLY straight UP, short conductor rod with two round side terminals. Matte slate-blue armor housing matches hull reference; ivory tiny edges and muted violet indicator. Compact base on bottom. NO entire vehicle, no wings. 24x32 logical pixel sprite."
+    },
+    {
+      "asset": "EnemyProjectiles/Grass/N01.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: single round pearl with one notch, burgundy-red seed with muted tan shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Grass/N02.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round shell with two parallel inset stripes, burgundy-red seed with muted tan shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Grass/N03.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round armored orb with four chunky rim plates, burgundy-red seed with muted tan shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Grass/N04.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round sniper bead with tiny cross center, burgundy-red seed with muted tan shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Grass/N05.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round split orb with three wedge segments, burgundy-red seed with muted tan shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Grass/E01.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: elite round ring-shell with diamond core, burgundy-red seed with muted tan shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Grass/E02.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: elite round orb with four corner studs, burgundy-red seed with muted tan shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Lava/N01.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: single round pearl with one notch, burnt coral and orange magma with charcoal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Lava/N02.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round shell with two parallel inset stripes, burnt coral and orange magma with charcoal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Lava/N03.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round armored orb with four chunky rim plates, burnt coral and orange magma with charcoal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Lava/N04.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round sniper bead with tiny cross center, burnt coral and orange magma with charcoal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Lava/N05.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round split orb with three wedge segments, burnt coral and orange magma with charcoal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Lava/E01.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: elite round ring-shell with diamond core, burnt coral and orange magma with charcoal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Lava/E02.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: elite round orb with four corner studs, burnt coral and orange magma with charcoal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Ice/N01.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: single round pearl with one notch, rose-violet frost core with pale slate shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Ice/N02.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round shell with two parallel inset stripes, rose-violet frost core with pale slate shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Ice/N03.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round armored orb with four chunky rim plates, rose-violet frost core with pale slate shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Ice/N04.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round sniper bead with tiny cross center, rose-violet frost core with pale slate shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Ice/N05.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round split orb with three wedge segments, rose-violet frost core with pale slate shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Ice/E01.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: elite round ring-shell with diamond core, rose-violet frost core with pale slate shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/Ice/E02.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: elite round orb with four corner studs, rose-violet frost core with pale slate shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/WaterElectric/N01.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: single round pearl with one notch, warm amber electric core with dark teal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/WaterElectric/N02.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round shell with two parallel inset stripes, warm amber electric core with dark teal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/WaterElectric/N03.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round armored orb with four chunky rim plates, warm amber electric core with dark teal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/WaterElectric/N04.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round sniper bead with tiny cross center, warm amber electric core with dark teal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/WaterElectric/N05.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: round split orb with three wedge segments, warm amber electric core with dark teal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/WaterElectric/E01.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: elite round ring-shell with diamond core, warm amber electric core with dark teal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "EnemyProjectiles/WaterElectric/E02.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. One enemy projectile: elite round orb with four corner studs, warm amber electric core with dark teal shell. Near-CIRCULAR silhouette, not a creature or ship. Centered with 2 logical pixel transparent margin, sprite diameter 28px. Dark ink navy border, muted single shade band and tiny ivory highlight. 32x32 logical pixels, 6 colors max. No wispy trail, no glow, no text."
+    },
+    {
+      "asset": "BossArt/Ice/01-ring-boomerang.png",
+      "width": 48,
+      "height": 48,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single top-down circular ring boomerang projectile. HOLLOW center covering 45% of diameter, four matte slate segmented stone-metal blocks on ring, icy lavender pale inset. Crisp 48x48 logical sprite, symmetrical exact centered, no glow."
+    },
+    {
+      "asset": "BossArt/Ice/02-crescent-boomerang.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single crescent boomerang projectile opening upwards, matte slate and rose-violet edges, ivory two pixel tips, dark navy stepped silhouette, 32x32 logical sprite. Clear thick crescent shape. No base or vehicle."
+    },
+    {
+      "asset": "BossArt/Ice/06-ring-laser.png",
+      "width": 64,
+      "height": 16,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single HORIZONTAL seamless tileable laser beam shaft. 64x16 logical pixels, perfectly straight along horizontal center. Solid ivory 2-pixel center, muted pale warm-grey bands, charcoal thin boundary then transparent empty top and bottom margins. Hard stepped width taper detail along length, NO source, NO muzzle, NO endpoint, NO orb, NO gradient or bloom. It will be tiled/stretched in the game."
+    },
+    {
+      "asset": "BossArt/Butterfly/08-laser-charge.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single compact circular charge-up energy orb effect. 32x32 logical pixels, hollow outer broken circular rim, offwhite center small seed, muted red-violet intermediate rings, chunky dark edges. No rays longer than circle, no bloom, transparent background."
+    },
+    {
+      "asset": "ProjectileArt/TargetMark.png",
+      "width": 32,
+      "height": 32,
+      "prompt": "Use case: stylized-concept. Production transparent PNG sprite for a top-down pixel shooter. Style reference 1 is game terrain ONLY; reference 2 is the approved new player hull for palette and pixel clustering. Single isolated subject, no scene/background, no shadow, no frame/text. Crisp classic pixel clusters, matte finish, clear dark stepped outline, no smoothing, no gradients, no bloom, no micro-noise, no gold ornament. Draw on requested logical grid then enlarge nearest-neighbor. Single hollow square-diamond reticle marker for destructible key projectile. EMPTY transparent center 70% width, four separated corner brackets drawn in pale ivory and navy shadow. Minimal 32x32 logical pixel art icon. No orb inside. No text, no extra symbols, no glow."
+    }
+  ]
+}

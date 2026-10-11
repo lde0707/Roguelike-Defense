@@ -19,6 +19,33 @@ namespace Rushitadel.Combat
         private float remainingLifetime;
         private bool flying;
         private EnemyController rewardOwner;
+        private WaveVolley volleyGroup;
+        private bool volleyCore, counterArmed;
+        private SpriteRenderer volleyMark;
+        public bool CounterArmed => counterArmed;
+        public bool IsVolleyCore => volleyCore;
+        public void LinkVolley(WaveVolley group, bool core)
+        {
+            volleyGroup = group; volleyCore = core;
+            if (!core) return;
+            var mark = new GameObject("Breakable volley core marker");
+            mark.transform.SetParent(transform, false);
+            volleyMark = mark.AddComponent<SpriteRenderer>();
+            volleyMark.sprite = Rushitadel.Presentation.ProjectileArt.Load("TargetMark");
+            volleyMark.sortingOrder = 115;
+            volleyMark.color = new Color(1, .94f, .63f);
+            if (volleyMark.sprite != null)
+                mark.transform.localScale = Vector3.one * .72f / (volleyMark.sprite.bounds.size.x * Mathf.Abs(transform.lossyScale.x));
+        }
+        public void ArmCounterRicochet()
+        {
+            if (!IsAlive || counterArmed) return;
+            counterArmed = true;
+            health = Mathf.Max(1, health * .5f);
+            foreach (var sr in GetComponentsInChildren<SpriteRenderer>()) sr.color = new Color(1, .68f, .85f);
+            // The next wall contact can now reflect even an ordinary zero-bounce projectile.
+            maximumBounces = Mathf.Max(maximumBounces, BounceCount + 1);
+        }
         public void SetRewardOwner(EnemyController owner) => rewardOwner = owner;
         public bool IsAlive => health > 0f;
         public float MaximumHealth => maximumHealth;
@@ -134,6 +161,24 @@ namespace Rushitadel.Combat
                 transform.position = start + direction * segment;
                 travel -= segment;
                 if (!wallHit) break;
+                if (counterArmed && volleyGroup != null && volleyGroup.ClaimReturn())
+                {
+                    Vector2 reflected = Vector2.Reflect(direction, normal).normalized;
+                    // Rebound locks onto the emitter's current position ONCE, then flies straight.
+                    // Pure downward mirroring would miss cliff enemies above the player forever.
+                    if (rewardOwner != null && rewardOwner.IsAlive)
+                    {
+                        Vector2 returnAim = ((Vector2)rewardOwner.transform.position - (Vector2)transform.position).normalized;
+                        if (Vector2.Dot(returnAim, normal) > .05f) reflected = returnAim;
+                    }
+                    var go = new GameObject("Friendly counter ricochet");
+                    go.transform.position = transform.position + (Vector3)(normal * .02f);
+                    var counter = go.AddComponent<ProjectileController>();
+                    counter.Launch(reflected, 65, 22, "PrismRound");
+                    counter.SetModifiers(2, false, false);
+                    Finish();
+                    break;
+                }
                 if(BounceCount >= maximumBounces) { Finish(); break; }
                 direction = Vector2.Reflect(direction, normal).normalized;
                 // Separate from the surface to avoid a repeated zero-distance collision.
@@ -150,6 +195,7 @@ namespace Rushitadel.Combat
             health = Mathf.Max(0f, health - amount*DamageMultiplier);
             if (!IsAlive)
             {
+                if (volleyCore) volleyGroup?.BreakCore();
                 if (rewardOwner != null) rewardOwner.RewardInterception(maximumHealth, transform.position);
                 Finish();
             }

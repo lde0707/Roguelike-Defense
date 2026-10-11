@@ -22,9 +22,9 @@ Shader "Rushitadel/FactionProjectile"
     float value=dot(source.rgb,float3(.2126,.7152,.0722));
     // A fixed faction palette preserves the source silhouette and stepped pixel shading.
     // Bright friendly cores versus warm hostile cores stay distinct without relying on hue alone.
-    float3 dark=lerp(float3(.025,.10,.20),float3(.24,.015,.045),_Hostile);
-    float3 mid=lerp(float3(.06,.75,.90),float3(1,.12,.055),_Hostile);
-    float3 bright=lerp(float3(.92,1,1),float3(1,.70,.10),_Hostile);
+    float3 dark=lerp(float3(.08,.13,.24),float3(.20,.10,.15),_Hostile);
+    float3 mid=lerp(float3(.38,.69,.79),float3(.78,.30,.25),_Hostile);
+    float3 bright=lerp(float3(.86,.94,.91),float3(.98,.79,.52),_Hostile);
     float3 color=value<.22?dark:value<.65?mid:bright;
     return half4(color*i.c.rgb,source.a*i.c.a);
    }

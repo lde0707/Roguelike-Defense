@@ -52,19 +52,25 @@ namespace Rushitadel.Combat
             charging=false;if(art!=null)art.color=Color.white;
             if(archetype==null){Emit(lockedAim,null,0,0,4);nextShotTime=Time.time+shotInterval;return;}
             int role=archetype.Variant;
-            int count=role==1||role==2?3:role>=5?5:role==4?2:1;
-            float spread=role==1?15:role==2?12:role>=5?12:20;
+            int pattern = (role + volley / 2) % WavePattern.Names.Length;
+            int count = WavePattern.Count(pattern, archetype.Elite);
+            if (FindObjectsByType<EnemyProjectileController>(FindObjectsSortMode.None).Length + count > 80)
+            { nextShotTime = Time.time + .5f; return; }
+            // Circuit volleys are deliberately intermittent, not a permanent screen-clear loop.
+            var circuit = volley % 3 == 0 ? new WaveVolley() : null;
             for(int i=0;i<count;i++)
             {
-                Vector2 direction=Quaternion.Euler(0,0,(i-(count-1)*.5f)*spread+(role>=5?(volley%2==0?5:-5):0))*lockedAim;
-                Emit(direction,archetype,role>=5?role==5?1:2:0,role==4?(i==0?-9:9):0,role==3?5.2f:role==2?2.2f:role>=5?3:3.6f);
+                Vector2 direction = WavePattern.Direction(lockedAim, pattern, i, count, volley);
+                var shot = Emit(direction, archetype, archetype.Elite ? 1 : 0,
+                    pattern == 2 ? (i % 2 == 0 ? -6 : 6) : 0, WavePattern.Speed(pattern, i, archetype.Elite));
+                if (shot != null && circuit != null) circuit.Add(shot, i == count / 2);
             }
             volley++;
             nextShotTime=Time.time+(role==0?.95f:role==3?2.4f:role>=5?2.8f:1.8f);
         }
-        private void Emit(Vector2 direction,EnemyArchetype archetype,int bounces,float turn,float speed)
+        private EnemyProjectileController Emit(Vector2 direction,EnemyArchetype archetype,int bounces,float turn,float speed)
         {
-            if(FindObjectsByType<EnemyProjectileController>(FindObjectsSortMode.None).Length>=110)return;
+            if(FindObjectsByType<EnemyProjectileController>(FindObjectsSortMode.None).Length>=80)return null;
             var shot = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             shot.gameObject.SetActive(true);
             shot.ConfigureBoss(archetype!=null?archetype.BulletHealth:24,speed,.12f,7,bounces,archetype!=null&&archetype.Elite?16:10);
@@ -74,6 +80,7 @@ namespace Rushitadel.Combat
             var theme=pressure!=null?pressure.Theme:Rushitadel.World.PressureTheme.Grass;
             EnemyProjectileArt.Apply(shot,theme,archetype!=null?archetype.Variant:0);
             if(turn!=0)shot.gameObject.AddComponent<EnemyShotCurve>().Turn=turn;
+            return shot;
         }
     }
     public sealed class EnemyShotCurve:MonoBehaviour

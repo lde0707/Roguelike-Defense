@@ -60,7 +60,8 @@ namespace Rushitadel.Presentation
             for (int i = 0; i < 5; i++) turretText[i].text = $"T{i+1} {Rushitadel.Combat.TurretForms.Names[d.State.turretForms[i]]}\n화력 {d.State.augments[i*3]} · 속도 {d.State.augments[i*3+1]}";
             bool alive = d.Boss != null && d.Boss.Health.IsAlive && d.State.phase == RunPhase.Boss;
             bossFill.gameObject.SetActive(alive);
-            bossText.text = alive ? $"{d.Boss.DisplayName} · {d.Boss.Phase+1}단계  {d.Boss.Health.CurrentHealth:0}/{d.Boss.Health.MaximumHealth:0}  {d.Boss.PatternLabel}" : "다음 위협: 절벽 좌·우 사격";
+            bossText.text = alive ? $"{d.Boss.DisplayName} · {d.Boss.Phase+1}단계  {d.Boss.Health.CurrentHealth:0}/{d.Boss.Health.MaximumHealth:0}  {d.Boss.PatternLabel}" :
+                Rushitadel.Combat.EnemyRangedAttack.IsReloadWindow(Time.time) ? "적 재장전 · 지금 공격!" : "코어 파괴 → 탄 약화 → 절벽 반사로 역습 (최대 3발)";
             if (alive) bossFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(700*d.Boss.Health.CurrentHealth/d.Boss.Health.MaximumHealth),8);
             if (ForwardPressureController.Instance.InDanger) progressText.text += "   ! 후방 위험 · 전진 !";
         }

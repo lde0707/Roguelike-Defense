@@ -1,6 +1,6 @@
 Shader "Rushitadel/ElementSprite"
 {
- Properties { [PerRendererData] _MainTex("Sprite",2D)="white"{} _ElementColor("Element",Color)=(1,.83,.48,1) _Pulse("Pulse",Float)=1 _Flash("Shot response",Range(0,1))=0 _RotationAA("Rotation edge coverage",Range(0,1))=1 }
+ Properties { [PerRendererData] _MainTex("Sprite",2D)="white"{} _ElementColor("Element",Color)=(.65,.55,.8,1) _Pulse("Pulse",Float)=1 _Flash("Shot response",Range(0,1))=0 _RotationAA("Rotation edge coverage",Range(0,1))=0 }
  SubShader { Tags {"Queue"="Transparent" "RenderType"="Transparent" "RenderPipeline"="UniversalPipeline"} Cull Off ZWrite Off Blend SrcAlpha OneMinusSrcAlpha
  Pass { Tags {"LightMode"="Universal2D"}
  HLSLPROGRAM
@@ -18,10 +18,10 @@ Shader "Rushitadel/ElementSprite"
      half4 c=(tap(i.uv-dx-dy)+tap(i.uv+dx-dy)+tap(i.uv-dx+dy)+tap(i.uv+dx+dy))*.25;
      c.rgb/=max(c.a,.0001);
      float light=dot(c.rgb,float3(.2126,.7152,.0722));
-     // Only the bright warm lamps change element; plum paint and brass stay intact.
-     float mask=smoothstep(.72,.96,light)*smoothstep(.02,.16,c.r-c.b)*smoothstep(.65,.88,c.g);
-     c.rgb=lerp(c.rgb,_ElementColor.rgb*light*1.18*_Pulse,mask);
-     c.rgb=lerp(c.rgb,float3(1,.95,.81),_Flash*.22);
+     // Restrained violet lamps, never the slate armor or ivory edge pixels.
+     float mask=smoothstep(.04,.16,c.b-c.g)*smoothstep(.03,.12,c.r-c.g);
+     c.rgb=lerp(c.rgb,_ElementColor.rgb*min(1.08,_Pulse),mask*.65);
+     c.rgb=lerp(c.rgb,float3(.89,.91,.94),_Flash*.08);
      return c*i.c;
  }
  ENDHLSL

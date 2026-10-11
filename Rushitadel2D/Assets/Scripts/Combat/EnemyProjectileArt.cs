@@ -25,8 +25,8 @@ namespace Rushitadel.Combat
             var sr=visual.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.sortingOrder=112;
             if(!materials.TryGetValue(path,out var material))materials[path]=material=new Material(Shader.Find("Sprites/Default")){mainTexture=sprite.texture};
             sr.sharedMaterial=material;
-            // Keep the previous .32 * 1.2 thickness * 2 hostile enlargement.
-            const float diameter=.768f;
+            // Match round art to its real hitbox while leaving navigable formation gaps.
+            float diameter=variant>=5?.56f:.46f;
             float scale=diameter/(sprite.bounds.size.x*Mathf.Abs(shot.transform.lossyScale.x));
             visual.transform.localScale=Vector3.one*scale;
             shot.FitVisualCollision(Vector2.one*diameter);

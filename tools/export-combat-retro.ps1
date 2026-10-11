@@ -1,4 +1,4 @@
-param([string]$Manifest='enemies.json')
+param([string]$Manifest='enemies.json', [string]$OutputDirectory='output/imagegen/combat-retro-20261007')
 $ErrorActionPreference='Stop'
 Add-Type -AssemblyName System.Drawing
 Add-Type -ReferencedAssemblies System.Drawing.Common,System.Drawing.Primitives -TypeDefinition @'
@@ -13,7 +13,7 @@ public static class RetroBounds {
 }
 '@
 $root=Split-Path $PSScriptRoot -Parent
-$out=Join-Path $root 'output/imagegen/combat-retro-20261007'
+$out=Join-Path $root $OutputDirectory
 $items=Get-Content (Join-Path $out $Manifest) -Raw | ConvertFrom-Json
 $failed=@($items | Where-Object error)
 if($failed.Count){throw ($failed | ConvertTo-Json)}

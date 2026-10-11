@@ -26,7 +26,7 @@ namespace Rushitadel.Presentation
         {
             DontDestroyOnLoad(gameObject);
             Application.runInBackground=true;
-            output=Path.GetFullPath(Path.Combine(Application.dataPath,"../../../output/flight-validation"));
+            output=Environment.GetEnvironmentVariable("RUSHITADEL_FLIGHT_OUTPUT") ?? Path.GetFullPath(Path.Combine(Application.dataPath,"../../../output/flight-validation"));
             Directory.CreateDirectory(output);
             RunStore.TestDirectory=Path.Combine(output,"test-saves");
             Application.logMessageReceived+=(message,stack,type)=>
@@ -94,6 +94,34 @@ namespace Rushitadel.Presentation
             Check(!attack.TryFire(aim)&&!power.TryFire(aim),"paused attacks blocked");
             Time.timeScale=1;yield return new WaitForSeconds(.5f);
             var camera=Camera.main;
+            if (Environment.GetEnvironmentVariable("RUSHITADEL_ART_REVIEW") == "1")
+            {
+                foreach(var shot in FindObjectsByType<ProjectileBehaviour>(FindObjectsSortMode.None))Destroy(shot.gameObject);
+                foreach(string name in new[]{"Ice/01-ring-boomerang","Ice/02-crescent-boomerang","Butterfly/08-laser-charge"})
+                    Check(BossArt.Load(name)!=null, "Boss replacement sprite " + name);
+                foreach(string name in new[]{"Butterfly/06-boss-laser","Butterfly/07-drone-laser","Lava/07-palm-laser","Ice/06-ring-laser","Twins/06-hydro-laser","Twins/07-lightning-tether"})
+                    Check(BossArt.Beam(name)!=null, "Boss replacement beam " + name);
+                for(int theme=0;theme<4;theme++)
+                {
+                    Rushitadel.World.ForwardPressureController.Instance.SetTheme((Rushitadel.World.PressureTheme)theme);
+                    for(int index=0;index<7;index++)
+                    {
+                        var sprite=EnemyProjectileArt.Load(EnemyProjectileArt.PathFor((Rushitadel.World.PressureTheme)theme,index));
+                        Check(sprite!=null && sprite.texture.width==32 && sprite.texture.height==32 && sprite.texture.filterMode==FilterMode.Point,
+                            "32px enemy sprite " + theme + "/" + index);
+                        var bullet = new GameObject("Review bullet").AddComponent<EnemyProjectileController>();
+                        bullet.transform.position=player.transform.position+new Vector3((index-3)*1.1f,3,0);
+                        bullet.ConfigureBoss(30,0,.1f,100,0);bullet.Launch(Vector2.down);
+                        EnemyProjectileArt.Apply(bullet,(Rushitadel.World.PressureTheme)theme,index);
+                        Check(Vector2.Distance(bullet.VisualCollisionSize,Vector2.one*(index>=5?.56f:.46f))<.001f,
+                            "Visible enemy hitbox " + theme + "/" + index);
+                    }
+                    yield return null;yield return null;
+                    Capture(camera,"theme-"+theme+".png",1920,1080);
+                    foreach(var shot in FindObjectsByType<EnemyProjectileController>(FindObjectsSortMode.None))Destroy(shot.gameObject);
+                    yield return null;
+                }
+            }
             foreach(var behaviour in camera.GetComponents<MonoBehaviour>())behaviour.enabled=false;
             camera.orthographicSize=1.55f;
             camera.transform.position=new Vector3(player.transform.position.x,player.transform.position.y,camera.transform.position.z);
@@ -111,15 +139,15 @@ namespace Rushitadel.Presentation
             Debug.Log("RUSHITADEL_FLIGHT_VALIDATION_SUCCESS");
             EditorApplication.Exit(0);
         }
-        private void Capture(Camera camera,string filename)
+        private void Capture(Camera camera,string filename,int width=640,int height=640)
         {
-            var target=new RenderTexture(640,640,24);
+            var target=new RenderTexture(width,height,24);
             var previous=RenderTexture.active;
             UnityEngine.Rendering.RenderPipeline.SubmitRenderRequest(camera,
                 new UnityEngine.Rendering.Universal.UniversalRenderPipeline.SingleCameraRequest{destination=target});
             RenderTexture.active=target;
-            var image=new Texture2D(640,640,TextureFormat.RGB24,false);
-            image.ReadPixels(new Rect(0,0,640,640),0,0);image.Apply();
+            var image=new Texture2D(width,height,TextureFormat.RGB24,false);
+            image.ReadPixels(new Rect(0,0,width,height),0,0);image.Apply();
             File.WriteAllBytes(Path.Combine(output,filename),image.EncodeToPNG());
             RenderTexture.active=previous;Destroy(image);Destroy(target);
         }
