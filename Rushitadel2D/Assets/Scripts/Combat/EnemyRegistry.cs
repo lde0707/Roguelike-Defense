@@ -80,7 +80,7 @@ namespace Rushitadel.Combat
                     continue;
                 }
 
-                Vector3 offset = enemy.transform.position - center;
+                Vector3 offset = DamagePosition(enemy, center) - center;
                 offset.z = 0f;
                 if (offset.sqrMagnitude <= radiusSquared)
                 {
@@ -89,6 +89,12 @@ namespace Rushitadel.Combat
             }
 
             return results;
+        }
+
+        public static Vector3 DamagePosition(EnemyController enemy, Vector3 query)
+        {
+            var boss = enemy.GetComponent<Rushitadel.Progression.CampaignBoss>();
+            return boss != null ? boss.DamagePosition(query) : enemy.transform.position;
         }
     }
 }

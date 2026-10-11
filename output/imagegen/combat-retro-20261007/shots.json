@@ -1,0 +1,426 @@
+[
+  {
+    "key": "EnemyProjectiles/Grass/N01",
+    "name": "Grass N01",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a solid spherical seed pellet with a single tiny diamond center and simple thick circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep plum outline, red-orange body, pale warm ivory center, tiny lime-green accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-e215ee85-2cc8-4e06-a4f9-b9596eb615a2.png"
+  },
+  {
+    "key": "EnemyProjectiles/Grass/N02",
+    "name": "Grass N02",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a spherical spore bullet, round outer disk enclosing three large circular dots arranged as a triangle. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep plum outline, red-orange body, pale warm ivory center, tiny lime-green accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-d3bb57d9-fc09-4d0d-a44b-a196a6bd4303.png"
+  },
+  {
+    "key": "EnemyProjectiles/Grass/N03",
+    "name": "Grass N03",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a heavy round cannonball, thick double circular armor rim and chunky cracked center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep plum outline, red-orange body, pale warm ivory center, tiny lime-green accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-7e4e831a-99f0-4467-a92a-f436aa0e4d6c.png"
+  },
+  {
+    "key": "EnemyProjectiles/Grass/N04",
+    "name": "Grass N04",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round precision energy orb with a clear crosshair centered inside its circular silhouette. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep plum outline, red-orange body, pale warm ivory center, tiny lime-green accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-fecbe91a-15f3-4189-8745-0b94aab84289.png"
+  },
+  {
+    "key": "EnemyProjectiles/Grass/N05",
+    "name": "Grass N05",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round vortex ball, bold three-arm spiral inside an unbroken circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep plum outline, red-orange body, pale warm ivory center, tiny lime-green accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-2502adba-68b2-4fae-ab7c-854cd53dded0.png"
+  },
+  {
+    "key": "EnemyProjectiles/Grass/E01",
+    "name": "Grass E01",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite round energy ball, concentric double armored rings, four bright inset square marks and dense solid center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep plum outline, red-orange body, pale warm ivory center, tiny lime-green accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-efa24bc9-d22a-4368-a99b-24432a9c39cd.png"
+  },
+  {
+    "key": "EnemyProjectiles/Grass/E02",
+    "name": "Grass E02",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite spherical ricochet bomb, six segmented armor wedges forming a circular outline around a hexagonal luminous center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep plum outline, red-orange body, pale warm ivory center, tiny lime-green accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1335867a-7132-4f44-8bf9-4432e5a77301.png"
+  },
+  {
+    "key": "EnemyProjectiles/Lava/N01",
+    "name": "Lava N01",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a solid spherical seed pellet with a single tiny diamond center and simple thick circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette dark burgundy outline, orange body, pale yellow center. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-aa8ae0fc-8fcb-45da-8f61-bcb8fcfa0103.png"
+  },
+  {
+    "key": "EnemyProjectiles/Lava/N02",
+    "name": "Lava N02",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a spherical spore bullet, round outer disk enclosing three large circular dots arranged as a triangle. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette dark burgundy outline, orange body, pale yellow center. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-018fea3a-e094-4776-ac40-245eadfb4e26.png"
+  },
+  {
+    "key": "EnemyProjectiles/Lava/N03",
+    "name": "Lava N03",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a heavy round cannonball, thick double circular armor rim and chunky cracked center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette dark burgundy outline, orange body, pale yellow center. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-5d27708b-b119-4183-91ea-7a7f5d86ce49.png"
+  },
+  {
+    "key": "EnemyProjectiles/Lava/N04",
+    "name": "Lava N04",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round precision energy orb with a clear crosshair centered inside its circular silhouette. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette dark burgundy outline, orange body, pale yellow center. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-8f08d564-3f83-4c56-84a0-07f9c363afeb.png"
+  },
+  {
+    "key": "EnemyProjectiles/Lava/N05",
+    "name": "Lava N05",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round vortex ball, bold three-arm spiral inside an unbroken circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette dark burgundy outline, orange body, pale yellow center. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-a0210096-4c44-4527-a000-f3f5ef2748d6.png"
+  },
+  {
+    "key": "EnemyProjectiles/Lava/E01",
+    "name": "Lava E01",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite round energy ball, concentric double armored rings, four bright inset square marks and dense solid center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette dark burgundy outline, orange body, pale yellow center. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-e064475d-800d-422b-b478-603de39f4f11.png"
+  },
+  {
+    "key": "EnemyProjectiles/Lava/E02",
+    "name": "Lava E02",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite spherical ricochet bomb, six segmented armor wedges forming a circular outline around a hexagonal luminous center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette dark burgundy outline, orange body, pale yellow center. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-cdadae89-7cdf-4dad-b73a-5e16b5417a47.png"
+  },
+  {
+    "key": "EnemyProjectiles/Ice/N01",
+    "name": "Ice N01",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a solid spherical seed pellet with a single tiny diamond center and simple thick circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette navy outline, coral-pink body, ivory center, small icy cyan accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-3f1b6a04-b309-485d-b795-6e2d729943c3.png"
+  },
+  {
+    "key": "EnemyProjectiles/Ice/N02",
+    "name": "Ice N02",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a spherical spore bullet, round outer disk enclosing three large circular dots arranged as a triangle. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette navy outline, coral-pink body, ivory center, small icy cyan accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-be42df06-258a-44c1-88ae-19ed3136c982.png"
+  },
+  {
+    "key": "EnemyProjectiles/Ice/N03",
+    "name": "Ice N03",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a heavy round cannonball, thick double circular armor rim and chunky cracked center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette navy outline, coral-pink body, ivory center, small icy cyan accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-12501809-b5ec-4c9c-87ba-a527276664d0.png"
+  },
+  {
+    "key": "EnemyProjectiles/Ice/N04",
+    "name": "Ice N04",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round precision energy orb with a clear crosshair centered inside its circular silhouette. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette navy outline, coral-pink body, ivory center, small icy cyan accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-9976f99d-d44c-4424-9403-aa9a86a7d612.png"
+  },
+  {
+    "key": "EnemyProjectiles/Ice/N05",
+    "name": "Ice N05",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round vortex ball, bold three-arm spiral inside an unbroken circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette navy outline, coral-pink body, ivory center, small icy cyan accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-133f76f6-b633-4f48-9332-6b21cce045c4.png"
+  },
+  {
+    "key": "EnemyProjectiles/Ice/E01",
+    "name": "Ice E01",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite round energy ball, concentric double armored rings, four bright inset square marks and dense solid center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette navy outline, coral-pink body, ivory center, small icy cyan accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-18bb2ac9-3c7c-48be-8282-9e09ae017737.png"
+  },
+  {
+    "key": "EnemyProjectiles/Ice/E02",
+    "name": "Ice E02",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite spherical ricochet bomb, six segmented armor wedges forming a circular outline around a hexagonal luminous center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette navy outline, coral-pink body, ivory center, small icy cyan accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-76bd954d-04f5-45da-84e0-129c8ed8c5b9.png"
+  },
+  {
+    "key": "EnemyProjectiles/WaterElectric/N01",
+    "name": "WaterElectric N01",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a solid spherical seed pellet with a single tiny diamond center and simple thick circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep violet outline, amber body, pale yellow center, small teal accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-627b9b2a-4fc5-4416-ad70-8bffdbb629c6.png"
+  },
+  {
+    "key": "EnemyProjectiles/WaterElectric/N02",
+    "name": "WaterElectric N02",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a spherical spore bullet, round outer disk enclosing three large circular dots arranged as a triangle. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep violet outline, amber body, pale yellow center, small teal accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-8aac43b8-95ac-438d-9f51-e7a0e69cbed2.png"
+  },
+  {
+    "key": "EnemyProjectiles/WaterElectric/N03",
+    "name": "WaterElectric N03",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a heavy round cannonball, thick double circular armor rim and chunky cracked center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep violet outline, amber body, pale yellow center, small teal accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-0be9ad62-988d-43db-b855-0d1603eea23c.png"
+  },
+  {
+    "key": "EnemyProjectiles/WaterElectric/N04",
+    "name": "WaterElectric N04",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round precision energy orb with a clear crosshair centered inside its circular silhouette. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep violet outline, amber body, pale yellow center, small teal accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-a02f21a0-06ac-45b8-b4fc-d298719fa13f.png"
+  },
+  {
+    "key": "EnemyProjectiles/WaterElectric/N05",
+    "name": "WaterElectric N05",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round vortex ball, bold three-arm spiral inside an unbroken circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep violet outline, amber body, pale yellow center, small teal accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1b5c1d39-38bc-427a-a9a9-fb9d66b1f33d.png"
+  },
+  {
+    "key": "EnemyProjectiles/WaterElectric/E01",
+    "name": "WaterElectric E01",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite round energy ball, concentric double armored rings, four bright inset square marks and dense solid center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep violet outline, amber body, pale yellow center, small teal accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ae3a3202-f06a-4da0-b3c1-46d7898e6374.png"
+  },
+  {
+    "key": "EnemyProjectiles/WaterElectric/E02",
+    "name": "WaterElectric E02",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite spherical ricochet bomb, six segmented armor wedges forming a circular outline around a hexagonal luminous center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette deep violet outline, amber body, pale yellow center, small teal accent. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically. Redraw in a much coarser very simple 16x16 arcade style enlarged. Maximum 5 colors, large flat pixel blocks, no intricate markings, no fine pixels. Round filled silhouette, no disconnected sparks, no trail. Transparent background.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-35cfa003-5288-43c1-b26d-799f3711579a.png"
+  },
+  {
+    "key": "ProjectileArt/PlayerBasic",
+    "name": "PlayerBasic",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, short capsule bullet pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-5de71854-b77c-4f85-90e2-d3ab9d99ee0a.png"
+  },
+  {
+    "key": "ProjectileArt/PlayerPower",
+    "name": "PlayerPower",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, large round charged energy ball with a cross-shaped core. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-f7a68b06-8fa2-4427-ac9f-982ed170ade9.png"
+  },
+  {
+    "key": "ProjectileArt/TowerBasic",
+    "name": "TowerBasic",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, short round-ended shell pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ed35a777-c440-4bc0-8993-2625a9f793bb.png"
+  },
+  {
+    "key": "ProjectileArt/BlastRing",
+    "name": "BlastRing",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, simple circular blast ring with a large clear empty middle. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-a30b5ef1-2f33-4bb5-8050-250962452807.png"
+  },
+  {
+    "key": "ProjectileArt/SplitFragment",
+    "name": "SplitFragment",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, tiny triangular shard pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-87b3a9d2-0704-4ef9-b787-5ede00a5bfc9.png"
+  },
+  {
+    "key": "ProjectileArt/S3-13",
+    "name": "S3-13",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, short straight chain lightning segment pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-95fcd6cc-c327-4135-a432-c84c11b41a42.png"
+  },
+  {
+    "key": "ProjectileArt/WebBlast",
+    "name": "WebBlast",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, round blast orb with four stubby corners. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-964080c5-83e2-436b-ba0a-55b8232c1722.png"
+  },
+  {
+    "key": "ProjectileArt/WebPierce",
+    "name": "WebPierce",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, long tapered piercing bullet pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ce33a12c-ce31-4d3f-99e3-9443e80925c3.png"
+  },
+  {
+    "key": "ProjectileArt/WebPoison",
+    "name": "WebPoison",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, poison droplet pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-daaa8217-43e4-4a9a-8e04-8946a30fad40.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-01",
+    "name": "ROT-01",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, short round-ended bullet pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-8d762c31-6559-4008-a5e4-3687613f0ea2.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-02",
+    "name": "ROT-02",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, round pellet with one square highlight. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ac2620b4-316a-4bcd-ba91-21e90a93e84d.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-03",
+    "name": "ROT-03",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, compact spiral drill projectile pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-2e22a429-ca84-46d5-b82a-d2efa1f0c438.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-04",
+    "name": "ROT-04",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, solid circular blade disk with four short teeth. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-26373248-6ed5-4a4c-add9-839ca6bca3fc.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-05",
+    "name": "ROT-05",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, round heavy explosive ball. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-b57a6227-c928-46bc-b3ea-4f8a27905c5e.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-06",
+    "name": "ROT-06",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, chunky icy spray puff pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-53baf535-473f-47cb-90c2-1f1f12bd7a9c.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-07",
+    "name": "ROT-07",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, round acidic droplet pointing UP. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ffcfe95d-0a24-4959-923f-bcd3be7f1cd6.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-08",
+    "name": "ROT-08",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, hollow square marker with two small duplicate squares. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1c2e78db-529c-4781-8b38-b86678710846.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-09",
+    "name": "ROT-09",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, simple broad V shaped boomerang. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-8ee0d5da-3782-4f66-b1ce-f82c0e449845.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-10",
+    "name": "ROT-10",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, circular saw blade with six short teeth. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-557fd240-fd00-41be-a955-f8ed5860bbbd.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-11",
+    "name": "ROT-11",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, wide horizontal arc shockwave. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-c2037a95-0f04-47fb-8f44-3ffe0543d14d.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-12",
+    "name": "ROT-12",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, four-pronged cross shard. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-7661263c-0846-4d9e-8824-b9c43f4c7982.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-13",
+    "name": "ROT-13",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, simple square net with four wide holes. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-b4608934-7909-4b4f-b41c-9b3dc8bae47c.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-14",
+    "name": "ROT-14",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, hollow diamond energy marker. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-13d56530-dc14-453b-840c-f55cdd1dfd97.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-15",
+    "name": "ROT-15",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, cluster of three round foam bubbles. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-c1ef1eac-4e03-4552-8b2d-3c35bced9901.png"
+  },
+  {
+    "key": "ProjectileArt/ROT-16",
+    "name": "ROT-16",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. One isolated transparent game projectile sprite, round conductor ball with two tiny lightning teeth. Extremely simple 16x16 pixel art enlarged. Crisp big square blocks, exactly 5 flat tones: dark navy outline, cyan midtone, pale ivory bright core. Classic retro arcade bullet hell asset with thick readable silhouette, no fine detail, no gradients, no soft glow, no smoke, no particles detached from object. Centered, generous transparent margin. No text, background, frame or weapon. This is a friendly projectile; distinguish bright core from dark outline. Entire sprite must remain readable at 16 pixels.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-19d25dac-f718-47c9-a488-44967a268b6a.png"
+  }
+]

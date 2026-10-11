@@ -1,0 +1,21 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.3f1 (c2eb47b3a2a9) revision 12774215'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0" at "2026-10-07T10:38:35.946518Z"
+OS: 'Windows 11  (10.0.22631) Core' Language: 'ko' Physical Memory: 32480 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-07T10:38:35Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Unity.exe
+-batchmode
+-projectPath
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+-executeMethod
+Rushitadel.Editor.BossIntegrationValidation.Run
+-logFile
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/output/projectile-faction-validation.log
+Successfully changed project path to: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/Rushitadel2D
+Exiting without the bug reporter. Application will terminate with return code 1

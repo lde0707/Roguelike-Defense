@@ -17,7 +17,7 @@ namespace Rushitadel.Presentation
 
         private void ShowSettings(Action returnTo)
         {
-            settingsBefore = GameSettings.Saved.Copy(); draft = settingsBefore.Copy();
+            settingsBefore = (GameSettings.Saved ?? new SettingsData()).Copy(); draft = settingsBefore.Copy();
             settingsReturn = returnTo; settingsTab = 0;
             resolutions = new[] {new Vector2Int(1280, 720), new Vector2Int(1600, 900),
                 new Vector2Int(1920, 1080), new Vector2Int(2560, 1440), new Vector2Int(3840, 2160)};

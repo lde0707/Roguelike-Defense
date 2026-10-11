@@ -51,7 +51,7 @@ namespace Rushitadel.Presentation
             for (int i = 0; i < 2; i++)
             {
                 int theme = candidates[i];
-                Button(p, (chosenTheme == theme ? "▶ 선택됨\n\n" : "") + Themes[theme], 75 + i * 555, 230, 495, 250,
+                ThemeCard(p, theme, chosenTheme == theme, 75 + i * 555, 230, 495, 250,
                     () => { chosenTheme = theme; ShowThemes(); });
             }
             Label(p, "총 3스테이지 · 각 3라운드 마지막에 보스가 등장합니다.\n라운드 종료 후 안전 정비에서 XP Web을 구매할 수 있습니다.", 75, 525, 1050, 100, 24);

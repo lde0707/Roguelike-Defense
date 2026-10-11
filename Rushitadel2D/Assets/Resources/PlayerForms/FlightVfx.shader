@@ -39,8 +39,10 @@ Shader "Rushitadel/FlightVfx"
                 }
                 else if(_Mode<3.5)
                 {
-                    float width=(.5-p.y)*.3;
-                    a=step(abs(p.x),width)*saturate(1-abs(p.y)*2)*(1-_Progress);
+                    // Three separated square-ended streaks: no solid fog or long trail.
+                    float dash=step(abs(p.y+.28),.085)+step(abs(p.y),.065)+step(abs(p.y-.24),.035);
+                    float width=lerp(.32,.10,saturate(p.y+.5));
+                    a=step(abs(p.x),width)*saturate(dash)*pow(1-_Progress,2);
                 }
                 else
                 {

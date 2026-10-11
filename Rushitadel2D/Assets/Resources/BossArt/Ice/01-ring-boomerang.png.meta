@@ -1,0 +1,792 @@
+fileFormatVersion: 2
+guid: 537e35e18bb8ddd46bde67dacec573ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3157148984880036522
+    second: 01-ring-boomerang_0
+  - first:
+      213: 4706994995796341222
+    second: 01-ring-boomerang_1
+  - first:
+      213: -7507549880940790737
+    second: 01-ring-boomerang_2
+  - first:
+      213: -4636117270429410245
+    second: 01-ring-boomerang_3
+  - first:
+      213: -2505149969879645398
+    second: 01-ring-boomerang_4
+  - first:
+      213: -645600767450343298
+    second: 01-ring-boomerang_5
+  - first:
+      213: 8097164623113335468
+    second: 01-ring-boomerang_6
+  - first:
+      213: 2415867870399969880
+    second: 01-ring-boomerang_7
+  - first:
+      213: 3037603261439325265
+    second: 01-ring-boomerang_8
+  - first:
+      213: 4791082386055843761
+    second: 01-ring-boomerang_9
+  - first:
+      213: 276165042753046351
+    second: 01-ring-boomerang_10
+  - first:
+      213: 8121287729740286813
+    second: 01-ring-boomerang_11
+  - first:
+      213: -8379739368562557725
+    second: 01-ring-boomerang_12
+  - first:
+      213: -9196046157294195638
+    second: 01-ring-boomerang_13
+  - first:
+      213: 3173081685369523284
+    second: 01-ring-boomerang_14
+  - first:
+      213: 3281516343415721571
+    second: 01-ring-boomerang_15
+  - first:
+      213: -9023002465341661312
+    second: 01-ring-boomerang_16
+  - first:
+      213: 6841975119789152420
+    second: 01-ring-boomerang_17
+  - first:
+      213: -592804583266770271
+    second: 01-ring-boomerang_18
+  - first:
+      213: -1467852308172989656
+    second: 01-ring-boomerang_19
+  - first:
+      213: 4707116532894902353
+    second: 01-ring-boomerang_20
+  - first:
+      213: 3345094635828185576
+    second: 01-ring-boomerang_21
+  - first:
+      213: -5426430785398636207
+    second: 01-ring-boomerang_22
+  - first:
+      213: -8350275152614458727
+    second: 01-ring-boomerang_23
+  - first:
+      213: -2049866448134689268
+    second: 01-ring-boomerang_24
+  - first:
+      213: -1785941322783503580
+    second: 01-ring-boomerang_25
+  - first:
+      213: -8261483326060063566
+    second: 01-ring-boomerang_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 01-ring-boomerang_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 1232
+        height: 1184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa72c2464270db20800000000000000
+      internalID: 3157148984880036522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_1
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 1119
+        width: 27
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e17bfb820b925140800000000000000
+      internalID: 4706994995796341222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_2
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1107
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c7ff4f823dfc790800000000000000
+      internalID: -7507549880940790737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_3
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1075
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c500fd7e339afb0800000000000000
+      internalID: -4636117270429410245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_4
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1047
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a234e30106beb3dd0800000000000000
+      internalID: -2505149969879645398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_5
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 800
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e781765c58d5a07f0800000000000000
+      internalID: -645600767450343298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_6
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 535
+        width: 6
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2b788f258ee5070800000000000000
+      internalID: 8097164623113335468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_7
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 657
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85a387f3703e68120800000000000000
+      internalID: 2415867870399969880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_8
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 528
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 154b8a6821cb72a20800000000000000
+      internalID: 3037603261439325265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_9
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 259
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf4d7ebb085d7240800000000000000
+      internalID: 4791082386055843761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_10
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 257
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f470da8a4a225d300800000000000000
+      internalID: 276165042753046351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_11
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 257
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b88e9692c94b070800000000000000
+      internalID: 8121287729740286813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_12
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 231
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ecf87a217f25bb80800000000000000
+      internalID: -8379739368562557725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_13
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 209
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c22602eb4116080800000000000000
+      internalID: -9196046157294195638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_14
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 207
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c8fbb2bfc090c20800000000000000
+      internalID: 3173081685369523284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_15
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 165
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ecee56ab94a8d20800000000000000
+      internalID: 3281516343415721571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_16
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 175
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f16dd401bd7c280800000000000000
+      internalID: -9023002465341661312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_17
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 102
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8d7110f1493fe50800000000000000
+      internalID: 6841975119789152420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_18
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 111
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a229215f5fe5c7f0800000000000000
+      internalID: -592804583266770271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_19
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 111
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b9c9c4a1421abe0800000000000000
+      internalID: -1467852308172989656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_20
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 95
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158a19b1c89035140800000000000000
+      internalID: 4707116532894902353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_21
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 95
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e98a9429d92c6e20800000000000000
+      internalID: 3345094635828185576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_22
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 71
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151021e73f171b4b0800000000000000
+      internalID: -5426430785398636207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_23
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 79
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99af4a78dfcdd1c80800000000000000
+      internalID: -8350275152614458727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_24
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 55
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ea0f973596d83e0800000000000000
+      internalID: -2049866448134689268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_25
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 39
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b4cc944df0737e0800000000000000
+      internalID: -1785941322783503580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01-ring-boomerang_26
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 42
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b49068afa0595d80800000000000000
+      internalID: -8261483326060063566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

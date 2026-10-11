@@ -36,18 +36,16 @@ namespace Rushitadel
             Vector3 groundStart = loop.Panels[0].transform.position;
             float screenStart = camera.WorldToViewportPoint(body.position).y;
             Vector3 rearAnchor = camera.WorldToViewportPoint(pressure.RearHazard.transform.position);
-            Vector3 frontAnchor = camera.WorldToViewportPoint(pressure.FrontBarrier.transform.position);
             yield return new WaitForSeconds(0.4f);
             Check(camera.transform.position.y > cameraStart.y + 0.25f && pressure.DistanceTravelled > 0.25f,
                 "Camera advances steadily in world space and records forward distance");
             Check(Vector2.Distance(body.position, playerStart) < 0.02f && camera.WorldToViewportPoint(body.position).y < screenStart - 0.02f,
                 "Idle player stays in the world but falls behind on screen");
             Check(loop.Panels[0].transform.position == groundStart, "Ground is world-fixed: camera motion creates downward screen scroll");
-            Check(Vector3.Distance(rearAnchor, camera.WorldToViewportPoint(pressure.RearHazard.transform.position)) < 0.0001f &&
-                Vector3.Distance(frontAnchor, camera.WorldToViewportPoint(pressure.FrontBarrier.transform.position)) < 0.0001f,
-                "Rear pursuit and front barrier stay at fixed camera-relative positions");
-            Check(pressure.RearHazard.isTrigger && !pressure.FrontBarrier.isTrigger,
-                "Rear danger is a damage volume; front barrier is solid");
+            Check(Vector3.Distance(rearAnchor, camera.WorldToViewportPoint(pressure.RearHazard.transform.position)) < 0.0001f,
+                "Rear pursuit stays camera-relative");
+            Check(pressure.RearHazard.isTrigger && (pressure.FrontBarrier==null||!pressure.FrontBarrier.gameObject.activeInHierarchy),
+                "Rear danger is a damage volume; front barrier is removed");
 
             Keyboard keyboard = InputSystem.AddDevice<Keyboard>();
             float beforeAdvance = body.position.y - camera.transform.position.y;
@@ -55,16 +53,15 @@ namespace Rushitadel
             yield return new WaitForSeconds(0.5f);
             Check(body.position.y - camera.transform.position.y > beforeAdvance + 0.65f && health.CurrentHealth == health.MaximumHealth,
                 "Forward input overtakes camera speed and escapes the rear threat");
-            body.position = new Vector2(0f, pressure.FrontBarrier.bounds.min.y - player.BodyRadius - 0.01f);
+            body.position = new Vector2(0f, camera.transform.position.y+3f);
             yield return new WaitForSeconds(0.3f);
-            Check(body.position.y + player.BodyRadius <= pressure.FrontBarrier.bounds.min.y + 0.025f,
-                "Player cannot pass the moving front barrier");
+            Check(body.position.y-camera.transform.position.y<=1.6f,"Camera follows forward player without barrier");
             InputSystem.QueueStateEvent(keyboard, new KeyboardState());
             yield return null;
             player.ApplyRecoil(Vector2.down, 0.18f, 0.12f);
             yield return new WaitForSeconds(0.2f);
-            Check(body.position.y + player.BodyRadius <= pressure.FrontBarrier.bounds.min.y + 0.025f,
-                "Recoil cannot push player through the front barrier");
+            Check(pressure.ClampPlayer(new Vector2(0,camera.transform.position.y+20),player.BodyRadius).y>camera.transform.position.y+19,
+                "No upper barrier clamp");
             InputSystem.RemoveDevice(keyboard);
 
             body.position = new Vector2(0f, pressure.RearHazard.bounds.max.y - 0.2f);
@@ -102,11 +99,11 @@ namespace Rushitadel
             foreach (PressureTheme theme in Enum.GetValues(typeof(PressureTheme)))
             {
                 pressure.SetTheme(theme);
-                colors.Add(pressure.RearHazard.GetComponentInChildren<SpriteRenderer>().color);
+                Check(pressure.RearHazard.GetComponent<ThemePressureVisual>().FrameCount==12,"Twelve animated pursuit frames");
                 Check(pressure.Theme == theme && !string.IsNullOrEmpty(ThemePressureVisual.HazardName(theme)),
                     "Theme pursuit profile available: " + theme);
             }
-            Check(colors.Count == 5, "All five themes use distinct hazard palettes");
+            Check(ThemePressureVisual.ThemeFolder(PressureTheme.Water)==ThemePressureVisual.ThemeFolder(PressureTheme.Electric),"Water and electricity share electric tsunami");
             pressure.SetTheme(PressureTheme.Electric);
 
             float savedY = camera.transform.position.y;

@@ -1,0 +1,2864 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.3f1 (c2eb47b3a2a9) revision 12774215'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0" at "2026-10-07T13:25:26.2200849Z"
+OS: 'Windows 11  (10.0.22631) Core' Language: 'ko' Physical Memory: 32480 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-07T13:25:26Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Unity.exe
+-batchmode
+-projectPath
+C:/Users/doun0/AppData/Local/Temp/RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692
+-executeMethod
+Rushitadel.Editor.TitleScenePreviewBuilder.BuildAndValidate
+-logFile
+C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/output/theme-cards-validation.log
+Successfully changed project path to: C:/Users/doun0/AppData/Local/Temp/RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692
+C:/Users/doun0/AppData/Local/Temp/RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [41428]  Target information:
+
+Player connection [41428]  * "[IP] 14.36.34.114 [Port] 55505 [Flags] 2 [Guid] 4144479672 [EditorId] 4144479672 [Version] 1048832 [Id] WindowsEditor(7,doeon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [41428] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [41428] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-32292" after 0.3 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-doun0"
+[Licensing::IpcConnector] LicenseClient-doun0 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0-6000.5.3" at "2026-10-07T13:25:28.3253364Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 17320, path: "C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              10f7e9f78387474fa7c0ad45a2a6bdaa
+  Correlation Id:          eb05c1d03383456e9e8449fad9f44658
+  External correlation Id: 769332314382848983
+  Machine Id:              +Y9dLo+xTxeE++gkth21EHAEDmE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-doun0-6000.5.3" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-doun0-6000.5.3-notifications" at "2026-10-07T13:25:28.3405764Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 14568939546096-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.00
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 2.13s
+[Licensing::Module] Licensing is initialized (took 1.43s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Artifact Garbage Collection - Removed 2 unused hashed content files
+Initialize engine version: 6000.5.3f1 (c2eb47b3a2a9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/doun0/AppData/Local/Temp/RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4060 Ti (ID=0x2803)
+    Vendor:          NVIDIA
+    VRAM:            7949 MB
+    App VRAM Budget: 7181 MB
+    Driver:          32.0.16.1088
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003846 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.438 seconds
+Domain Reload Profiling: 1028ms
+	BeginReloadAssembly (163ms)
+		CreateAndSetChildDomain (3ms)
+	RebuildCommonClasses (6ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (83ms)
+	LoadAllAssembliesAndSetupDomain (318ms)
+		LoadAssemblies (153ms)
+		AnalyzeDomain (234ms)
+			TypeCache.Refresh (232ms)
+				TypeCache.ScanAssembly (215ms)
+	FinalizeReload (441ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (94ms)
+			ProcessInitializeOnLoadAttributes (115ms)
+			ProcessInitializeOnLoadMethodAttributes (150ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 65 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.2d.animation@15.1.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.2d.animation@6d5a363ae647)
+    com.unity.2d.aseprite@5.0.3 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.2d.aseprite@d13865913efa)
+    com.unity.2d.psdimporter@14.0.3 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.2d.psdimporter@5d82044f9e43)
+    com.unity.2d.spriteshape@15.0.3 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.2d.spriteshape@fcb7ec61a58b)
+    com.unity.2d.tilemap.extras@8.0.3 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.2d.tilemap.extras@a80140457adc)
+    com.unity.2d.tooling@3.0.1 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.2d.tooling@6f06ffb033c0)
+    com.unity.collab-proxy@2.12.4 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.collab-proxy@0b1559bcd34e)
+    com.unity.ide.rider@3.0.38 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.ide.rider@1f60b3138684)
+    com.unity.ide.visualstudio@2.0.26 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.ide.visualstudio@a99d56dec63f)
+    com.unity.inputsystem@1.19.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.inputsystem@21a28c3a6c83)
+    com.unity.timeline@1.8.12 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.timeline@8cd8509afae5)
+    com.unity.visualscripting@1.9.11 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.visualscripting@8bed5ad90189)
+    com.unity.2d.common@14.0.1 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.2d.common@73badf92ba8b)
+    com.unity.searcher@4.9.4 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.searcher@d45a78918735)
+    com.unity.burst@1.8.29 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.burst@6bb9aca3ef38)
+    com.unity.nuget.mono-cecil@1.11.6 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+    com.unity.test-framework.performance@3.5.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.test-framework.performance@8b56083ec0f0)
+  Built-in packages:
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.2d.sprite@053a968eab56)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.2d.tilemap@592c6ccaefe1)
+    com.unity.multiplayer.center@1.0.1 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.multiplayer.center@b860850997d0)
+    com.unity.render-pipelines.universal@17.5.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.render-pipelines.universal@276396f56b3f)
+    com.unity.test-framework@1.7.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.test-framework@1405238725ab)
+    com.unity.ugui@2.5.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.ugui@377fd60ad87b)
+    com.unity.modules.accessibility@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.ext.nunit@44f7d31723bd)
+    com.unity.render-pipelines.core@17.5.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.render-pipelines.core@0733e3164aa3)
+    com.unity.shadergraph@17.5.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.shadergraph@8aa9acb51790)
+    com.unity.render-pipelines.universal-config@17.5.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.render-pipelines.universal-config@fdda01c80fe3)
+    com.unity.mathematics@1.4.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.mathematics@981956d94fb6)
+    com.unity.collections@6.5.0 (location: C:\Users\doun0\AppData\Local\Temp\RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692\Library\PackageCache\com.unity.collections@a43cabe808ca)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.04 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/doun0/AppData/Local/Temp/RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 2s703ms
+[ 862/1110  0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[1106/1110  1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets\Scripts\Editor\GameplaySceneSetup.cs(172,17): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\PortValidation.cs(26,75): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Scripts\Editor\PortValidation.cs(26,21): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Scripts\Editor\PortValidation.cs(27,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\PortValidation.cs(28,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\PortValidation.cs(29,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\PortValidation.cs(30,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Scripts\Editor\PortValidation.cs(31,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+[1107/1110  0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 140 defines and 375 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[1108/1110  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+[1109/1110  0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+*** Tundra build success (2.59 seconds), 5 items updated, 1110 evaluated
+Assets\Scripts\Editor\GameplaySceneSetup.cs(172,17): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(26,75): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Scripts\Editor\PortValidation.cs(26,21): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Scripts\Editor\PortValidation.cs(27,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(28,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(29,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(30,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Scripts\Editor\PortValidation.cs(31,21): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+AssetDatabase: script compilation time: 3.307680s
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 4.94 ms, found 5 plugins.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 4.65 ms, found 5 plugins.
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  3.775 seconds
+Domain Reload Profiling: 5207ms
+	BeginReloadAssembly (447ms)
+		DisableScriptedObjects (77ms)
+		CreateAndSetChildDomain (171ms)
+	RebuildCommonClasses (10ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (90ms)
+	LoadAllAssembliesAndSetupDomain (863ms)
+		LoadAssemblies (506ms)
+		AnalyzeDomain (329ms)
+			TypeCache.Refresh (223ms)
+				TypeCache.ScanAssembly (210ms)
+			BuildScriptInfoCaches (95ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (3776ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (102ms)
+			ProcessInitializeOnLoadAttributes (3078ms)
+			ProcessInitializeOnLoadMethodAttributes (318ms)
+			AfterProcessingInitializeOnLoad (13ms)
+		AwakeInstancesAfterBackupRestoration (34ms)
+Starting new worker id: 0 with log in C:/Users/doun0/AppData/Local/Temp/RushitadelBalance-db8cc0275753418b9636a7e2eb2e0692/Logs/AssetImportWorkerHW0.log
+Refreshing native plugins compatible for Editor in 4.31 ms, found 5 plugins.
+
+Asset Pipeline Refresh (id=6368649bc7481e944a2e7db57a077000): Total: 10.146 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=4784 ms
+		Asset DB Callback time: managed=367 ms, native=56 ms
+		Scripting: domain reloads=1, domain reload time=1527 ms, compile time=3312 ms, other=99 ms
+		Project Asset Count: scripts=1584, non-scripts=3306
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 45.084ms
+	ApplyChangesToAssetFolders: 1.135ms
+	Scan: 314.704ms
+	Collect global state as custom dependencies: 3.593ms
+	OnSourceAssetsModified: 0.783ms
+	CategorizeScriptCompilationAssets: 62.211ms
+	ProcessAssetsWithTransientArtifactChanges: 116.760ms
+	CategorizeAssets: 67.720ms
+	CompileScripts: 3311.501ms
+	ImportOutOfDateAssets: 4009.954ms (3806.195ms without children)
+		UnloadImportedAssets: 1.012ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 1.048ms
+		ImportSchedulerStart: 201.650ms
+	PostProcessAllAssets: 370.958ms
+		VCAutoAddAssetPostprocess 2.350ms
+		XRBuildSystem.XRAssetImported 1.339ms
+		MonoPostProcessAllAssets: 366.559ms
+			AssetPostprocessor.OnPostprocessAllAssets 174.656ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 77.043ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 22.765ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 12.039ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 8.864ms
+			SyncVS.PostprocessSyncProject 4.409ms
+			SpriteSlicePostprocessor.OnPostprocessAllAssets 3.058ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.080ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.858ms
+			AssetChangedListener.OnPostprocessAllAssets 1.478ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.416ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.275ms
+			MaterialPostprocessor.OnPostprocessAllAssets 1.098ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.024ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.885ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.645ms
+			SpriteEditorTexturePostprocessor.OnPostprocessAllAssets 0.598ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.513ms
+			SampleDependencyImporterPostProcessor.OnPostprocessAllAssets 0.509ms
+			AssetEvents.OnPostprocessAllAssets 0.501ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.498ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.457ms
+			AssetProcessor.OnPostprocessAllAssets 0.454ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.450ms
+			PostProcessor.OnPostprocessAllAssets 0.449ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.406ms
+			SpriteShapeAssetPostProcessor.OnPostprocessAllAssets 0.381ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.361ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.318ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.224ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.223ms
+			SpriteLibraryAssetPostprocessor.OnPostprocessAllAssets 0.208ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.184ms
+			SamplePostprocessor.OnPostprocessAllAssets 0.166ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.161ms
+			PSDImportPostProcessor.OnPostprocessAllAssets 0.152ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.121ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.117ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.109ms
+			PSDImporterAssetPostProcessor.OnPostprocessAllAssets 0.096ms
+	PostAssetChangesProfiler: 10.505ms
+	UnloadStreamsBegin: 3.388ms
+	PersistCurrentRevisions: 0.128ms
+	GenerateScriptTypeHashes: 2.626ms
+	GenerateScriptTypeSerializationHashes: 4.146ms
+	Untracked: 1816.682ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Scanning for USB devices : 12.689ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Rushitadel2D
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7246 unused Assets / (4.3 MB). Loaded Objects now: 8160.
+Memory consumption went from 430.2 MB to 425.9 MB.
+Total: 27.446400 ms (FindLiveObjects: 1.684200 ms CreateObjectMapping: 3.269800 ms MarkObjects: 10.180500 ms  DeleteObjects: 12.308500 ms)
+
+Opening scene 'Assets/Scenes/Title.unity'
+Unloading 19 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Title.unity'
+	Deserialize:            35.206 ms
+	Integration:            361.036 ms
+	Integration of assets:  2.358 ms
+	Thread Wait Time:       0.969 ms
+	Total Operation Time:   399.569 ms
+Unloading 2 unused Assets / (Unknown). Loaded Objects now: 9095.
+Memory consumption went from 421.8 MB to 421.9 MB.
+Total: 11.910200 ms (FindLiveObjects: 0.879300 ms CreateObjectMapping: 1.213500 ms MarkObjects: 9.783300 ms  DeleteObjects: 0.032800 ms)
+
+Importing 'GUID: 3bbe560a02ded014e8fe6a2260a0a801 - Path: Assets/Scenes/Title.unity' with importer (DefaultImporter)
+Imported 'GUID: 3bbe560a02ded014e8fe6a2260a0a801' -> (Import Result ID: '3adb3b44029fd1a2c08ea972c2d78492') in 0.009 seconds [static dependencies only]. Details - ImportResultOutputID=2ea29eb0248308c12394bc5cdd7cca8c DependenciesID=1a543fb9846d0c50465e54655d36175e StaticDependenciesID=2823a62efa00332fd60ccecb4d0026c3 
+Refreshing native plugins compatible for Editor in 4.04 ms, found 5 plugins.
+Asset Pipeline Refresh (id=f7a37646a8168364e89ccbb541397dd2): Total: 0.159 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+TITLE_SCENE_PREVIEW_READY 8 pages
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Editor.TitleScenePreviewBuilder:Refresh () (at Assets/Scripts/Editor/TitleScenePreviewEditor.cs:49)
+Rushitadel.Editor.TitleScenePreviewBuilder:BuildAndValidate () (at Assets/Scripts/Editor/TitleScenePreviewEditor.cs:52)
+
+(Filename: Assets/Scripts/Editor/TitleScenePreviewEditor.cs Line: 49)
+
+Opening scene 'Assets/Scenes/Title.unity'
+Unloading 26 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Title.unity'
+	Deserialize:            15.604 ms
+	Integration:            370.123 ms
+	Integration of assets:  0.005 ms
+	Thread Wait Time:       0.297 ms
+	Total Operation Time:   386.029 ms
+Unloading 165 unused Assets / (9.6 MB). Loaded Objects now: 9122.
+Memory consumption went from 455.0 MB to 445.4 MB.
+Total: 14.034600 ms (FindLiveObjects: 0.936800 ms CreateObjectMapping: 1.126400 ms MarkObjects: 11.468400 ms  DeleteObjects: 0.501800 ms)
+
+[Project] Loading completed in 16.969 seconds
+	Project init time: 				14.617 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		1.731 seconds
+		Asset Database init time: 		0.224 seconds
+		Global illumination init time: 	0.004 seconds
+		Assemblies load time: 			1.090 seconds
+		Unity extensions init time: 	0.025 seconds
+		Asset Database refresh time: 	10.147 seconds
+	Scene opening time: 			1.925 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1791379543110,"processId":32292,"projectLoad":16.9694975,"projectInit":14.6167144,"templateInit":0.0,"packageManagerInit":1.7310339,"assetDatabaseInit":0.2237483,"globalIlluminationInit":0.0041697,"assembliesLoad":1.0901565,"unityExtensionsInit":0.0250619,"assetDatabaseRefresh":10.1468536,"sceneOpening":1.9249148}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1791379543111,"processId":32292,"editorVersion":"6000.5.3f1 (c2eb47b3a2a9)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
+Worker ready: AssetImportWorkerHW0 0
+SpriteAtlasPacking completed in 0.006414 sec
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            14.225 ms
+	Integration:            408.998 ms
+	Integration of assets:  0.140 ms
+	Thread Wait Time:       -0.003 ms
+	Total Operation Time:   423.361 ms
+[Licensing::Client] Successfully resolved entitlement details
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <816f70bc2a9c4332b0bd119906a8d40e>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__75.MoveNext () [0x00089] in <ba40de9d2c774406a299ab488f9e8db6>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <fe644d7ad1cf499ebe4e7ad937bc03bf>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <fe644d7ad1cf499ebe4e7ad937bc03bf>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00005] in <ba40de9d2c774406a299ab488f9e8db6>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000a] in <ba40de9d2c774406a299ab488f9e8db6>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x00029] in <2608e8670e87477ba4f8f33d8e275d95>:0 
+
+Created GICache directory at C:/Users/doun0/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.039s, timestamps: [17.473 - 17.512]
+[Licensing::Client] Successfully resolved entitlement details
+PASS: Editor Play begins at title
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:50)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Continue disabled without a valid save
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:51)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Title background scrolls with unscaled time while buttons stay fixed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Cursor inversion excludes background and has no raycast overlay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:61)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Rendered UI pixel changes color inside cursor circle
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Rendered UI pixel outside cursor circle stays unchanged
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:69)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Start owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Start hover swap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:79)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Continue owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Settings owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Settings hover swap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:79)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Quit owns separate hover/pressed sprites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Quit hover swap
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:79)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: QuitButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:83)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Quit confirmation text
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:84)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:85)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Quit cancellation stays on title
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:86)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:87)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 테두리 없는 전체 화면  ▶ Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:91)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Three-option setting retains click cycling
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:92)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 1920 × 1080  ▼ Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:94)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Resolution dropdown contains five curated choices
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:96)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: QHD and 4K offered
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:97)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Mouse wheel scrolls dropdown
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:102)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Scrollbar moves list to bottom
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 3840 × 2160 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:106)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Dropdown selection changes draft only
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 60  ▼ Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:109)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: FPS uses scrollable dropdown
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:110)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Click outside closes dropdown without selection
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:112)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 사운드 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:113)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Three independent audio sliders
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Audio previews immediately
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:118)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:119)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Cancel restores audio
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:120)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:121)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 사운드 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:121)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 적용 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:123)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Settings persist and reload
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:124)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 조작 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:126)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: SettingsButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:127)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 적용 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:129)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Display timeout reverts
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:133)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:134)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: StartButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Theme confirmation disabled until selection
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:138)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 선택 확정 · 시작 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:140)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Shutter immediately blocks input and simulation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:141)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+Unloading 31 Unused Serialized files (Serialized files now loaded: 0)
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+UnloadTime: 3.411100 ms
+Loaded scene 'Assets/Scenes/inGame.unity'
+	Deserialize:            22.803 ms
+	Integration:            331.550 ms
+	Integration of assets:  4.604 ms
+	Thread Wait Time:       28.951 ms
+	Total Operation Time:   387.907 ms
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+Unloading 58 unused Assets / (80.5 KB). Loaded Objects now: 9158.
+Memory consumption went from 479.1 MB to 479.0 MB.
+Total: 17.283900 ms (FindLiveObjects: 0.711800 ms CreateObjectMapping: 1.315500 ms MarkObjects: 14.628600 ms  DeleteObjects: 0.626700 ms)
+
+PASS: Gameplay stays frozen while scene is revealed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:251)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Shutter cleaned up and combat resumes after opening
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: New run loads gameplay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:147)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: All five scene turrets have three-unit range
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:148)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Projectile prefab exists: towerProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:152)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Projectile visual enlarged twenty percent: towerProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:154)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Projectile prefab exists: playerBasicProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:152)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Projectile visual enlarged twenty percent: playerBasicProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:154)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Projectile prefab exists: enemyProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:152)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Projectile visual enlarged twenty percent: enemyProjectile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:154)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Area projectile damage radius matches visible size
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:161)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Turret shot stops at exactly three units
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:168)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Theme confirmation writes slot atomically
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:169)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Safe checkpoint saves live player data: 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:176)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Previous good save backup retained
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:177)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Pause freezes simulation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:179)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 설정 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:180)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:180)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Settings returns to paused game
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:181)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 타이틀로 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:182)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 확인 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:182)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Gameplay stays frozen while scene is revealed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:251)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+Unloading 34 Unused Serialized files (Serialized files now loaded: 0)
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+UnloadTime: 4.049100 ms
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            14.992 ms
+	Integration:            276.341 ms
+	Integration of assets:  10.051 ms
+	Thread Wait Time:       41.172 ms
+	Total Operation Time:   342.556 ms
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+Unloading 59 unused Assets / (33.3 KB). Loaded Objects now: 9574.
+Memory consumption went from 472.4 MB to 472.4 MB.
+Total: 15.153900 ms (FindLiveObjects: 0.590100 ms CreateObjectMapping: 1.054500 ms MarkObjects: 13.324400 ms  DeleteObjects: 0.184000 ms)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Continue enabled with valid checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:183)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: ContinueButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:186)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 불러오기 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+UnloadTime: 1.016700 ms
+Loaded scene 'Assets/Scenes/inGame.unity'
+	Deserialize:            13.504 ms
+	Integration:            282.024 ms
+	Integration of assets:  2.992 ms
+	Thread Wait Time:       16.700 ms
+	Total Operation Time:   315.219 ms
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+Unloading 46 unused Assets / (73.9 KB). Loaded Objects now: 9177.
+Memory consumption went from 479.2 MB to 479.1 MB.
+Total: 16.025300 ms (FindLiveObjects: 0.781800 ms CreateObjectMapping: 1.316300 ms MarkObjects: 13.493400 ms  DeleteObjects: 0.419000 ms)
+
+PASS: Gameplay stays frozen while scene is revealed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:251)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Simulation remains frozen throughout shutter
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<WaitForTransition>d__10:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:246)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Continue restores HP and XP
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:188)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.844200 ms
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            16.353 ms
+	Integration:            275.341 ms
+	Integration of assets:  8.007 ms
+	Thread Wait Time:       0.698 ms
+	Total Operation Time:   300.400 ms
+Unloading 61 unused Assets / (41.4 KB). Loaded Objects now: 9444.
+Memory consumption went from 472.5 MB to 472.4 MB.
+Total: 12.621700 ms (FindLiveObjects: 0.516600 ms CreateObjectMapping: 0.961000 ms MarkObjects: 10.976700 ms  DeleteObjects: 0.166600 ms)
+
+PASS: Corrupt data rejected without deleting original
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:192)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Unsupported schema rejected
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:194)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Non-finite save values rejected
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:196)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: StartButton
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:199)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Overwrite asks before replacing slot
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:202)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Clickable: 취소 Button
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe:Click (string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:43)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:203)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: Overwrite cancellation preserves slot
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:204)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+PASS: No UI runtime errors
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe:Check (bool,string) (at Assets/Scripts/Presentation/TitleUiProbe.cs:44)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:205)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 44)
+
+RUSHITADEL_TITLE_UI_VALIDATION_SUCCESS
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Rushitadel.Presentation.TitleUiProbe/<Start>d__8:MoveNext () (at Assets/Scripts/Presentation/TitleUiProbe.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/Presentation/TitleUiProbe.cs Line: 207)
+
+MonoPathRemapper: Attempts to remap: 25257; Successful remaps: 2
+Serialized file version minimum: 22, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-doun0-6000.5.3-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-doun0-6000.5.3 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791379552259,"processId":32292,"allocatedMemory":17896583,"memoryLabels":[{"Default":211945},{"Permanent":15516},{"NewDelete":67523},{"Thread":4205176},{"Manager":819589},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":854066},{"Material":24},{"GfxDevice":57848},{"Animation":952},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":3032},{"Input":42840},{"JobScheduler":256},{"TextLib":280},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1574468},{"BaseObject":1645008},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":18858},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":19920},{"StaticString":3808},{"Utility":2673238},{"Curl":2579},{"PoolAlloc":2360},{"AI":80},{"TypeTree":14869},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":9976},{"WebRequest":552},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":72},{"CoreStats":13688},{"Identifiers":6768},{"Gui":128},{"EditorUtility":113113},{"VersionControl":8},{"Undo":931},{"AssetDatabase":5027711},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":38929},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

@@ -1,0 +1,233 @@
+[
+  {
+    "key": "BossArt/Butterfly/01-pollen-pearl",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single pollen pearl enemy projectile for a Butterfly boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny lime accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ac9fa2b8-d783-4f71-a4fc-14d1b8c5d8db.png"
+  },
+  {
+    "key": "BossArt/Butterfly/02-thorn-needle",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single thorn needle enemy projectile for a Butterfly boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny lime accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-0dd24f5a-e168-4dce-a6c9-c3c3d01d5e15.png"
+  },
+  {
+    "key": "BossArt/Butterfly/03-petal-blade",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single petal blade enemy projectile for a Butterfly boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny lime accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-4fb31e2d-b3ea-421d-85bf-afd980e20d31.png"
+  },
+  {
+    "key": "BossArt/Butterfly/04-seed-pod",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single seed pod enemy projectile for a Butterfly boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny lime accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-8cbfa012-c332-4038-978c-7a68299e6abe.png"
+  },
+  {
+    "key": "BossArt/Butterfly/05-scale-kite",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single scale kite enemy projectile for a Butterfly boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny lime accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ff6d12c7-d1b9-4de5-9ccf-56e3363bdb8f.png"
+  },
+  {
+    "key": "BossArt/Butterfly/06-boss-laser",
+    "width": 64,
+    "height": 16,
+    "beam": true,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A horizontal laser shaft tile, long rectangular energy beam with parallel straight edges, no muzzle, no end cap. Repeating chunky internal energy bands, white-hot core, dark red outline and orange edges. Aspect ratio 4:1. Entire shaft visible with transparent margin.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-3b1efe7a-fe1a-448a-bff7-d906e214e2fe.png"
+  },
+  {
+    "key": "BossArt/Butterfly/07-drone-laser",
+    "width": 64,
+    "height": 16,
+    "beam": true,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A horizontal laser shaft tile, long rectangular energy beam with parallel straight edges, no muzzle, no end cap. Repeating chunky internal energy bands, white-hot core, dark red outline and orange edges. Aspect ratio 4:1. Entire shaft visible with transparent margin.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-d50e6775-5186-4a15-84f5-6cb4c61d8dd8.png"
+  },
+  {
+    "key": "BossArt/Lava/01-ember-orb",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single ember orb enemy projectile for a Lava boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny yellow accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-a71c73cb-9d8c-4d9e-b0ca-f16f943240c1.png"
+  },
+  {
+    "key": "BossArt/Lava/02-slag-dart",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single slag dart enemy projectile for a Lava boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny yellow accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-8e08957d-e663-4060-a850-1309fba399d1.png"
+  },
+  {
+    "key": "BossArt/Lava/04-cluster-bomb",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single cluster bomb enemy projectile for a Lava boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny yellow accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-7bf19f7d-67e9-43c0-ba99-c426ac0566a3.png"
+  },
+  {
+    "key": "BossArt/Lava/03-armored-magma",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single armored magma enemy projectile for a Lava boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny yellow accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-91833d0b-317d-47ca-8ea2-f0de7af29f4b.png"
+  },
+  {
+    "key": "BossArt/Lava/05-heat-crescent",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single heat crescent enemy projectile for a Lava boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny yellow accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-26463923-51a0-4405-9767-973cfb4b6799.png"
+  },
+  {
+    "key": "BossArt/Lava/06-furnace-mine",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single furnace mine enemy projectile for a Lava boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny yellow accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-91109530-03a4-444c-bff6-f7220576a107.png"
+  },
+  {
+    "key": "BossArt/Lava/07-palm-laser",
+    "width": 64,
+    "height": 16,
+    "beam": true,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A horizontal laser shaft tile, long rectangular energy beam with parallel straight edges, no muzzle, no end cap. Repeating chunky internal energy bands, white-hot core, dark red outline and orange edges. Aspect ratio 4:1. Entire shaft visible with transparent margin.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-fbf5c17f-8892-4232-885f-c1e3c1fb5d03.png"
+  },
+  {
+    "key": "BossArt/Ice/01-ring-boomerang",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single ring boomerang enemy projectile for a Ice boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny ice cyan accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-6ccb0695-0769-473f-bfe2-96a5dd63061b.png"
+  },
+  {
+    "key": "BossArt/Ice/02-crescent-boomerang",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single crescent boomerang enemy projectile for a Ice boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny ice cyan accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-69ba2ecc-2fd2-4e8c-ab6f-808ae9dc70a9.png"
+  },
+  {
+    "key": "BossArt/Ice/04-heavy-prism",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single heavy prism enemy projectile for a Ice boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny ice cyan accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-0d7be969-e4e9-4024-8209-3991451617e6.png"
+  },
+  {
+    "key": "BossArt/Ice/03-ricochet-orb",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single ricochet orb enemy projectile for a Ice boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny ice cyan accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-89ef337b-dbe2-4333-b436-81eed9603f7f.png"
+  },
+  {
+    "key": "BossArt/Ice/05-frost-dart",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single frost dart enemy projectile for a Ice boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny ice cyan accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ffd14245-55e3-4494-9180-51c7e9dc91e7.png"
+  },
+  {
+    "key": "BossArt/Ice/06-ring-laser",
+    "width": 64,
+    "height": 16,
+    "beam": true,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A horizontal laser shaft tile, long rectangular energy beam with parallel straight edges, no muzzle, no end cap. Repeating chunky internal energy bands, white-hot core, dark red outline and orange edges. Aspect ratio 4:1. Entire shaft visible with transparent margin.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-eefb9872-530f-47f4-b3ed-491eafee3a83.png"
+  },
+  {
+    "key": "BossArt/Twins/01-pressure-orb",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single pressure orb enemy projectile for a Twins boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny gold accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-0a0332c8-5728-4c36-9b0b-f1a01aee54c2.png"
+  },
+  {
+    "key": "BossArt/Twins/02-voltaic-dart",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single voltaic dart enemy projectile for a Twins boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny gold accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-5fc49136-21a4-4001-8ce2-38bd8051f1e2.png"
+  },
+  {
+    "key": "BossArt/Twins/03-ricochet-crystal",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single ricochet crystal enemy projectile for a Twins boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny gold accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-3a43d422-1dc5-4e00-be88-89304a46a321.png"
+  },
+  {
+    "key": "BossArt/Twins/04-tidal-crescent",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single tidal crescent enemy projectile for a Twins boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny gold accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-0e2ec84c-4161-4d1a-927a-6b3a102960ce.png"
+  },
+  {
+    "key": "BossArt/Twins/05-prism-mine",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single prism mine enemy projectile for a Twins boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny gold accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-86777fe7-a0d2-4fcf-b108-532be452ee11.png"
+  },
+  {
+    "key": "BossArt/Twins/06-hydro-laser",
+    "width": 64,
+    "height": 16,
+    "beam": true,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A horizontal laser shaft tile, long rectangular energy beam with parallel straight edges, no muzzle, no end cap. Repeating chunky internal energy bands, white-hot core, dark red outline and orange edges. Aspect ratio 4:1. Entire shaft visible with transparent margin.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-fbade3de-d5c1-4295-bc77-97676cb15781.png"
+  },
+  {
+    "key": "BossArt/Twins/07-lightning-tether",
+    "width": 64,
+    "height": 16,
+    "beam": true,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A horizontal laser shaft tile, long rectangular energy beam with parallel straight edges, no muzzle, no end cap. Repeating chunky internal energy bands, white-hot core, dark red outline and orange edges. Aspect ratio 4:1. Entire shaft visible with transparent margin.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-6690cdfb-8101-422e-a545-845f5139e068.png"
+  },
+  {
+    "key": "BossArt/Twins/08-overload-core",
+    "width": 32,
+    "height": 32,
+    "beam": false,
+    "prompt": "Use case: stylized-concept. Single game sprite on genuine transparent background. Classic retro arcade coarse pixel art, maximum 5 flat colors, large solid square pixel clusters, hard edges, no gradients or bloom, no text, no cast shadow, no realistic illustration. A single overload core enemy projectile for a Twins boss. Centered simple compact silhouette, top-down view, point UP if directional, broad readable shape. Dark burgundy outline, red-orange midtone, pale ivory core; tiny gold accent. Draw as simple 16x16 sprite enlarged, no fine detail, no detached particles.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-28768b7d-5bc9-4ff4-b810-ad0316d7b502.png"
+  },
+  {
+    "key": "BossArt/Butterfly/Drone",
+    "width": 32,
+    "height": 32,
+    "prompt": "Use case: stylized-concept. Transparent single top-down retro arcade butterfly ranged drone sprite facing DOWN, two simple leaf wings and round red muzzle at bottom, olive green body and pale sage wing patches, dark plum outline. Coarse 24x24 pixel look, maximum 6 flat colors, matte, no tiny details, no glow, no cast shadow, no text.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-42789701-8864-4c7b-a5f9-58148420942a.png"
+  }
+]

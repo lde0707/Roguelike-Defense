@@ -21,6 +21,7 @@ namespace Rushitadel.Player
 
         private void Awake()
         {
+            transform.localScale *= .7f;
             body = GetComponent<Rigidbody2D>();
             health = GetComponent<PlayerHealth>();
             hitbox = GetComponent<CircleCollider2D>();

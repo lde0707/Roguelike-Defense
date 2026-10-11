@@ -1,0 +1,37 @@
+[
+  {
+    "id": "N01",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-9d371edd-d61f-463d-8562-a4968d8ba3a0.png",
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a solid spherical seed pellet with a single tiny diamond center and simple thick circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette neutral grayscale ONLY: dark charcoal outline, medium gray shell, light gray energy center, near-white small highlights, ready for runtime theme tinting. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically."
+  },
+  {
+    "id": "N02",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-e8b3dff5-4ca9-4553-9c50-c9e0a9c9cb71.png",
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a spherical spore bullet, round outer disk enclosing three large circular dots arranged as a triangle. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette neutral grayscale ONLY: dark charcoal outline, medium gray shell, light gray energy center, near-white small highlights, ready for runtime theme tinting. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically."
+  },
+  {
+    "id": "N03",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-eed4bd03-e9d6-4f12-bb7d-8edb0a514572.png",
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a heavy round cannonball, thick double circular armor rim and chunky cracked center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette neutral grayscale ONLY: dark charcoal outline, medium gray shell, light gray energy center, near-white small highlights, ready for runtime theme tinting. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically."
+  },
+  {
+    "id": "N04",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1779fa04-0b0b-42db-9c31-b3d7d71bf03f.png",
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round precision energy orb with a clear crosshair centered inside its circular silhouette. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette neutral grayscale ONLY: dark charcoal outline, medium gray shell, light gray energy center, near-white small highlights, ready for runtime theme tinting. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically."
+  },
+  {
+    "id": "N05",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-38d75747-4e35-40aa-96e5-8081be4d1d96.png",
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: a round vortex ball, bold three-arm spiral inside an unbroken circular rim. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette neutral grayscale ONLY: dark charcoal outline, medium gray shell, light gray energy center, near-white small highlights, ready for runtime theme tinting. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically."
+  },
+  {
+    "id": "E01",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-952e7922-bd71-41ce-af5f-907f13b886b3.png",
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite round energy ball, concentric double armored rings, four bright inset square marks and dense solid center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette neutral grayscale ONLY: dark charcoal outline, medium gray shell, light gray energy center, near-white small highlights, ready for runtime theme tinting. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically."
+  },
+  {
+    "id": "E02",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-c8fb6732-49fe-4c66-ba36-de2cc2fc13d3.png",
+    "prompt": "Use case: stylized-concept. Asset: one isolated top-down enemy projectile sprite for a pixel-art bullet hell game. Subject: an elite spherical ricochet bomb, six segmented armor wedges forming a circular outline around a hexagonal luminous center. Clean classic chunky pixel art, readable at 32x32, strictly circular overall silhouette, centered, square canvas, generous transparent margin. Palette neutral grayscale ONLY: dark charcoal outline, medium gray shell, light gray energy center, near-white small highlights, ready for runtime theme tinting. Flat discrete pixel clusters, no smooth gradients, no glow haze, no cast shadow, no trail, no text, no sheet, no weapon, no background. One sprite only, straight overhead view, diameter same horizontally and vertically."
+  }
+]

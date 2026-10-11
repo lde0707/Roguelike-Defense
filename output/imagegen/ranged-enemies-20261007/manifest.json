@@ -1,0 +1,254 @@
+[
+  {
+    "theme": "Grass",
+    "themeKo": "풀",
+    "id": "N01",
+    "name": "가시 연사포",
+    "role": "3연사 가시탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep aubergine and pale bone shells, small muted jade leaf accents and red apertures, NOT olive-green camouflage. Subject: oval beetle carapace with two SHORT HOLLOW bone gun barrels, stubby feet. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-47292530-3382-4bbe-bda0-57ce7bd5420a.png"
+  },
+  {
+    "theme": "Grass",
+    "themeKo": "풀",
+    "id": "N02",
+    "name": "포자 산탄포",
+    "role": "부채꼴 포자탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep aubergine and pale bone shells, small muted jade leaf accents and red apertures, NOT olive-green camouflage. Subject: flat mushroom disk chassis with three large circular downward spore gun ports, no face. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-7570c6ae-9f23-46e5-8cdb-0258e6ee85ac.png"
+  },
+  {
+    "theme": "Grass",
+    "themeKo": "풀",
+    "id": "N03",
+    "name": "씨앗 박격포",
+    "role": "곡사 분열 씨앗탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep aubergine and pale bone shells, small muted jade leaf accents and red apertures, NOT olive-green camouflage. Subject: round acorn armored mortar with one huge open hollow central barrel, two seed hoppers. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-75743de5-10dc-4f4b-90c0-4ff1a8e83edd.png"
+  },
+  {
+    "theme": "Grass",
+    "themeKo": "풀",
+    "id": "N04",
+    "name": "덩굴 저격포",
+    "role": "충전 후 고속 침탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep aubergine and pale bone shells, small muted jade leaf accents and red apertures, NOT olive-green camouflage. Subject: triangular coiled vine chassis supporting one long hollow ivory sniper barrel. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-44a364e6-aec1-4fa1-869e-7c8d5e226458.png"
+  },
+  {
+    "theme": "Grass",
+    "themeKo": "풀",
+    "id": "N05",
+    "name": "꽃봉오리 곡사포",
+    "role": "곡선 꽃잎탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep aubergine and pale bone shells, small muted jade leaf accents and red apertures, NOT olive-green camouflage. Subject: five broad plum petals folded around a clearly hollow red launch cup. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-32b10247-2478-4dbf-8f38-b8b533d9ddcc.png"
+  },
+  {
+    "theme": "Grass",
+    "themeKo": "풀",
+    "id": "E01",
+    "name": "쌍수 수액포",
+    "role": "쌍포 레이저 교대",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep aubergine and pale bone shells, small muted jade leaf accents and red apertures, NOT olive-green camouflage. Subject: ELITE wide bark armored artillery turret with two huge parallel hollow ivory cannons and a triple ridge. Elite: heavier multi-barrel silhouette occupying 28x28 pixels, same canvas.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-929442f1-1abd-48c4-ba46-ea705edcbf28.png"
+  },
+  {
+    "theme": "Grass",
+    "themeKo": "풀",
+    "id": "E02",
+    "name": "포자 벌집포",
+    "role": "다방향 씨앗 장막",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep aubergine and pale bone shells, small muted jade leaf accents and red apertures, NOT olive-green camouflage. Subject: ELITE hexagonal burgundy seed hive chassis with six dark hollow launch tubes and bone outer rim. Elite: heavier multi-barrel silhouette occupying 28x28 pixels, same canvas.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-fb20d703-ffff-4a1c-83ff-9dda6970da11.png"
+  },
+  {
+    "theme": "Lava",
+    "themeKo": "용암",
+    "id": "N01",
+    "name": "불씨 기관포",
+    "role": "빠른 단발 조준탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: cool charcoal-blue basalt armor, ash ivory plates, tiny saturated orange hot vents, NOT ground brown. Subject: compact square cooled basalt turret, one short hollow orange barrel and a rear ammo drum. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-1be68a39-fa2c-4038-a3a8-d739a95a579a.png"
+  },
+  {
+    "theme": "Lava",
+    "themeKo": "용암",
+    "id": "N02",
+    "name": "쌍열 화산포",
+    "role": "엇갈린 2연사",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: cool charcoal-blue basalt armor, ash ivory plates, tiny saturated orange hot vents, NOT ground brown. Subject: wide squat dark basalt chassis with two conspicuous short hollow orange gun barrels. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-43abe78d-1400-47a0-8586-7355c08418d9.png"
+  },
+  {
+    "theme": "Lava",
+    "themeKo": "용암",
+    "id": "N03",
+    "name": "용재 박격포",
+    "role": "분열 용암 폭탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: cool charcoal-blue basalt armor, ash ivory plates, tiny saturated orange hot vents, NOT ground brown. Subject: round ash-white iron cauldron artillery with a huge open dark bore and lava rim. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-5d051494-80a2-4e19-b08e-bbe270da7135.png"
+  },
+  {
+    "theme": "Lava",
+    "themeKo": "용암",
+    "id": "N04",
+    "name": "화염 분사포",
+    "role": "넓은 부채꼴 불씨",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: cool charcoal-blue basalt armor, ash ivory plates, tiny saturated orange hot vents, NOT ground brown. Subject: fan shaped charcoal armored bunker with broad flattened hollow orange nozzle. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-b55e45e8-8656-4371-868c-4134b4e88fc1.png"
+  },
+  {
+    "theme": "Lava",
+    "themeKo": "용암",
+    "id": "N05",
+    "name": "흑요석 저격포",
+    "role": "고체력 관통탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: cool charcoal-blue basalt armor, ash ivory plates, tiny saturated orange hot vents, NOT ground brown. Subject: narrow diamond obsidian chassis with long ash-white cannon barrel and bright orange bore. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-576e7aa8-e842-4b94-8ba2-84e9e62d280d.png"
+  },
+  {
+    "theme": "Lava",
+    "themeKo": "용암",
+    "id": "E01",
+    "name": "용광로 레이저포",
+    "role": "양측 충전 레이저",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: cool charcoal-blue basalt armor, ash ivory plates, tiny saturated orange hot vents, NOT ground brown. Subject: ELITE heavy hexagonal charcoal furnace turret with two oversized orange lens cannons, ash-white shoulder armor. Elite: heavier multi-barrel silhouette occupying 28x28 pixels, same canvas.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-13211a85-d0fe-41f0-a664-0b3d6f5bd61a.png"
+  },
+  {
+    "theme": "Lava",
+    "themeKo": "용암",
+    "id": "E02",
+    "name": "삼연장 분화포",
+    "role": "도탄탄·분열탄 연계",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: cool charcoal-blue basalt armor, ash ivory plates, tiny saturated orange hot vents, NOT ground brown. Subject: ELITE broad triangular basalt artillery chassis with three huge hollow mortar tubes, cool blue grey armored rim. Elite: heavier multi-barrel silhouette occupying 28x28 pixels, same canvas.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-ee08439e-4512-479a-8f21-6b9585ecec15.png"
+  },
+  {
+    "theme": "Ice",
+    "themeKo": "얼음",
+    "id": "N01",
+    "name": "빙침 연사포",
+    "role": "얼음침 3연사",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep navy and muted violet armor, ivory crystal facets, small cyan emitters, NOT pale-blue camouflage. Subject: oval navy crystal turret with a short white hollow ice gun barrel pointing down. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-3e5fe0c5-645e-4bf3-bc91-75fe7e847e2e.png"
+  },
+  {
+    "theme": "Ice",
+    "themeKo": "얼음",
+    "id": "N02",
+    "name": "서리 산탄포",
+    "role": "넓게 퍼지는 서리탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep navy and muted violet armor, ivory crystal facets, small cyan emitters, NOT pale-blue camouflage. Subject: wide violet frost bunker with three separated cyan hollow muzzle ports. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-b6e15924-a7f6-4cb5-88af-5e22533962ff.png"
+  },
+  {
+    "theme": "Ice",
+    "themeKo": "얼음",
+    "id": "N03",
+    "name": "빙정 박격포",
+    "role": "느린 고체력 결정탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep navy and muted violet armor, ivory crystal facets, small cyan emitters, NOT pale-blue camouflage. Subject: round navy crystal bowl mortar with a large hollow central barrel and two white ice fins. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-49b491fc-5c4c-4b3f-9bfc-7b42f0215084.png"
+  },
+  {
+    "theme": "Ice",
+    "themeKo": "얼음",
+    "id": "N04",
+    "name": "프리즘 저격포",
+    "role": "조준 후 고속 결정탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep navy and muted violet armor, ivory crystal facets, small cyan emitters, NOT pale-blue camouflage. Subject: slender dark violet diamond chassis with one long hollow pale crystal rail barrel. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-aeccc32d-b636-4392-9394-a9cf3ee194f1.png"
+  },
+  {
+    "theme": "Ice",
+    "themeKo": "얼음",
+    "id": "N05",
+    "name": "빙환 발사포",
+    "role": "작은 고리 부메랑",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep navy and muted violet armor, ivory crystal facets, small cyan emitters, NOT pale-blue camouflage. Subject: compact navy disk launcher with a vertical oval hollow ring muzzle in its front, two white armor blocks. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-6799dff2-8e94-49ad-b0d2-3af0680506b4.png"
+  },
+  {
+    "theme": "Ice",
+    "themeKo": "얼음",
+    "id": "E01",
+    "name": "쌍광 프리즘포",
+    "role": "엇갈린 쌍레이저",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep navy and muted violet armor, ivory crystal facets, small cyan emitters, NOT pale-blue camouflage. Subject: ELITE broad navy crystal engine with two huge hollow white prism cannon barrels and angular violet shoulders. Elite: heavier multi-barrel silhouette occupying 28x28 pixels, same canvas.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-fcecdc3d-b638-4faa-b45e-d1c2d92310b6.png"
+  },
+  {
+    "theme": "Ice",
+    "themeKo": "얼음",
+    "id": "E02",
+    "name": "육각 빙벽포",
+    "role": "두꺼운 도탄 탄벽",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep navy and muted violet armor, ivory crystal facets, small cyan emitters, NOT pale-blue camouflage. Subject: ELITE massive hexagonal violet bunker with six ivory launcher ports around a cyan core. Elite: heavier multi-barrel silhouette occupying 28x28 pixels, same canvas.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-d8a028e7-013e-4a9b-b09b-4103ab0746d5.png"
+  },
+  {
+    "theme": "WaterElectric",
+    "themeKo": "물·전기",
+    "id": "N01",
+    "name": "수압 단포",
+    "role": "도탄하는 수압 구슬",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep indigo shells, muted coral-red armor bands, warm brass electrodes, small teal accents, NOT cyan camouflage. Subject: round indigo pressure vessel with one short hollow brass nozzle and coral side plates. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-7d448458-9338-427b-a30b-77d175753558.png"
+  },
+  {
+    "theme": "WaterElectric",
+    "themeKo": "물·전기",
+    "id": "N02",
+    "name": "전격 쌍포",
+    "role": "교대 전기탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep indigo shells, muted coral-red armor bands, warm brass electrodes, small teal accents, NOT cyan camouflage. Subject: wide indigo capacitor turret with two separate brass hollow electrode cannons. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-81873928-2cc4-4387-a45c-ab3002bee64d.png"
+  },
+  {
+    "theme": "WaterElectric",
+    "themeKo": "물·전기",
+    "id": "N03",
+    "name": "기뢰 사출포",
+    "role": "지연 분열 기뢰",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep indigo shells, muted coral-red armor bands, warm brass electrodes, small teal accents, NOT cyan camouflage. Subject: triangular coral armored pressure launcher with a huge round dark launch hatch and indigo base. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-29c9616c-390c-40da-a5f8-e10fa51d92a8.png"
+  },
+  {
+    "theme": "WaterElectric",
+    "themeKo": "물·전기",
+    "id": "N04",
+    "name": "뇌전 저격포",
+    "role": "가느다란 충전 전격",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep indigo shells, muted coral-red armor bands, warm brass electrodes, small teal accents, NOT cyan camouflage. Subject: narrow indigo rectangular chassis with a long brass railgun barrel, coral rear battery. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-08812a71-ff13-4211-9f11-feb016f0ba1e.png"
+  },
+  {
+    "theme": "WaterElectric",
+    "themeKo": "물·전기",
+    "id": "N05",
+    "name": "해류 곡사포",
+    "role": "굽어지는 파동탄",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep indigo shells, muted coral-red armor bands, warm brass electrodes, small teal accents, NOT cyan camouflage. Subject: spiral indigo nautilus artillery shell with a large hollow coral trumpet nozzle. Normal enemy: one instantly readable weapon silhouette.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-57ae533b-0dff-4201-b50c-e05c87591bba.png"
+  },
+  {
+    "theme": "WaterElectric",
+    "themeKo": "물·전기",
+    "id": "E01",
+    "name": "폭풍 삼각포",
+    "role": "삼방향 레이저",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep indigo shells, muted coral-red armor bands, warm brass electrodes, small teal accents, NOT cyan camouflage. Subject: ELITE broad triangular indigo turret with three oversized brass emitter lenses and coral shield corners. Elite: heavier multi-barrel silhouette occupying 28x28 pixels, same canvas.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-76a8b131-44cc-4e3a-bd00-966f4996a17b.png"
+  },
+  {
+    "theme": "WaterElectric",
+    "themeKo": "물·전기",
+    "id": "E02",
+    "name": "심해 축전포",
+    "role": "기뢰 연결 전기장",
+    "prompt": "Use case: stylized-concept. ONE standalone enemy ranged artillery sprite for a top-down pixel bullet-hell game. Genuine transparent background. Designed as an actual simple 32x32 pixel sprite enlarged with nearest-neighbor: 26x26 occupied pixels centered, 3 pixel margins, chunky square pixels, dark one-pixel outline, only 10-12 flat colors, matte 3-step faceted shading, no fine detail, no gradients, no bloom. High top-down camera looking at upper surfaces, weapon front points DOWN. Non-humanoid compact stationary cliff-top SHOOTER. Clearly visible dark hollow muzzle holes and short barrels are ESSENTIAL; ranged weapon must be unmistakable at 32px. No blades, claws, swords, scythes, arms, melee weapons, text, ground, shadow, bullets, effects, UI, grid or background. This sprite belongs on a matte rocky pixel map but must contrast with it, never camouflage. Palette: deep indigo shells, muted coral-red armor bands, warm brass electrodes, small teal accents, NOT cyan camouflage. Subject: ELITE heavy square indigo pressure fortress with two thick brass capacitor drums and two hollow coral launch barrels. Elite: heavier multi-barrel silhouette occupying 28x28 pixels, same canvas.",
+    "source": "C:\\Users\\doun0\\.codex\\generated_images\\01a05265-5108-7070-a900-ea05a455f6cb\\exec-6779c35c-d285-430b-b393-5b488d55ee68.png"
+  }
+]

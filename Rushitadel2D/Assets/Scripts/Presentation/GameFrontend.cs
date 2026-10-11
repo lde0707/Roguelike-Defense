@@ -105,7 +105,11 @@ namespace Rushitadel.Presentation
                 scale.referenceResolution = new Vector2(1920, 1080);
                 scale.screenMatchMode = CanvasScaler.ScreenMatchMode.Expand;
             }
-            foreach (Transform child in canvas.transform) { child.gameObject.SetActive(false); Destroy(child.gameObject); }
+            foreach (Transform child in canvas.transform.Cast<Transform>().ToArray())
+            {
+                child.gameObject.SetActive(false);
+                if(Application.isPlaying)Destroy(child.gameObject);else DestroyImmediate(child.gameObject);
+            }
             modal = null;
             content = Rect(canvas.transform, "Page " + name, 0, 0, 1920, 1080);
             CenterPage(content);
@@ -118,7 +122,7 @@ namespace Rushitadel.Presentation
                 art.raycastTarget = false;
                 art.material = titleBackgroundMaterial;
             }
-            if (EventSystem.current == null)
+            if (Application.isPlaying && EventSystem.current == null)
                 new GameObject("UI Event System", typeof(EventSystem), typeof(InputSystemUIInputModule));
         }
         private static void CenterPage(RectTransform rect)

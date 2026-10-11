@@ -18,20 +18,39 @@ namespace Rushitadel.Spawning
         [SerializeField] private Vector2 spawnYRange = new(1.5f, 5.5f);
         public void Configure(GameObject prefab) => enemyPrefab = prefab;
         public bool CampaignControlled { get; private set; }
+        private int rosterIndex;
         public void TakeCampaignControl() { CampaignControlled = true; StopAllCoroutines(); }
         public EnemyController SpawnCampaignEnemy(int stage, bool boss = false)
         {
             if (enemyPrefab == null) return null;
             float cameraY = Camera.main.transform.position.y;
-            var pos = boss ? new Vector3(0, cameraY + 2.5f, 0) :
-                new Vector3(Random.value < .5f ? leftSpawnX : rightSpawnX, cameraY + Random.Range(1.5f, 4f), 0);
+            int variant=rosterIndex%7;
+            if(!boss && variant>=5 && FindObjectsByType<EnemyArchetype>(FindObjectsSortMode.None).Count(e=>e.Elite)>=2)return null;
+            var pos=new Vector3(0,cameraY+2.5f,0);
+            if(!boss)
+            {
+                // Near-cliff suppression, rear artillery/snipers, and staggered elite crossfire.
+                float preferredY=variant==2||variant==3?3.7f:variant>=5?3f:1.6f;
+                bool placed=false;
+                for(int attempt=0;attempt<10;attempt++)
+                {
+                    bool left=(rosterIndex+attempt)%2==0;
+                    float edge=PlayfieldBoundary.Instance!=null?(left?PlayfieldBoundary.Instance.LeftEdge:PlayfieldBoundary.Instance.RightEdge):(left?-5.6f:5.6f);
+                    float offset=variant==2||variant==3?2.4f:1.9f;
+                    pos=new Vector3(edge+(left?-offset:offset),cameraY+preferredY-(attempt/2)*1.4f,0);
+                    if(EnemyRegistry.ActiveEnemies.Any(e=>e!=null&&Vector2.Distance(e.transform.position,pos)<1.25f))continue;
+                    placed=true;break;
+                }
+                if(!placed)return null;
+                rosterIndex++;
+            }
             var go = Instantiate(enemyPrefab, pos, Quaternion.identity); go.SetActive(true);
             var enemy = go.GetComponent<EnemyController>();
-            enemy.ConfigureRun(boss ? 450 + stage * 200 : 60 + stage * 20, boss ? 100 : 20, true);
+            enemy.ConfigureRun(boss ? 1100 + stage * 400 : 180 + (stage-1) * 60, boss ? 100 : 20, true);
             if (!boss)
             {
-                var sentry = go.GetComponent<SpriteRenderer>(); sentry.sprite = Rushitadel.Progression.PixelRunArt.Sentry; sentry.color = Color.white;
-                go.transform.localScale = Vector3.one * .65f;
+                var theme=Rushitadel.World.ForwardPressureController.Instance!=null?Rushitadel.World.ForwardPressureController.Instance.Theme:Rushitadel.World.PressureTheme.Grass;
+                go.AddComponent<EnemyArchetype>().Configure(variant,stage,theme);
             }
             if (boss)
             {
@@ -62,10 +81,7 @@ namespace Rushitadel.Spawning
             int available = Mathf.Max(0, maximumEnemies - EnemyRegistry.ActiveEnemies.Count());
             for (int i = 0; i < Mathf.Min(enemiesPerBatch, available); i++)
             {
-                float x = Random.value < 0.5f ? leftSpawnX : rightSpawnX;
-                float cameraY = Camera.main != null ? Camera.main.transform.position.y : 0f;
-                GameObject enemy = Instantiate(enemyPrefab, new Vector3(x, cameraY + Random.Range(spawnYRange.x, spawnYRange.y), 0f), Quaternion.identity);
-                enemy.SetActive(true);
+                SpawnCampaignEnemy(1);
             }
         }
     }

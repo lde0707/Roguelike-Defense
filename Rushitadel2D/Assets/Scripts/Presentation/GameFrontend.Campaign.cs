@@ -60,7 +60,7 @@ namespace Rushitadel.Presentation
             for (int i = 0; i < 5; i++) turretText[i].text = $"T{i+1} {Rushitadel.Combat.TurretForms.Names[d.State.turretForms[i]]}\n화력 {d.State.augments[i*3]} · 속도 {d.State.augments[i*3+1]}";
             bool alive = d.Boss != null && d.Boss.Health.IsAlive && d.State.phase == RunPhase.Boss;
             bossFill.gameObject.SetActive(alive);
-            bossText.text = alive ? $"절벽 감시자 {d.Stage}  {d.Boss.Health.CurrentHealth:0}/{d.Boss.Health.MaximumHealth:0}  {d.Boss.PatternLabel}" : "다음 위협: 절벽 좌·우 사격";
+            bossText.text = alive ? $"{d.Boss.DisplayName} · {d.Boss.Phase+1}단계  {d.Boss.Health.CurrentHealth:0}/{d.Boss.Health.MaximumHealth:0}  {d.Boss.PatternLabel}" : "다음 위협: 절벽 좌·우 사격";
             if (alive) bossFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(700*d.Boss.Health.CurrentHealth/d.Boss.Health.MaximumHealth),8);
             if (ForwardPressureController.Instance.InDanger) progressText.text += "   ! 후방 위험 · 전진 !";
         }
@@ -97,6 +97,7 @@ namespace Rushitadel.Presentation
         public void ShowMaintenance()
         {
             var d = CampaignDirector.Instance;
+            if(d.State.recovered && !showLegacyWeb) { ShowWebTree(d); back=ShowPause; return; }
             var p = SafePanel($"안전 정비 · STAGE {d.Stage} / ROUND {d.Round} 완료");
             if (!d.State.recovered)
             {
@@ -106,11 +107,12 @@ namespace Rushitadel.Presentation
                 Button(p, "동력 회복\n\n동력 +50", 640, 245, 490, 240, () => { d.Recover(1); ShowMaintenance(); }, power.CurrentPower < power.MaximumPower);
                 Button(p, "건너뛰고 Web", 735, 700, 390, 75, () => { d.Recover(2); ShowMaintenance(); });
             }
-            else DrawWeb(p, d);
+            else DrawLegacyWeb(p, d);
             back = ShowPause;
         }
-        private void DrawWeb(RectTransform p, CampaignDirector d)
+        private void DrawLegacyWeb(RectTransform p, CampaignDirector d)
         {
+            Button(p,"아이콘 Web 보기",820,120,330,60,()=>{showLegacyWeb=false;ShowMaintenance();});
             Label(p, $"XP WEB   보유 XP {d.Wallet}   · 연결 노드만 구매 가능", 50, 100, 1100, 65, 27);
             // Deliberately rectilinear pixel wiring, not smooth Bezier lines.
             Image(p, "Upper connection", 200, 315, 550, 6, ink).raycastTarget = false;
@@ -134,7 +136,7 @@ namespace Rushitadel.Presentation
             }
             string next = d.Round < 3 ? $"다음: ROUND {d.Round+1}" : d.Stage < 3 ? "다음: 스테이지 테마 선택" : "3스테이지 클리어";
             Label(p, next, 50, 750, 600, 60, 26);
-            Button(p, d.Stage == 3 && d.Round == 3 ? "런 완료" : "출발", 830, 735, 300, 75, d.Depart);
+            Button(p, d.Stage == 3 && d.Round == 3 ? "런 완료" : "출발", 830, 735, 300, 75, () => {showLegacyWeb=false;d.Depart();});
             if (!string.IsNullOrEmpty(d.SaveError))
                 Button(p, "저장 실패 · 재시도", 55, 690, 710, 50, () => { d.SaveCheckpoint("정비 재시도"); ShowMaintenance(); });
         }
@@ -145,7 +147,7 @@ namespace Rushitadel.Presentation
             for (int i = 0; i < 2; i++)
             {
                 int theme = d.State.themeChoices[i];
-                Button(p, (nextThemeSelection == theme ? "▶ " : "") + Themes[theme], 70+i*560, 255, 490, 230,
+                ThemeCard(p, theme, nextThemeSelection == theme, 70+i*560, 255, 490, 230,
                     () => { nextThemeSelection = theme; ShowNextTheme(); });
             }
             Button(p, "테마 확정 · 출발", 650, 710, 460, 75, () => { d.SelectTheme(nextThemeSelection); nextThemeSelection = -1; }, d.State.themeChoices.Contains(nextThemeSelection));

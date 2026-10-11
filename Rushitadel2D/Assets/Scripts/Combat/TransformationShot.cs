@@ -20,7 +20,12 @@ namespace Rushitadel.Combat
         private bool hasGateOrigin;
         private EnemyProjectileController attached;
         private Color tint;
-        private CircleCollider2D hitbox;
+        private Collider2D hitbox;
+        public override void FitVisualCollision(Vector2 size)
+        {
+            if(Stationary)return; // Area attacks use TickArea and gate checks instead of moving hitboxes.
+            base.FitVisualCollision(size);hitbox=visualHitbox;
+        }
         public int Form => form;
         public bool CanHit(EnemyProjectileController b)=>!finished && !Stationary && !wasAttached && (form!=9||hitCount<3) && b!=null && b.IsAlive && !hitIds.Contains(b) && (pelletHits==null || !pelletHits.TryGetValue(b,out int n) || n<(form==2?2:1));
         private bool Stationary=>form==6||form==8||form==10||form==11||form==13||form==14||form==15;
@@ -51,10 +56,10 @@ namespace Rushitadel.Combat
                 var old=live.Where(x=>x!=null&&!x.finished&&x.form==f&&x.slot==slot).ToArray();
                 for(int i=0;i<=old.Length-cap;i++)old[i].Finish();
             }
-            else {shot.hitbox=go.AddComponent<CircleCollider2D>();shot.hitbox.isTrigger=true;shot.hitbox.radius=.5f;}
-            shot.Decorate();live.Add(shot);return shot;
+            else {var circle=go.AddComponent<CircleCollider2D>();circle.isTrigger=true;circle.radius=.5f;shot.hitbox=circle;}
+            Rushitadel.Presentation.ProjectileArt.Transformation(go,f,c);
+            live.Add(shot);return shot;
         }
-        private void Decorate() => Rushitadel.Presentation.ProjectileArt.Transformation(gameObject,form,tint);
         public static Sprite Glyph
         {
             get{if(pixel!=null)return pixel;var t=new Texture2D(5,5,TextureFormat.RGBA32,false){filterMode=FilterMode.Point};var p=new Color[25];for(int y=0;y<5;y++)for(int x=0;x<5;x++)p[y*5+x]=(x==0||x==4)&&(y==0||y==4)?Color.clear:Color.white;t.SetPixels(p);t.Apply();return pixel=Sprite.Create(t,new Rect(0,0,5,5),new Vector2(.5f,.5f),5);}
@@ -81,7 +86,7 @@ namespace Rushitadel.Combat
             float previousTravel=travel;
             TryGates(start,start+dir*distance);
             Physics2D.SyncTransforms();
-            foreach(var h in Physics2D.CircleCastAll(start,form==4?.2f:.075f,dir,distance).OrderBy(h=>h.distance))
+            foreach(var h in Physics2D.CapsuleCastAll(start,CastSize(form==4?.2f:.075f),CastDirection,transform.eulerAngles.z,dir,distance).OrderBy(h=>h.distance))
             {
                 var b=h.collider.GetComponentInParent<EnemyProjectileController>();
                 if(b!=null && CanHit(b) && InRange(b.transform.position)){transform.position=start+dir*h.distance;travel=previousTravel+h.distance;Hit(b);if(finished||attached!=null)return;}
@@ -124,6 +129,7 @@ namespace Rushitadel.Combat
             if(Time.time<nextTick)return;nextTick=Time.time+(form==10?.2f:.1f);
             int max=form==6?6:form==11?5:form==13?4:form==10?3:99;
             float radius=form==6?1.8f:form==11?2:form==10?.3f:form==13?.55f:.4f;
+            if(form==10)radius=GetComponent<Rushitadel.Presentation.ProjectileVisual>().DisplaySize.x*.5f;
             int count=0;
             foreach(var b in Nearby(transform.position,radius))
             {

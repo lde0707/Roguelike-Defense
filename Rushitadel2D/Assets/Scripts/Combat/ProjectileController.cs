@@ -68,7 +68,7 @@ namespace Rushitadel.Combat
             // Enemy movement is transform-driven. Synchronize before the swept collision query.
             Physics2D.SyncTransforms();
             hits.Clear();
-            Physics2D.CircleCast(start, collisionRadius, direction,
+            Physics2D.CapsuleCast(start, CastSize(collisionRadius), CastDirection, transform.eulerAngles.z, direction,
                 new ContactFilter2D { useTriggers = true }, hits, step);
             IDamageable first = null;
             float closestDistance = float.PositiveInfinity;
@@ -119,6 +119,7 @@ namespace Rushitadel.Combat
         {
             flying = false;
             if (hitbox != null) hitbox.enabled = false;
+            if (visualHitbox != null) visualHitbox.enabled = false;
             Destroy(gameObject);
         }
     }

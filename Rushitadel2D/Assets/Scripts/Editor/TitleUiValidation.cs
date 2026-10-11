@@ -13,6 +13,12 @@ namespace Rushitadel.Editor
             SessionState.SetBool("Rushitadel.UiValidation", true);
             EditorApplication.isPlaying = true;
         }
+        public static void RunExisting()
+        {
+            EditorSceneManager.OpenScene("Assets/Scenes/Title.unity");
+            SessionState.SetBool("Rushitadel.UiValidation",true);
+            EditorApplication.isPlaying=true;
+        }
         [InitializeOnLoadMethod]
         private static void Hook()
         {
