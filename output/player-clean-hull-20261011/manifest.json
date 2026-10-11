@@ -1,0 +1,9 @@
+[
+  {
+    "key": "PlayerForms/Hull",
+    "paletteKey": "CleanHull",
+    "source": "output/player-clean-hull-20261011/source.png",
+    "width": 48,
+    "height": 48
+  }
+]

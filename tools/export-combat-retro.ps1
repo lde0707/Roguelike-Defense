@@ -110,7 +110,11 @@ foreach($item in $items){
  $g.DrawImage($src,[System.Drawing.Rectangle]::new([int](($item.width-$w)/2),[int](($item.height-$h)/2),$w,$h),$l,$top,($r-$l+1),($bottom-$top+1),[System.Drawing.GraphicsUnit]::Pixel)
  $g.Dispose()
  }
- if($FourColors){[RetroBounds]::LimitPalette($bmp,$PixelScale,[string]$item.key)}
+ if($FourColors){
+  $paletteKey=[string]$item.key
+  if($item.paletteKey){$paletteKey=[string]$item.paletteKey}
+  [RetroBounds]::LimitPalette($bmp,$PixelScale,$paletteKey)
+ }
  $bmp.Save($dest,[System.Drawing.Imaging.ImageFormat]::Png)
  if($PixelScale -gt 1){
   $logicalPath=Join-Path $out ('logical/'+$item.key+'.png')
