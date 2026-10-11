@@ -24,6 +24,9 @@ namespace Rushitadel.Presentation
         public int VisibleTurrets => turrets.Count;
         public PlayerFlightEffects Flight => flight;
         public SpriteRenderer HullRenderer => hull;
+        public const float HullScale = 1.46f;
+        // Mount-ring centre on the 20px turret canvas: logical texel (9,15) from the top-left.
+        private static readonly Vector2 MountPivot = new(9.5f / 20f, 4.5f / 20f);
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void Reset() => sprites.Clear();
@@ -34,25 +37,23 @@ namespace Rushitadel.Presentation
             if (sprites.TryGetValue(key, out var cached) && cached != null) return cached;
             var texture = Resources.Load<Texture2D>("PlayerForms/" + name);
             if (texture == null) return null;
-            Rect rect = new(0, 0, texture.width, texture.height);
+            Sprite result;
             if (mount)
             {
-                var pixels = texture.GetPixels32();
-                int minX=texture.width, minY=texture.height, maxX=-1, maxY=-1;
-                for(int y=0;y<texture.height;y++)
-                    for(int x=0;x<texture.width;x++)
-                        if(pixels[y*texture.width+x].a>128)
-                        {
-                            minX=Mathf.Min(minX,x); minY=Mathf.Min(minY,y);
-                            maxX=Mathf.Max(maxX,x); maxY=Mathf.Max(maxY,y);
-                        }
-                if(maxX<minX) return null;
-                rect = new Rect(minX,minY,maxX-minX+1,maxY-minY+1);
+                // Every turret canvas seats its mount ring on the same texel, so all forms
+                // sit on the hull socket regardless of muzzle length. Pixels per unit follow
+                // the hull so turret and hull pixels render at an identical size.
+                var hullTexture = Resources.Load<Texture2D>("PlayerForms/Hull");
+                float unitsPerHullTexel = HullScale / (hullTexture != null ? hullTexture.height : 80f);
+                result = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), MountPivot,
+                    1f / unitsPerHullTexel, 0, SpriteMeshType.FullRect);
             }
-            // A fixed full hull canvas preserves the reactor pivot. Mounts normalize
-            // by height so the top of every muzzle ends at its physical shot socket.
-            var result = Sprite.Create(texture,rect,new Vector2(.5f,mount?.2f:.5f),
-                mount?rect.height:texture.height,0,SpriteMeshType.FullRect);
+            else
+            {
+                // A fixed full hull canvas preserves the reactor pivot.
+                result = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(.5f, .5f),
+                    texture.height, 0, SpriteMeshType.FullRect);
+            }
             sprites[key]=result;
             return result;
         }
@@ -102,7 +103,7 @@ namespace Rushitadel.Presentation
         {
             var go=new GameObject(name);
             go.transform.SetParent(rig.RotatingBody,false);
-            go.transform.localScale=Vector3.one*1.46f;
+            go.transform.localScale=Vector3.one*HullScale;
             var renderer=go.AddComponent<SpriteRenderer>();
             renderer.sprite=sprite; renderer.sortingOrder=order; renderer.sharedMaterial=material;
             return renderer;
@@ -114,7 +115,7 @@ namespace Rushitadel.Presentation
             if(hull==null || flight==null) return;
             var localOffset=rig.RotatingBody.InverseTransformVector(flight.VisualOffsetWorld);
             hull.transform.localPosition=localOffset;
-            hull.transform.localScale=Vector3.one*(1.46f*flight.HoverScale);
+            hull.transform.localScale=Vector3.one*(HullScale*flight.HoverScale);
             hullProperties.SetFloat("_Pulse",flight.CorePulse);
             hullProperties.SetFloat("_Flash",flight.ShotFlash);
             hull.SetPropertyBlock(hullProperties);
@@ -150,7 +151,7 @@ namespace Rushitadel.Presentation
             owner=playerArt; tower=GetComponent<TowerController>();
             var go=new GameObject("Transformation Sprite");
             go.transform.SetParent(transform,false);
-            go.transform.localScale=Vector3.one*.475f;
+            go.transform.localScale=Vector3.one;
             art=go.AddComponent<SpriteRenderer>();
             art.sortingOrder=104; art.sharedMaterial=material;
             tower.Fired+=OnFire; initialized=true; Refresh();
