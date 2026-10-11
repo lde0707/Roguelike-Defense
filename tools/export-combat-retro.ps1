@@ -1,9 +1,39 @@
-param([string]$Manifest='enemies.json', [string]$OutputDirectory='output/imagegen/combat-retro-20261007', [ValidateSet(1,2)][int]$PixelScale=1, [switch]$RefinedGrid)
+param([string]$Manifest='enemies.json', [string]$OutputDirectory='output/imagegen/combat-retro-20261007', [ValidateSet(1,2)][int]$PixelScale=1, [switch]$RefinedGrid, [switch]$FourColors)
 $ErrorActionPreference='Stop'
 Add-Type -AssemblyName System.Drawing
 Add-Type -ReferencedAssemblies System.Drawing.Common,System.Drawing.Primitives -TypeDefinition @'
 using System.Drawing;
 public static class RetroBounds {
+ public static void LimitPalette(Bitmap image,int scale,string key) {
+  string[] hex={"18222F","526579","AAB9B6","987AC8"};
+  if(key.Contains("Grass"))hex=new[]{"291C2C","864052","D1BE87","E97D72"};
+  else if(key.Contains("Lava"))hex=new[]{"241F2C","73423C","EE743C","FFE0A0"};
+  else if(key.Contains("Ice")||key.Contains("Butterfly"))hex=new[]{"20283D","526888","ACE0E8","A18BCE"};
+  else if(key.Contains("WaterElectric"))hex=new[]{"172A35","387A87","E9AF55","E8E5BD"};
+  var palette=new Color[4];for(int k=0;k<4;k++)palette[k]=Color.FromArgb(255,Color.FromArgb(System.Convert.ToInt32(hex[k],16)));
+  int w=image.Width/scale,h=image.Height/scale;var source=new Color[w,h];
+  for(int y=0;y<h;y++)for(int x=0;x<w;x++)source[x,y]=image.GetPixel(x*scale,y*scale);
+  for(int y=0;y<h;y++)for(int x=0;x<w;x++) {
+   Color c=source[x,y];if(c.A==0)continue;
+   // One logical pixel of unbroken, fully opaque contour; never fuzzy alpha edges.
+   bool edge=x==0||y==0||x==w-1||y==h-1||source[x-1,y].A==0||source[x+1,y].A==0||source[x,y-1].A==0||source[x,y+1].A==0;
+   int best=0;double distance=double.MaxValue;
+   if(!edge)for(int k=0;k<4;k++) {
+    var p=palette[k];double dr=c.R-p.R,dg=c.G-p.G,db=c.B-p.B;double d=dr*dr+dg*dg+db*db;
+    if(d<distance){distance=d;best=k;}
+   }
+   if(!edge && key.Contains("PlayerForms")){
+    double light=c.R*.2126+c.G*.7152+c.B*.0722;
+    best=(c.B-c.G>16 && c.R-c.G>4)?3:light>108?2:light<43?0:1;
+   }
+   for(int dy=0;dy<scale;dy++)for(int dx=0;dx<scale;dx++)image.SetPixel(x*scale+dx,y*scale+dy,palette[best]);
+  }
+  for(int y=0;y<image.Height;y++)for(int x=0;x<image.Width;x++){
+   var c=image.GetPixel(x,y);if(c.A==0)continue;
+   bool valid=false;foreach(var p in palette)if(c.ToArgb()==p.ToArgb())valid=true;
+   if(!valid)throw new System.Exception("Palette overflow or partial alpha: "+key);
+  }
+ }
  // Area reduction first, then exact integer replication. Sampling just one source
  // pixel during a large reduction aliases fine highlights into random speckles.
  public static Bitmap Pixelize(Bitmap src, Rectangle bounds, int width, int height, int pad, int scale, bool beam) {
@@ -80,6 +110,7 @@ foreach($item in $items){
  $g.DrawImage($src,[System.Drawing.Rectangle]::new([int](($item.width-$w)/2),[int](($item.height-$h)/2),$w,$h),$l,$top,($r-$l+1),($bottom-$top+1),[System.Drawing.GraphicsUnit]::Pixel)
  $g.Dispose()
  }
+ if($FourColors){[RetroBounds]::LimitPalette($bmp,$PixelScale,[string]$item.key)}
  $bmp.Save($dest,[System.Drawing.Imaging.ImageFormat]::Png)
  if($PixelScale -gt 1){
   $logicalPath=Join-Path $out ('logical/'+$item.key+'.png')
