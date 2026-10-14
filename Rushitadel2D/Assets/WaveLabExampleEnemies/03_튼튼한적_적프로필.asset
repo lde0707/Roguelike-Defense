@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e561ce4fdba74e41a82324dc4c66a90, type: 3}
+  m_Name: "03_\uD2BC\uD2BC\uD55C\uC801_\uC801\uD504\uB85C\uD544"
+  m_EditorClassIdentifier: WaveLab.Waves::WaveLab.Waves.EnemyProfile
+  id: 
+  prefab: {fileID: 3011590219486010506, guid: 73744d023bf0ef749b5402cb7768fd91, type: 3}
+  defeatRewards:
+  - resourceId: xp
+    amount: 40
+  - resourceId: gold
+    amount: 12
+  statBindings:
+  - statId: health.max
+    unit: HP
+    source: {fileID: 3868920096085111144, guid: 73744d023bf0ef749b5402cb7768fd91, type: 3}
+    propertyPath: maxHealth
+    snapshot: 160
+    sampledUtc: 2026-10-14T13:00:47.9197212Z
+  - statId: attack.damage
+    unit: HP
+    source: {fileID: 3868920096085111144, guid: 73744d023bf0ef749b5402cb7768fd91, type: 3}
+    propertyPath: attackDamage
+    snapshot: 8
+    sampledUtc: 2026-10-14T13:00:47.9197212Z
+  - statId: attack.interval
+    unit: s
+    source: {fileID: 3868920096085111144, guid: 73744d023bf0ef749b5402cb7768fd91, type: 3}
+    propertyPath: attackInterval
+    snapshot: 3
+    sampledUtc: 2026-10-14T13:00:47.9197212Z
+  - statId: movement.speed
+    unit: unit/s
+    source: {fileID: 3868920096085111144, guid: 73744d023bf0ef749b5402cb7768fd91, type: 3}
+    propertyPath: moveSpeed
+    snapshot: 0.6
+    sampledUtc: 2026-10-14T13:00:47.9197212Z
+  - statId: attack.range
+    unit: unit
+    source: {fileID: 3868920096085111144, guid: 73744d023bf0ef749b5402cb7768fd91, type: 3}
+    propertyPath: attackRange
+    snapshot: 4
+    sampledUtc: 2026-10-14T13:00:47.9197212Z
