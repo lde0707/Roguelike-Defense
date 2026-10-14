@@ -36,6 +36,9 @@ namespace WaveLab.Waves.Editor
             go.AddComponent<CircleCollider2D>().isTrigger=true;
             go.GetComponent<Renderer>().sharedMaterial=material;
             var stats=go.AddComponent<ExampleEnemy>();stats.maxHealth=hp;stats.attackDamage=damage;stats.attackInterval=interval;stats.moveSpeed=speed;stats.attackRange=range;
+            var combat=go.AddComponent<ExampleCombat>();
+            combat.attackMode=shape==PrimitiveType.Sphere ? ExampleAttackMode.Ranged : ExampleAttackMode.Melee;
+            if(combat.attackMode==ExampleAttackMode.Melee) stats.attackRange=range=.9f;
             var prefab=PrefabUtility.SaveAsPrefabAsset(go,folder+"/"+name+".prefab");UnityEngine.Object.DestroyImmediate(go);
             var source=prefab.GetComponent<ExampleEnemy>();
             var profile=ScriptableObject.CreateInstance<EnemyProfile>();profile.prefab=prefab;
@@ -63,7 +66,7 @@ namespace WaveLab.Waves.Editor
             string[] labels={"최대 체력","공격 1회 피해","공격 간격 (초)","이동속도","사거리","자동 이동 사용","이동 방향"};
             for(int i=0;i<fields.Length;i++)EditorGUILayout.PropertyField(serializedObject.FindProperty(fields[i]),new GUIContent(labels[i]));
             serializedObject.ApplyModifiedProperties();
-            EditorGUILayout.HelpBox("밸런스 입력·스폰·피격 연결용 예제입니다. 공격 AI·투사체 발사는 포함하지 않습니다. 이동은 켜야 작동합니다. 실제 게임 공격에서는 TakeDamage를 연결하세요.",MessageType.Info);
+            EditorGUILayout.HelpBox("Example Combat 컴포넌트를 추가하면 근거리/원거리 공격과 자동 추적이 작동합니다. 공격 방식은 해당 컴포넌트에서 선택하세요. 전투 이동 사용 중에는 아래 자동 이동을 사용하지 않습니다.",MessageType.Info);
             if(Application.isPlaying)
             {
                 var e=(ExampleEnemy)target;EditorGUILayout.LabelField("현재 체력",e.CurrentHealth.ToString());

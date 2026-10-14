@@ -17,7 +17,7 @@ namespace WaveLab.Waves
         private void Awake() { CurrentHealth = maxHealth; }
         private void Update()
         {
-            if (moveOnSpawn && !defeated) transform.position += moveDirection.normalized * moveSpeed * Time.deltaTime;
+            if (moveOnSpawn && !defeated && GetComponent<ExampleCombat>() == null) transform.position += moveDirection.normalized * moveSpeed * Time.deltaTime;
         }
         public void TakeDamage(float amount)
         {

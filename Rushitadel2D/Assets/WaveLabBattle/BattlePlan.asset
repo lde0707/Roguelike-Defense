@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aada793297a77d458840735234f2571, type: 3}
+  m_Name: BattlePlan
+  m_EditorClassIdentifier: WaveLab.Waves::WaveLab.Waves.WavePlan
+  schemaVersion: 1
+  seed: 1
+  waves:
+  - id: 51bb1a59c0b844358add8898b8db0469
+    title: "\uC804\uD22C \uD14C\uC2A4\uD2B8 1"
+    end: 0
+    durationSeconds: 30
+    restSeconds: 3
+    groups:
+    - id: a644e42b0b9649419517d626f9484df0
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 2
+  - id: 92a37f34570342f4aca5565651c754c7
+    title: "\uC804\uD22C \uD14C\uC2A4\uD2B8 2"
+    end: 0
+    durationSeconds: 30
+    restSeconds: 3
+    groups:
+    - id: 73485c7d17004c95ba33e67999e93d60
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 2
+    - id: 5f1acd34c3664b7b8e882b0c7402929e
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 1.2
+      intervalSeconds: 2
+  - id: 05f26fb459254a5cba8f167fa1919b02
+    title: "\uC804\uD22C \uD14C\uC2A4\uD2B8 3"
+    end: 0
+    durationSeconds: 30
+    restSeconds: 3
+    groups:
+    - id: 99fd887038b541e1ad4ee110d4e30b77
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 2
+    - id: 59177585755e4f7db32af4e92a64b3f9
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 1.2
+      intervalSeconds: 2
+    - id: c9b4091a2d7845938f290b7642178c94
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 2.4
+      intervalSeconds: 2
