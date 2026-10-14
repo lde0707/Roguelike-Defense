@@ -12,8 +12,9 @@ namespace WaveLab.Waves.Editor
         private Vector2 leftScroll, middleScroll, rightScroll;
         private List<string> errors = new List<string>();
         private bool inspected;
-        [MenuItem("Tools/WaveLab/Wave Editor")]
-        public static void Open() { var w = GetWindow<WaveLabWindow>("WaveLab"); w.minSize = new Vector2(900, 520); }
+        [MenuItem("Tools/웨이브랩/웨이브 편집기")]
+        public static void Open() { var w = GetWindow<WaveLabWindow>("웨이브 편집기"); w.minSize = new Vector2(900, 520); }
+        public static void OpenPlan(WavePlan selected) { Open(); var w = GetWindow<WaveLabWindow>(); w.plan = selected; w.waveIndex = w.groupIndex = 0; }
         private void OnEnable() { Undo.undoRedoPerformed += Repaint; }
         private void OnDisable() { Undo.undoRedoPerformed -= Repaint; }
         private void OnInspectorUpdate() { if (EditorApplication.isPlaying) Repaint(); }
@@ -22,13 +23,13 @@ namespace WaveLab.Waves.Editor
             EditorGUILayout.BeginHorizontal(EditorStyles.toolbar);
             var next = (WavePlan)EditorGUILayout.ObjectField(plan, typeof(WavePlan), false, GUILayout.MinWidth(180));
             if (next != plan) { plan = next; waveIndex = groupIndex = 0; inspected = false; }
-            if (GUILayout.Button("새 플랜", EditorStyles.toolbarButton)) CreatePlan();
+            if (GUILayout.Button("새 웨이브 계획", EditorStyles.toolbarButton)) CreatePlan();
             if (GUILayout.Button("적 등록", EditorStyles.toolbarButton)) CreateEnemy();
             if (GUILayout.Button("검사", EditorStyles.toolbarButton)) { inspected = true; errors = WaveValidation.Errors(plan); }
             if (GUILayout.Button("저장", EditorStyles.toolbarButton)) AssetDatabase.SaveAssets();
             EditorGUILayout.EndHorizontal();
-            EditorGUILayout.HelpBox("01 적 등록 → 02 그룹·위치 키 지정 → 03 씬의 Runner 연결 → Play 모드 테스트. 0.1 기반 버전: 자동 밸런싱·성장 시뮬레이션은 아직 제공하지 않습니다.", MessageType.Info);
-            if (plan == null) { EditorGUILayout.LabelField("새 플랜을 만들거나 WavePlan 에셋을 끌어 넣으세요.", EditorStyles.boldLabel); return; }
+            EditorGUILayout.HelpBox("01 적 등록 → 02 등장 위치·수량 설정 → 03 씬의 웨이브 실행기 연결 → 플레이 테스트. 0.1 기반 버전: 자동 밸런싱·성장 시뮬레이션은 아직 제공하지 않습니다.", MessageType.Info);
+            if (plan == null) { EditorGUILayout.LabelField("새 웨이브 계획을 만들거나 웨이브 계획 파일을 끌어 넣으세요.", EditorStyles.boldLabel); return; }
             // Never change the authoring asset during a run.
             using (new EditorGUI.DisabledScope(EditorApplication.isPlaying))
             {
@@ -40,7 +41,7 @@ namespace WaveLab.Waves.Editor
             if (inspected)
             {
                 errors = WaveValidation.Errors(plan);
-                EditorGUILayout.HelpBox(errors.Count == 0 ? "플랜 기본 검사 통과. 씬 연결은 Runner에서 별도로 검사합니다." : string.Join("\n", errors.GetRange(0, Math.Min(5, errors.Count))), errors.Count == 0 ? MessageType.Info : MessageType.Error);
+                EditorGUILayout.HelpBox(errors.Count == 0 ? "플랜 기본 검사 통과. 씬 연결은 실행기에서 별도로 검사합니다." : string.Join("\n", errors.GetRange(0, Math.Min(5, errors.Count))), errors.Count == 0 ? MessageType.Info : MessageType.Error);
                 if (errors.Count > 5) EditorGUILayout.LabelField($"외 {errors.Count - 5}개 — 첫 오류부터 수정하세요.");
             }
         }
@@ -54,14 +55,14 @@ namespace WaveLab.Waves.Editor
             for (int i = 0; i < plan.waves.Count; i++)
                 if (GUILayout.Toggle(waveIndex == i, $"{i + 1:00}  {plan.waves[i].title}", "Button")) { if (waveIndex != i) groupIndex = 0; waveIndex = i; }
             EditorGUILayout.EndScrollView();
-            if (GUILayout.Button("+ 웨이브")) Change("Add wave", () => { plan.waves.Add(new WaveDefinition { title = "Wave " + (plan.waves.Count + 1) }); waveIndex = plan.waves.Count - 1; groupIndex = 0; });
+            if (GUILayout.Button("+ 웨이브")) Change("Add wave", () => { plan.waves.Add(new WaveDefinition { title = "웨이브 " + (plan.waves.Count + 1) }); waveIndex = plan.waves.Count - 1; groupIndex = 0; });
             if (plan.waves.Count > 0)
             {
                 waveIndex = Mathf.Clamp(waveIndex, 0, plan.waves.Count - 1);
                 if (GUILayout.Button("현재 웨이브 복제")) Change("Duplicate wave", () =>
                 {
                     var copy = JsonUtility.FromJson<WaveDefinition>(JsonUtility.ToJson(plan.waves[waveIndex]));
-                    copy.id = Guid.NewGuid().ToString("N"); copy.title += " Copy";
+                    copy.id = Guid.NewGuid().ToString("N"); copy.title += " 복사본";
                     foreach (var g in copy.groups) g.id = Guid.NewGuid().ToString("N");
                     plan.waves.Insert(waveIndex + 1, copy); waveIndex++; groupIndex = 0;
                 });
@@ -123,7 +124,7 @@ namespace WaveLab.Waves.Editor
                     EditorGUILayout.Space(); EditorGUILayout.LabelField("선택한 적 그룹", EditorStyles.boldLabel);
                     Field(g, "enemy", "적 프로필"); Field(g, "count", "총 마릿수"); Field(g, "spawnKey", "스폰 영역 키");
                     Field(g, "startSeconds", "첫 등장 (초)"); Field(g, "intervalSeconds", "배치 간격 (초)"); Field(g, "batchSize", "한 번에 등장할 수");
-                    EditorGUILayout.HelpBox("그룹 시간은 웨이브 시작 기준입니다. 여러 그룹은 동시에 실행됩니다. 스폰 키는 씬의 SpawnArea와 일치해야 합니다.", MessageType.None);
+                    EditorGUILayout.HelpBox("그룹 시간은 웨이브 시작 기준입니다. 여러 그룹은 동시에 실행됩니다. 스폰 키는 씬의 스폰 영역와 일치해야 합니다.", MessageType.None);
                     if (g.FindPropertyRelative("enemy").objectReferenceValue != null && GUILayout.Button("적 스탯·보상 연결 열기")) Selection.activeObject = g.FindPropertyRelative("enemy").objectReferenceValue;
                 }
                 so.ApplyModifiedProperties();
@@ -136,16 +137,16 @@ namespace WaveLab.Waves.Editor
             EditorGUILayout.BeginHorizontal("box");
             if (!EditorApplication.isPlaying)
             {
-                if (GUILayout.Button("씬에 Runner 추가"))
-                { var go = new GameObject("WaveLab Runner"); Undo.RegisterCreatedObjectUndo(go, "Create WaveLab Runner"); go.AddComponent<WaveRunner>().plan = plan; Selection.activeGameObject = go; }
+                if (GUILayout.Button("씬에 웨이브 실행기 추가"))
+                { var go = new GameObject("웨이브 실행기"); Undo.RegisterCreatedObjectUndo(go, "Create WaveLab Runner"); go.AddComponent<WaveRunner>().plan = plan; Selection.activeGameObject = go; }
                 if (GUILayout.Button("씬에 스폰 영역 추가"))
-                { var go = new GameObject("WaveLab Spawn Area"); Undo.RegisterCreatedObjectUndo(go, "Create spawn area"); go.AddComponent<SpawnArea>(); Selection.activeGameObject = go; }
-                EditorGUILayout.LabelField("Runner의 영역 배열 연결 후 Play 모드에서 테스트하세요.");
+                { var go = new GameObject("스폰 영역"); Undo.RegisterCreatedObjectUndo(go, "Create spawn area"); go.AddComponent<SpawnArea>(); Selection.activeGameObject = go; }
+                EditorGUILayout.LabelField("실행기에 스폰 영역을 연결한 뒤 플레이 모드에서 테스트하세요.");
             }
             else
             {
                 var runner = FindFirstObjectByType<WaveRunner>();
-                if (runner == null) EditorGUILayout.LabelField("현재 씬에 Runner가 없습니다.");
+                if (runner == null) EditorGUILayout.LabelField("현재 씬에 웨이브 실행기가 없습니다.");
                 else
                 {
                     using (new EditorGUI.DisabledScope(runner.IsRunning || runner.plan != plan))
@@ -160,7 +161,7 @@ namespace WaveLab.Waves.Editor
         private void CreatePlan()
         {
             var path = EditorUtility.SaveFilePanelInProject("웨이브 플랜 저장", "WavePlan", "asset", ""); if (string.IsNullOrEmpty(path)) return;
-            var asset = CreateInstance<WavePlan>(); asset.waves.Add(new WaveDefinition { title = "Wave 1" });
+            var asset = CreateInstance<WavePlan>(); asset.waves.Add(new WaveDefinition { title = "웨이브 1" });
             AssetDatabase.CreateAsset(asset, path); plan = asset; waveIndex = groupIndex = 0;
         }
         private void CreateEnemy()

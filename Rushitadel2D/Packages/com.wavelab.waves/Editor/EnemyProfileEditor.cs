@@ -11,16 +11,38 @@ namespace WaveLab.Waves.Editor
         {
             serializedObject.Update();
             EditorGUILayout.PropertyField(serializedObject.FindProperty("prefab"), new GUIContent("적 프리팹"));
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("defeatRewards"), new GUIContent("처치 보상 (기존 보상과 중복 연결 금지)"), true);
+            EditorGUILayout.LabelField("처치 보상", EditorStyles.boldLabel);
+            var rewards = serializedObject.FindProperty("defeatRewards");
+            for (int i = 0; i < rewards.arraySize; i++)
+            {
+                var reward = rewards.GetArrayElementAtIndex(i);
+                EditorGUILayout.BeginVertical("box");
+                var resource = reward.FindPropertyRelative("resourceId");
+                int choice = resource.stringValue == "xp" ? 0 : resource.stringValue == "gold" ? 1 : 2;
+                int next = EditorGUILayout.Popup("보상 종류", choice, new[] { "경험치", "골드", "직접 지정" });
+                if (next != choice) resource.stringValue = next == 0 ? "xp" : next == 1 ? "gold" : "custom";
+                if (next == 2) EditorGUILayout.PropertyField(resource, new GUIContent("자원 식별자"));
+                EditorGUILayout.PropertyField(reward.FindPropertyRelative("amount"), new GUIContent("지급량"));
+                bool removeReward = GUILayout.Button("보상 삭제"); EditorGUILayout.EndVertical();
+                if (removeReward) { rewards.DeleteArrayElementAtIndex(i); break; }
+            }
+            if (GUILayout.Button("+ 처치 보상 추가"))
+            {
+                rewards.arraySize++;
+                var reward = rewards.GetArrayElementAtIndex(rewards.arraySize - 1);
+                reward.FindPropertyRelative("resourceId").stringValue = "xp";
+                reward.FindPropertyRelative("amount").floatValue = 0;
+            }
+            EditorGUILayout.HelpBox("기존 적 스크립트가 보상을 주고 있다면 여기는 비워 두세요. 중복 지급을 막을 수 있습니다.", MessageType.Info);
             serializedObject.ApplyModifiedProperties();
             var p = (EnemyProfile)target;
-            EditorGUILayout.HelpBox("스탯 연결은 읽기 전용 스냅샷입니다. 원본 스탯·HP를 변경하지 않습니다. Component 또는 데이터 에셋을 넣고 숫자 필드를 선택하세요.", MessageType.Info);
+            EditorGUILayout.HelpBox("기존 스크립트나 데이터 파일의 숫자를 읽어 저장합니다. 원본 능력치·체력은 바꾸지 않습니다.", MessageType.Info);
             for (int i = 0; i < p.statBindings.Count; i++)
             {
                 var b = p.statBindings[i];
                 EditorGUILayout.BeginVertical("box");
                 EditorGUI.BeginChangeCheck();
-                string id = EditorGUILayout.TextField("스탯 ID", b.statId);
+                string id = EditorGUILayout.TextField(new GUIContent("능력치 식별자", "예: health.max = 최대 체력, attack.range = 사거리. 저장용 식별자는 영어를 유지합니다."), b.statId);
                 string unit = EditorGUILayout.TextField("단위", b.unit);
                 var src = EditorGUILayout.ObjectField("기존 데이터", b.source, typeof(UnityEngine.Object), false);
                 if (EditorGUI.EndChangeCheck())

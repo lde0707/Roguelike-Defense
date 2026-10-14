@@ -24,7 +24,7 @@ namespace Rushitadel.Editor
                     EditorSceneManager.playModeStartScene = null;
             };
         }
-        [MenuItem("Rushitadel/Play From Title")]
+        [MenuItem("Rushitadel/타이틀부터 실행")]
         public static void PlayFromTitle()
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode) return;
@@ -35,10 +35,10 @@ namespace Rushitadel.Editor
             EditorSceneManager.playModeStartScene = title;
             EditorApplication.EnterPlaymode();
         }
-        [MenuItem("Rushitadel/Play From Title", true)]
+        [MenuItem("Rushitadel/타이틀부터 실행", true)]
         private static bool CanPlayFromTitle() => !EditorApplication.isPlayingOrWillChangePlaymode;
 
-        [MenuItem("Rushitadel/Use Current Scene For Play")]
+        [MenuItem("Rushitadel/현재 씬에서 실행하도록 설정")]
         public static void UseCurrentScene()
         {
             SessionState.SetBool(TitlePlayRequest, false);

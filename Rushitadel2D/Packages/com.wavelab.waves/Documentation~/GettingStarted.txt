@@ -6,10 +6,10 @@ WaveLab 0.1 — 웨이브 기반 기능 (Unity 6)
 이 단계에서는 러시타델 코드/씬/프리팹에 의존하지 않습니다. Unity 6000.5.3f1에서 검증합니다.
 
 가장 빠른 실행
-Tools > WaveLab > Create Separate Demo Scene
+Tools > 웨이브랩 > 독립 예제 씬 만들기
 현재 씬 저장 여부를 확인한 뒤 Assets/WaveLabDemo(중복 시 새 이름)에 독립 데모를 생성합니다.
 Play: 3개 웨이브가 등장하고 큐브가 2초 뒤 자동 처치됩니다. 실제 전투 검증은 아닙니다.
-Tools > WaveLab > Wave Editor를 열고 DemoPlan을 넣으면 실행 상태를 볼 수 있습니다.
+Tools > 웨이브랩 > 웨이브 편집기를 열고 DemoPlan을 넣으면 실행 상태를 볼 수 있습니다.
 
 실제 적 연결
 1. Wave Editor의 적 등록: EnemyProfile을 저장하고 기존 프리팹을 지정합니다.

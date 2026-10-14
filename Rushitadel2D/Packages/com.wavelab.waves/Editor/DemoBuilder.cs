@@ -7,7 +7,7 @@ namespace WaveLab.Waves.Editor
 {
     public static class DemoBuilder
     {
-        [MenuItem("Tools/WaveLab/Create Separate Demo Scene")]
+        [MenuItem("Tools/웨이브랩/독립 예제 씬 만들기")]
         public static void Create()
         {
             if(EditorApplication.isPlaying || !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())return;
