@@ -29,9 +29,25 @@ namespace Rushitadel.Presentation
         public string CurrentPage => page;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        private static void ResetStatics() { Instance = null; RunSession.Reset(); }
+        private static void ResetStatics()
+        {
+            SceneManager.sceneLoaded -= BootstrapScene;
+            Instance = null; RunSession.Reset();
+        }
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        private static void Boot() => Ensure();
+        private static void Boot()
+        {
+            SceneManager.sceneLoaded -= BootstrapScene;
+            SceneManager.sceneLoaded += BootstrapScene;
+        }
+        private static void BootstrapScene(Scene scene, LoadSceneMode mode)
+        {
+            if (scene.path != "Assets/Scenes/Title.unity" && scene.path != "Assets/Scenes/inGame.unity") return;
+            if (Instance != null) return; // Awake already subscribed SceneReady before this load.
+            Ensure();
+            // A listener added during sceneLoaded does not receive the current dispatch.
+            Instance.SceneReady(scene, mode);
+        }
         public static void Ensure()
         {
             if (Instance == null) new GameObject("Game Frontend").AddComponent<GameFrontend>();

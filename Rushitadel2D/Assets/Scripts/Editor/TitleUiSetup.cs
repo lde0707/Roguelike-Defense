@@ -10,12 +10,39 @@ namespace Rushitadel.Editor
     [InitializeOnLoad]
     public static class TitleUiSetup
     {
+        private const string TitlePlayRequest = "Rushitadel.PlayFromTitleOnce";
         static TitleUiSetup()
         {
-            EditorApplication.delayCall += () => {
-                if (!Application.isBatchMode && !EditorApplication.isPlayingOrWillChangePlaymode)
-                    EditorSceneManager.playModeStartScene = AssetDatabase.LoadAssetAtPath<SceneAsset>("Assets/Scenes/Title.unity");
+            EditorApplication.playModeStateChanged += state => {
+                if (state != PlayModeStateChange.EnteredEditMode) return;
+                SessionState.SetBool(TitlePlayRequest, false);
+                EditorSceneManager.playModeStartScene = null;
             };
+            EditorApplication.delayCall += () => {
+                if (!Application.isBatchMode && !EditorApplication.isPlayingOrWillChangePlaymode
+                    && !SessionState.GetBool(TitlePlayRequest, false))
+                    EditorSceneManager.playModeStartScene = null;
+            };
+        }
+        [MenuItem("Rushitadel/Play From Title")]
+        public static void PlayFromTitle()
+        {
+            if (EditorApplication.isPlayingOrWillChangePlaymode) return;
+            var title = AssetDatabase.LoadAssetAtPath<SceneAsset>("Assets/Scenes/Title.unity");
+            if (title == null) { Debug.LogError("Title 씬을 찾을 수 없습니다."); return; }
+            if (!EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+            SessionState.SetBool(TitlePlayRequest, true);
+            EditorSceneManager.playModeStartScene = title;
+            EditorApplication.EnterPlaymode();
+        }
+        [MenuItem("Rushitadel/Play From Title", true)]
+        private static bool CanPlayFromTitle() => !EditorApplication.isPlayingOrWillChangePlaymode;
+
+        [MenuItem("Rushitadel/Use Current Scene For Play")]
+        public static void UseCurrentScene()
+        {
+            SessionState.SetBool(TitlePlayRequest, false);
+            EditorSceneManager.playModeStartScene = null;
         }
         [MenuItem("Rushitadel/Prepare Title UI Assets")]
         public static void Prepare()
@@ -44,7 +71,6 @@ namespace Rushitadel.Editor
                 importer.alphaIsTransparency = true; importer.maxTextureSize = 2048; importer.SaveAndReimport();
             }
             EditorBuildSettings.scenes = new[] {new EditorBuildSettingsScene("Assets/Scenes/Title.unity", true), new EditorBuildSettingsScene("Assets/Scenes/inGame.unity", true)};
-            EditorSceneManager.playModeStartScene = AssetDatabase.LoadAssetAtPath<SceneAsset>("Assets/Scenes/Title.unity");
             AssetDatabase.SaveAssets();
             Debug.Log("TITLE_UI_ASSETS_READY");
         }
