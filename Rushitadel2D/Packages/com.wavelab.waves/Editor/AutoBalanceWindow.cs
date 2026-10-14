@@ -14,13 +14,20 @@ namespace WaveLab.Waves.Editor
         [SerializeField] private EnemyProfile playerStatProfile;
         [SerializeField] private bool readOnGenerate=true;
         [MenuItem("Tools/웨이브랩/자동 밸런스 초안")]
-        public static void Open() { GetWindow<AutoBalanceWindow>("자동 웨이브 생성").minSize = new Vector2(650, 600); }
+        public static void Open() { WaveQuickStartWindow.Open(); }
+        public static void OpenAdvanced(BalanceInput settings, GameObject player)
+        {
+            var window=GetWindow<AutoBalanceWindow>("고급 웨이브 설정");window.ClearPreview();
+            window.input=JsonUtility.FromJson<BalanceInput>(JsonUtility.ToJson(settings));
+            window.playerPrefab=player;window.minSize=new Vector2(650,600);
+        }
         private void OnDisable() { ClearPreview(); }
         private void ClearPreview() { if (preview?.plan != null && !AssetDatabase.Contains(preview.plan)) DestroyImmediate(preview.plan); preview = null; }
         private void OnGUI()
         {
             scroll = EditorGUILayout.BeginScrollView(scroll);
-            EditorGUILayout.LabelField("스탯으로 웨이브 자동 생성", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("고급 설정 — 직접 조정할 때만 사용", EditorStyles.boldLabel);
+            if(GUILayout.Button("쉬운 시작 화면으로 돌아가기"))WaveQuickStartWindow.Open();
             EditorGUILayout.HelpBox("적 프로필·전투 스탯·목표 시간을 입력하세요. 생성 결과를 확인한 뒤 새 계획으로 저장합니다. 기존 프리팹과 계획은 변경하지 않습니다.", MessageType.Info);
             EditorGUI.BeginChangeCheck();
             EditorGUILayout.LabelField("1. 목표", EditorStyles.boldLabel);
