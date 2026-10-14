@@ -10,6 +10,9 @@ namespace WaveLab.Waves.Editor
         private BalanceResult preview;
         private Vector2 scroll;
         private string error;
+        [SerializeField] private GameObject playerPrefab;
+        [SerializeField] private EnemyProfile playerStatProfile;
+        [SerializeField] private bool readOnGenerate=true;
         [MenuItem("Tools/웨이브랩/자동 밸런스 초안")]
         public static void Open() { GetWindow<AutoBalanceWindow>("자동 웨이브 생성").minSize = new Vector2(650, 600); }
         private void OnDisable() { ClearPreview(); }
@@ -27,11 +30,17 @@ namespace WaveLab.Waves.Editor
             input.difficulty = EditorGUILayout.Popup("난이도", input.difficulty, new[] { "여유롭게", "보통", "어렵게" });
             input.seed = EditorGUILayout.IntField("생성 시드 (같은 값 = 같은 편성)", input.seed);
             EditorGUILayout.Space();EditorGUILayout.LabelField("2. 플레이어의 시작 스탯", EditorStyles.boldLabel);
+            playerPrefab=(GameObject)EditorGUILayout.ObjectField("플레이어 프리팹",playerPrefab,typeof(GameObject),false);
+            playerStatProfile=(EnemyProfile)EditorGUILayout.ObjectField(new GUIContent("스탯 연결 프로필 (선택)","다른 게임 스크립트는 기존 프로필 형식으로 숫자 필드를 연결할 수 있습니다. 보상은 플레이어 계산에 사용하지 않습니다."),playerStatProfile,typeof(EnemyProfile),false);
+            readOnGenerate=EditorGUILayout.Toggle("생성 시 현재 프리팹 스탯 읽기",readOnGenerate);
+            EditorGUILayout.HelpBox("자동 읽기에는 체력·피해·공격 간격(또는 초당 공격 횟수)·사거리·이동속도 5개가 필요합니다. 연결이 없으면 생성하지 않습니다. 수동 입력하려면 자동 읽기를 끄세요. 이동하지 않는 유닛은 이동속도 0으로 계산하세요.",MessageType.Info);
             input.playerHealth = EditorGUILayout.FloatField("최대 체력", input.playerHealth);
             input.playerDamage = EditorGUILayout.FloatField("한 번 공격의 피해량", input.playerDamage);
             input.playerInterval = EditorGUILayout.FloatField("공격 간격 (초)", input.playerInterval);
+            input.playerRange=EditorGUILayout.FloatField("플레이어 사거리 (유닛)",input.playerRange);
+            input.playerMoveSpeed=EditorGUILayout.FloatField("플레이어 접근 이동속도",input.playerMoveSpeed);
             input.hitRate = EditorGUILayout.Slider("예상 명중률", input.hitRate, .01f, 1);
-            input.attackUptime = EditorGUILayout.Slider(new GUIContent("공격 가능한 시간 비율", "사거리 밖 이동·재장전 등을 제외하고 실제로 공격 가능한 시간의 비율입니다. 위치 계산 대신 사용하는 가정입니다."), input.attackUptime, .01f, 1);
+            input.attackUptime = EditorGUILayout.Slider(new GUIContent("사거리 안 공격 가동률", "접근 시간은 별도로 계산합니다. 여기에는 회피·재장전 등 사거리 안에서 공격을 쉬는 시간만 반영하세요."), input.attackUptime, .01f, 1);
             EditorGUILayout.LabelField("비율 0.8 = 80%. 여러 무기의 공격력은 유효한 단일 공격 값으로 환산해 입력하세요.", EditorStyles.wordWrappedMiniLabel);
             EditorGUILayout.Space();EditorGUILayout.LabelField("3. 등장할 적", EditorStyles.boldLabel);
             for (int i=0;i<input.enemies.Count;i++)
@@ -42,11 +51,14 @@ namespace WaveLab.Waves.Editor
                 e.health=EditorGUILayout.FloatField("체력",e.health);
                 e.damage=EditorGUILayout.FloatField("1회 공격 피해",e.damage);
                 e.attackInterval=EditorGUILayout.FloatField("공격 간격 (초)",e.attackInterval);
+                e.attackRange=EditorGUILayout.FloatField("사거리 (유닛)",e.attackRange);
+                e.moveSpeed=EditorGUILayout.FloatField("접근 이동속도",e.moveSpeed);
+                e.encounterDistance=EditorGUILayout.FloatField(new GUIContent("예상 조우 거리 (유닛)","이 적의 스폰 영역과 플레이어 사이 대표 거리. 실제 씬 위치를 자동 분석하지 않습니다."),e.encounterDistance);
                 e.hitRate=EditorGUILayout.Slider("플레이어에게 맞힐 비율",e.hitRate,0,1);
                 EditorGUILayout.BeginHorizontal();
                 using(new EditorGUI.DisabledScope(e.profile==null))
                 {
-                    if(GUILayout.Button("프로필의 저장된 스탯 가져오기")) { ImportStats(e);GUI.changed=true; }
+                    if(GUILayout.Button("프리팹의 현재 스탯 읽기")) { try{ImportStats(e);error=null;}catch(ArgumentException ex){error=ex.Message;} GUI.changed=true; }
                     if(GUILayout.Button("보상 설정 열기"))Selection.activeObject=e.profile;
                 }
                 bool remove=GUILayout.Button("삭제",GUILayout.Width(45));EditorGUILayout.EndHorizontal();
@@ -74,13 +86,29 @@ namespace WaveLab.Waves.Editor
                 if(GUILayout.Button("웨이브 자동 생성 · 미리보기",GUILayout.Height(34)))
                 {
                     ClearPreview();error=null;
-                    try{preview=AutoBalance.Generate(input);}catch(ArgumentException ex){error=ex.Message;}
+                    try
+                    {
+                        if(readOnGenerate)
+                        {
+                            var p=ReadStats(playerPrefab!=null?playerPrefab:playerStatProfile?.prefab,playerStatProfile,"플레이어");
+                            input.playerHealth=p[0];input.playerDamage=p[1];input.playerInterval=p[2];input.playerRange=p[3];input.playerMoveSpeed=p[4];
+                            foreach(var enemy in input.enemies)ImportStats(enemy);
+                        }
+                        preview=AutoBalance.Generate(input);
+                    }catch(ArgumentException ex){error=ex.Message;}
                 }
             }
             if(!string.IsNullOrEmpty(error))EditorGUILayout.HelpBox(error,MessageType.Error);
             if(preview!=null)
             {
                 EditorGUILayout.Space();EditorGUILayout.LabelField($"생성 결과: {preview.rows.Count}웨이브 / 목표 {input.totalSeconds:0.#}초",EditorStyles.boldLabel);
+                EditorGUILayout.LabelField($"사용한 플레이어 스탯: HP {input.playerHealth:0.#} / 피해 {input.playerDamage:0.#} / 간격 {input.playerInterval:0.###}초 / 사거리 {input.playerRange:0.#} / 이동 {input.playerMoveSpeed:0.#}",EditorStyles.wordWrappedLabel);
+                foreach(var enemy in input.enemies)
+                {
+                    double approach=AutoBalance.ReachTime(enemy.encounterDistance,input.playerRange,enemy.attackRange,input.playerMoveSpeed,enemy.moveSpeed);
+                    string time=double.IsInfinity(approach)?"접근 불가":approach.ToString("0.##")+"초";
+                    EditorGUILayout.LabelField($"{enemy.profile.name}: 사거리 {enemy.attackRange:0.#}, 간격 {enemy.attackInterval:0.###}초, 이동 {enemy.moveSpeed:0.#}, 조우 {enemy.encounterDistance:0.#} → 플레이어 접근 {time}",EditorStyles.wordWrappedMiniLabel);
+                }
                 foreach(var row in preview.rows)
                 {
                     EditorGUILayout.BeginVertical("box");
@@ -97,15 +125,19 @@ namespace WaveLab.Waves.Editor
         }
         private void ImportStats(BalanceEnemy e)
         {
-            int found=0;
-            foreach(var b in e.profile.statBindings)
+            var p=ReadStats(e.profile?.prefab,e.profile,e.profile!=null?e.profile.name:"적 프로필 미지정");
+            e.health=p[0];e.damage=p[1];e.attackInterval=p[2];e.attackRange=p[3];e.moveSpeed=p[4];
+        }
+        private static float[] ReadStats(GameObject prefab,EnemyProfile profile,string label)
+        {
+            string[] ids={"health.max","attack.damage","attack.interval","attack.range","movement.speed"};
+            var values=new float[5];
+            for(int i=0;i<ids.Length;i++)
             {
-                if(b==null||string.IsNullOrEmpty(b.sampledUtc))continue;
-                if(b.statId=="health.max"){e.health=b.snapshot;found++;}
-                if(b.statId=="attack.damage"){e.damage=b.snapshot;found++;}
-                if(b.statId=="attack.interval"){e.attackInterval=b.snapshot;found++;}
+                bool ok=i==2?BalanceStatReader.Interval(prefab,profile,out values[i]):BalanceStatReader.Read(prefab,profile,ids[i],out values[i]);
+                if(!ok)throw new ArgumentException(label+": "+ids[i]+" 현재 값을 읽을 수 없습니다. 프리팹의 IStatProvider 또는 프로필의 숫자 필드 연결을 확인하세요.");
             }
-            error=$"저장된 스탯 {found}개를 가져왔습니다. health.max / attack.damage / attack.interval만 지원합니다. 원본이 변경됐다면 적 프로필에서 먼저 ‘현재 값 읽기’를 누르세요. 가져오지 못한 값은 기존 입력을 유지합니다.";
+            return values;
         }
         private void Save()
         {

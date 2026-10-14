@@ -62,5 +62,43 @@ namespace WaveLab.Waves.Tests
             Assert.LessOrEqual(risky.rows[0].estimatedDamage,input.playerHealth*.22f+.01f);
             UnityEngine.Object.DestroyImmediate(safe.plan);UnityEngine.Object.DestroyImmediate(risky.plan);
         }
+        [Test] public void RangeAndMovementChangeWaveCounts()
+        {
+            input.modelGrowth=false;input.waveCount=1;input.playerRange=1;input.playerMoveSpeed=1;
+            var shortRange=AutoBalance.Generate(input);
+            input.playerRange=10;var longRange=AutoBalance.Generate(input);
+            Assert.Greater(longRange.rows[0].count,shortRange.rows[0].count);
+            input.playerRange=1;input.playerMoveSpeed=5;var fast=AutoBalance.Generate(input);
+            Assert.Greater(fast.rows[0].count,shortRange.rows[0].count);
+            UnityEngine.Object.DestroyImmediate(shortRange.plan);UnityEngine.Object.DestroyImmediate(longRange.plan);UnityEngine.Object.DestroyImmediate(fast.plan);
+        }
+        [Test] public void AttackSpeedChangesWaveBudget()
+        {
+            input.waveCount=1;input.modelGrowth=false;
+            var slow=AutoBalance.Generate(input);input.playerInterval=.1f;var fast=AutoBalance.Generate(input);
+            Assert.Greater(fast.rows[0].count,slow.rows[0].count);
+            UnityEngine.Object.DestroyImmediate(slow.plan);UnityEngine.Object.DestroyImmediate(fast.plan);
+        }
+        [Test] public void LongerEnemyRangeAddsFirstStrikeExposure()
+        {
+            var e=input.enemies[0];e.damage=10;e.hitRate=1;input.playerRange=1;
+            e.attackRange=1;double close=AutoBalance.IncomingDamage(input,e,30);
+            e.attackRange=8;Assert.Greater(AutoBalance.IncomingDamage(input,e,30),close);
+            double damage=AutoBalance.IncomingDamage(input,e,30);e.attackInterval/=2;
+            Assert.AreEqual(damage*2,AutoBalance.IncomingDamage(input,e,30),.001);
+        }
+        [Test] public void StationaryShortRangeCannotReachStationaryLongRange()
+        {
+            input.playerMoveSpeed=0;input.playerRange=1;
+            Assert.IsTrue(double.IsInfinity(AutoBalance.WorkSeconds(input,input.enemies[0],30)));
+            Assert.Throws<ArgumentException>(()=>AutoBalance.Generate(input));
+            input.enemies[0].encounterDistance=0;
+            Assert.AreEqual(input.enemies[0].health/30d,AutoBalance.WorkSeconds(input,input.enemies[0],30),.001);
+        }
+        [Test] public void RejectsInvalidSpatialStats()
+        {
+            input.playerRange=float.NaN;Assert.IsNotEmpty(AutoBalance.Validate(input));
+            input.playerRange=3;input.enemies[0].moveSpeed=-1;Assert.IsNotEmpty(AutoBalance.Validate(input));
+        }
     }
 }
