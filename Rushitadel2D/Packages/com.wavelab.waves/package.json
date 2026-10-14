@@ -1,0 +1,8 @@
+{
+  "name":"com.wavelab.waves",
+  "version":"0.1.0",
+  "displayName":"WaveLab Waves",
+  "description":"Prefab-based wave authoring, spawn areas and explicit reward events. Phase 1 foundation.",
+  "unity":"6000.0",
+  "dependencies":{"com.wavelab.core":"0.1.0"}
+}

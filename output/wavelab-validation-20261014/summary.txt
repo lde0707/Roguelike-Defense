@@ -1,0 +1,14 @@
+WaveLab 0.1 validation — 2026-10-14
+Unity 6000.5.3f1 / Windows
+
+EditMode: 6 passed / 0 failed
+PlayMode: 3 passed / 0 failed
+New package assemblies compiled successfully. Existing game scripts have deprecation warnings.
+
+Covered: modifier order and clamp; partial spawn batches; invalid plans; seeded annulus bounds;
+one-shot defeat notifications; non-reward despawn; runtime spawn/reward/completion;
+stopping without rewards; authoring plan isolation during play.
+
+Not verified: interactive editor visual layout, demo scene rendering, integration with existing
+Rushitadel enemy health/reward components, other Unity versions, production balancing accuracy.
+No existing gameplay scene or prefab was replaced. This is a foundation release, not an auto-balancer.

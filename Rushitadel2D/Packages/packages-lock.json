@@ -280,6 +280,20 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.wavelab.core": {
+      "version": "file:com.wavelab.core",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.wavelab.waves": {
+      "version": "file:com.wavelab.waves",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.wavelab.core": "0.1.0"
+      }
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,

@@ -1,0 +1,1 @@
+{"name":"WaveLab.Waves.Editor","rootNamespace":"WaveLab.Waves.Editor","references":["WaveLab.Core","WaveLab.Waves"],"includePlatforms":["Editor"]}
