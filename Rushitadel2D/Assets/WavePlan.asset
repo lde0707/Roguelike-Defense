@@ -20,4 +20,24 @@ MonoBehaviour:
     end: 0
     durationSeconds: 30
     restSeconds: 3
-    groups: []
+    groups:
+    - id: 14b205ec6acc49d3af77ad1db994780d
+      enemy: {fileID: 0}
+      spawnKey: main
+      count: 10
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 1
+  - id: f51cc57d5db8477aba365c128162acf3
+    title: "\uC6E8\uC774\uBE0C 2"
+    end: 0
+    durationSeconds: 30
+    restSeconds: 3
+    groups:
+    - id: 3abecd2a51874f6bbdccb62365c48fbd
+      enemy: {fileID: 0}
+      spawnKey: main
+      count: 10
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 1
