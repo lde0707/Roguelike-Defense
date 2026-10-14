@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aada793297a77d458840735234f2571, type: 3}
+  m_Name: "\uC790\uB3D9\uC6E8\uC774\uBE0C"
+  m_EditorClassIdentifier: WaveLab.Waves::WaveLab.Waves.WavePlan
+  schemaVersion: 1
+  seed: 1
+  waves:
+  - id: cf95a3e446ff9c6973c4a1cd1034135b
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 1"
+    end: 2
+    durationSeconds: 57.6
+    restSeconds: 3
+    groups:
+    - id: 846fa34e4aa57adf0ea09ce3c1176ce4
+      enemy: {fileID: 11400000, guid: e503feb41a276fc44a047cc68d484ab8, type: 2}
+      spawnKey: main
+      count: 6
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 8.905556
+  - id: f058533b28a34b18e991eb81e312bcf1
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 2"
+    end: 2
+    durationSeconds: 57.6
+    restSeconds: 3
+    groups:
+    - id: c11ac49aa95eda865b57bd3f8ee61039
+      enemy: {fileID: 11400000, guid: e503feb41a276fc44a047cc68d484ab8, type: 2}
+      spawnKey: main
+      count: 7
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 7.633333
+  - id: d651b3558995d2d190b43e07fdb192cd
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 3"
+    end: 2
+    durationSeconds: 57.6
+    restSeconds: 3
+    groups:
+    - id: 6b4b947dbdd98003b1f24fde8ba43f87
+      enemy: {fileID: 11400000, guid: e503feb41a276fc44a047cc68d484ab8, type: 2}
+      spawnKey: main
+      count: 9
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 6.0141973
+  - id: 9231d232a1e2cf63c5f0e71d98afd125
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 4"
+    end: 2
+    durationSeconds: 57.6
+    restSeconds: 3
+    groups:
+    - id: 46f23aa374ec3fb732a89b9879ce7d7f
+      enemy: {fileID: 11400000, guid: e503feb41a276fc44a047cc68d484ab8, type: 2}
+      spawnKey: main
+      count: 11
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 4.9449883
+  - id: df634670932227f910bd1af25f3a06ca
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 5"
+    end: 2
+    durationSeconds: 57.6
+    restSeconds: 0
+    groups:
+    - id: 6773f756d8b122dea543ceb51d18f920
+      enemy: {fileID: 11400000, guid: e503feb41a276fc44a047cc68d484ab8, type: 2}
+      spawnKey: main
+      count: 14
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 3.915873

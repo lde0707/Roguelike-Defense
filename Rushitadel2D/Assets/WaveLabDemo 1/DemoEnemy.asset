@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e561ce4fdba74e41a82324dc4c66a90, type: 3}
+  m_Name: DemoEnemy
+  m_EditorClassIdentifier: WaveLab.Waves::WaveLab.Waves.EnemyProfile
+  id: 
+  prefab: {fileID: 6782407337395539072, guid: 2924da0f2141afa4c9051c24ee7e2848, type: 3}
+  defeatRewards:
+  - resourceId: xp
+    amount: 5
+  statBindings: []

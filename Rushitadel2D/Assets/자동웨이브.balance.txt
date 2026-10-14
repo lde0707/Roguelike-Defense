@@ -1,0 +1,113 @@
+기대값 초안: 명중률·공격 가능 시간은 입력한 가정입니다. 이동·사거리·회전·도탄·범위·탄 파괴·실제 회피는 계산하지 않습니다. 피해량은 각 적이 처치까지 계속 공격한다고 가정한 합계이며 생존율이 아닙니다. 성장은 웨이브 종료 시 경험치/골드 전량 획득 후 공격력 증가만 모델링합니다. 실제 게임의 증강·구매를 실행하거나 보상 값을 바꾸지 않습니다. 휴식 회복과 누적 잔여 체력은 모델링하지 않습니다. 실제 시간은 처치 속도와 잔여 적에 따라 달라집니다.
+
+설정:
+{
+    "seed": 1,
+    "totalSeconds": 300.0,
+    "waveCount": 5,
+    "restSeconds": 3.0,
+    "difficulty": 1,
+    "playerHealth": 100.0,
+    "playerDamage": 20.0,
+    "playerInterval": 0.5,
+    "hitRate": 0.800000011920929,
+    "attackUptime": 0.75,
+    "modelGrowth": true,
+    "firstLevelXp": 100.0,
+    "xpRequirementStep": 0.25,
+    "damagePerLevel": 0.10000000149011612,
+    "goldUpgradeCost": 100.0,
+    "damagePerPurchase": 0.10000000149011612,
+    "enemies": [
+        {
+            "profile": {
+                "instanceID": 568105589213753986
+            },
+            "spawnKey": "main",
+            "health": 100.0,
+            "damage": 5.0,
+            "attackInterval": 2.0,
+            "hitRate": 0.20000000298023225
+        }
+    ]
+}
+
+웨이브 결과:
+{
+    "wave": 1,
+    "count": 6,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 57.599998474121097,
+    "effectiveDps": 24.0,
+    "estimatedWorkSeconds": 25.0,
+    "estimatedDamage": 12.5,
+    "xpEarned": 60.0,
+    "goldEarned": 60.0,
+    "goldRemaining": 60.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 2,
+    "count": 7,
+    "startLevel": 1,
+    "endLevel": 2,
+    "purchases": 1,
+    "seconds": 57.599998474121097,
+    "effectiveDps": 24.0,
+    "estimatedWorkSeconds": 29.16666603088379,
+    "estimatedDamage": 14.583333015441895,
+    "xpEarned": 70.0,
+    "goldEarned": 70.0,
+    "goldRemaining": 30.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 3,
+    "count": 9,
+    "startLevel": 2,
+    "endLevel": 2,
+    "purchases": 1,
+    "seconds": 57.599998474121097,
+    "effectiveDps": 28.80000114440918,
+    "estimatedWorkSeconds": 31.25,
+    "estimatedDamage": 15.625,
+    "xpEarned": 90.0,
+    "goldEarned": 90.0,
+    "goldRemaining": 20.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 4,
+    "count": 11,
+    "startLevel": 2,
+    "endLevel": 3,
+    "purchases": 1,
+    "seconds": 57.599998474121097,
+    "effectiveDps": 31.200000762939454,
+    "estimatedWorkSeconds": 35.25640869140625,
+    "estimatedDamage": 17.628204345703126,
+    "xpEarned": 110.0,
+    "goldEarned": 110.0,
+    "goldRemaining": 30.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 5,
+    "count": 14,
+    "startLevel": 3,
+    "endLevel": 4,
+    "purchases": 1,
+    "seconds": 57.599998474121097,
+    "effectiveDps": 36.0,
+    "estimatedWorkSeconds": 38.88888931274414,
+    "estimatedDamage": 19.44444465637207,
+    "xpEarned": 140.0,
+    "goldEarned": 140.0,
+    "goldRemaining": 70.0,
+    "note": "기대값 예산 내"
+}
+
+주의: 성장 가정은 계산 전용입니다. 실제 게임에 같은 경험치 곡선과 강화 규칙을 연결해야 이후 웨이브 예상치가 맞습니다.
+주의: 예상 피해를 웨이브마다 따로 제한합니다. 누적 생존·빌드 선택·다수 적 동시 공격은 검증하지 않았습니다.

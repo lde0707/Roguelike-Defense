@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aada793297a77d458840735234f2571, type: 3}
+  m_Name: DemoPlan
+  m_EditorClassIdentifier: WaveLab.Waves::WaveLab.Waves.WavePlan
+  schemaVersion: 1
+  seed: 1
+  waves:
+  - id: a59accfde82d4a5dbe5542a0aeb2b220
+    title: Demo 1
+    end: 0
+    durationSeconds: 30
+    restSeconds: 1
+    groups:
+    - id: 5407835f2a0644878de14d5d408d4a72
+      enemy: {fileID: 11400000, guid: f1d155b3f2ca2924d94538dde2bd7186, type: 2}
+      spawnKey: main
+      count: 4
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 0.5
+  - id: 2be9df7325444b84b37a312baf80b987
+    title: Demo 2
+    end: 0
+    durationSeconds: 30
+    restSeconds: 1
+    groups:
+    - id: f75cffbab7604f499b1035870f4fd9d2
+      enemy: {fileID: 11400000, guid: f1d155b3f2ca2924d94538dde2bd7186, type: 2}
+      spawnKey: main
+      count: 6
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 0.5
+  - id: 70b9c186f4a34c5d9f70da6086870bb7
+    title: Demo 3
+    end: 0
+    durationSeconds: 30
+    restSeconds: 1
+    groups:
+    - id: 649aedc818414e549ff7b5e0a438da2d
+      enemy: {fileID: 11400000, guid: f1d155b3f2ca2924d94538dde2bd7186, type: 2}
+      spawnKey: main
+      count: 8
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 0.5
