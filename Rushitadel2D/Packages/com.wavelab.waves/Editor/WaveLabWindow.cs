@@ -25,10 +25,11 @@ namespace WaveLab.Waves.Editor
             if (next != plan) { plan = next; waveIndex = groupIndex = 0; inspected = false; }
             if (GUILayout.Button("새 웨이브 계획", EditorStyles.toolbarButton)) CreatePlan();
             if (GUILayout.Button("적 등록", EditorStyles.toolbarButton)) CreateEnemy();
+            if (GUILayout.Button("자동 생성", EditorStyles.toolbarButton)) AutoBalanceWindow.Open();
             if (GUILayout.Button("검사", EditorStyles.toolbarButton)) { inspected = true; errors = WaveValidation.Errors(plan); }
             if (GUILayout.Button("저장", EditorStyles.toolbarButton)) AssetDatabase.SaveAssets();
             EditorGUILayout.EndHorizontal();
-            EditorGUILayout.HelpBox("01 적 등록 → 02 등장 위치·수량 설정 → 03 씬의 웨이브 실행기 연결 → 플레이 테스트. 0.1 기반 버전: 자동 밸런싱·성장 시뮬레이션은 아직 제공하지 않습니다.", MessageType.Info);
+            EditorGUILayout.HelpBox("‘자동 생성’에서 스탯·목표 시간으로 초안을 만든 뒤 여기서 수정하세요. 위치·도탄·실제 생존율을 검증하는 전투 시뮬레이션은 아직 제공하지 않습니다.", MessageType.Info);
             if (plan == null) { EditorGUILayout.LabelField("새 웨이브 계획을 만들거나 웨이브 계획 파일을 끌어 넣으세요.", EditorStyles.boldLabel); return; }
             // Never change the authoring asset during a run.
             using (new EditorGUI.DisabledScope(EditorApplication.isPlaying))

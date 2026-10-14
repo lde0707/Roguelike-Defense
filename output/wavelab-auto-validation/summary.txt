@@ -1,0 +1,9 @@
+WaveLab auto balance draft — 2026-10-14
+Validated in a separate Unity 6000.5.3f1 project containing only WaveLab packages.
+Editor assemblies compiled. EditMode tests: 12 passed, 0 failed.
+New tests: valid generated plan/time sum, seeded composition/IDs, XP/gold growth effect,
+disabled growth, invalid/impossible inputs, incoming damage budget limiting population.
+Existing gameplay scenes and prefabs untouched.
+Not validated: interactive visual layout, real gameplay difficulty, actual upgrade integration,
+player survival probability, movement/range/ricochet/projectile interception mechanics.
+Generated plans use a heuristic throughput and incoming-damage budget, not combat simulation.

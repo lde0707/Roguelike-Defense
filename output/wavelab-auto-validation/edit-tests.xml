@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="12" result="Passed" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.0522547">
+  <test-suite type="TestSuite" id="1000" name="WaveLabAutoValidation" fullname="WaveLabAutoValidation" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.052255" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1016" name="WaveLab.Waves.Editor.Tests.dll" fullname="C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/.work/WaveLabAutoValidation/Library/ScriptAssemblies/WaveLab.Waves.Editor.Tests.dll" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.045347" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="54808" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1017" name="WaveLab" fullname="WaveLab" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.044928" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1018" name="Waves" fullname="WaveLab.Waves" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.044751" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1019" name="Tests" fullname="WaveLab.Waves.Tests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.044594" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1002" name="AutoBalanceTests" fullname="WaveLab.Waves.Tests.AutoBalanceTests" classname="WaveLab.Waves.Tests.AutoBalanceTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.034725" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1006" name="DisabledGrowthKeepsDpsAndLevel" fullname="WaveLab.Waves.Tests.AutoBalanceTests.DisabledGrowthKeepsDpsAndLevel" methodname="DisabledGrowthKeepsDpsAndLevel" classname="WaveLab.Waves.Tests.AutoBalanceTests" runstate="Runnable" seed="1574764698" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.013134" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="GeneratesValidPlanAndConservesTargetTime" fullname="WaveLab.Waves.Tests.AutoBalanceTests.GeneratesValidPlanAndConservesTargetTime" methodname="GeneratesValidPlanAndConservesTargetTime" classname="WaveLab.Waves.Tests.AutoBalanceTests" runstate="Runnable" seed="1581266376" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.006850" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="GrowthChangesLaterDpsWithoutChangingSource" fullname="WaveLab.Waves.Tests.AutoBalanceTests.GrowthChangesLaterDpsWithoutChangingSource" methodname="GrowthChangesLaterDpsWithoutChangingSource" classname="WaveLab.Waves.Tests.AutoBalanceTests" runstate="Runnable" seed="1088621682" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.001488" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="IncomingDamageReducesEnemyBudget" fullname="WaveLab.Waves.Tests.AutoBalanceTests.IncomingDamageReducesEnemyBudget" methodname="IncomingDamageReducesEnemyBudget" classname="WaveLab.Waves.Tests.AutoBalanceTests" runstate="Runnable" seed="116919723" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.000602" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="RejectsImpossibleAndNonFiniteInputs" fullname="WaveLab.Waves.Tests.AutoBalanceTests.RejectsImpossibleAndNonFiniteInputs" methodname="RejectsImpossibleAndNonFiniteInputs" classname="WaveLab.Waves.Tests.AutoBalanceTests" runstate="Runnable" seed="1085107109" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.001303" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="SeedReproducesCompositionAndIds" fullname="WaveLab.Waves.Tests.AutoBalanceTests.SeedReproducesCompositionAndIds" methodname="SeedReproducesCompositionAndIds" classname="WaveLab.Waves.Tests.AutoBalanceTests" runstate="Runnable" seed="531233287" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.001008" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1009" name="FoundationTests" fullname="WaveLab.Waves.Tests.FoundationTests" classname="WaveLab.Waves.Tests.FoundationTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.008790" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1013" name="AnnulusSamplesStayInBoundsAndAreSeeded" fullname="WaveLab.Waves.Tests.FoundationTests.AnnulusSamplesStayInBoundsAndAreSeeded" methodname="AnnulusSamplesStayInBoundsAndAreSeeded" classname="WaveLab.Waves.Tests.FoundationTests" runstate="Runnable" seed="2016113013" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.004122" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="DefeatSignalIsIdempotent" fullname="WaveLab.Waves.Tests.FoundationTests.DefeatSignalIsIdempotent" methodname="DefeatSignalIsIdempotent" classname="WaveLab.Waves.Tests.FoundationTests" runstate="Runnable" seed="567759453" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.000724" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="DespawnIsNotAReward" fullname="WaveLab.Waves.Tests.FoundationTests.DespawnIsNotAReward" methodname="DespawnIsNotAReward" classname="WaveLab.Waves.Tests.FoundationTests" runstate="Runnable" seed="1690825487" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.000411" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1011" name="PartialBatchSchedule" fullname="WaveLab.Waves.Tests.FoundationTests.PartialBatchSchedule" methodname="PartialBatchSchedule" classname="WaveLab.Waves.Tests.FoundationTests" runstate="Runnable" seed="929132397" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.000663" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="StatOrderAndClamp" fullname="WaveLab.Waves.Tests.FoundationTests.StatOrderAndClamp" methodname="StatOrderAndClamp" classname="WaveLab.Waves.Tests.FoundationTests" runstate="Runnable" seed="1171539539" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.000685" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1012" name="ValidationRejectsMissingPrefabDuplicateIdsAndNonFiniteTime" fullname="WaveLab.Waves.Tests.FoundationTests.ValidationRejectsMissingPrefabDuplicateIdsAndNonFiniteTime" methodname="ValidationRejectsMissingPrefabDuplicateIdsAndNonFiniteTime" classname="WaveLab.Waves.Tests.FoundationTests" runstate="Runnable" seed="843742757" result="Passed" start-time="2026-10-14 11:03:16Z" end-time="2026-10-14 11:03:16Z" duration="0.000784" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/doun0/Desktop/File/GitHub/Roguelike-Defense/output/wavelab-auto-validation/edit-tests.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
