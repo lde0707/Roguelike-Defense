@@ -44,7 +44,7 @@ namespace Rushitadel.Progression
                 sr.sharedMaterial=warning.sharedMaterial;
                 go.transform.localScale=Vector3.one*.045f;motes[i]=go.transform;
             }
-            if(owner.Kind==BossKind.Ice && socket.childCount>0)
+            if(owner.Kind==BossKind.Ice && socket.childCount>0 && socket.GetComponentInChildren<ThemeBossAnimation>()==null)
             {ringArt=socket.GetChild(socket.childCount-1);ringScale=ringArt.localScale;}
         }
         private void Update()
@@ -55,7 +55,7 @@ namespace Rushitadel.Progression
             float activeAge=Age-ChargeSeconds-PilotSeconds;
             IsDamaging=activeAge>=0 && activeAge<hold;
             if(Age>ChargeSeconds+PilotSeconds+hold+FadeSeconds){Destroy(gameObject);return;}
-            Vector2 d=Quaternion.Euler(0,0,sweep*Mathf.Clamp01(activeAge/hold))*heading;
+            Vector2 d=Quaternion.Euler(0,0,sweep*Mathf.Clamp01(activeAge/Mathf.Max(.001f,hold)))*heading;
             Vector2 start=Socket.position;
             if(Owner.Kind==BossKind.Butterfly && Socket.GetComponent<EnemyProjectileController>()!=null)start+=Vector2.down*.12f;
             float limit=18;

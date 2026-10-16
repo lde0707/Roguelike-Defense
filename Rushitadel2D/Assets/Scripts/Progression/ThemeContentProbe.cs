@@ -51,6 +51,28 @@ namespace Rushitadel.Progression
                 foreach(var anim in clips){var visual=anim.GetComponent<SpriteRenderer>();Debug.Log("VISUAL "+theme+" "+visual.sprite.texture.name+" rect="+visual.sprite.rect+" pos="+visual.transform.position+" scale="+visual.transform.lossyScale+" enabled="+visual.enabled+" color="+visual.color);}
                 Capture(pressure.GameplayCamera,Path.Combine(folder,"theme-"+ThemeContent.Type((PressureTheme)theme)+".png"));
                 Debug.Log("THEME PASS "+theme+" map="+map.name+" boss="+boss.Kind+" animated parts="+clips.Length);
+                if(theme<4)
+                {
+                    boss.StopAllCoroutines();
+                    // Exercise both new patterns to completion, including telegraph/hold/recovery.
+                    for(int pattern=5;pattern<=6;pattern++)
+                    {
+                        int shots=boss.ShotsFired,beams=boss.LasersFired;
+                        var method=typeof(CampaignBoss).GetMethod("AnimatedPattern",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic);
+                        bool complete=false,sawCue=false;
+                        IEnumerator Finish(){yield return (IEnumerator)method.Invoke(boss,new object[]{pattern});complete=true;}
+                        boss.StartCoroutine(Finish());
+                        float deadline=Time.time+25;
+                        while(!complete&&Time.time<deadline)
+                        {
+                            sawCue|=FindObjectsByType<ThemeBossAnimation>(FindObjectsSortMode.None).Any(a=>a.IsActionPlaying);
+                            yield return null;
+                        }
+                        if(!complete||!sawCue||boss.ShotsFired+boss.LasersFired<=shots+beams)
+                            throw new Exception("Animated pattern failed "+theme+"/"+pattern);
+                        Debug.Log("ANIMATED_PATTERN_PASS "+boss.Kind+"/"+pattern+" shots="+(boss.ShotsFired-shots)+" lasers="+(boss.LasersFired-beams));
+                    }
+                }
                 Destroy(boss.gameObject);yield return null;CampaignDirector.ClearProjectiles();
             }
             Debug.Log("THEME_CONTENT_VALIDATION_OK");EditorApplication.Exit(0);

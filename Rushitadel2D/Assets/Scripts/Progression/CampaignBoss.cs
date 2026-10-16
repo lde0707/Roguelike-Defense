@@ -128,6 +128,7 @@ namespace Rushitadel.Progression
         {
             if(socket==null||lasers.Count(x=>x!=null)>=2)return null;
             var laser=new GameObject("Boss laser").AddComponent<BossLaser>();
+            CuePart(socket,BossLaser.ChargeSeconds+BossLaser.PilotSeconds,hold,BossLaser.FadeSeconds);
             laser.Configure(this,socket,heading,asset,tint??Accent,width,hold,sweep);lasers.Add(laser);LasersFired++;return laser;
         }
         private IEnumerator RunPatterns()
@@ -136,10 +137,12 @@ namespace Rushitadel.Progression
             while(Health!=null&&Health.IsAlive)
             {
                 int phase=Phase;
-                int p=phase!=lastPhase?(phase==2?4:phase==1?2:0):step++%(phase==0?2:phase==1?4:5);
+                int[] rotation=phase==0?new[]{0,5,1}:phase==1?new[]{5,2,6,1,3}:new[]{5,4,6,2,3,0};
+                int p=phase!=lastPhase?(phase==2?6:phase==1?5:0):rotation[step++%rotation.Length];
                 lastPhase=phase;
                 IsAttacking=true;
-                if(Kind==BossKind.Butterfly)yield return Butterfly(p);
+                if(p>=5)yield return AnimatedPattern(p);
+                else if(Kind==BossKind.Butterfly)yield return Butterfly(p);
                 else if(Kind==BossKind.Lava)yield return Lava(p);
                 else if(Kind==BossKind.Ice)yield return Ice(p);
                 else yield return Twins(p);

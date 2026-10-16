@@ -13,6 +13,24 @@ namespace Rushitadel.Progression
         private CampaignBoss owner;
         private bool wasAttacking;
         private float age;
+        private float actionAge,windup,hold,recovery,peak,end;
+        private bool action;
+        public bool IsActionPlaying=>action;
+        // The middle of A/C/D is the extended pose. B's first attack frame is the upright ring.
+        public void Cue(float chargeSeconds,float holdSeconds,float recoverySeconds,float peakFrame=.5f,float endFrame=1)
+        {
+            windup=Mathf.Max(.01f,chargeSeconds);hold=Mathf.Max(0,holdSeconds);recovery=Mathf.Max(.01f,recoverySeconds);
+            peak=Mathf.Clamp01(peakFrame);end=Mathf.Clamp01(endFrame);actionAge=0;action=true;
+            ApplyAction();
+        }
+        private void ApplyAction()
+        {
+            if(clip==null||clip.idle.Length==0)return;
+            var frames=clip.attack.Length>0?clip.attack:clip.idle;
+            float frame=actionAge<windup?Mathf.Lerp(0,peak,actionAge/windup):
+                actionAge<windup+hold?peak:Mathf.Lerp(peak,end,(actionAge-windup-hold)/recovery);
+            SetFrame(frames[Mathf.Clamp(Mathf.RoundToInt(frame*(frames.Length-1)),0,frames.Length-1)]);
+        }
         private MaterialPropertyBlock properties;
         private void SetFrame(Sprite sprite)
         {
@@ -35,6 +53,12 @@ namespace Rushitadel.Progression
         private void Update()
         {
             if(clip==null||clip.idle.Length==0||renderer2D==null)return;
+            if(action)
+            {
+                actionAge+=Time.deltaTime;ApplyAction();
+                if(actionAge>=windup+hold+recovery){action=false;age=0;}
+                return;
+            }
             bool attack=owner!=null&&owner.IsAttacking&&clip.attack.Length>0;
             if(attack!=wasAttacking){age=0;wasAttacking=attack;}
             age+=Time.deltaTime;var frames=attack?clip.attack:clip.idle;

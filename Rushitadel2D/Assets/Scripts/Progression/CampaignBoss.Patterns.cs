@@ -100,7 +100,11 @@ namespace Rushitadel.Progression
                 }
                 yield return null;
             }
-            if(ring!=null){ring.position=start;ring.rotation=Quaternion.identity;}
+            if(ring!=null)
+            {
+                ring.position=start;ring.rotation=Quaternion.identity;
+                if(ring.childCount>0)ring.GetChild(ring.childCount-1).localRotation=Quaternion.identity;
+            }
         }
         private IEnumerator Ice(int p)
         {
