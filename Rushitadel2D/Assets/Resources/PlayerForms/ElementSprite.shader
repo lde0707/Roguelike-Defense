@@ -24,14 +24,18 @@ Shader "Rushitadel/ElementSprite"
      c.rgb=lerp(c.rgb,float3(.89,.91,.94),_Flash*.08);
      if(_CoreDisc>.5)
      {
-         // Code-native 32px round reactor; four matte palette bands, no attached sockets.
-         float2 p=(floor(i.uv*32)+.5)/32-.5;
+         // 24px logical canvas: pixels are one third larger than the previous 32px core.
+         // Keep the world diameter and central hit circle unchanged.
+         float2 p=(floor(i.uv*24)+.5)/24-.5;
          float r=length(p);
          c=half4(.12,.14,.20,r<=.5?1:0);
-         if(r<.44)c.rgb=half3(.69,.73,.78);
-         if(r<.37)c.rgb=half3(.27,.31,.40);
-         if(r<.22)c.rgb=half3(.62,.47,.82);
-         if(abs(p.x)<.025 && abs(p.y)<.15 || abs(p.y)<.025 && abs(p.x)<.15)c.rgb=half3(.69,.73,.78);
+         if(r<.45)c.rgb=half3(.69,.73,.78);
+         if(r<.365)c.rgb=half3(.27,.31,.40);
+         // Four symmetric armor seams remain readable while the unit rotates.
+         if(r>.365 && r<.45 && min(abs(p.x),abs(p.y))<.025)c.rgb=half3(.27,.31,.40);
+         if(r<.26)c.rgb=half3(.12,.14,.20);
+         if(r<.205)c.rgb=half3(.62,.47,.82);
+         if((abs(p.x)<.025 && abs(p.y)<.125) || (abs(p.y)<.025 && abs(p.x)<.125))c.rgb=half3(.69,.73,.78);
      }
      return c*i.c;
  }
