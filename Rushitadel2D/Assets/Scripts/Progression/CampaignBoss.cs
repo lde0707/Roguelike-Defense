@@ -27,6 +27,10 @@ namespace Rushitadel.Progression
         private readonly List<Vector2> homes=new();
         private readonly List<float> respawnAt=new();
         private int stage;
+        private readonly EnemyController[] twinHealth=new EnemyController[2];
+        public EnemyController TwinHealth(int side)=>side>=0&&side<2?twinHealth[side]:null;
+        private bool TwinAlive(int side)=>Kind!=BossKind.Twins || twinHealth[side]!=null&&twinHealth[side].IsAlive;
+        private bool SourceAlive(Vector2 from)=>Kind!=BossKind.Twins || TwinAlive(from.x<transform.position.x?0:1);
         private Color Accent=>Kind==BossKind.Butterfly||Kind==BossKind.Lava?new Color(1,.3f,.08f):new Color(.15f,.8f,1);
         public Vector3 DamagePosition(Vector3 query)
         {
@@ -57,8 +61,13 @@ namespace Rushitadel.Progression
                     string variant=i==0?"a":"b";
                     art.gameObject.AddComponent<ThemeBossAnimation>().Configure(this,art,"D","boss_Type_D_"+variant+"_idle_","boss_Type_D_"+variant+"_attack_",2.7f);
                     var box=art.gameObject.AddComponent<BoxCollider2D>();box.isTrigger=true;box.size=art.sprite.bounds.size*.75f;
+                    var individual=art.gameObject.AddComponent<EnemyController>();
+                    individual.ConfigureRun(Health.MaximumHealth*.5f,0,true);
+                    individual.Damaged+=Health.TakeDamage;
+                    twinHealth[i]=individual;
                     Socket(new Vector2(i==0?-2:2,-.2f));
                 }
+                EnemyRegistry.Unregister(Health); // Root is bookkeeping only; hits resolve to each body.
             }
             else
             {
@@ -107,6 +116,8 @@ namespace Rushitadel.Progression
         {
             if(Time.timeScale<=0 || Health==null || !Health.IsAlive)return;
             bullets.RemoveAll(x=>x==null);lasers.RemoveAll(x=>x==null);
+            CullDefeatedParts();
+            if(Kind==BossKind.Twins)for(int i=0;i<2;i++)sockets[i].gameObject.SetActive(TwinAlive(i));
             for(int i=0;i<satellites.Count;i++)if(satellites[i]==null)
             {
                 if(float.IsPositiveInfinity(respawnAt[i]))respawnAt[i]=Time.time+3;
@@ -116,7 +127,7 @@ namespace Rushitadel.Progression
         private Vector2 Aim(Vector2 from)=>PlayerHealth.Instance==null?Vector2.down:((Vector2)PlayerHealth.Instance.transform.position-from).normalized;
         public EnemyProjectileController FireAt(Vector2 from,Vector2 direction,string asset,float hp=24,float speed=3,float radius=.14f,int bounces=0,float turn=0,float returnAfter=0,float splitAfter=0,string child=null)
         {
-            if(prefab==null||Health==null||!Health.IsAlive||bullets.Count(x=>x!=null)>=110)return null;
+            if(prefab==null||Health==null||!Health.IsAlive||!SourceAlive(from)||bullets.Count(x=>x!=null)>=110)return null;
             var shot=Instantiate(prefab,from,Quaternion.identity);shot.gameObject.SetActive(true);
             shot.ConfigureBoss(hp*(1.35f+.15f*(stage-1)),speed*(1+.06f*(stage-1)),radius,7,bounces);shot.SetRewardOwner(Health);shot.Launch(direction);
             BossArt.Shot(shot.gameObject,asset,radius*2.5f,true,true);
@@ -127,7 +138,7 @@ namespace Rushitadel.Progression
         {for(int i=0;i<count;i++)FireAt(from,Quaternion.Euler(0,0,angle+(i-(count-1)*.5f)*spread)*Vector2.down,asset,hp,speed,.14f,bounces);}
         private BossLaser Laser(Transform socket,string asset,Vector2 heading,float width=.28f,float hold=1.4f,float sweep=0,Color? tint=null,float windup=BossLaser.ChargeSeconds)
         {
-            if(socket==null||lasers.Count(x=>x!=null)>=2)return null;
+            if(socket==null||!socket.gameObject.activeInHierarchy||!SourceAlive(socket.position)||lasers.Count(x=>x!=null)>=2)return null;
             var laser=new GameObject("Boss laser").AddComponent<BossLaser>();
             windup=Mathf.Max(.65f,windup);
             CuePart(socket,windup+BossLaser.PilotSeconds,hold,BossLaser.FadeSeconds);
@@ -139,11 +150,12 @@ namespace Rushitadel.Progression
             while(Health!=null&&Health.IsAlive)
             {
                 int phase=Phase;
-                int[] rotation=phase==0?new[]{7,0,5,9,1,8}:phase==1?new[]{8,5,2,9,6,7,1,3}:new[]{9,7,4,8,6,2,5,3,0};
+                int[] rotation=phase==0?new[]{10,7,0,11,5,9,1,12,8}:phase==1?new[]{11,8,5,12,2,9,10,6,7,1,3}:new[]{12,9,10,7,4,11,8,6,2,5,3,0};
                 int p=phase!=lastPhase?(phase==2?6:phase==1?5:0):rotation[step++%rotation.Length];
                 lastPhase=phase;
                 IsAttacking=true;
-                if(p>=7)yield return BarragePattern(p);
+                if(p>=10)yield return ObjectPattern(p-10);
+                else if(p>=7)yield return BarragePattern(p);
                 else if(p>=5)yield return AnimatedPattern(p);
                 else if(Kind==BossKind.Butterfly)yield return Butterfly(p);
                 else if(Kind==BossKind.Lava)yield return Lava(p);
@@ -156,6 +168,7 @@ namespace Rushitadel.Progression
         private void OnDestroy()
         {
             StopAllCoroutines();
+            foreach(var resource in partResources)if(resource!=null)Destroy(resource);
             foreach(var shot in bullets)if(shot!=null)Destroy(shot.gameObject);
             foreach(var laser in lasers)if(laser!=null)Destroy(laser.gameObject);
             foreach(var part in satellites)if(part!=null)Destroy(part.gameObject);

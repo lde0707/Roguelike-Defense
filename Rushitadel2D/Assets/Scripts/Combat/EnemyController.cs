@@ -42,6 +42,7 @@ namespace Rushitadel.Combat
         public bool IsAlive => currentHealth > 0f;
         public float CurrentHealth => currentHealth;
         public float MaximumHealth => maxHealth;
+        public event System.Action<float> Damaged;
 
         private void Awake() => currentHealth = maxHealth;
 
@@ -80,7 +81,9 @@ namespace Rushitadel.Combat
                 return;
             }
 
+            float applied=Mathf.Min(currentHealth,amount);
             currentHealth = Mathf.Max(0f, currentHealth - amount);
+            Damaged?.Invoke(applied);
             if (!IsAlive)
             {
                 Die();
@@ -94,8 +97,7 @@ namespace Rushitadel.Combat
                 return;
             }
 
-            currentHealth = 0f;
-            Die();
+            TakeDamage(currentHealth);
         }
 
         private void Die()

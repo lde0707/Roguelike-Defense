@@ -12,6 +12,9 @@ namespace Rushitadel.Presentation
     {
         private Text progressText, resourcesText, healthText, powerText, bossText;
         private Image xpFill, hpFill, powerFill, bossFill;
+        private Image twinWaterFill,twinElectricFill;
+        private Image twinWaterPanel,twinElectricPanel;
+        private Text twinWaterText,twinElectricText;
         private readonly Text[] turretText = new Text[6];
         private int augmentSlot = 1, augmentChoice = -1, webSelection = -1;
         private int nextThemeSelection = -1;
@@ -41,6 +44,12 @@ namespace Rushitadel.Presentation
             }
             bossText = Label(content, "", 545, 82, 830, 35, 22, TextAnchor.MiddleCenter);
             bossFill = Image(content, "Boss HP", 610, 122, 700, 8, new Color32(210,116,82,255)); bossFill.raycastTarget = false;
+            twinWaterPanel=Image(content,"Water Boss panel",420,116,520,49,panel);twinWaterPanel.raycastTarget=false;
+            twinElectricPanel=Image(content,"Electric Boss panel",980,116,520,49,panel);twinElectricPanel.raycastTarget=false;
+            twinWaterText=Label(content,"",430,118,500,30,24,TextAnchor.MiddleCenter);
+            twinElectricText=Label(content,"",990,118,500,30,24,TextAnchor.MiddleCenter);
+            twinWaterFill=Image(content,"Water Boss HP",430,150,500,10,new Color32(90,200,240,255));twinWaterFill.raycastTarget=false;
+            twinElectricFill=Image(content,"Electric Boss HP",990,150,500,10,new Color32(244,199,80,255));twinElectricFill.raycastTarget=false;
             Label(content, "ESC  일시정지", 1660, 20, 235, 40, 21);
             UpdateBattleHud();
         }
@@ -59,10 +68,23 @@ namespace Rushitadel.Presentation
             xpFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(260*e.NormalizedGauge),10);
             for (int i = 0; i < 6; i++) turretText[i].text = $"T{i+1} {Rushitadel.Combat.TurretForms.Names[d.State.turretForms[i]]}\n화력 {d.State.augments[i*3]} · 속도 {d.State.augments[i*3+1]}";
             bool alive = d.Boss != null && d.Boss.Health.IsAlive && d.State.phase == RunPhase.Boss;
-            bossFill.gameObject.SetActive(alive);
+            bool twins=alive&&d.Boss.Kind==BossKind.Twins;
+            bossFill.gameObject.SetActive(alive&&!twins);
+            twinWaterFill.gameObject.SetActive(twins);twinElectricFill.gameObject.SetActive(twins);
+            twinWaterPanel.gameObject.SetActive(twins);twinElectricPanel.gameObject.SetActive(twins);
+            twinWaterText.gameObject.SetActive(twins);twinElectricText.gameObject.SetActive(twins);
+            if(twins)
+            {
+                var water=d.Boss.TwinHealth(0);var electric=d.Boss.TwinHealth(1);
+                twinWaterText.text=water!=null?$"수압 보스  {water.CurrentHealth:0}/{water.MaximumHealth:0}":"수압 보스 · 격파";
+                twinElectricText.text=electric!=null?$"전격 보스  {electric.CurrentHealth:0}/{electric.MaximumHealth:0}":"전격 보스 · 격파";
+                twinWaterFill.rectTransform.sizeDelta=new Vector2(water!=null?500*water.CurrentHealth/water.MaximumHealth:0,10);
+                twinElectricFill.rectTransform.sizeDelta=new Vector2(electric!=null?500*electric.CurrentHealth/electric.MaximumHealth:0,10);
+            }
             bossText.text = alive ? $"{d.Boss.DisplayName} · {d.Boss.Phase+1}단계  {d.Boss.Health.CurrentHealth:0}/{d.Boss.Health.MaximumHealth:0}  {d.Boss.PatternLabel}" :
                 Rushitadel.Combat.EnemyRangedAttack.IsReloadWindow(Time.time) ? "적 재장전 · 지금 공격!" : "코어 파괴 → 탄 약화 → 절벽 반사로 역습 (최대 3발)";
             if (alive) bossFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(700*d.Boss.Health.CurrentHealth/d.Boss.Health.MaximumHealth),8);
+            if(twins)bossText.text=$"수압·전격 쌍성 · {d.Boss.Phase+1}단계 · {d.Boss.PatternLabel}";
             if (ForwardPressureController.Instance.InDanger) progressText.text += "   ! 후방 위험 · 전진 !";
         }
         private RectTransform SafePanel(string title)

@@ -36,7 +36,7 @@ namespace Rushitadel.Progression
             beam.sprite=BossArt.Beam(asset);horizontal=beam.sprite.bounds.size.x>beam.sprite.bounds.size.y;
             beam.drawMode=SpriteDrawMode.Tiled;
             beam.tileMode=SpriteTileMode.Continuous;
-            charge=BossArt.Create(transform,owner.OrbAsset,Vector2.zero,.2f);charge.sortingOrder=116;
+            charge=BossArt.Create(transform,owner.Kind==BossKind.Twins?"Twins/01-pressure-orb":owner.OrbAsset,Vector2.zero,.2f);charge.sortingOrder=116;
             warning=gameObject.AddComponent<LineRenderer>();warning.sharedMaterial=new Material(Shader.Find("Sprites/Default"));
             warning.positionCount=2;warning.useWorldSpace=true;warning.sortingOrder=114;warning.widthMultiplier=.035f;
             for(int i=0;i<motes.Length;i++)
