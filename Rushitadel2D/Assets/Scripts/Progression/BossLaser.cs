@@ -16,6 +16,7 @@ namespace Rushitadel.Progression
         public float Age {get;private set;}
         public float Length {get;private set;}
         public float Width {get;private set;}
+        public float WindupSeconds {get;private set;}=ChargeSeconds;
         private Vector2 heading;
         private float hold,sweep;
         private SpriteRenderer beam,charge;
@@ -26,8 +27,9 @@ namespace Rushitadel.Progression
         private readonly Transform[] motes=new Transform[8];
         private Transform ringArt;
         private Vector3 ringScale;
-        public void Configure(CampaignBoss owner,Transform socket,Vector2 direction,string asset,Color tint,float width,float duration,float sweepDegrees=0)
+        public void Configure(CampaignBoss owner,Transform socket,Vector2 direction,string asset,Color tint,float width,float duration,float sweepDegrees=0,float windupSeconds=ChargeSeconds)
         {
+            WindupSeconds=Mathf.Max(.65f,windupSeconds);
             Owner=owner;Socket=socket;heading=direction.normalized;color=tint;Width=width;hold=duration;sweep=sweepDegrees;
             beam=BossArt.Create(transform,asset,Vector2.zero,1);beam.sortingOrder=115;
             beam.sharedMaterial=BossArt.HostileMaterial;
@@ -52,9 +54,9 @@ namespace Rushitadel.Progression
             if(Time.timeScale<=0)return;
             if(Owner==null || !Owner.Health.IsAlive || Socket==null || !Socket.gameObject.activeInHierarchy || (RequireEnd&&EndSocket==null)){Destroy(gameObject);return;}
             Age+=Time.deltaTime;transform.position=Socket.position;
-            float activeAge=Age-ChargeSeconds-PilotSeconds;
+            float activeAge=Age-WindupSeconds-PilotSeconds;
             IsDamaging=activeAge>=0 && activeAge<hold;
-            if(Age>ChargeSeconds+PilotSeconds+hold+FadeSeconds){Destroy(gameObject);return;}
+            if(Age>WindupSeconds+PilotSeconds+hold+FadeSeconds){Destroy(gameObject);return;}
             Vector2 d=Quaternion.Euler(0,0,sweep*Mathf.Clamp01(activeAge/Mathf.Max(.001f,hold)))*heading;
             Vector2 start=Socket.position;
             if(Owner.Kind==BossKind.Butterfly && Socket.GetComponent<EnemyProjectileController>()!=null)start+=Vector2.down*.12f;
@@ -64,10 +66,10 @@ namespace Rushitadel.Progression
             var camera=Camera.main;
             if(camera!=null && d.y<-.001f)limit=Mathf.Min(limit,Mathf.Max(0,(camera.transform.position.y-camera.orthographicSize-start.y)/d.y));
             Length=activeAge>=0?limit*Mathf.Clamp01(activeAge/.15f):limit;
-            warning.enabled=Age<ChargeSeconds;
+            warning.enabled=Age<WindupSeconds;
             warning.startColor=warning.endColor=new Color(color.r,color.g,color.b,.35f+.2f*Mathf.Sin(Age*18));
             warning.SetPosition(0,start);warning.SetPosition(1,start+d*limit);
-            beam.enabled=Age>=ChargeSeconds;
+            beam.enabled=Age>=WindupSeconds;
             if(beam.sprite!=null)
             {
                 beam.transform.position=start+d*Length*.5f;
@@ -82,11 +84,11 @@ namespace Rushitadel.Progression
                 beam.color=new Color(1,1,1,activeAge>hold?1-(activeAge-hold)/FadeSeconds:1);
             }
             charge.transform.position=start;
-            charge.transform.localScale=Vector3.one*(Mathf.Lerp(.12f,.45f,Mathf.Clamp01(Age/ChargeSeconds))/charge.sprite.bounds.size.x);
+            charge.transform.localScale=Vector3.one*(Mathf.Lerp(.12f,.45f,Mathf.Clamp01(Age/WindupSeconds))/charge.sprite.bounds.size.x);
             charge.color=new Color(1,1,1,activeAge>hold?Mathf.Clamp01(1-(activeAge-hold)/FadeSeconds):1);
             for(int i=0;i<motes.Length;i++)
             {
-                motes[i].gameObject.SetActive(Age<ChargeSeconds);
+                motes[i].gameObject.SetActive(Age<WindupSeconds);
                 float a=i*Mathf.PI*.25f+Age*1.5f,r=.7f*(1-Mathf.Repeat(Age*1.5f+i*.13f,1));
                 motes[i].localPosition=new Vector3(Mathf.Cos(a)*r,Mathf.Sin(a)*r,0);
             }

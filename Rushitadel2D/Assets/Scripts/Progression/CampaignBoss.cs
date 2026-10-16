@@ -74,6 +74,7 @@ namespace Rushitadel.Progression
                 else if(Kind==BossKind.Lava){Socket(new(-2.85f,-1.45f));Socket(new(2.85f,-1.45f));Socket(new(0,-.8f));}
                 else Socket(new(0,-1.2f));
             }
+            FitScreenFootprint();
             int count=Kind==BossKind.Butterfly?4:Kind==BossKind.Ice?2:0;
             for(int i=0;i<count;i++)
             {
@@ -124,12 +125,13 @@ namespace Rushitadel.Progression
         }
         private void Fan(Vector2 from,string asset,int count,float angle,float spread,float hp=24,float speed=3,int bounces=0)
         {for(int i=0;i<count;i++)FireAt(from,Quaternion.Euler(0,0,angle+(i-(count-1)*.5f)*spread)*Vector2.down,asset,hp,speed,.14f,bounces);}
-        private BossLaser Laser(Transform socket,string asset,Vector2 heading,float width=.28f,float hold=1.4f,float sweep=0,Color? tint=null)
+        private BossLaser Laser(Transform socket,string asset,Vector2 heading,float width=.28f,float hold=1.4f,float sweep=0,Color? tint=null,float windup=BossLaser.ChargeSeconds)
         {
             if(socket==null||lasers.Count(x=>x!=null)>=2)return null;
             var laser=new GameObject("Boss laser").AddComponent<BossLaser>();
-            CuePart(socket,BossLaser.ChargeSeconds+BossLaser.PilotSeconds,hold,BossLaser.FadeSeconds);
-            laser.Configure(this,socket,heading,asset,tint??Accent,width,hold,sweep);lasers.Add(laser);LasersFired++;return laser;
+            windup=Mathf.Max(.65f,windup);
+            CuePart(socket,windup+BossLaser.PilotSeconds,hold,BossLaser.FadeSeconds);
+            laser.Configure(this,socket,heading,asset,tint??Accent,width,hold,sweep,windup);lasers.Add(laser);LasersFired++;return laser;
         }
         private IEnumerator RunPatterns()
         {
@@ -137,11 +139,12 @@ namespace Rushitadel.Progression
             while(Health!=null&&Health.IsAlive)
             {
                 int phase=Phase;
-                int[] rotation=phase==0?new[]{0,5,1}:phase==1?new[]{5,2,6,1,3}:new[]{5,4,6,2,3,0};
+                int[] rotation=phase==0?new[]{7,0,5,9,1,8}:phase==1?new[]{8,5,2,9,6,7,1,3}:new[]{9,7,4,8,6,2,5,3,0};
                 int p=phase!=lastPhase?(phase==2?6:phase==1?5:0):rotation[step++%rotation.Length];
                 lastPhase=phase;
                 IsAttacking=true;
-                if(p>=5)yield return AnimatedPattern(p);
+                if(p>=7)yield return BarragePattern(p);
+                else if(p>=5)yield return AnimatedPattern(p);
                 else if(Kind==BossKind.Butterfly)yield return Butterfly(p);
                 else if(Kind==BossKind.Lava)yield return Lava(p);
                 else if(Kind==BossKind.Ice)yield return Ice(p);

@@ -33,7 +33,10 @@ namespace Rushitadel.Progression
             foreach(var enemy in FindObjectsByType<EnemyController>(FindObjectsSortMode.None))Destroy(enemy.gameObject);
             yield return null;
             var loop=FindFirstObjectByType<LoopingBattlefield>();
-            string folder=Path.GetFullPath(Path.Combine(Application.dataPath,"../../output/theme-content-20261016"));Directory.CreateDirectory(folder);
+            string folder=Path.GetFullPath(Path.Combine(Application.dataPath,"../../output/boss-barrage-20261016"));Directory.CreateDirectory(folder);
+            if(CampaignBoss.CalculateScreenFit(new Vector2(100,100),19.2f,10.8f)!=.85f ||
+                CampaignBoss.CalculateScreenFit(Vector2.one,19.2f,10.8f)!=1)
+                throw new Exception("Screen fit must only shrink oversized bosses, capped at 15 percent");
             for(int theme=0;theme<5;theme++)
             {
                 pressure.SetTheme((PressureTheme)theme);yield return null;yield return null;
@@ -41,6 +44,8 @@ namespace Rushitadel.Progression
                 if(loop.Panels.Any(p=>p.sprite!=map)||Math.Abs(loop.PanelHeight-12.8f)>.001f)throw new Exception("Theme map mismatch "+theme);
                 var boss=FindFirstObjectByType<EnemySpawner>().SpawnCampaignEnemy(1,true).GetComponent<CampaignBoss>();
                 if((int)boss.Kind!=Math.Min(theme,3))throw new Exception("Theme boss mismatch "+theme);
+                if(boss.ScreenFitScale<.85f||boss.ScreenFitScale>1)throw new Exception("Invalid boss scale");
+                Debug.Log("SCREEN_FIT_PASS "+boss.Kind+" scale="+boss.ScreenFitScale);
                 var clips=FindObjectsByType<ThemeBossAnimation>(FindObjectsSortMode.None);
                 if(clips.Length==0||clips.Any(c=>c.IdleFrameCount==0))throw new Exception("Missing animation "+theme);
                 var sr=clips[0].GetComponent<SpriteRenderer>();var before=sr.sprite;
@@ -54,11 +59,11 @@ namespace Rushitadel.Progression
                 if(theme<4)
                 {
                     boss.StopAllCoroutines();
-                    // Exercise both new patterns to completion, including telegraph/hold/recovery.
-                    for(int pattern=5;pattern<=6;pattern++)
+                    // Exercise every animation-driven pattern, including telegraph/hold/recovery.
+                    for(int pattern=5;pattern<=9;pattern++)
                     {
                         int shots=boss.ShotsFired,beams=boss.LasersFired;
-                        var method=typeof(CampaignBoss).GetMethod("AnimatedPattern",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic);
+                        var method=typeof(CampaignBoss).GetMethod(pattern>=7?"BarragePattern":"AnimatedPattern",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic);
                         bool complete=false,sawCue=false;
                         IEnumerator Finish(){yield return (IEnumerator)method.Invoke(boss,new object[]{pattern});complete=true;}
                         boss.StartCoroutine(Finish());
@@ -66,6 +71,9 @@ namespace Rushitadel.Progression
                         while(!complete&&Time.time<deadline)
                         {
                             sawCue|=FindObjectsByType<ThemeBossAnimation>(FindObjectsSortMode.None).Any(a=>a.IsActionPlaying);
+                            var activeLasers=FindObjectsByType<BossLaser>(FindObjectsSortMode.None).Where(l=>l.Owner==boss).ToArray();
+                            if(activeLasers.Length>2||activeLasers.Any(l=>l.IsDamaging&&l.Age<l.WindupSeconds+BossLaser.PilotSeconds))
+                                throw new Exception("Unsafe laser timing or concurrency");
                             yield return null;
                         }
                         if(!complete||!sawCue||boss.ShotsFired+boss.LasersFired<=shots+beams)

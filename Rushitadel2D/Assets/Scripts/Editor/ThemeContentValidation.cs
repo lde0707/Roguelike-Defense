@@ -9,7 +9,7 @@ namespace Rushitadel.Editor
         {
             AssetDatabase.Refresh();EditorSceneManager.OpenScene("Assets/Scenes/Title.unity");
             SessionState.SetBool("ThemeContent.Check",true);
-            double deadline=EditorApplication.timeSinceStartup+180;
+            double deadline=EditorApplication.timeSinceStartup+360;
             EditorApplication.update+=()=>{if(EditorApplication.timeSinceStartup>deadline)EditorApplication.Exit(2);};
             EditorApplication.EnterPlaymode();
         }
