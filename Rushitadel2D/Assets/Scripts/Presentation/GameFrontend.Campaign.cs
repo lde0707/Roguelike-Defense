@@ -12,7 +12,7 @@ namespace Rushitadel.Presentation
     {
         private Text progressText, resourcesText, healthText, powerText, bossText;
         private Image xpFill, hpFill, powerFill, bossFill;
-        private readonly Text[] turretText = new Text[5];
+        private readonly Text[] turretText = new Text[6];
         private int augmentSlot = 1, augmentChoice = -1, webSelection = -1;
         private int nextThemeSelection = -1;
         public void ShowBattle()
@@ -33,10 +33,10 @@ namespace Rushitadel.Presentation
             powerFill = Image(content, "Power pixels", 325, 1040, 260, 10, new Color32(173,129,209,255)); powerFill.raycastTarget = false;
             Image(content, "XP track", 615, 1040, 260, 10, Color.black).raycastTarget = false;
             xpFill = Image(content, "XP pixels", 615, 1040, 260, 10, new Color32(64,180,236,255)); xpFill.raycastTarget = false;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 6; i++)
             {
                 int slot = i + 1;
-                var b = Button(content, "", 925+i*195, 967, 183, 88, () => ShowTurret(slot));
+                var b = Button(content, "", 925+i*163, 967, 153, 88, () => ShowTurret(slot));
                 turretText[i] = b.GetComponentsInChildren<Text>().First(); turretText[i].fontSize = 20;
             }
             bossText = Label(content, "", 545, 82, 830, 35, 22, TextAnchor.MiddleCenter);
@@ -57,7 +57,7 @@ namespace Rushitadel.Presentation
             hpFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(260*h.NormalizedHealth),10);
             powerFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(260*p.NormalizedPower),10);
             xpFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(260*e.NormalizedGauge),10);
-            for (int i = 0; i < 5; i++) turretText[i].text = $"T{i+1} {Rushitadel.Combat.TurretForms.Names[d.State.turretForms[i]]}\n화력 {d.State.augments[i*3]} · 속도 {d.State.augments[i*3+1]}";
+            for (int i = 0; i < 6; i++) turretText[i].text = $"T{i+1} {Rushitadel.Combat.TurretForms.Names[d.State.turretForms[i]]}\n화력 {d.State.augments[i*3]} · 속도 {d.State.augments[i*3+1]}";
             bool alive = d.Boss != null && d.Boss.Health.IsAlive && d.State.phase == RunPhase.Boss;
             bossFill.gameObject.SetActive(alive);
             bossText.text = alive ? $"{d.Boss.DisplayName} · {d.Boss.Phase+1}단계  {d.Boss.Health.CurrentHealth:0}/{d.Boss.Health.MaximumHealth:0}  {d.Boss.PatternLabel}" :
@@ -78,10 +78,10 @@ namespace Rushitadel.Presentation
             if(d.NeedsFirstForms){ShowTransformations();return;}
             var p = SafePanel($"LV {d.Experience.Level} · 포탑 증강 3택1"); page = "augment";
             Label(p, $"남은 선택 {d.PendingAugments}회 · 적용할 포탑을 선택하세요. 선택 중 전투는 정지합니다.", 45, 100, 1120, 65, 24);
-            for (int i = 1; i <= 5; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 int slot = i;
-                Button(p, (augmentSlot == slot ? "▶ " : "") + "T"+slot, 60+(i-1)*215, 175, 200, 60, () => { augmentSlot = slot; ShowAugments(); });
+                Button(p, (augmentSlot == slot ? "▶ " : "") + "T"+slot, 60+(i-1)*180, 175, 165, 60, () => { augmentSlot = slot; ShowAugments(); });
             }
             var offers=d.OfferedUpgrades(augmentSlot);
             if(!offers.Contains(augmentChoice))augmentChoice=-1;

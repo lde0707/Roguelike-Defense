@@ -209,9 +209,9 @@ namespace Rushitadel.Editor
         {
             GameObject go = new GameObject($"T{slotId}");
             go.transform.SetParent(root, false);
-            float angle = (slotId - 1) * 72f;
+            float angle = (slotId - 1) * (360f / PlayerTurretRig.TurretCount);
             go.transform.localRotation = Quaternion.Euler(0f, 0f, -angle);
-            go.transform.localPosition = Quaternion.Euler(0f, 0f, -angle) * (Vector3.up * 0.55f);
+            go.transform.localPosition = Quaternion.Euler(0f, 0f, -angle) * (Vector3.up * PlayerTurretRig.OrbitRadius);
             AttachVisual(go.transform, "Mount", new Color(0.23f, 0.25f, 0.4f), new Vector2(0.32f, 0.32f), 102, Vector2.zero);
             AttachVisual(go.transform, "Barrel", new Color(0.68f, 0.67f, 0.8f), new Vector2(0.18f, 0.46f), 103, new Vector2(0f, 0.12f));
             AttachVisual(go.transform, "Emitter", new Color(0.64f, 0.2f, 1f), new Vector2(0.12f, 0.16f), 104, new Vector2(0f, 0.28f));

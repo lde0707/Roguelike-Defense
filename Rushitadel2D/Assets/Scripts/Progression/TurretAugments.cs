@@ -14,7 +14,7 @@ namespace Rushitadel.Progression
         public static int UniqueRank(int slot)=>Rank(slot,2);
         public static bool Eligible(CampaignState state,int slot,int kind)
         {
-            if(slot<1||slot>5||kind<0||kind>=6||state.turretForms.Any(f=>f==0))return false;
+            if(slot<1||slot>6||kind<0||kind>=6||state.turretForms.Any(f=>f==0))return false;
             int f=state.turretForms[slot-1];
             if(state.turretUpgrades[(slot-1)*6+kind]>=Caps[kind])return false;
             if(TurretForms.Support(f))return kind==1||kind==2||kind==4;
@@ -29,7 +29,7 @@ namespace Rushitadel.Progression
     {
         public bool ChooseCompletionReward(int slot)
         {
-            if(NeedsFirstForms||PendingAugments<=0||slot<1||slot>5||!Rushitadel.Player.PlayerHealth.Instance.IsAlive||OfferedUpgrades(slot).Length!=0)return false;
+            if(NeedsFirstForms||PendingAugments<=0||slot<1||slot>6||!Rushitadel.Player.PlayerHealth.Instance.IsAlive||OfferedUpgrades(slot).Length!=0)return false;
             Rushitadel.Player.PlayerHealth.Instance.Heal(10);
             var p=Rushitadel.Player.PlayerHealth.Instance.GetComponent<Rushitadel.Power.PlayerPower>();p.RestorePower(Mathf.Min(p.MaximumPower,p.CurrentPower+20),false);
             State.completionRewards++;State.augmentsChosen++;return true;

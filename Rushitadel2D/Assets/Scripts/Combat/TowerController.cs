@@ -5,7 +5,8 @@ namespace Rushitadel.Combat
 {
     public sealed class TowerController : MonoBehaviour
     {
-        [SerializeField, Range(1, 5)] private int slotId = 1;
+        [SerializeField, Range(1, 6)] private int slotId = 1;
+        public void SetSlot(int value) => slotId = Mathf.Clamp(value,1,PlayerTurretRig.TurretCount);
         private PlayerHealth owner;
         public int SlotId => slotId;
         private void Awake() => owner = GetComponentInParent<PlayerHealth>();

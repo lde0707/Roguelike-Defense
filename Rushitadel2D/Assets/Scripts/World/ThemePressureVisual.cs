@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Rushitadel.Combat;
 
 namespace Rushitadel.World
 {
@@ -65,7 +66,10 @@ namespace Rushitadel.World
             {
                 var sr=tiles[i];sr.sprite=sequence[(FrameIndex+i*4)%12];if(sr.sprite==null)continue;
                 var texture=sr.sprite.texture;
-                if(!materials.TryGetValue(texture,out var material))materials[texture]=material=new Material(Shader.Find("Sprites/Default")){mainTexture=texture};
+                if(!materials.TryGetValue(texture,out var material))materials[texture]=material=new Material(Resources.Load<Shader>("PressureArt/CliffBlend")){mainTexture=texture};
+                var boundary=PlayfieldBoundary.Instance;
+                material.SetFloat("_Left",boundary!=null?boundary.LeftEdge:-size.x*.5f);
+                material.SetFloat("_Right",boundary!=null?boundary.RightEdge:size.x*.5f);
                 sr.sharedMaterial=material;
             }
             Layout();

@@ -7,7 +7,7 @@ Shader "Rushitadel/ElementSprite"
  #pragma vertex vert
  #pragma fragment frag
  #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
- TEXTURE2D(_MainTex);SAMPLER(sampler_MainTex);float4 _ElementColor;float _Pulse,_Flash,_RotationAA;
+ TEXTURE2D(_MainTex);SAMPLER(sampler_MainTex);float4 _ElementColor;float _Pulse,_Flash,_RotationAA,_CoreDisc;
  struct A{float3 p:POSITION;float2 uv:TEXCOORD0;float4 c:COLOR;};struct V{float4 p:SV_POSITION;float2 uv:TEXCOORD0;float4 c:COLOR;};
  V vert(A a){V o;o.p=TransformObjectToHClip(a.p);o.uv=a.uv;o.c=a.c;return o;}
  half4 tap(float2 uv){half4 c=SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,uv);return half4(c.rgb*c.a,c.a);}
@@ -22,6 +22,17 @@ Shader "Rushitadel/ElementSprite"
      float mask=smoothstep(.04,.16,c.b-c.g)*smoothstep(.03,.12,c.r-c.g);
      c.rgb=lerp(c.rgb,_ElementColor.rgb*min(1.08,_Pulse),mask*.65);
      c.rgb=lerp(c.rgb,float3(.89,.91,.94),_Flash*.08);
+     if(_CoreDisc>.5)
+     {
+         // Code-native 32px round reactor; four matte palette bands, no attached sockets.
+         float2 p=(floor(i.uv*32)+.5)/32-.5;
+         float r=length(p);
+         c=half4(.12,.14,.20,r<=.5?1:0);
+         if(r<.44)c.rgb=half3(.69,.73,.78);
+         if(r<.37)c.rgb=half3(.27,.31,.40);
+         if(r<.22)c.rgb=half3(.62,.47,.82);
+         if(abs(p.x)<.025 && abs(p.y)<.15 || abs(p.y)<.025 && abs(p.x)<.15)c.rgb=half3(.69,.73,.78);
+     }
      return c*i.c;
  }
  ENDHLSL

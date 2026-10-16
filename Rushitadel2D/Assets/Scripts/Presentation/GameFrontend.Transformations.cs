@@ -13,8 +13,8 @@ namespace Rushitadel.Presentation
             if(!d.NeedsFirstForms){ShowAugments();return;}
             if(d.State.turretForms[augmentSlot-1]!=0){augmentSlot=System.Array.IndexOf(d.State.turretForms,0)+1;selectedForm=0;}
             var p=SafePanel("포탑 변형 · 외형과 공격 방식 변경");page="augment";
-            Label(p,"첫 증강은 변형 필수 · 5포탑 모두 변형 후 일반 증강 개방 · 지원형 최대 1개",45,100,1120,55,23);
-            for(int i=1;i<=5;i++){int slot=i;bool ready=d.State.turretForms[i-1]!=0;Button(p,(augmentSlot==i?"▶ ":"")+"T"+i+(ready?" 완료":""),60+(i-1)*215,165,200,55,()=>{augmentSlot=slot;selectedForm=0;ShowTransformations();},!ready);}
+            Label(p,"첫 증강은 변형 필수 · 6포탑 모두 변형 후 일반 증강 개방 · 지원형 최대 1개",45,100,1120,55,23);
+            for(int i=1;i<=6;i++){int slot=i;bool ready=d.State.turretForms[i-1]!=0;Button(p,(augmentSlot==i?"▶ ":"")+"T"+i+(ready?" 완료":""),60+(i-1)*180,165,165,55,()=>{augmentSlot=slot;selectedForm=0;ShowTransformations();},!ready);}
             var offers=d.OfferedForms(augmentSlot);
             for(int i=0;i<offers.Length;i++)
             {

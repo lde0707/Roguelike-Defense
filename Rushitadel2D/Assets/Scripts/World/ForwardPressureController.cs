@@ -83,6 +83,11 @@ namespace Rushitadel.World
 
         private void Update()
         {
+            var director=Rushitadel.Progression.CampaignDirector.Instance;
+            bool boss=director!=null && director.Initialized && director.State.phase==Rushitadel.Progression.RunPhase.Boss;
+            if(rearVisual!=null)rearVisual.gameObject.SetActive(!boss);
+            if(rearHazard!=null)rearHazard.enabled=!boss;
+            if(boss){ExposureSeconds=0;InDanger=false;return;}
             var player = PlayerHealth.Instance;
             if (gameplayCamera == null || Time.timeScale <= 0f || player == null || !player.IsAlive) return;
             if (!themeApplied || appliedTheme != theme) SetTheme(theme);

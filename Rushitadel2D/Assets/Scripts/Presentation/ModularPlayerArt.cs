@@ -24,7 +24,7 @@ namespace Rushitadel.Presentation
         public int VisibleTurrets => turrets.Count;
         public PlayerFlightEffects Flight => flight;
         public SpriteRenderer HullRenderer => hull;
-        public const float HullScale = 1.46f;
+        public const float HullScale = PlayerTurretRig.CoreRadius*2f;
         // Mount-ring centre on the 20px turret canvas: logical texel (9,15) from the top-left.
         private static readonly Vector2 MountPivot = new(9.5f / 20f, 4.5f / 20f);
 
@@ -44,7 +44,7 @@ namespace Rushitadel.Presentation
                 // sit on the hull socket regardless of muzzle length. Pixels per unit follow
                 // the hull so turret and hull pixels render at an identical size.
                 var hullTexture = Resources.Load<Texture2D>("PlayerForms/Hull");
-                float unitsPerHullTexel = HullScale / (hullTexture != null ? hullTexture.height : 80f);
+                float unitsPerHullTexel = 1.46f / (hullTexture != null ? hullTexture.height : 80f);
                 result = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), MountPivot,
                     1f / unitsPerHullTexel, 0, SpriteMeshType.FullRect);
             }
@@ -62,6 +62,7 @@ namespace Rushitadel.Presentation
         {
             rig=GetComponent<PlayerTurretRig>();
             if(rig==null || rig.RotatingBody==null) return;
+            rig.EnsureOrbit();
             var sprite=LoadSprite("Hull",false);
             if(sprite==null) return;
             if(hull==null)
@@ -106,6 +107,7 @@ namespace Rushitadel.Presentation
             go.transform.localScale=Vector3.one*HullScale;
             var renderer=go.AddComponent<SpriteRenderer>();
             renderer.sprite=sprite; renderer.sortingOrder=order; renderer.sharedMaterial=material;
+            var core=new MaterialPropertyBlock();core.SetFloat("_CoreDisc",1);renderer.SetPropertyBlock(core);
             return renderer;
         }
 
@@ -115,8 +117,9 @@ namespace Rushitadel.Presentation
             if(hull==null || flight==null) return;
             var localOffset=rig.RotatingBody.InverseTransformVector(flight.VisualOffsetWorld);
             hull.transform.localPosition=localOffset;
-            hull.transform.localScale=Vector3.one*(HullScale*flight.HoverScale);
+            hull.transform.localScale=Vector3.one*HullScale;
             hullProperties.SetFloat("_Pulse",flight.CorePulse);
+            hullProperties.SetFloat("_CoreDisc",1);
             hullProperties.SetFloat("_Flash",flight.ShotFlash);
             hull.SetPropertyBlock(hullProperties);
             shadow.transform.position=transform.position+new Vector3(0,-.075f,0);
