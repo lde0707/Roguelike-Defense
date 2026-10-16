@@ -58,6 +58,21 @@ namespace Rushitadel.Presentation
             return result;
         }
 
+        public static float CompactMuzzleHeight(Sprite sprite)
+        {
+            if(sprite==null)return .2f;
+            var texture=sprite.texture;var pixels=texture.GetPixels32();int top=texture.height-1;
+            for(;top>=0;top--)
+            {
+                bool opaque=false;for(int x=0;x<texture.width;x++)if(pixels[top*texture.width+x].a>100){opaque=true;break;}
+                if(opaque)break;
+            }
+            float uv=(top+1f)/texture.height;
+            if(uv>.45f)uv=.45f+(uv-.45f)*.75f;
+            float edge=Mathf.Ceil(uv*18f)/18f;
+            return Mathf.Max(0,(edge-MountPivot.y)*sprite.bounds.size.y)+.01f;
+        }
+
         public void Refresh()
         {
             rig=GetComponent<PlayerTurretRig>();
@@ -143,6 +158,7 @@ namespace Rushitadel.Presentation
         private SpriteRenderer art;
         private MaterialPropertyBlock properties;
         private float recoil, velocity, flash;
+        private float muzzleHeight;
         private bool initialized;
         public int DisplayedForm { get; private set; }=-1;
         public float Recoil => recoil;
@@ -167,6 +183,9 @@ namespace Rushitadel.Presentation
             if(form!=DisplayedForm)
             {
                 art.sprite=ModularPlayerArt.LoadSprite(form==0?"Default":"ROT-"+form.ToString("00"),true);
+                muzzleHeight=ModularPlayerArt.CompactMuzzleHeight(art.sprite);
+                tower.SetVisualMuzzle(Vector3.up*muzzleHeight);
+                properties.SetFloat("_CompactTurret",1);art.SetPropertyBlock(properties);
                 DisplayedForm=form;
             }
         }
@@ -192,6 +211,8 @@ namespace Rushitadel.Presentation
                 flash=Mathf.MoveTowards(flash,0,Time.deltaTime*10);
             }
             art.transform.localPosition=transform.InverseTransformVector(owner.Flight.VisualOffsetWorld)+Vector3.down*recoil;
+            tower.SetVisualMuzzle(art.transform.localPosition+Vector3.up*muzzleHeight);
+            properties.SetFloat("_CompactTurret",1);
             properties.SetFloat("_Pulse",1+flash*.7f);
             properties.SetFloat("_Flash",flash*.65f);
             art.SetPropertyBlock(properties);

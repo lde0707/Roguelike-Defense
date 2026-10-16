@@ -24,6 +24,10 @@ namespace Rushitadel.Combat
         private bool alternate;
         public event System.Action Fired;
         public Vector3 MuzzlePosition => shotPos != null ? shotPos.position : transform.position;
+        public void SetVisualMuzzle(Vector3 offset)
+        {
+            if(shotPos!=null&&shotPos!=transform)shotPos.localPosition=offset;
+        }
 
         public void Configure(Transform newShotPos, GameObject newProjectilePrefab)
         {
