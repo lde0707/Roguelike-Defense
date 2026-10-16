@@ -30,10 +30,28 @@ namespace Rushitadel.Presentation
             {
                 var g=RandomPlayerWeb.Generate(seed);
                 if(!RandomPlayerWeb.Valid(g))throw new Exception("Invalid graph "+seed);
+                if(g.nodes.Length!=160||!g.nodes.Any(n=>n.links.Length>0))throw new Exception("Missing expanded web or bridges");
                 if(JsonUtility.ToJson(g)!=JsonUtility.ToJson(RandomPlayerWeb.Generate(seed)))throw new Exception("Unstable seed");
                 foreach(var a in g.nodes)foreach(var b in g.nodes)if(!ReferenceEquals(a,b)&&Vector2.Distance(new Vector2(a.x,a.y),new Vector2(b.x,b.y))<57)throw new Exception("Overlapping nodes "+seed);
             }
             Check(true,"1000 valid deterministic non-overlapping graphs");
+            var bridgeGraph=RandomPlayerWeb.Generate(334);
+            bool crossed=false;
+            for(int i=0;i<bridgeGraph.nodes.Length&&!crossed;i++)foreach(int adjacent in bridgeGraph.nodes[i].links)
+            {
+                var path=new System.Collections.Generic.List<int>();
+                for(int p=adjacent;p>=0;p=bridgeGraph.nodes[p].parent)path.Add(p);
+                if(path.Contains(bridgeGraph.nodes[i].parent))continue;
+                foreach(int p in path)bridgeGraph.nodes[p].owned=true;
+                Check(!bridgeGraph.nodes[bridgeGraph.nodes[i].parent].owned&&RandomPlayerWeb.Accessible(bridgeGraph,i),"bridge opens without original parent");
+                bridgeGraph.nodes[i].owned=true;Check(RandomPlayerWeb.Valid(bridgeGraph),"sideways ownership validates for saves");crossed=true;break;
+            }
+            Check(crossed,"at least one cross-branch route");
+            var legacy=(PlayerWebGraph)typeof(RandomPlayerWeb).GetMethod("GenerateLegacy",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic).Invoke(null,new object[]{42});
+            legacy.nodes[0].owned=true;
+            var migrated=new CampaignState{playerWeb=legacy};RandomPlayerWeb.Ensure(migrated,42);
+            Check(RandomPlayerWeb.Valid(migrated.playerWeb)&&migrated.playerWeb.nodes.Length==160&&
+                legacy.nodes.Select((n,i)=>n.upgrade==migrated.playerWeb.nodes[i].upgrade&&n.cost==migrated.playerWeb.nodes[i].cost&&n.owned==migrated.playerWeb.nodes[i].owned).All(ok=>ok),"legacy purchases and costs preserved");
             Check(RandomPlayerWeb.Titles.Length==40&&RandomPlayerWeb.Effects.Length==40,"forty upgrade definitions");
             Check(Enumerable.Range(1,1000).SelectMany(seed=>RandomPlayerWeb.Generate(seed).nodes.GroupBy(n=>n.upgrade)).Any(g=>RandomPlayerWeb.Category(g.Key)==0&&g.Count()>=3),"basic upgrades can appear three or four times");
             var stacks=new CampaignState{playerWeb=new PlayerWebGraph{nodes=Enumerable.Range(0,4).Select(i=>new PlayerWebNode{upgrade=0,owned=true}).ToArray()}};
@@ -54,17 +72,35 @@ namespace Rushitadel.Presentation
             }
             nodes[0].onClick.Invoke();yield return null;
             Check(d.Wallet==wallet,"inspection never spends XP");
-            Check(!d.CanBuyNode(2,out _),"locked child rejected");
+            int child=System.Array.FindIndex(d.State.playerWeb.nodes,n=>n.parent==0);
+            Check(child>=0&&!d.CanBuyNode(child,out _),"locked child rejected");
             Check(d.BuyNode(0),"root purchase");
             Check(d.Wallet==wallet-d.State.playerWeb.nodes[0].cost,"exact XP deduction");
             Check(!d.BuyNode(0),"duplicate purchase rejected");
-            Check(d.CanBuyNode(2,out _),"child unlocked");
-            Check(d.BuyNode(2),"child purchase");
+            Check(d.CanBuyNode(child,out _),"child unlocked");
+            Check(d.BuyNode(child),"child purchase");
             Check(d.SaveCheckpoint("Web test"),"purchase saved");
             Check(RunStore.Read(1,out var loaded,out var error),"reload: "+error);
             Check(JsonUtility.ToJson(loaded.campaign.playerWeb)==JsonUtility.ToJson(d.State.playerWeb),"shape and purchases preserved");
             Check(!d.CanBuy(-1,out _)&&!d.SetElement(1),"legacy purchases and elements disabled");
             ui.ShowMaintenance();yield return null;
+            var scroll=FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).First(s=>s.name=="Web viewport");
+            Check(scroll.horizontal&&scroll.vertical&&scroll.viewport.GetComponent<RectMask2D>()!=null,"clipped two-axis canvas");
+            var oldPosition=scroll.content.anchoredPosition;
+            var pointer=new UnityEngine.EventSystems.PointerEventData(UnityEngine.EventSystems.EventSystem.current){scrollDelta=new Vector2(0,3)};
+            scroll.OnScroll(pointer);Canvas.ForceUpdateCanvases();
+            Check(scroll.content.anchoredPosition!=oldPosition,"wheel scroll moves web");
+            scroll.normalizedPosition=new Vector2(.35f,.25f);Canvas.ForceUpdateCanvases();
+            var savedPosition=scroll.normalizedPosition;
+            Find("Web Node 0").onClick.Invoke();yield return null;
+            scroll=FindObjectsByType<ScrollRect>(FindObjectsSortMode.None).First(s=>s.name=="Web viewport");
+            Check(Vector2.Distance(scroll.normalizedPosition,savedPosition)<.01f,"selection preserves view position");
+            oldPosition=scroll.content.anchoredPosition;
+            pointer.position=RectTransformUtility.WorldToScreenPoint(null,scroll.viewport.TransformPoint(scroll.viewport.rect.center));
+            scroll.OnInitializePotentialDrag(pointer);scroll.OnBeginDrag(pointer);pointer.position+=new Vector2(160,90);scroll.OnDrag(pointer);scroll.OnEndDrag(pointer);
+            Check(Vector2.Distance(oldPosition,scroll.content.anchoredPosition)>100,"click-drag pans canvas");
+            Capture("expanded-web.png");
+            scroll.normalizedPosition=new Vector2(.5f,0);Canvas.ForceUpdateCanvases();
             Capture("random-web.png");
             // Isolated effect fixtures, never persisted to the player's saves.
             var savedGraph=d.State.playerWeb;

@@ -11,7 +11,7 @@ namespace Rushitadel.Progression
             if(State.phase!=RunPhase.Maintenance||!State.recovered||State.playerWeb==null||index<0||index>=State.playerWeb.nodes.Length)return false;
             var node=State.playerWeb.nodes[index];
             if(node.owned){reason="획득 완료";return false;}
-            if(node.parent>=0&&!State.playerWeb.nodes[node.parent].owned){reason="연결된 이전 노드 필요";return false;}
+            if(!RandomPlayerWeb.Accessible(State.playerWeb,index)){reason="연결된 노드를 하나 이상 구매하세요";return false;}
             if(Wallet<node.cost){reason="XP 부족";return false;}
             reason="구매 가능";return true;
         }
