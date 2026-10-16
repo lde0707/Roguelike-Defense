@@ -19,6 +19,8 @@ namespace Rushitadel.Spawning
         public void Configure(GameObject prefab) => enemyPrefab = prefab;
         public bool CampaignControlled { get; private set; }
         private int rosterIndex;
+        // Boss endurance grows faster than ordinary enemies so later builds still see multiple patterns.
+        public static float BossHealthForStage(int stage) => 6000f + (Mathf.Max(1, stage) - 1) * 3000f;
         public void TakeCampaignControl() { CampaignControlled = true; StopAllCoroutines(); }
         public EnemyController SpawnCampaignEnemy(int stage, bool boss = false)
         {
@@ -46,7 +48,7 @@ namespace Rushitadel.Spawning
             }
             var go = Instantiate(enemyPrefab, pos, Quaternion.identity); go.SetActive(true);
             var enemy = go.GetComponent<EnemyController>();
-            enemy.ConfigureRun(boss ? 1100 + stage * 400 : 180 + (stage-1) * 60, boss ? 100 : 20, true);
+            enemy.ConfigureRun(boss ? BossHealthForStage(stage) : 180 + (stage-1) * 60, boss ? 100 : 20, true);
             if (!boss)
             {
                 var theme=Rushitadel.World.ForwardPressureController.Instance!=null?Rushitadel.World.ForwardPressureController.Instance.Theme:Rushitadel.World.PressureTheme.Grass;

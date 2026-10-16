@@ -39,10 +39,16 @@ namespace Rushitadel.Progression
                 throw new Exception("Screen fit must only shrink oversized bosses, capped at 15 percent");
             for(int theme=0;theme<5;theme++)
             {
+                bool healthOnly=Environment.GetCommandLineArgs().Contains("--boss-health-only");
+                int stage=healthOnly?theme%3+1:1;
                 pressure.SetTheme((PressureTheme)theme);yield return null;yield return null;
                 var map=ThemeContent.Map((PressureTheme)theme);
                 if(loop.Panels.Any(p=>p.sprite!=map)||Math.Abs(loop.PanelHeight-12.8f)>.001f)throw new Exception("Theme map mismatch "+theme);
-                var boss=FindFirstObjectByType<EnemySpawner>().SpawnCampaignEnemy(1,true).GetComponent<CampaignBoss>();
+                var boss=FindFirstObjectByType<EnemySpawner>().SpawnCampaignEnemy(stage,true).GetComponent<CampaignBoss>();
+                float expectedHp=new[]{6000f,9000f,12000f}[stage-1];
+                if(boss.Health.MaximumHealth!=expectedHp||boss.Health.CurrentHealth!=expectedHp)
+                    throw new Exception("Boss HP mismatch at stage "+stage);
+                Debug.Log("BOSS_HEALTH_PASS stage="+stage+" theme="+theme+" HP="+expectedHp);
                 if((int)boss.Kind!=Math.Min(theme,3))throw new Exception("Theme boss mismatch "+theme);
                 if(boss.ScreenFitScale<.85f||boss.ScreenFitScale>1)throw new Exception("Invalid boss scale");
                 Debug.Log("SCREEN_FIT_PASS "+boss.Kind+" scale="+boss.ScreenFitScale);
@@ -56,7 +62,7 @@ namespace Rushitadel.Progression
                 foreach(var anim in clips){var visual=anim.GetComponent<SpriteRenderer>();Debug.Log("VISUAL "+theme+" "+visual.sprite.texture.name+" rect="+visual.sprite.rect+" pos="+visual.transform.position+" scale="+visual.transform.lossyScale+" enabled="+visual.enabled+" color="+visual.color);}
                 Capture(pressure.GameplayCamera,Path.Combine(folder,"theme-"+ThemeContent.Type((PressureTheme)theme)+".png"));
                 Debug.Log("THEME PASS "+theme+" map="+map.name+" boss="+boss.Kind+" animated parts="+clips.Length);
-                if(theme<4)
+                if(theme<4&&!healthOnly)
                 {
                     boss.StopAllCoroutines();
                     // Exercise every animation-driven pattern, including telegraph/hold/recovery.
