@@ -29,11 +29,11 @@ namespace Rushitadel.World
                 {
                     if(themeSprites[theme]==null)
                     {
-                        var texture=Resources.Load<Texture2D>("Battlefields/"+new[]{"grass","lava","ice","water-electric"}[theme]);
-                        if(texture!=null)themeSprites[theme]=Sprite.Create(texture,new Rect(0,0,texture.width,texture.height),Vector2.one*.5f,100);
+                        themeSprites[theme]=ThemeContent.Map(pressure.Theme);
                     }
                     if(themeSprites[theme]!=null)foreach(var panel in panels)
                     {
+                        panelHeight=12.8f;
                         panel.sprite=themeSprites[theme];panel.color=Color.white;
                         panel.transform.localScale=new Vector3(19.2f/panel.sprite.bounds.size.x,panelHeight/panel.sprite.bounds.size.y,1);
                     }

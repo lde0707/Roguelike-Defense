@@ -17,6 +17,7 @@ namespace Rushitadel.Progression
         public string PatternLabel {get;private set;}="등장";
         public int ShotsFired {get;private set;}
         public int LasersFired {get;private set;}
+        public bool IsAttacking {get;private set;}
         public int Phase=>Health.CurrentHealth/Health.MaximumHealth>.7f?0:Health.CurrentHealth/Health.MaximumHealth>.35f?1:2;
         public string OrbAsset=>Kind switch {BossKind.Butterfly=>"Butterfly/01-pollen-pearl",BossKind.Lava=>"Lava/01-ember-orb",_=>"Ice/03-ricochet-orb"};
         private EnemyProjectileController prefab;
@@ -53,6 +54,8 @@ namespace Rushitadel.Progression
                 for(int i=0;i<2;i++)
                 {
                     var art=BossArt.Create(transform,"Twins/Body",new Vector2(i==0?-2:2,0),2.7f,i);
+                    string variant=i==0?"a":"b";
+                    art.gameObject.AddComponent<ThemeBossAnimation>().Configure(this,art,"D","boss_Type_D_"+variant+"_idle_","boss_Type_D_"+variant+"_attack_",2.7f);
                     var box=art.gameObject.AddComponent<BoxCollider2D>();box.isTrigger=true;box.size=art.sprite.bounds.size*.75f;
                     Socket(new Vector2(i==0?-2:2,-.2f));
                 }
@@ -60,7 +63,10 @@ namespace Rushitadel.Progression
             else
             {
                 float width=Kind==BossKind.Butterfly?7:Kind==BossKind.Lava?8:2.7f;
-                BossArt.Create(transform,Kind+"/Body",Vector2.zero,width);
+                var bodyArt=BossArt.Create(transform,Kind+"/Body",Vector2.zero,width);
+                string type=Kind==BossKind.Lava?"A":Kind==BossKind.Ice?"B":"C";
+                string idle=Kind==BossKind.Lava?"boss_a_idle_":Kind==BossKind.Ice?"boss_Type_B_body_idle_":"boss_Type_C_boss_";
+                bodyArt.gameObject.AddComponent<ThemeBossAnimation>().Configure(this,bodyArt,type,idle,Kind==BossKind.Lava?"boss_a_attack_":null,width);
                 var box=gameObject.AddComponent<BoxCollider2D>();box.isTrigger=true;
                 box.size=Kind==BossKind.Butterfly?new Vector2(5.6f,1.7f):Kind==BossKind.Lava?new Vector2(4,2.8f):new Vector2(2.3f,2.9f);
                 if(Kind==BossKind.Butterfly)
@@ -80,6 +86,10 @@ namespace Rushitadel.Progression
             var shot=Instantiate(prefab,transform.position+(Vector3)homes[i],Quaternion.identity);
             shot.gameObject.SetActive(true);shot.ConfigureBoss(Kind==BossKind.Ice?160:100,0,.28f,10000,0,0);shot.SetRewardOwner(Health);shot.Launch(Vector2.up);
             BossArt.Shot(shot.gameObject,Kind==BossKind.Ice?"Ice/01-ring-boomerang":"Butterfly/Drone",Kind==BossKind.Ice?1.35f:.65f,false);
+            var partArt=shot.GetComponentsInChildren<SpriteRenderer>().Last(s=>s.enabled);
+            partArt.gameObject.AddComponent<ThemeBossAnimation>().Configure(this,partArt,Kind==BossKind.Ice?"B":"C",
+                Kind==BossKind.Ice?"boss_Type_B_weapon_idle_":"boss_Type_C_fly_",
+                Kind==BossKind.Ice?"boss_Type_B_weapon_attack_":null,(Kind==BossKind.Ice?1.35f:.65f)/Mathf.Abs(shot.transform.lossyScale.x));
             if(Kind==BossKind.Ice)
             {
                 shot.GetComponent<CircleCollider2D>().enabled=false;
@@ -128,10 +138,12 @@ namespace Rushitadel.Progression
                 int phase=Phase;
                 int p=phase!=lastPhase?(phase==2?4:phase==1?2:0):step++%(phase==0?2:phase==1?4:5);
                 lastPhase=phase;
+                IsAttacking=true;
                 if(Kind==BossKind.Butterfly)yield return Butterfly(p);
                 else if(Kind==BossKind.Lava)yield return Lava(p);
                 else if(Kind==BossKind.Ice)yield return Ice(p);
                 else yield return Twins(p);
+                IsAttacking=false;
                 PatternLabel="재충전 · 공격 기회";yield return new WaitForSeconds(Phase==2?2.5f:1.8f);
             }
         }
