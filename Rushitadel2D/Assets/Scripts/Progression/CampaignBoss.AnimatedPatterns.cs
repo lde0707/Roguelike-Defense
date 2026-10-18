@@ -96,6 +96,7 @@ namespace Rushitadel.Progression
                 yield return new WaitForSeconds(.8f);
                 for(int side=0;side<2;side++)
                     Fan(sockets[side].position,"Butterfly/01-pollen-pearl",5,(pulse-1)*12*(side==0?1:-1),17,16,2.3f);
+                FlyOrbs(pulse%2);
                 if(relay)
                 {
                     // Only one diagonal pair is active; next pair waits for fade-out.

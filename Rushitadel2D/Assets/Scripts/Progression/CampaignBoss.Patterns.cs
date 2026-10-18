@@ -15,6 +15,7 @@ namespace Rushitadel.Progression
                 {
                     for(int side=0;side<2;side++)Fan(sockets[side].position,OrbAsset,5,(wave*7-18)*(side==0?1:-1),15,12,2.4f);
                     if(wave%2==0)for(int side=2;side<4;side++)FireAt(sockets[side].position,Aim(sockets[side].position),"Butterfly/02-thorn-needle",12,4);
+                    if(wave==1 || wave==4)FlyOrbs(wave==1?0:1);
                     yield return new WaitForSeconds(.4f);
                 }
                 if(p==0)yield break;yield return new WaitForSeconds(1);
@@ -26,9 +27,15 @@ namespace Rushitadel.Progression
                     foreach(int index in pair==0?new[]{0,3}:new[]{1,2})if(satellites[index]!=null)
                         Laser(satellites[index],"Butterfly/07-drone-laser",Aim(satellites[index].position),.16f,.9f);
                     yield return new WaitForSeconds(2.9f);
+                    FlyOrbs(pair);
                     for(int side=0;side<2;side++)FireAt(sockets[side].position,Vector2.down,"Butterfly/03-petal-blade",45,2.5f,.22f,0,side==0?12:-12);
                 }
-                if(p==4){Laser(sockets[4],"Butterfly/06-boss-laser",Aim(sockets[4].position),.4f);yield return new WaitForSeconds(3.2f);}
+                // The body follows the fly relay after its beams have faded.
+                yield return new WaitForSeconds(.4f);
+                Laser(sockets[4],"Butterfly/06-boss-laser",Aim(sockets[4].position),.28f,1.1f,0,null,1.05f);
+                Fan(sockets[0].position,OrbAsset,3,-18,20,20,2.2f);
+                Fan(sockets[1].position,OrbAsset,3,18,20,20,2.2f);
+                yield return new WaitForSeconds(3.2f);
             }
             if(p==2)
             {
@@ -45,6 +52,16 @@ namespace Rushitadel.Progression
                     for(int i=0;i<8;i++)if(i!=gap&&i!=gap+1)FireAt((Vector2)transform.position+new Vector2(-4.2f+i*1.2f,-.8f),Vector2.down,"Butterfly/05-scale-kite",36,2.3f,.26f);
                     yield return new WaitForSeconds(1.2f);
                 }
+            }
+        }
+        private void FlyOrbs(int pair)
+        {
+            foreach(int index in pair==0?new[]{0,3}:new[]{1,2})
+            {
+                if(satellites[index]==null)continue;
+                Vector2 from=(Vector2)satellites[index].position+Vector2.down*.12f;
+                Vector2 aim=Aim(from);
+                for(int n=-1;n<=1;n++)FireAt(from,Quaternion.Euler(0,0,n*18)*aim,OrbAsset,18,2.2f,.14f);
             }
         }
         private IEnumerator Lava(int p)

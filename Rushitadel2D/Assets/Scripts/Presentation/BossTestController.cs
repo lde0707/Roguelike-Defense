@@ -12,15 +12,17 @@ namespace Rushitadel.Presentation
     {
         private static BossTestController instance;
         public static bool Active => instance != null;
+        public static bool PanelVisible => Active && !instance.hidden;
+        private static float PanelScale => Mathf.Max(.01f,Mathf.Min(Screen.height/1080f,(BattleSideSpace.LeftPixels-16)/324));
         public static bool Invulnerable => Active && instance.invulnerable;
         public static bool PointerOverPanel
         {
             get
             {
                 if(!Active || UnityEngine.InputSystem.Mouse.current==null)return false;
-                float scale=Mathf.Max(.5f,Mathf.Min(Screen.width/1920f,Screen.height/1080f));
+                float scale=PanelScale;
                 Vector2 p=UnityEngine.InputSystem.Mouse.current.position.ReadValue();
-                return new Rect(12,120,300,instance.hidden?65:800).Contains(new Vector2(p.x/scale,(Screen.height-p.y)/scale));
+                return new Rect(12,instance.hidden?960:120,300,instance.hidden?65:800).Contains(new Vector2(p.x/scale,(Screen.height-p.y)/scale));
             }
         }
         private readonly string[] names = { "풀 · 적월 나비", "불 · 용광로 거신", "얼음 · 빙환 수호자", "물/전기 · 쌍성" };
@@ -73,10 +75,10 @@ namespace Rushitadel.Presentation
         private void OnGUI()
         {
             var old=GUI.matrix;
-            float scale=Mathf.Max(.5f,Mathf.Min(Screen.width/1920f,Screen.height/1080f));
+            float scale=PanelScale;
             GUI.matrix=Matrix4x4.Scale(new Vector3(scale,scale,1));
             var skinFont=GUI.skin.font;if(font!=null)GUI.skin.font=font;
-            GUILayout.BeginArea(new Rect(12,120,300,hidden?65:800),GUI.skin.box);
+            GUILayout.BeginArea(new Rect(12,hidden?960:120,300,hidden?65:800),GUI.skin.box);
             if(GUILayout.Button(hidden?"보스 테스트 펼치기 [Tab]":"보스 테스트 접기 [Tab]",GUILayout.Height(34)))hidden=!hidden;
             if(!hidden)
             {

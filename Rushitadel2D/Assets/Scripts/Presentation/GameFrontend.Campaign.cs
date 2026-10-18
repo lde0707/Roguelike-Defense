@@ -18,45 +18,50 @@ namespace Rushitadel.Presentation
         private readonly Text[] turretText = new Text[6];
         private int augmentSlot = 1, augmentChoice = -1, webSelection = -1;
         private int nextThemeSelection = -1;
+        private RectTransform battleLeft,battleRight;
         public void ShowBattle()
         {
             NewPage("game", false); Time.timeScale = IsTransitioning ? 0 : 1;
             var campaign = CampaignDirector.Instance;
             if (campaign == null) return;
-            var top = Image(content, "Progress strip", 355, 15, 1210, 65, panel);
+            battleLeft=Rect(content,"Battle HUD Left",0,0,280,1040);
+            battleRight=Rect(content,"Battle HUD Right",1640,0,280,1040);
+            var top = Image(battleLeft, "Progress strip", 0, 0, 280, 120, panel);
             top.raycastTarget = false;
-            progressText = Label(content, "", 380, 20, 1150, 50, 25, TextAnchor.MiddleCenter);
-            var side = Image(content, "Bottom resources", 20, 965, 875, 95, panel); side.raycastTarget = false;
-            healthText = Label(content, "", 35, 970, 260, 60, 22);
-            powerText = Label(content, "", 325, 970, 260, 60, 22);
-            resourcesText = Label(content, "", 615, 970, 265, 60, 22);
-            Image(content, "HP track", 35, 1040, 260, 10, Color.black).raycastTarget = false;
-            hpFill = Image(content, "HP pixels", 35, 1040, 260, 10, new Color32(150,194,127,255)); hpFill.raycastTarget = false;
-            Image(content, "Power track", 325, 1040, 260, 10, Color.black).raycastTarget = false;
-            powerFill = Image(content, "Power pixels", 325, 1040, 260, 10, new Color32(173,129,209,255)); powerFill.raycastTarget = false;
-            Image(content, "XP track", 615, 1040, 260, 10, Color.black).raycastTarget = false;
-            xpFill = Image(content, "XP pixels", 615, 1040, 260, 10, new Color32(64,180,236,255)); xpFill.raycastTarget = false;
+            progressText = Label(battleLeft, "", 10, 5, 260, 110, 23);
+            var side = Image(battleLeft, "Player resources", 0, 135, 280, 330, panel); side.raycastTarget = false;
+            healthText = Label(battleLeft, "", 10, 145, 260, 60, 22);
+            powerText = Label(battleLeft, "", 10, 245, 260, 60, 22);
+            resourcesText = Label(battleLeft, "", 10, 345, 260, 60, 22);
+            Image(battleLeft, "HP track", 10, 215, 260, 10, Color.black).raycastTarget = false;
+            hpFill = Image(battleLeft, "HP pixels", 10, 215, 260, 10, new Color32(150,194,127,255)); hpFill.raycastTarget = false;
+            Image(battleLeft, "Power track", 10, 315, 260, 10, Color.black).raycastTarget = false;
+            powerFill = Image(battleLeft, "Power pixels", 10, 315, 260, 10, new Color32(173,129,209,255)); powerFill.raycastTarget = false;
+            Image(battleLeft, "XP track", 10, 415, 260, 10, Color.black).raycastTarget = false;
+            xpFill = Image(battleLeft, "XP pixels", 10, 415, 260, 10, new Color32(64,180,236,255)); xpFill.raycastTarget = false;
             for (int i = 0; i < 6; i++)
             {
                 int slot = i + 1;
-                var b = Button(content, "", 925+i*163, 967, 153, 88, () => ShowTurret(slot));
+                var b = Button(battleRight, "", 0, 375+i*96, 280, 88, () => ShowTurret(slot));
                 turretText[i] = b.GetComponentsInChildren<Text>().First(); turretText[i].fontSize = 20;
             }
-            bossText = Label(content, "", 545, 82, 830, 35, 22, TextAnchor.MiddleCenter);
-            bossFill = Image(content, "Boss HP", 610, 122, 700, 8, new Color32(210,116,82,255)); bossFill.raycastTarget = false;
-            twinWaterPanel=Image(content,"Water Boss panel",420,116,520,49,panel);twinWaterPanel.raycastTarget=false;
-            twinElectricPanel=Image(content,"Electric Boss panel",980,116,520,49,panel);twinElectricPanel.raycastTarget=false;
-            twinWaterText=Label(content,"",430,118,500,30,24,TextAnchor.MiddleCenter);
-            twinElectricText=Label(content,"",990,118,500,30,24,TextAnchor.MiddleCenter);
-            twinWaterFill=Image(content,"Water Boss HP",430,150,500,10,new Color32(90,200,240,255));twinWaterFill.raycastTarget=false;
-            twinElectricFill=Image(content,"Electric Boss HP",990,150,500,10,new Color32(244,199,80,255));twinElectricFill.raycastTarget=false;
-            Label(content, "ESC  일시정지", 1660, 20, 235, 40, 21);
+            Image(battleRight,"Boss status panel",0,0,280,165,panel).raycastTarget=false;
+            bossText = Label(battleRight, "", 10, 5, 260, 140, 22);
+            bossFill = Image(battleRight, "Boss HP", 10, 150, 260, 8, new Color32(210,116,82,255)); bossFill.raycastTarget = false;
+            twinWaterPanel=Image(battleRight,"Water Boss panel",0,175,280,65,panel);twinWaterPanel.raycastTarget=false;
+            twinElectricPanel=Image(battleRight,"Electric Boss panel",0,250,280,65,panel);twinElectricPanel.raycastTarget=false;
+            twinWaterText=Label(battleRight,"",10,175,260,45,21);
+            twinElectricText=Label(battleRight,"",10,250,260,45,21);
+            twinWaterFill=Image(battleRight,"Water Boss HP",10,225,260,10,new Color32(90,200,240,255));twinWaterFill.raycastTarget=false;
+            twinElectricFill=Image(battleRight,"Electric Boss HP",10,300,260,10,new Color32(244,199,80,255));twinElectricFill.raycastTarget=false;
+            Label(battleRight, "ESC  일시정지", 10, 970, 260, 40, 21);
             UpdateBattleHud();
         }
         private void UpdateBattleHud()
         {
             var d = CampaignDirector.Instance;
             if (page != "game" || d == null || !d.Initialized || progressText == null) return;
+            LayoutBattleSides();
             string next = d.State.phase == RunPhase.Boss ? "보스전" : $"스폰 {d.Spawned}/{d.SpawnBudget} · 남은 적 {Rushitadel.Combat.EnemyRegistry.ActiveEnemies.Count()}";
             progressText.text = $"STAGE {d.Stage}/3   ROUND {d.Round}/3     {next}";
             var h = PlayerHealth.Instance; var p = h.GetComponent<PlayerPower>(); var e = d.Experience;
@@ -78,14 +83,30 @@ namespace Rushitadel.Presentation
                 var water=d.Boss.TwinHealth(0);var electric=d.Boss.TwinHealth(1);
                 twinWaterText.text=water!=null?$"수압 보스  {water.CurrentHealth:0}/{water.MaximumHealth:0}":"수압 보스 · 격파";
                 twinElectricText.text=electric!=null?$"전격 보스  {electric.CurrentHealth:0}/{electric.MaximumHealth:0}":"전격 보스 · 격파";
-                twinWaterFill.rectTransform.sizeDelta=new Vector2(water!=null?500*water.CurrentHealth/water.MaximumHealth:0,10);
-                twinElectricFill.rectTransform.sizeDelta=new Vector2(electric!=null?500*electric.CurrentHealth/electric.MaximumHealth:0,10);
+                twinWaterFill.rectTransform.sizeDelta=new Vector2(water!=null?260*water.CurrentHealth/water.MaximumHealth:0,10);
+                twinElectricFill.rectTransform.sizeDelta=new Vector2(electric!=null?260*electric.CurrentHealth/electric.MaximumHealth:0,10);
             }
             bossText.text = alive ? $"{d.Boss.DisplayName} · {d.Boss.Phase+1}단계  {d.Boss.Health.CurrentHealth:0}/{d.Boss.Health.MaximumHealth:0}  {d.Boss.PatternLabel}" :
                 Rushitadel.Combat.EnemyRangedAttack.IsReloadWindow(Time.time) ? "적 재장전 · 지금 공격!" : "코어 파괴 → 탄 약화 → 절벽 반사로 역습 (최대 3발)";
-            if (alive) bossFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(700*d.Boss.Health.CurrentHealth/d.Boss.Health.MaximumHealth),8);
+            if (alive) bossFill.rectTransform.sizeDelta = new Vector2(Mathf.Round(260*d.Boss.Health.CurrentHealth/d.Boss.Health.MaximumHealth),8);
             if(twins)bossText.text=$"수압·전격 쌍성 · {d.Boss.Phase+1}단계 · {d.Boss.PatternLabel}";
             if (ForwardPressureController.Instance.InDanger) progressText.text += "   ! 후방 위험 · 전진 !";
+        }
+        private void LayoutBattleSides()
+        {
+            if(battleLeft==null||battleRight==null)return;
+            // Use the actual cliff boundaries, not a fixed aspect-ratio assumption.
+            float unit=canvas.scaleFactor;
+            float left=BattleSideSpace.LeftPixels/unit,right=BattleSideSpace.RightPixels/unit;
+            float width=Screen.width/unit,height=Screen.height/unit;
+            Place(battleLeft,left,false);Place(battleRight,right,true);
+            battleLeft.gameObject.SetActive(!BossTestController.PanelVisible);
+            void Place(RectTransform rt,float available,bool isRight)
+            {
+                float scale=Mathf.Min(1,Mathf.Max(0,available-24)/280,(height-24)/1040);
+                rt.localScale=Vector3.one*scale;
+                rt.anchoredPosition=new Vector2((1920-width)*.5f+(isRight?width-12-280*scale:12),-(1080-height)*.5f-12);
+            }
         }
         private RectTransform SafePanel(string title)
         {
