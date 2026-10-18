@@ -51,6 +51,7 @@ namespace Rushitadel.Player
 
         private void ApplyDamage(float amount)
         {
+            if (Rushitadel.Presentation.BossTestController.Invulnerable) return;
             currentHealth = Mathf.Max(0f, currentHealth - amount);
             HealthChanged?.Invoke(currentHealth, maximumHealth);
             if (IsAlive) return;

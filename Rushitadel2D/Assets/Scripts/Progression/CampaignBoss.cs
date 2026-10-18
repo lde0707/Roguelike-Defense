@@ -18,7 +18,9 @@ namespace Rushitadel.Progression
         public int ShotsFired {get;private set;}
         public int LasersFired {get;private set;}
         public bool IsAttacking {get;private set;}
-        public int Phase=>Health.CurrentHealth/Health.MaximumHealth>.7f?0:Health.CurrentHealth/Health.MaximumHealth>.35f?1:2;
+        public int PreviewPhase {get;set;} = -1;
+        public int PreviewPattern {get;set;} = -1;
+        public int Phase=>PreviewPhase>=0?Mathf.Clamp(PreviewPhase,0,2):Health.CurrentHealth/Health.MaximumHealth>.7f?0:Health.CurrentHealth/Health.MaximumHealth>.35f?1:2;
         public string OrbAsset=>Kind switch {BossKind.Butterfly=>"Butterfly/01-pollen-pearl",BossKind.Lava=>"Lava/01-ember-orb",_=>"Ice/03-ricochet-orb"};
         private EnemyProjectileController prefab;
         private readonly List<EnemyProjectileController> bullets=new();
@@ -153,6 +155,7 @@ namespace Rushitadel.Progression
                 int[] rotation=phase==0?new[]{10,7,0,11,5,9,1,12,8}:phase==1?new[]{11,8,5,12,2,9,10,6,7,1,3}:new[]{12,9,10,7,4,11,8,6,2,5,3,0};
                 int p=phase!=lastPhase?(phase==2?6:phase==1?5:0):rotation[step++%rotation.Length];
                 lastPhase=phase;
+                if(PreviewPattern>=0)p=Mathf.Clamp(PreviewPattern,0,12);
                 IsAttacking=true;
                 if(p>=10)yield return ObjectPattern(p-10);
                 else if(p>=7)yield return BarragePattern(p);

@@ -102,7 +102,7 @@ namespace Rushitadel.Presentation
                 if (countdown != null) countdown.text = $"화면 설정을 유지할까요?  {Mathf.CeilToInt(previewDeadline - Time.unscaledTime)}초";
                 if (Time.unscaledTime >= previewDeadline) RevertDisplay();
             }
-            if (Keyboard.current == null || !Keyboard.current.escapeKey.wasPressedThisFrame || loading) return;
+            if (BossTestController.Active || Keyboard.current == null || !Keyboard.current.escapeKey.wasPressedThisFrame || loading) return;
             if (modal != null) { dialogCancel?.Invoke(); return; }
             if (page == "game") { ShowPause(); return; }
             back?.Invoke();

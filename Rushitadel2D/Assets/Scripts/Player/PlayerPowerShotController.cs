@@ -40,6 +40,7 @@ namespace Rushitadel.Player
         private void Update()
         {
             if (Time.timeScale <= 0f) return;
+            if (Rushitadel.Presentation.BossTestController.PointerOverPanel) return;
             Mouse mouse = Mouse.current;
             if (mouse == null || !mouse.rightButton.wasPressedThisFrame)
             {

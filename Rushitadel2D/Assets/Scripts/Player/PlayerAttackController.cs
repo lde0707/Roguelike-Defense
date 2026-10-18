@@ -34,6 +34,7 @@ namespace Rushitadel.Player
 
         private void Update()
         {
+            if (Rushitadel.Presentation.BossTestController.PointerOverPanel) return;
             Mouse mouse = Mouse.current;
             if (mouse != null && mouse.leftButton.isPressed) TryFire(mouse.position.ReadValue());
         }
