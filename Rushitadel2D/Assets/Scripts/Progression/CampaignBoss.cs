@@ -50,6 +50,11 @@ namespace Rushitadel.Progression
         }
         private Transform Socket(Vector2 offset)
         {var go=new GameObject("Emitter "+sockets.Count);go.transform.SetParent(transform,false);go.transform.localPosition=offset;sockets.Add(go.transform);return go.transform;}
+        public void SetLavaPalmPositions(Vector3 left,Vector3 right)
+        {
+            if(Kind!=BossKind.Lava||sockets.Count<2)return;
+            sockets[0].position=left;sockets[1].position=right;
+        }
         private void BuildArt()
         {
             transform.localScale=Vector3.one;transform.rotation=Quaternion.identity;
@@ -86,6 +91,7 @@ namespace Rushitadel.Progression
                 else Socket(new(0,-1.2f));
             }
             FitScreenFootprint();
+            foreach(var animation in GetComponentsInChildren<ThemeBossAnimation>())animation.RefreshEmitters();
             int count=Kind==BossKind.Butterfly?4:Kind==BossKind.Ice?2:0;
             for(int i=0;i<count;i++)
             {

@@ -4,9 +4,14 @@ using System.Linq;
 using UnityEngine;
 namespace Rushitadel.Progression
 {
+    [DefaultExecutionOrder(-50)] // Update emitters before projectile/laser Update and pattern coroutines.
     public sealed class ThemeBossAnimation : MonoBehaviour
     {
-        private sealed class Clip { public Sprite[] idle,attack; }
+        private sealed class Clip
+        {
+            public Sprite[] idle,attack;
+            public readonly Dictionary<Sprite,Vector2[]> palms=new();
+        }
         private static readonly Dictionary<string,Clip> cache=new();
         private Clip clip;
         private SpriteRenderer renderer2D;
@@ -40,6 +45,13 @@ namespace Rushitadel.Progression
             renderer2D.GetPropertyBlock(properties);
             properties.SetTexture("_MainTex",sprite.texture);
             renderer2D.SetPropertyBlock(properties);
+            RefreshEmitters();
+        }
+        public void RefreshEmitters()
+        {
+            if(owner==null||renderer2D==null||clip==null)return;
+            if(clip.palms.TryGetValue(renderer2D.sprite,out var points))
+                owner.SetLavaPalmPositions(renderer2D.transform.TransformPoint(points[0]),renderer2D.transform.TransformPoint(points[1]));
         }
         public int IdleFrameCount=>clip?.idle.Length??0;
         public int AttackFrameCount=>clip?.attack.Length??0;
@@ -49,6 +61,7 @@ namespace Rushitadel.Progression
             if(clip.idle.Length==0)return;
             SetFrame(clip.idle[0]);renderer2D.color=Color.white;
             renderer2D.transform.localScale=Vector3.one*(width/renderer2D.sprite.bounds.size.x);
+            RefreshEmitters();
         }
         private void Update()
         {
@@ -86,9 +99,45 @@ namespace Rushitadel.Progression
                 var cropped=new Texture2D(width,height,TextureFormat.RGBA32,false)
                 {name=t.name,filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp};
                 cropped.SetPixels(t.GetPixels(left,bottom,width,height));cropped.Apply(false,true);
-                return Sprite.Create(cropped,new Rect(0,0,width,height),Vector2.one*.5f,100,0,SpriteMeshType.FullRect);
+                var sprite=Sprite.Create(cropped,new Rect(0,0,width,height),Vector2.one*.5f,100,0,SpriteMeshType.FullRect);
+                if(type=="A")
+                {
+                    var points=new Vector2[2];
+                    for(int side=0;side<2;side++)
+                    {
+                        Vector2 pixel=LavaPalmPixel(t,side);
+                        // Source pixels are top-left based; sprites use the shared crop's bottom-left origin.
+                        points[side]=new Vector2(pixel.x+.5f-left-width*.5f,t.height-pixel.y-.5f-bottom-height*.5f)/100f;
+                    }
+                    clip.palms[sprite]=points;
+                }
+                return sprite;
             }).ToArray();
             clip.idle=Sprites(idle);clip.attack=Sprites(attack);return cache[key]=clip;
+        }
+        private static Vector2 LavaPalmPixel(Texture2D texture,int side)
+        {
+            // Authored 384x216 A frames: locate only the round palm aperture, never finger lamps.
+            int frame=int.Parse(texture.name.Substring(texture.name.LastIndexOf('_')+1));
+            Vector2 center=new(106,64);
+            if(texture.name.StartsWith("boss_a_attack_"))
+            {
+                if(frame==2||frame==22)center=new(108,65);
+                else if(frame==3||frame==21)center=new(115,72);
+                else if(frame==4||frame==20)center=new(121,88);
+                else if(frame>=5&&frame<=19)center=new(123,98);
+            }
+            if(side==1)center.x=383-center.x;
+            Vector2 total=Vector2.zero;float weight=0;
+            for(int y=(int)center.y-4;y<=(int)center.y+4;y++)
+            for(int x=(int)center.x-5;x<=(int)center.x+5;x++)
+            {
+                Color32 c=texture.GetPixel(x,texture.height-1-y);
+                if(c.a<=100||c.r<=220||c.g<=130||c.b>=190)continue;
+                total+=new Vector2(x,y)*c.g;weight+=c.g;
+            }
+            if(weight==0){Debug.LogWarning("Palm anchor fallback: "+texture.name+" side "+side);return center;}
+            return total/weight;
         }
     }
 }
