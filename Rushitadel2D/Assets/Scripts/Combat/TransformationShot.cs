@@ -81,7 +81,7 @@ namespace Rushitadel.Combat
         private void Update()
         {
             if(finished||Time.timeScale<=0)return;
-            life-=Time.deltaTime;
+            life-=Stationary||wasAttached?Time.deltaTime:CombatTempo.DeltaTime;
             if(attached!=null)
             {
                 if(!attached.IsAlive||!InRange(attached.transform.position)){Finish();return;}
@@ -92,7 +92,7 @@ namespace Rushitadel.Combat
             if(wasAttached){Finish();return;}
             if(Stationary){TickArea();if(life<=0)Finish();return;}
             if(life<=0){EndFlight();return;}
-            float distance=Mathf.Min(8*Time.deltaTime,3-travel);
+            float distance=Mathf.Min(8*CombatTempo.DeltaTime,3-travel);
             if(form==9&&!returning)distance=Mathf.Min(distance,1.5f-travel);
             Vector2 start=transform.position, dir=returning?-heading:heading;
             float previousTravel=travel;
@@ -108,7 +108,7 @@ namespace Rushitadel.Combat
             transform.position=start+dir*distance;travel=previousTravel+distance;
             if(form==9&&!returning&&travel>=1.4999f){returning=true;hitIds.Clear();hitCount=0;hitbox.enabled=true;}
             if(travel>=2.9999f || !InRange(transform.position))EndFlight();
-            if(form==4||form==9)transform.Rotate(0,0,540*Time.deltaTime);
+            if(form==4||form==9)transform.Rotate(0,0,540*CombatTempo.DeltaTime);
         }
         private float BaseDamage()=>fragment?10:form switch {1=>8,2=>8,3=>25,4=>22,5=>32,7=>4,9=>18,12=>20,16=>20,_=>3};
         public void Hit(EnemyProjectileController target)

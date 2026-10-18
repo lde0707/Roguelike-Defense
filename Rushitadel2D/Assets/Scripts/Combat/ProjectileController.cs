@@ -60,14 +60,14 @@ namespace Rushitadel.Combat
         private void Update()
         {
             if (!flying || Time.timeScale <= 0f) return;
-            remainingLifetime -= Time.deltaTime;
+            remainingLifetime -= CombatTempo.DeltaTime;
             if (remainingLifetime <= 0f || remainingDistance <= 0f)
             {
                 Finish();
                 return;
             }
 
-            float step = Mathf.Min(speed * Time.deltaTime, remainingDistance);
+            float step = Mathf.Min(speed * CombatTempo.DeltaTime, remainingDistance);
             Vector3 start = transform.position;
             // Enemy movement is transform-driven. Synchronize before the swept collision query.
             Physics2D.SyncTransforms();

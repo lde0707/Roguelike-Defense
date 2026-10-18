@@ -36,7 +36,7 @@ namespace Rushitadel.Player
         private void Update()
         {
             if (!flying || Time.timeScale <= 0f) return;
-            remainingLifetime -= Time.deltaTime;
+            remainingLifetime -= CombatTempo.DeltaTime;
             if (remainingLifetime <= 0f)
             {
                 Destroy(gameObject);
@@ -45,7 +45,7 @@ namespace Rushitadel.Player
 
             Vector3 start = transform.position;
             float remainingDistance = Vector3.Distance(start, destination);
-            float step = Mathf.Min(speed * Time.deltaTime, remainingDistance);
+            float step = Mathf.Min(speed * CombatTempo.DeltaTime, remainingDistance);
             Vector3 end = start + direction * step;
 
             transform.position = end;

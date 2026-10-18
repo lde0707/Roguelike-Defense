@@ -110,9 +110,9 @@ namespace Rushitadel.Combat
         private void Update()
         {
             if (!flying || !IsAlive || Time.timeScale <= 0f) return;
-            remainingLifetime -= Time.deltaTime;
+            remainingLifetime -= speed>0?CombatTempo.DeltaTime:Time.deltaTime;
             if (remainingLifetime <= 0f) { Finish(); return; }
-            Advance(speed * SpeedMultiplier * Time.deltaTime);
+            Advance(speed * SpeedMultiplier * CombatTempo.DeltaTime);
         }
 
         // Bounded substeps handle entry + several ricochets in a single fast frame.

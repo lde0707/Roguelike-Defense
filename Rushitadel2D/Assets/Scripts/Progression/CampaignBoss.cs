@@ -148,8 +148,8 @@ namespace Rushitadel.Progression
         {
             if(socket==null||!socket.gameObject.activeInHierarchy||!SourceAlive(socket.position)||lasers.Count(x=>x!=null)>=2)return null;
             var laser=new GameObject("Boss laser").AddComponent<BossLaser>();
-            windup=Mathf.Max(.65f,windup);
-            CuePart(socket,windup+BossLaser.PilotSeconds,hold,BossLaser.FadeSeconds);
+            windup=Mathf.Max(.65f*CombatTempo.SpeedMultiplier,windup);
+            CuePart(socket,(windup+BossLaser.PilotSeconds)/CombatTempo.SpeedMultiplier,hold/CombatTempo.SpeedMultiplier,BossLaser.FadeSeconds/CombatTempo.SpeedMultiplier);
             laser.Configure(this,socket,heading,asset,tint??Accent,width,hold,sweep,windup);lasers.Add(laser);LasersFired++;return laser;
         }
         private IEnumerator RunPatterns()

@@ -29,7 +29,7 @@ namespace Rushitadel.Progression
         private Vector3 ringScale;
         public void Configure(CampaignBoss owner,Transform socket,Vector2 direction,string asset,Color tint,float width,float duration,float sweepDegrees=0,float windupSeconds=ChargeSeconds)
         {
-            WindupSeconds=Mathf.Max(.65f,windupSeconds);
+            WindupSeconds=Mathf.Max(.65f*CombatTempo.SpeedMultiplier,windupSeconds);
             Owner=owner;Socket=socket;heading=direction.normalized;color=tint;Width=width;hold=duration;sweep=sweepDegrees;
             beam=BossArt.Create(transform,asset,Vector2.zero,1);beam.sortingOrder=115;
             beam.sharedMaterial=BossArt.HostileMaterial;
@@ -53,7 +53,7 @@ namespace Rushitadel.Progression
         {
             if(Time.timeScale<=0)return;
             if(Owner==null || !Owner.Health.IsAlive || Socket==null || !Socket.gameObject.activeInHierarchy || (RequireEnd&&EndSocket==null)){Destroy(gameObject);return;}
-            Age+=Time.deltaTime;transform.position=Socket.position;
+            Age+=CombatTempo.DeltaTime;transform.position=Socket.position;
             float activeAge=Age-WindupSeconds-PilotSeconds;
             IsDamaging=activeAge>=0 && activeAge<hold;
             if(Age>WindupSeconds+PilotSeconds+hold+FadeSeconds){Destroy(gameObject);return;}

@@ -88,6 +88,6 @@ namespace Rushitadel.Combat
         public float Turn;
         private EnemyProjectileController shot;
         private void Awake()=>shot=GetComponent<EnemyProjectileController>();
-        private void Update(){if(Time.timeScale>0&&shot.IsAlive&&shot.BounceCount==0)shot.SetHeading(Quaternion.Euler(0,0,Turn*Time.deltaTime)*shot.Direction);}
+        private void Update(){if(Time.timeScale>0&&shot.IsAlive&&shot.BounceCount==0)shot.SetHeading(Quaternion.Euler(0,0,Turn*CombatTempo.DeltaTime)*shot.Direction);}
     }
 }

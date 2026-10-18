@@ -20,14 +20,14 @@ namespace Rushitadel.Progression
             if(Time.timeScale<=0)return;
             if(Owner==null || !Owner.Health.IsAlive){shot.Despawn();return;}
             if(!shot.IsAlive)return;
-            age+=Time.deltaTime;
+            age+=CombatTempo.DeltaTime;
             if(ReturnAfter>0 && age>=ReturnAfter)
             {
                 Vector2 delta=origin-(Vector2)transform.position;
                 if(delta.magnitude<.25f){shot.Despawn();return;}
                 shot.SetHeading(delta);
             }
-            else if(Turn!=0)shot.SetHeading(Quaternion.Euler(0,0,Turn*Time.deltaTime)*shot.Direction);
+            else if(Turn!=0)shot.SetHeading(Quaternion.Euler(0,0,Turn*CombatTempo.DeltaTime)*shot.Direction);
             if(SplitAfter>0 && age>=SplitAfter)
             {
                 // Never split into a player at point-blank range. Breaking the parent cancels children.
