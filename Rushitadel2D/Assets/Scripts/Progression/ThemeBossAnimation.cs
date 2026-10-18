@@ -20,10 +20,18 @@ namespace Rushitadel.Progression
         private float age;
         private float actionAge,windup,hold,recovery,peak,end;
         private bool action;
+        private bool explicitRing,contactSpin;
+        public bool IsContactSpinning=>contactSpin;
+        public void SetContactSpin(bool value)
+        {
+            contactSpin=value;action=false;age=0;
+            if(clip!=null&&clip.idle.Length>0)SetFrame(clip.idle[0]);
+        }
         public bool IsActionPlaying=>action;
         // The middle of A/C/D is the extended pose. B's first attack frame is the upright ring.
         public void Cue(float chargeSeconds,float holdSeconds,float recoverySeconds,float peakFrame=.5f,float endFrame=1)
         {
+            if(contactSpin)return;
             windup=Mathf.Max(.01f,chargeSeconds);hold=Mathf.Max(0,holdSeconds);recovery=Mathf.Max(.01f,recoverySeconds);
             peak=Mathf.Clamp01(peakFrame);end=Mathf.Clamp01(endFrame);actionAge=0;action=true;
             ApplyAction();
@@ -58,6 +66,7 @@ namespace Rushitadel.Progression
         public void Configure(CampaignBoss boss,SpriteRenderer target,string type,string idlePrefix,string attackPrefix,float width)
         {
             owner=boss;renderer2D=target;clip=Load(type,idlePrefix,attackPrefix);
+            explicitRing=type=="B"&&idlePrefix=="boss_Type_B_weapon_idle_";
             if(clip.idle.Length==0)return;
             SetFrame(clip.idle[0]);renderer2D.color=Color.white;
             renderer2D.transform.localScale=Vector3.one*(width/renderer2D.sprite.bounds.size.x);
@@ -66,13 +75,19 @@ namespace Rushitadel.Progression
         private void Update()
         {
             if(clip==null||clip.idle.Length==0||renderer2D==null)return;
+            if(contactSpin)
+            {
+                age+=Time.deltaTime;
+                SetFrame(clip.idle[(int)(age*30)%clip.idle.Length]);
+                return;
+            }
             if(action)
             {
                 actionAge+=Time.deltaTime;ApplyAction();
                 if(actionAge>=windup+hold+recovery){action=false;age=0;}
                 return;
             }
-            bool attack=owner!=null&&owner.IsAttacking&&clip.attack.Length>0;
+            bool attack=!explicitRing&&owner!=null&&owner.IsAttacking&&clip.attack.Length>0;
             if(attack!=wasAttacking){age=0;wasAttacking=attack;}
             age+=Time.deltaTime;var frames=attack?clip.attack:clip.idle;
             SetFrame(frames[(int)(age*10)%frames.Length]);

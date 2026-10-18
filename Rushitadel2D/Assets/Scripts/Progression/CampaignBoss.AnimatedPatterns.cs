@@ -71,6 +71,7 @@ namespace Rushitadel.Progression
                 if(ring==null)continue;
                 Laser(ring,"Ice/06-ring-laser",Vector2.down,.25f,1.2f);
                 yield return new WaitForSeconds(BossLaser.ChargeSeconds+BossLaser.PilotSeconds);
+                if(ring!=null)Fan(ring.position,"Ice/03-ricochet-orb",3,0,22,30,2.4f,1);
                 for(int sign=-1;sign<=1;sign+=2)
                     FireAt(sockets[0].position,new Vector2(sign*.55f,-1),"Ice/02-crescent-boomerang",42,2.5f,.18f,0,0,1.25f);
                 yield return new WaitForSeconds(1.2f+BossLaser.FadeSeconds+.25f);

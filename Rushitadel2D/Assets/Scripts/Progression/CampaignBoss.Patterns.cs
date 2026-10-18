@@ -101,14 +101,21 @@ namespace Rushitadel.Progression
             var ring=satellites[index];if(ring==null)yield break;
             Vector2 start=ring.position,target=PlayerHealth.Instance.transform.position;
             target.x=Mathf.Clamp(target.x+(index==0?-1.3f:1.3f),-4,4);
-            var warning=Laser(ring,"Ice/06-ring-laser",(target-start).normalized,.05f,0);
-            yield return new WaitForSeconds(.65f);if(warning!=null)Destroy(warning.gameObject);
+            // A harmless dash guide is not a laser attack and must not trigger the attack clip.
+            var guide=new GameObject("Ring dash route");guide.transform.SetParent(ring,false);
+            var line=guide.AddComponent<LineRenderer>();var material=new Material(Shader.Find("Sprites/Default"));
+            partResources.Add(material);line.sharedMaterial=material;line.positionCount=2;line.useWorldSpace=true;
+            line.SetPosition(0,start);line.SetPosition(1,target);line.widthMultiplier=.035f;line.sortingOrder=114;
+            line.startColor=line.endColor=new Color(.35f,.8f,1,.45f);
+            yield return new WaitForSeconds(.65f);
+            if(guide!=null)Destroy(guide);Destroy(material);
+            if(ring==null)yield break;
+            SetRingContact(ring,true);
             float t=0;
             while(t<2.8f && ring!=null)
             {
                 t+=Time.deltaTime;float u=Mathf.Clamp01(t/2.8f);
                 ring.position=Vector2.Lerp(start,target,Mathf.Sin(u*Mathf.PI))+Vector2.right*Mathf.Sin(u*2*Mathf.PI)*(index==0?-.65f:.65f);
-                ring.GetChild(ring.childCount-1).Rotate(0,0,Time.deltaTime*180);
                 var player=PlayerHealth.Instance;
                 if(player!=null && Time.timeScale>0)
                 {
@@ -119,9 +126,18 @@ namespace Rushitadel.Progression
             }
             if(ring!=null)
             {
+                SetRingContact(ring,false);
                 ring.position=start;ring.rotation=Quaternion.identity;
                 if(ring.childCount>0)ring.GetChild(ring.childCount-1).localRotation=Quaternion.identity;
             }
+        }
+        private void SetRingContact(Transform ring,bool active)
+        {
+            if(ring==null||Kind!=BossKind.Ice)return;
+            ring.GetComponentInChildren<ThemeBossAnimation>()?.SetContactSpin(active);
+            var trail=ring.GetComponent<IceRingDashTrail>();
+            if(trail==null&&active)trail=ring.gameObject.AddComponent<IceRingDashTrail>();
+            if(trail!=null)trail.SetEmitting(active);
         }
         private IEnumerator Ice(int p)
         {

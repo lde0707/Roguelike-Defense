@@ -32,7 +32,10 @@ namespace Rushitadel.Progression
             else if(Kind==BossKind.Lava)
                 for(int i=-1;i<=1;i++)FireAt(from,new Vector2(i*.55f+sign*.2f,-1),"Lava/04-cluster-bomb",65,1.7f,.2f,0,0,0,1.8f,"Lava/02-slag-dart");
             else if(Kind==BossKind.Ice)
-                for(int i=-1;i<=1;i++)FireAt(from,new Vector2(i*.4f+sign*.2f,-1),"Ice/02-crescent-boomerang",38,2.5f,.18f,1,0,1.1f);
+            {
+                CuePart(part.shot.transform,.15f,.3f,.25f);
+                for(int i=-1;i<=1;i++)FireAt(from,new Vector2(i*.4f+sign*.2f,-1),"Ice/03-ricochet-orb",38,2.5f,.18f,1);
+            }
             else Fan(from,PartOrb(part.side),part.side==0?5:3,sign*(20+wave*8),part.side==0?18:26,part.side==0?35:25,part.side==0?2.1f:3.1f,part.side==0?0:1);
         }
         private AttackPart MakePart(int side,int copy)
@@ -45,6 +48,11 @@ namespace Rushitadel.Progression
             float diameter=Kind==BossKind.Ice?.85f:Kind==BossKind.Lava?.7f:.48f;
             shot.ConfigureBoss(80+stage*20,0,diameter*.45f,24,0,0);shot.SetRewardOwner(Health);shot.Launch(Vector2.down);
             BossArt.Shot(shot.gameObject,PartAsset,diameter,false);
+            if(Kind==BossKind.Ice)
+            {
+                var art=System.Linq.Enumerable.Last(shot.GetComponentsInChildren<SpriteRenderer>(),s=>s.enabled);
+                art.gameObject.AddComponent<ThemeBossAnimation>().Configure(this,art,"B","boss_Type_B_weapon_idle_","boss_Type_B_weapon_attack_",diameter/Mathf.Abs(shot.transform.lossyScale.x));
+            }
             if(Kind==BossKind.Twins)MakeGemMesh(shot.transform,side);
             var part=new AttackPart{shot=shot,side=side,copy=copy,origin=origin};attackParts.Add(part);bullets.Add(shot);
             ShotsFired++;return part;
@@ -76,6 +84,7 @@ namespace Rushitadel.Progression
         {
             if(!PartAlive(part))yield break;
             Vector2 start=part.shot.transform.position;bool hit=false;
+            if(contact)SetRingContact(part.shot.transform,true);
             for(float t=0;t<seconds&&PartAlive(part);t+=Time.deltaTime)
             {
                 Vector2 previous=part.shot.transform.position;
@@ -91,7 +100,7 @@ namespace Rushitadel.Progression
                 }
                 yield return null;
             }
-            if(PartAlive(part))part.shot.transform.position=target;
+            if(PartAlive(part)){part.shot.transform.position=target;if(contact)SetRingContact(part.shot.transform,false);}
         }
         private IEnumerator DashPart(AttackPart part,Vector2 target)
         {
