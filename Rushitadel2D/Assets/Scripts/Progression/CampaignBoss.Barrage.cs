@@ -5,6 +5,7 @@ namespace Rushitadel.Progression
 {
     public sealed partial class CampaignBoss
     {
+        [SerializeField, Min(0f)] private float screenTopPadding = .25f;
         public float ScreenFitScale {get;private set;}=1;
         public static float CalculateScreenFit(Vector2 bodySize,float viewWidth,float viewHeight)
         {
@@ -21,6 +22,12 @@ namespace Rushitadel.Progression
             ScreenFitScale=CalculateScreenFit(bounds.size,camera.orthographicSize*2*camera.aspect,camera.orthographicSize*2);
             // Root scaling also scales body colliders and emitter offsets, not projectile dimensions or HP.
             transform.localScale=Vector3.one*ScreenFitScale;
+            // Animation frames share a common crop, so this includes attack poses without
+            // moving the boss each frame. Position before emitter refresh and satellite spawn.
+            bounds=art[0].GetComponent<SpriteRenderer>().bounds;
+            foreach(var part in art)bounds.Encapsulate(part.GetComponent<SpriteRenderer>().bounds);
+            float top=camera.transform.position.y+camera.orthographicSize-screenTopPadding;
+            transform.position+=Vector3.up*(top-bounds.max.y);
         }
         private string BarrageOrb=>Kind==BossKind.Twins?"Twins/01-pressure-orb":OrbAsset;
         private Transform BarrageSource(int side)

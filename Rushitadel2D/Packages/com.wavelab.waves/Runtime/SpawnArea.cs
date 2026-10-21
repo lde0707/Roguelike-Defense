@@ -13,9 +13,13 @@ namespace WaveLab.Waves
         [Min(0)] public float outerRadius = 5;
         [Tooltip("플레이어나 카메라를 지정하면 중심 위치를 따라갑니다. 회전·크기는 영역 Transform 기준입니다.")]
         public Transform follow;
+        [Tooltip("이 대상의 안전 반경 안에는 생성하지 않습니다.")]
+        public Transform avoid;
+        [Min(0)] public float avoidRadius = 2;
         public Vector3 Center => follow != null ? follow.position + transform.position : transform.position;
         public bool Valid => WaveValidation.Finite(size.x) && WaveValidation.Finite(size.y) && size.x > 0 && size.y > 0
-            && WaveValidation.Finite(innerRadius) && WaveValidation.Finite(outerRadius) && innerRadius >= 0 && outerRadius >= innerRadius;
+            && WaveValidation.Finite(innerRadius) && WaveValidation.Finite(outerRadius) && innerRadius >= 0 && outerRadius >= innerRadius
+            && WaveValidation.Finite(avoidRadius) && avoidRadius >= 0;
         public Vector3 Sample(System.Random random)
         {
             Vector2 p = Vector2.zero;

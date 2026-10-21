@@ -102,6 +102,7 @@ namespace Rushitadel.Combat
 
         private void Die()
         {
+            if(TryGetComponent<WaveLab.Waves.SpawnedUnit>(out var waveUnit))waveUnit.ReportDefeated();
             SpawnExperience(dropValue - interceptionXp, transform.position);
             Destroy(gameObject);
         }

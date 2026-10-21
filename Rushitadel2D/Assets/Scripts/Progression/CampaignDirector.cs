@@ -42,7 +42,9 @@ namespace Rushitadel.Progression
         public int Stage { get; private set; } = 1;
         public int Round { get; private set; } = 1;
         public int Spawned { get; private set; }
-        public int SpawnBudget => 10 + Stage * 2 + Round * 2;
+        public int SpawnBudget => designedRound != null ? designedRound.Total : 10 + Stage * 2 + Round * 2;
+        private CampaignWaveSchedule designedRound;
+        private WaveLab.Waves.WavePlan designedPlan;
         public int Wallet => Mathf.Max(0, Experience.TotalExperience - State.spentXp);
         public int PendingAugments => Mathf.Max(0, Experience.CompletedThresholds - State.augmentsChosen);
         public PlayerExperience Experience => PlayerHealth.Instance.GetComponent<PlayerExperience>();
@@ -112,6 +114,7 @@ namespace Rushitadel.Progression
         {
             if (PlayerHealth.Instance != null) PlayerHealth.Instance.Died -= Defeat;
             if (Instance == this) Instance = null;
+            if(designedPlan!=null)Destroy(designedPlan);
         }
         private void Update()
         {
@@ -121,13 +124,14 @@ namespace Rushitadel.Progression
             if (Time.timeScale <= 0) return;
             if (State.phase == RunPhase.Round)
             {
-                if (Spawned < SpawnBudget && Time.time >= nextSpawn && EnemyRegistry.ActiveEnemies.Count() < 8)
+                if (designedRound != null) Spawned=designedRound.Tick(spawner,Stage,Time.deltaTime);
+                if (designedRound == null && Spawned < SpawnBudget && Time.time >= nextSpawn && EnemyRegistry.ActiveEnemies.Count() < 8)
                 {
                     var enemy = spawner.SpawnCampaignEnemy(Stage);
                     if (enemy != null) Spawned++;
                     nextSpawn = Time.time + Mathf.Max(1.1f,1.65f-.1f*Stage-.05f*Round);
                 }
-                if (Spawned >= SpawnBudget && !EnemyRegistry.ActiveEnemies.Any(e => e != null && e.IsAlive))
+                if (Spawned >= SpawnBudget && (designedRound==null||designedRound.TargetTimeReached) && !EnemyRegistry.ActiveEnemies.Any(e => e != null && e.IsAlive))
                 {
                     if (Round == 3) BeginBoss(); else TryEnterMaintenance();
                 }
@@ -136,7 +140,18 @@ namespace Rushitadel.Progression
         }
         private void BeginRound()
         {
+            // Snapshot once per round: saving never changes an encounter already in progress.
+            if(designedPlan!=null)Destroy(designedPlan);
+            designedPlan=null;
+            var design=Resources.Load<CampaignWaveSettings>("WaveLabCampaign");
+            if(design!=null && design.plan!=null)
+            {
+                var issues=CampaignWaveSettings.Errors(design.plan);
+                if(issues.Count==0)designedPlan=Instantiate(design.plan);
+                else Debug.LogWarning("웨이브 설계 연결 오류: 기존 편성 사용. " + string.Join(" / ",issues));
+            }
             State.phase = RunPhase.Round; Spawned = 0; nextSpawn = Time.time + 1.5f;
+            designedRound=designedPlan!=null?new CampaignWaveSchedule(designedPlan,(Stage-1)*3+Round-1):null;
             ForwardPressureController.Instance.HoldAdvance = false;
             GameFrontend.Instance.ShowBattle();
         }

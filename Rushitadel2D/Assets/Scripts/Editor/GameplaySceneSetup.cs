@@ -112,8 +112,8 @@ namespace Rushitadel.Editor
             var boundaries = new GameObject("Cliff Boundaries").AddComponent<PlayfieldBoundary>();
             boundaries.transform.SetParent(camera.transform, false);
             boundaries.transform.localPosition = new Vector3(0f, 0f, 10f);
-            BoxCollider2D leftWall = CreateCliffWall(boundaries.transform, "Left Invisible Wall", -5.65f);
-            BoxCollider2D rightWall = CreateCliffWall(boundaries.transform, "Right Invisible Wall", 5.65f);
+            BoxCollider2D leftWall = CreateCliffWall(boundaries.transform, "Left Invisible Wall", -6.75f);
+            BoxCollider2D rightWall = CreateCliffWall(boundaries.transform, "Right Invisible Wall", 6.75f);
             boundaries.Configure(leftWall, rightWall);
             var rearHazard = CreatePressureZone(camera.transform, "Rear Theme Hazard", 1.2f, true);
 
@@ -189,7 +189,7 @@ namespace Rushitadel.Editor
             var root = new GameObject(name);
             root.transform.SetParent(camera, false);
             var box = root.AddComponent<BoxCollider2D>();
-            box.size = new Vector2(10.8f, depth);
+            box.size = new Vector2(13f, depth);
             box.isTrigger = rear;
             var fill = Visual("Zone Fill", square, Color.white, box.size, 5);
             fill.transform.SetParent(root.transform, false);

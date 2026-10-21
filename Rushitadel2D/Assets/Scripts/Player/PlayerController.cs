@@ -49,7 +49,9 @@ namespace Rushitadel.Player
             Vector2 next = body.position + (recoilStep > 0f ? recoilVelocity * recoilStep :
                 moveInput * (moveSpeed * CombatTempo.SpeedMultiplier * (Rushitadel.Progression.CampaignDirector.HasWeb(5) ? 1.1f : 1f) * Rushitadel.Progression.RandomPlayerWeb.MoveMultiplier * Time.fixedDeltaTime));
             recoilRemaining = Mathf.Max(0f, recoilRemaining - recoilStep);
-            next.x = Mathf.Clamp(next.x, minimumPosition.x, maximumPosition.x);
+            // The cliff colliders own horizontal limits; serialized limits are a fallback only.
+            if (PlayfieldBoundary.Instance == null)
+                next.x = Mathf.Clamp(next.x, minimumPosition.x, maximumPosition.x);
             var pressure = ForwardPressureController.Instance;
             if (pressure != null && pressure.isActiveAndEnabled) next = pressure.ClampPlayer(next, BodyRadius);
             else next.y = Mathf.Clamp(next.y, minimumPosition.y, maximumPosition.y);

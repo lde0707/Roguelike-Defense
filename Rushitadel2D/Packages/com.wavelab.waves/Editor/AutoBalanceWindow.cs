@@ -36,6 +36,13 @@ namespace WaveLab.Waves.Editor
             input.restSeconds = EditorGUILayout.FloatField("웨이브 사이 휴식 (초)", input.restSeconds);
             input.difficulty = EditorGUILayout.Popup("난이도", input.difficulty, new[] { "여유롭게", "보통", "어렵게" });
             input.seed = EditorGUILayout.IntField("생성 시드 (같은 값 = 같은 편성)", input.seed);
+            input.maximumAlive=EditorGUILayout.IntSlider("동시 적 상한",input.maximumAlive,1,64);
+            input.maximumElites=EditorGUILayout.IntSlider("동시 엘리트",Mathf.Min(input.maximumElites,input.maximumAlive),1,input.maximumAlive);
+            input.rhythm=EditorGUILayout.Popup("전투 흐름",input.rhythm,new[]{"꾸준하게","압박 후 숨 고르기","점층"});
+            input.clearBeforeRest=EditorGUILayout.Toggle("잔여 적 정리 후 휴식",input.clearBeforeRest);
+            input.effectiveDpsOverride=EditorGUILayout.FloatField("실측 유효 DPS (0 = 추정)",input.effectiveDpsOverride);
+            input.pressureMargin=EditorGUILayout.Slider("동시 공격 안전 여유",input.pressureMargin,1,3);
+            input.recoveryPercent=EditorGUILayout.Slider("예상 회복 비율",input.recoveryPercent,0,1);
             EditorGUILayout.Space();EditorGUILayout.LabelField("2. 플레이어의 시작 스탯", EditorStyles.boldLabel);
             playerPrefab=(GameObject)EditorGUILayout.ObjectField("플레이어 프리팹",playerPrefab,typeof(GameObject),false);
             playerStatProfile=(EnemyProfile)EditorGUILayout.ObjectField(new GUIContent("스탯 연결 프로필 (선택)","다른 게임 스크립트는 기존 프로필 형식으로 숫자 필드를 연결할 수 있습니다. 보상은 플레이어 계산에 사용하지 않습니다."),playerStatProfile,typeof(EnemyProfile),false);
@@ -54,6 +61,8 @@ namespace WaveLab.Waves.Editor
             {
                 var e=input.enemies[i];EditorGUILayout.BeginVertical("box");
                 e.profile=(EnemyProfile)EditorGUILayout.ObjectField("적 프로필",e.profile,typeof(EnemyProfile),false);
+                e.role=(EnemyRole)EditorGUILayout.EnumPopup("적 역할",e.role);
+                e.selectionWeight=EditorGUILayout.Slider("등장 비중",e.selectionWeight,.25f,3);
                 e.spawnKey=EditorGUILayout.TextField("스폰 영역 이름",e.spawnKey);
                 e.health=EditorGUILayout.FloatField("체력",e.health);
                 e.damage=EditorGUILayout.FloatField("1회 공격 피해",e.damage);
@@ -158,7 +167,10 @@ namespace WaveLab.Waves.Editor
             foreach(var row in preview.rows)report+=JsonUtility.ToJson(row,true)+"\n";
             foreach(var warning in preview.warnings)report+="\n주의: "+warning;
             File.WriteAllText(Path.ChangeExtension(path,"balance.txt"),report);
-            AssetDatabase.SaveAssets();AssetDatabase.Refresh();WaveLabWindow.OpenPlan(saved);
+            AssetDatabase.SaveAssets();AssetDatabase.Refresh();
+            try { WaveQuickStartWindow.PlanSaved?.Invoke(saved); }
+            catch(ArgumentException ex) { error="파일은 저장했지만 본편 연결에 실패했습니다: "+ex.Message; }
+            WaveLabWindow.OpenPlan(saved);
         }
     }
 }

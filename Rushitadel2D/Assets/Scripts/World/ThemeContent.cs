@@ -21,7 +21,7 @@ namespace Rushitadel.World
             var l=road.GetPixels32();var m=cliff.GetPixels32();var r=upper.GetPixels32();var pixels=new Color32[width*height];
             for(int y=0;y<height;y++)for(int x=0;x<width;x++)
             {
-                // M's inner rocky lip sits at the existing +/-5.4 world-unit collision boundary.
+                // Keep the map art fixed; gameplay boundaries sit at the inner cliff face (+/-6.5).
                 int mx=x<192?103-x:x-280;
                 if(mx>=0&&mx<64)pixels[y*width+x]=m[(y%cliff.height)*cliff.width+mx%cliff.width];
                 else if(x<40||x>=344)pixels[y*width+x]=r[(y%upper.height)*upper.width+x%upper.width];

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e561ce4fdba74e41a82324dc4c66a90, type: 3}
+  m_Name: "05_\uC5D8\uB9AC\uD2B8 \uC0AC\uC218"
+  m_EditorClassIdentifier: WaveLab.Waves::WaveLab.Waves.EnemyProfile
+  id: 6cbcde248bad42a8934a9cc958c731e4
+  prefab: {fileID: 6196850671552213033, guid: bf3804d06c49f7f448921f1897c0b6eb, type: 3}
+  gameKey: rushitadel:5
+  defeatRewards:
+  - resourceId: xp
+    amount: 35
+  statBindings: []

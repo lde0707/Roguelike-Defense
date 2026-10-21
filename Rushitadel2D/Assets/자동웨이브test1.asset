@@ -1,0 +1,422 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aada793297a77d458840735234f2571, type: 3}
+  m_Name: "\uC790\uB3D9\uC6E8\uC774\uBE0Ctest1"
+  m_EditorClassIdentifier: WaveLab.Waves::WaveLab.Waves.WavePlan
+  schemaVersion: 1
+  seed: 1
+  waves:
+  - id: 6946ffcf739ca1c4cd1034135b4ea36f
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 1"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: df4aa5840e7a9ca0e3c1176ce48e824e
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 11.444445
+    - id: 0fbe2102533bf058a328184be991eb81
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 4
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 8.416667
+    - id: f1bc12e3c49ac11a5ea986da5b57bd3f
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 15
+  - id: 3c5a4d30f652b35551d69589d1d290b4
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 2"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: b1fd073ecd92947d4b6bd9bd0380b1f2
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 17.166666
+    - id: a48bde4f873fcac708f63404c6ceec6d
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 16.833334
+    - id: 31d232fde29263a1cfc5f0e71d98afd1
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 10
+  - id: 6b7f7dced1bf7fae5f6c3c28d47a96e0
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 3"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: 634670ad22dff9932710bd1af25f3a06
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 7
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 4.904762
+    - id: 73f756cab167ded822a543ceb51d18f9
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 6
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 5.611111
+    - id: 37855e203554ac9aea8544af13938dff
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 30
+  - id: 39406898c5de0944f8c4fa93da03b195
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 4"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: e2894bbc296c8fcb17449c7ebe9a77fd
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 17.166666
+    - id: ec9f89e560f425cd403bb64f99fa252e
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 11.222222
+    - id: 37c1c984969a6f8f9cb1229a28c54b5e
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 10
+  - id: 7231a164f67c1e1d6efaf5d83f624ff9
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 5"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: 3e43502ffc33ef7b58029b4cd3cabf28
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 11.444445
+    - id: f435b965fc5ebb20047bbacb55850d9a
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 11.222222
+    - id: 7434585e1d5d674a26411a7a5ad14ba3
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 10
+  - id: 9aaf42b8f4d2ee017b954bca486fcecd
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 6"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: 60a5e11c2f3391168813886d02bc0144
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 7
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 4.904762
+    - id: 2492e3d5a776854858e2cf0def022a15
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 33.666668
+    - id: 517e8d5e278a88062c1e11be6c94ebbe
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 10
+  - id: 0860500886a272e80e753eafbaaedc09
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 7"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: 899558f8c41910f779e80dc538b43608
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 11.444445
+    - id: b61f6ab723278b7cd6f9857580e44c46
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 4
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 8.416667
+    - id: feb0d3870fe04306594f8fb978223a59
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 10
+  - id: 9c9490813ec604643727a764db5dd894
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 8"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: bfb312c3362bec49fcb761f2db22d65c
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 5
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 6.866667
+    - id: bed704e61cfae4b2d655070e50eab3c9
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 6
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 5.611111
+    - id: f61840095fff4b1347a79f0fdc722815
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 15
+  - id: 9c3b2ed50312e8989b09e05c86f18c77
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 9"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: 07a27d532d63bdf2046cdc43efa67295
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 4
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 8.583333
+    - id: 1c3d76300b0b0b8d44898d0b71eff7e5
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 4
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 8.416667
+    - id: 2847a1f8c7bea8853b7e97a62654f8f5
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 10
+  - id: 74154ce74af75f4e4ad769f094e08d73
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 10"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: 91f0e4e67497c326e7318835ff382604
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 7
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 4.904762
+    - id: 315408ab3182092faa954c72c11f1f8f
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 11.222222
+    - id: b209d4de48d2720725518cc5c2186011
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 10
+  - id: 2702e6e601b412c7f8572a2e74316200
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 11"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: a4300ce1476a35923ac15cdb930482e4
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 17.166666
+    - id: 62ecfd544b055071c5b3c9c135e33c33
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 11.222222
+    - id: 4faa8ae110bf9e4a54ccecf2a4ec7ef4
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 4
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 7.5
+  - id: 09f92985335a4324b34d0d395e7eabd9
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 12"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: efecd434c508e1ed8f13b4df31922083
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 7
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 4.904762
+    - id: 7b6c95cc75f2a19a2197c3f7f2c1381c
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 7
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 4.8095236
+    - id: a98205350fe4c04f3b1879467e451220
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 15
+  - id: eef50171dacea9982b0f779fbc46ac3f
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 13"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: 2253fbd984dccaa269546f0a051ec36e
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 5
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 6.866667
+    - id: bedd41982a456cabe69be611b5e9b082
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 16.833334
+    - id: c30df06528e6ecf25e2b85796a8da40c
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 4
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 7.5
+  - id: 15919d40a47fa5ed1411ff876f4ff160
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 14"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 5
+    groups:
+    - id: 0132a51af658c5daace2351a77f75e73
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 4
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 8.583333
+    - id: 4eb1edff16cdd5067de890fb4c81972b
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 11.222222
+    - id: 09de8d76e61e4ae2c3cc689c6ed22e1d
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 4
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 7.5
+  - id: 555518e90a188a6600ae6966abba7349
+    title: "\uC790\uB3D9 \uC6E8\uC774\uBE0C 15"
+    end: 2
+    durationSeconds: 35.333332
+    restSeconds: 0
+    groups:
+    - id: 8c15f8c0fad469dac16372e3e5543c50
+      enemy: {fileID: 11400000, guid: e55e8844fd174904e90fc73a64672feb, type: 2}
+      spawnKey: main
+      count: 6
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 5.7222223
+    - id: 04442e64365c776f3717925635f5d7b6
+      enemy: {fileID: 11400000, guid: 28cca6db50b7981449436f70e6f19f95, type: 2}
+      spawnKey: main
+      count: 12
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 2.8055556
+    - id: 33b795f37d36eecf3eeb94b59883a5ac
+      enemy: {fileID: 11400000, guid: e4a569c68e998e24b953755d910dac69, type: 2}
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 30

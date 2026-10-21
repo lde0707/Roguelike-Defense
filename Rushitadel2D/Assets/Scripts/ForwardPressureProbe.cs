@@ -54,8 +54,11 @@ namespace Rushitadel
             Check(body.position.y - camera.transform.position.y > beforeAdvance + 0.65f && health.CurrentHealth == health.MaximumHealth,
                 "Forward input overtakes camera speed and escapes the rear threat");
             body.position = new Vector2(0f, camera.transform.position.y+3f);
+            pressure.HoldAdvance = true;
+            float heldY = camera.transform.position.y;
             yield return new WaitForSeconds(0.3f);
-            Check(body.position.y-camera.transform.position.y<=1.6f,"Camera follows forward player without barrier");
+            Check(Mathf.Approximately(camera.transform.position.y, heldY), "Forward player never pulls the held camera");
+            pressure.HoldAdvance = false;
             InputSystem.QueueStateEvent(keyboard, new KeyboardState());
             yield return null;
             player.ApplyRecoil(Vector2.down, 0.18f, 0.12f);

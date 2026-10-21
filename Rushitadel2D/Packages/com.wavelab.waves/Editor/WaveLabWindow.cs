@@ -12,7 +12,10 @@ namespace WaveLab.Waves.Editor
         private Vector2 leftScroll, middleScroll, rightScroll;
         private List<string> errors = new List<string>();
         private bool inspected;
+        private string saveNotice;
         [MenuItem("Tools/웨이브랩/웨이브 편집기")]
+        public static void StartEasy(){WaveQuickStartWindow.Open();}
+        [MenuItem("Tools/웨이브랩/세부 편집기 (고급)")]
         public static void Open() { var w = GetWindow<WaveLabWindow>("웨이브 편집기"); w.minSize = new Vector2(900, 520); }
         public static void OpenPlan(WavePlan selected) { Open(); var w = GetWindow<WaveLabWindow>(); w.plan = selected; w.waveIndex = w.groupIndex = 0; }
         private void OnEnable() { Undo.undoRedoPerformed += Repaint; }
@@ -25,9 +28,14 @@ namespace WaveLab.Waves.Editor
             if (next != plan) { plan = next; waveIndex = groupIndex = 0; inspected = false; }
             if (GUILayout.Button("새 웨이브 계획", EditorStyles.toolbarButton)) CreatePlan();
             if (GUILayout.Button("적 등록", EditorStyles.toolbarButton)) CreateEnemy();
+            if (GUILayout.Button("웨이브 배치", EditorStyles.toolbarButton)) WavePlacementWindow.OpenPlan(plan);
             if (GUILayout.Button("자동 생성", EditorStyles.toolbarButton)) AutoBalanceWindow.Open();
             if (GUILayout.Button("검사", EditorStyles.toolbarButton)) { inspected = true; errors = WaveValidation.Errors(plan); }
-            if (GUILayout.Button("저장", EditorStyles.toolbarButton)) AssetDatabase.SaveAssets();
+            if (GUILayout.Button("저장", EditorStyles.toolbarButton))
+            {
+                try { AssetDatabase.SaveAssets(); WaveQuickStartWindow.PlanSaved?.Invoke(plan); saveNotice="저장 완료. 본편 프로필을 사용한 계획은 inGame에 연결되며 다음 라운드부터 반영됩니다."; }
+                catch(ArgumentException ex){saveNotice="본편 연결 실패: "+ex.Message;}
+            }
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.HelpBox("‘자동 생성’에서 스탯·목표 시간으로 초안을 만든 뒤 여기서 수정하세요. 위치·도탄·실제 생존율을 검증하는 전투 시뮬레이션은 아직 제공하지 않습니다.", MessageType.Info);
             if (plan == null) { EditorGUILayout.LabelField("새 웨이브 계획을 만들거나 웨이브 계획 파일을 끌어 넣으세요.", EditorStyles.boldLabel); return; }
@@ -38,6 +46,7 @@ namespace WaveLab.Waves.Editor
                 DrawWaves(); DrawGroups(); DrawDetails();
                 EditorGUILayout.EndHorizontal();
             }
+            if(!string.IsNullOrEmpty(saveNotice))EditorGUILayout.HelpBox(saveNotice,MessageType.Info);
             DrawTestControls();
             if (inspected)
             {
@@ -113,9 +122,12 @@ namespace WaveLab.Waves.Editor
                 EditorGUILayout.LabelField("웨이브 설정", EditorStyles.boldLabel);
                 Field(w, "title", "이름");
                 var end = w.FindPropertyRelative("end");
-                end.enumValueIndex = EditorGUILayout.Popup("완료 조건", end.enumValueIndex, new[] { "등장 종료 + 잔여 적 없음", "모두 등장", "시간 경과" });
-                if (end.enumValueIndex == 2) Field(w, "durationSeconds", "종료 시간 (초)");
+                end.enumValueIndex = EditorGUILayout.Popup("완료 조건", end.enumValueIndex, new[] { "등장 종료 + 잔여 적 없음", "모두 등장 (적 이월)", "시간 경과 (적 이월)", "목표 시간 + 잔여 적 정리 (권장)" });
+                if (end.enumValueIndex >= 2) Field(w, "durationSeconds", "목표 전투 시간 (초)");
                 Field(w, "restSeconds", "완료 후 휴식 (초)");
+                EditorGUILayout.PropertyField(so.FindProperty("maximumAlive"),new GUIContent("동시 적 상한 (0 = 무제한)"));
+                EditorGUILayout.PropertyField(so.FindProperty("maximumElites"),new GUIContent("동시 엘리트 상한"));
+                EditorGUILayout.PropertyField(so.FindProperty("minimumSpawnSpacing"),new GUIContent("최소 등장 간격 (거리)"));
                 EditorGUILayout.PropertyField(so.FindProperty("seed"), new GUIContent("위치 추첨 시드"));
                 var groups = w.FindPropertyRelative("groups");
                 if (groups.arraySize > 0)
@@ -124,6 +136,7 @@ namespace WaveLab.Waves.Editor
                     var g = groups.GetArrayElementAtIndex(groupIndex);
                     EditorGUILayout.Space(); EditorGUILayout.LabelField("선택한 적 그룹", EditorStyles.boldLabel);
                     Field(g, "enemy", "적 프로필"); Field(g, "count", "총 마릿수"); Field(g, "spawnKey", "스폰 영역 키");
+                    Field(g,"role","역할 (엘리트 상한 판정)");
                     Field(g, "startSeconds", "첫 등장 (초)"); Field(g, "intervalSeconds", "배치 간격 (초)"); Field(g, "batchSize", "한 번에 등장할 수");
                     EditorGUILayout.HelpBox("그룹 시간은 웨이브 시작 기준입니다. 여러 그룹은 동시에 실행됩니다. 스폰 키는 씬의 스폰 영역와 일치해야 합니다.", MessageType.None);
                     if (g.FindPropertyRelative("enemy").objectReferenceValue != null && GUILayout.Button("적 스탯·보상 연결 열기")) Selection.activeObject = g.FindPropertyRelative("enemy").objectReferenceValue;

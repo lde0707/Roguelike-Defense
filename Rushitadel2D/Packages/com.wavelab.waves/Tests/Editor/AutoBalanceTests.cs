@@ -100,5 +100,44 @@ namespace WaveLab.Waves.Tests
             input.playerRange=float.NaN;Assert.IsNotEmpty(AutoBalance.Validate(input));
             input.playerRange=3;input.enemies[0].moveSpeed=-1;Assert.IsNotEmpty(AutoBalance.Validate(input));
         }
+
+        [Test] public void SafeDesignStaggersGroupsAndKeepsCaps()
+        {
+            input.waveCount=3;input.enemies.Add(new BalanceEnemy{profile=enemy,health=20,damage=0,role=EnemyRole.Elite});
+            var r=AutoBalance.Generate(input);
+            Assert.IsTrue(r.plan.waves.All(w=>w.end==WaveEnd.DurationAndCleared));
+            Assert.AreEqual(8,r.plan.maximumAlive);Assert.AreEqual(2,r.plan.maximumElites);
+            Assert.IsTrue(r.plan.waves.SelectMany(w=>w.groups).Any(g=>g.startSeconds>0));
+            Assert.IsEmpty(WaveValidation.Errors(r.plan));UnityEngine.Object.DestroyImmediate(r.plan);
+        }
+        [Test] public void MeasuredDpsReplacesSingleWeaponEstimate()
+        {
+            input.modelGrowth=false;input.effectiveDpsOverride=77;
+            var r=AutoBalance.Generate(input);Assert.IsTrue(r.rows.All(w=>w.effectiveDps==77));UnityEngine.Object.DestroyImmediate(r.plan);
+        }
+        [Test] public void TierHealthUsesActualStageIncrement()
+        {
+            var e=input.enemies[0];e.healthPerTier=60;
+            Assert.AreEqual(4,AutoBalance.WorkSeconds(input,e,30,2)-AutoBalance.WorkSeconds(input,e,30,0),.001);
+        }
+        [Test] public void CumulativeForecastCarriesDamageAndRecovery()
+        {
+            input.waveCount=3;input.modelGrowth=false;input.enemies[0].damage=5;input.enemies[0].encounterDistance=0;
+            var r=AutoBalance.Generate(input);
+            Assert.AreEqual(input.playerHealth-r.rows.Sum(w=>w.estimatedDamage),r.rows.Last().remainingHealth,.001);
+            UnityEngine.Object.DestroyImmediate(r.plan);
+        }
+        [Test] public void PressureMarginDoesNotIncreaseRoster()
+        {
+            input.waveCount=1;input.enemies[0].damage=8;input.enemies[0].hitRate=1;
+            input.pressureMargin=1;var a=AutoBalance.Generate(input);input.pressureMargin=2;var b=AutoBalance.Generate(input);
+            Assert.LessOrEqual(b.rows[0].count,a.rows[0].count);
+            UnityEngine.Object.DestroyImmediate(a.plan);UnityEngine.Object.DestroyImmediate(b.plan);
+        }
+        [Test] public void RejectsInvalidCapsAndOverrides()
+        {
+            input.maximumAlive=0;Assert.IsNotEmpty(AutoBalance.Validate(input));
+            input.maximumAlive=8;input.effectiveDpsOverride=float.NaN;Assert.IsNotEmpty(AutoBalance.Validate(input));
+        }
     }
 }

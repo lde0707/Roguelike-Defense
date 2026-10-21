@@ -48,5 +48,45 @@ namespace WaveLab.Waves.Tests
             float until=Time.realtimeSinceStartup+5;while(runner.IsRunning&&Time.realtimeSinceStartup<until)yield return null;
             Assert.AreEqual(3,count);
         }
+
+        [UnityTest] public IEnumerator LiveCapBackpressuresWithoutDroppingEnemies()
+        {
+            plan.maximumAlive=1;var spawned=new List<GameObject>();runner.UnitSpawned+=(go,p)=>spawned.Add(go);
+            runner.Play();yield return new WaitForSeconds(.08f);Assert.AreEqual(1,runner.SpawnedCount);
+            spawned[0].GetComponent<SpawnedUnit>().ReportDefeated();Object.Destroy(spawned[0]);
+            yield return new WaitForSeconds(.08f);Assert.AreEqual(2,runner.SpawnedCount);Assert.AreEqual(1,runner.AliveCount);
+            spawned[1].GetComponent<SpawnedUnit>().ReportDefeated();Object.Destroy(spawned[1]);
+            yield return new WaitForSeconds(.08f);Assert.AreEqual(3,runner.SpawnedCount);
+        }
+        [UnityTest] public IEnumerator EliteCapStillLetsNormalGroupSpawn()
+        {
+            plan.maximumAlive=4;plan.maximumElites=1;plan.waves[0].groups[0].role=EnemyRole.Elite;
+            plan.waves[0].groups.Add(new SpawnGroup{enemy=enemy,count=1});
+            runner.Play();yield return new WaitForSeconds(.08f);
+            Assert.AreEqual(1,runner.EliteCount);Assert.AreEqual(2,runner.AliveCount);
+        }
+        [UnityTest] public IEnumerator TimedSafeWaveWaitsForKillsAndUsesGraceAfterTarget()
+        {
+            var wave=plan.waves[0];wave.end=WaveEnd.DurationAndCleared;wave.durationSeconds=.2f;wave.groups[0].count=1;
+            runner.safetyTimeoutSeconds=.3f;GameObject unit=null;runner.UnitSpawned+=(go,p)=>unit=go;
+            bool completed=false;runner.onWaveCompleted.AddListener(_=>completed=true);
+            runner.Play();yield return new WaitForSeconds(.25f);Assert.IsFalse(completed);Assert.IsTrue(runner.IsRunning);
+            unit.GetComponent<SpawnedUnit>().ReportDefeated();Object.Destroy(unit);
+            yield return new WaitForSeconds(.05f);Assert.IsTrue(completed);
+        }
+        [UnityTest] public IEnumerator SpawnAvoidanceWaitsUntilSafe()
+        {
+            var avoid=new GameObject("protected player");runner.spawnAreas[0].avoid=avoid.transform;
+            runner.Play();yield return new WaitForSeconds(.04f);Assert.AreEqual(0,runner.SpawnedCount);
+            avoid.transform.position=Vector3.one*100;yield return new WaitForSeconds(.05f);
+            Assert.Greater(runner.SpawnedCount,0);Object.Destroy(avoid);
+        }
+        [UnityTest] public IEnumerator PausedRunnerDoesNotSpawn()
+        {
+            Time.timeScale=0;
+            try {runner.Play();yield return null;Assert.AreEqual(0,runner.SpawnedCount);}
+            finally {Time.timeScale=1;}
+            yield return new WaitForSeconds(.05f);Assert.Greater(runner.SpawnedCount,0);
+        }
     }
 }

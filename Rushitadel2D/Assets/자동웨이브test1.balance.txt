@@ -1,0 +1,289 @@
+기대값 초안: 입력한 조우 거리에서 서로 직선 접근하고 각자 사거리에 도달하면 멈춘다고 가정합니다. 접근 시간 + 체력/유효DPS를 처치 작업량으로, 적의 사거리 진입부터 처치까지를 피격 노출 시간으로 계산합니다. 명중률·사거리 내 공격 가동률은 사용자 가정입니다. 실제 경로·탄속·회피·다수 적 동시 교전·도탄·범위·탄 파괴는 시뮬레이션하지 않습니다. 성장은 웨이브 종료 후 보상을 전량 얻어 공격력을 강화하는 계산 전용 가정입니다. 누적 생존/회복은 계산하지 않습니다.
+설정:
+{
+    "seed": 1,
+    "totalSeconds": 600.0,
+    "waveCount": 0,
+    "restSeconds": 5.0,
+    "difficulty": 2,
+    "playerHealth": 250.0,
+    "playerDamage": 20.0,
+    "playerInterval": 0.4000000059604645,
+    "playerRange": 6.0,
+    "playerMoveSpeed": 2.0,
+    "hitRate": 0.800000011920929,
+    "attackUptime": 0.75,
+    "modelGrowth": false,
+    "firstLevelXp": 100.0,
+    "xpRequirementStep": 0.25,
+    "damagePerLevel": 0.10000000149011612,
+    "goldUpgradeCost": 100.0,
+    "damagePerPurchase": 0.10000000149011612,
+    "enemies": [
+        {
+            "profile": {
+                "instanceID": 568105584918845712
+            },
+            "spawnKey": "main",
+            "health": 30.0,
+            "damage": 2.0,
+            "attackInterval": 2.5,
+            "hitRate": 0.20000000298023225,
+            "attackRange": 3.0,
+            "moveSpeed": 1.0,
+            "encounterDistance": 6.0
+        },
+        {
+            "profile": {
+                "instanceID": 568105584918845736
+            },
+            "spawnKey": "main",
+            "health": 50.0,
+            "damage": 3.0,
+            "attackInterval": 1.5,
+            "hitRate": 0.20000000298023225,
+            "attackRange": 0.8999999761581421,
+            "moveSpeed": 3.0,
+            "encounterDistance": 6.0
+        },
+        {
+            "profile": {
+                "instanceID": 568105584918845702
+            },
+            "spawnKey": "main",
+            "health": 160.0,
+            "damage": 8.0,
+            "attackInterval": 3.0,
+            "hitRate": 0.20000000298023225,
+            "attackRange": 0.8999999761581421,
+            "moveSpeed": 0.6000000238418579,
+            "encounterDistance": 6.0
+        }
+    ]
+}
+{
+    "wave": 1,
+    "count": 9,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 20.33333396911621,
+    "estimatedDamage": 0.0,
+    "xpEarned": 182.0,
+    "goldEarned": 53.0,
+    "goldRemaining": 53.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 2,
+    "count": 7,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 21.33333396911621,
+    "estimatedDamage": 0.0,
+    "xpEarned": 176.0,
+    "goldEarned": 52.0,
+    "goldRemaining": 105.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 3,
+    "count": 14,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 22.33333396911621,
+    "estimatedDamage": 0.0,
+    "xpEarned": 218.0,
+    "goldEarned": 63.0,
+    "goldRemaining": 168.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 4,
+    "count": 8,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 23.0,
+    "estimatedDamage": 0.0,
+    "xpEarned": 194.0,
+    "goldEarned": 57.0,
+    "goldRemaining": 225.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 5,
+    "count": 9,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 24.0,
+    "estimatedDamage": 0.0,
+    "xpEarned": 204.0,
+    "goldEarned": 60.0,
+    "goldRemaining": 285.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 6,
+    "count": 11,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 24.66666603088379,
+    "estimatedDamage": 0.0,
+    "xpEarned": 208.0,
+    "goldEarned": 62.0,
+    "goldRemaining": 347.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 7,
+    "count": 10,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 25.66666603088379,
+    "estimatedDamage": 0.0,
+    "xpEarned": 222.0,
+    "goldEarned": 65.0,
+    "goldRemaining": 412.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 8,
+    "count": 13,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 25.66666603088379,
+    "estimatedDamage": 0.0,
+    "xpEarned": 238.0,
+    "goldEarned": 69.0,
+    "goldRemaining": 481.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 9,
+    "count": 11,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 26.66666603088379,
+    "estimatedDamage": 0.0,
+    "xpEarned": 232.0,
+    "goldEarned": 68.0,
+    "goldRemaining": 549.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 10,
+    "count": 13,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 28.0,
+    "estimatedDamage": 0.0,
+    "xpEarned": 244.0,
+    "goldEarned": 72.0,
+    "goldRemaining": 621.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 11,
+    "count": 9,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 28.33333396911621,
+    "estimatedDamage": 0.0,
+    "xpEarned": 234.0,
+    "goldEarned": 69.0,
+    "goldRemaining": 690.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 12,
+    "count": 16,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 29.33333396911621,
+    "estimatedDamage": 0.0,
+    "xpEarned": 276.0,
+    "goldEarned": 80.0,
+    "goldRemaining": 770.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 13,
+    "count": 11,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 29.66666603088379,
+    "estimatedDamage": 0.0,
+    "xpEarned": 246.0,
+    "goldEarned": 73.0,
+    "goldRemaining": 843.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 14,
+    "count": 11,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 30.33333396911621,
+    "estimatedDamage": 0.0,
+    "xpEarned": 254.0,
+    "goldEarned": 75.0,
+    "goldRemaining": 918.0,
+    "note": "기대값 예산 내"
+}
+{
+    "wave": 15,
+    "count": 19,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 35.33333206176758,
+    "effectiveDps": 30.0,
+    "estimatedWorkSeconds": 31.33333396911621,
+    "estimatedDamage": 0.0,
+    "xpEarned": 316.0,
+    "goldEarned": 90.0,
+    "goldRemaining": 1008.0,
+    "note": "기대값 예산 내"
+}
+주의: 예상 피해를 웨이브마다 따로 제한합니다. 누적 생존·빌드 선택·다수 적 동시 공격은 검증하지 않았습니다.

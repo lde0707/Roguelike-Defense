@@ -26,6 +26,8 @@ namespace WaveLab.Waves
         public int DefeatedCount { get; private set; }
         public int AliveCount => units.Count;
         private readonly HashSet<SpawnedUnit> units = new HashSet<SpawnedUnit>();
+        private readonly HashSet<SpawnedUnit> elites = new HashSet<SpawnedUnit>();
+        public int EliteCount => elites.Count;
         private Coroutine routine;
         private WavePlan snapshot;
         private readonly List<EnemyProfile> profiles = new List<EnemyProfile>();
@@ -35,6 +37,7 @@ namespace WaveLab.Waves
         {
             var errors = WaveValidation.Errors(plan);
             var keys = new HashSet<string>();
+            if (spawnAreas == null) { errors.Add("스폰 영역을 연결하세요."); return errors; }
             foreach (var area in spawnAreas)
             {
                 if (area == null) { errors.Add("빈 스폰 영역 연결"); continue; }
@@ -71,6 +74,7 @@ namespace WaveLab.Waves
             routine = null; IsRunning = false;
             foreach (var unit in units) if (unit != null) { unit.Detach(); Destroy(unit.gameObject); }
             units.Clear();
+            elites.Clear();
             if (snapshot != null) Destroy(snapshot);
             snapshot = null;
             foreach (var p in profiles) if (p != null) Destroy(p);
@@ -85,28 +89,40 @@ namespace WaveLab.Waves
             {
                 CurrentWave = i; var wave = snapshot.waves[i];
                 var emitted = new int[wave.groups.Count];
+                var nextAt = new double[wave.groups.Count];
+                for (int g=0;g<nextAt.Length;g++) nextAt[g]=wave.groups[g].startSeconds;
                 double elapsed = 0; Status = $"웨이브 {i + 1}: {wave.title}";
+                double expectedEnd = wave.durationSeconds;
+                foreach(var group in wave.groups) expectedEnd=Math.Max(expectedEnd,group.LastSpawnSeconds);
                 onWaveStarted.Invoke(i);
                 if (!IsRunning) yield break;
                 while (true)
                 {
+                    if (Time.timeScale <= 0) { yield return null; continue; }
                     int budget = 256; bool allSpawned = true;
                     for (int j = 0; j < wave.groups.Count; j++)
                     {
                         var g = wave.groups[j];
-                        while (emitted[j] < g.count && budget > 0 && elapsed >= g.startSeconds + (emitted[j] / g.batchSize) * (double)g.intervalSeconds)
+                        int batch = 0;
+                        while (emitted[j] < g.count && budget > 0 && elapsed >= nextAt[j] && batch < g.batchSize)
                         {
+                            if ((snapshot.maximumAlive > 0 && units.Count >= snapshot.maximumAlive) ||
+                                (g.role == EnemyRole.Elite && snapshot.maximumElites > 0 && elites.Count >= snapshot.maximumElites)) break;
                             var area = areas[g.spawnKey];
                             if (area == null) { Stop(); Status = "오류: 실행 중 스폰 영역이 제거되었습니다."; yield break; }
-                            Spawn(g.enemy, area.Sample(random)); emitted[j]++; budget--;
+                            if (!TryPosition(area,random,out var position)) break;
+                            Spawn(g.enemy, position, g.role); emitted[j]++; budget--; batch++;
                             if (!IsRunning) yield break;
                         }
+                        // Don't release an accumulated backlog in a single frame when a cap opens.
+                        if (batch > 0) nextAt[j] = elapsed + g.intervalSeconds;
                         if (emitted[j] < g.count) allSpawned = false;
                     }
-                    bool complete = wave.end == WaveEnd.Duration ? elapsed >= wave.durationSeconds && allSpawned
+                    bool complete = wave.end == WaveEnd.DurationAndCleared ? elapsed >= wave.durationSeconds && allSpawned && units.Count == 0
+                        : wave.end == WaveEnd.Duration ? elapsed >= wave.durationSeconds && allSpawned
                         : allSpawned && (wave.end == WaveEnd.AllSpawned || units.Count == 0);
                     if (complete) break;
-                    if (elapsed >= safetyTimeoutSeconds)
+                    if (elapsed >= expectedEnd + safetyTimeoutSeconds)
                     { Stop(); Status = "안전 정지: 제한 시간 초과. 처치/디스폰 연결과 적 수를 확인하세요."; Debug.LogWarning(Status, this); yield break; }
                     yield return null;
                     elapsed += Time.deltaTime;
@@ -125,13 +141,28 @@ namespace WaveLab.Waves
             }
             IsRunning = false; routine = null; Status = "플랜 완료"; onPlanCompleted.Invoke();
         }
-        private void Spawn(EnemyProfile profile, Vector3 position)
+        private bool TryPosition(SpawnArea area, System.Random random, out Vector3 position)
+        {
+            for(int attempt=0;attempt<16;attempt++)
+            {
+                position=area.Sample(random);
+                if(area.avoid != null && Vector3.Distance(position,area.avoid.position)<area.avoidRadius)continue;
+                bool occupied=false;
+                foreach(var unit in units)
+                    if(unit!=null && Vector3.Distance(unit.transform.position,position)<snapshot.minimumSpawnSpacing){occupied=true;break;}
+                if(!occupied)return true;
+            }
+            position=default;return false;
+        }
+        private void Spawn(EnemyProfile profile, Vector3 position, EnemyRole role)
         {
             var obj = Instantiate(profile.prefab, position, profile.prefab.transform.rotation);
             var unit = obj.GetComponent<SpawnedUnit>() ?? obj.AddComponent<SpawnedUnit>();
             units.Add(unit); SpawnedCount++;
+            if(role==EnemyRole.Elite)elites.Add(unit);
             unit.Initialize(defeated =>
             {
+                elites.Remove(unit);
                 if (!units.Remove(unit) || !defeated) return;
                 DefeatedCount++;
                 foreach (var reward in profile.defeatRewards) onReward.Invoke(reward.resourceId, reward.amount);

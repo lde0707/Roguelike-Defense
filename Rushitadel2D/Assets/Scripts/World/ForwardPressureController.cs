@@ -1,4 +1,5 @@
 using Rushitadel.Player;
+using Rushitadel.Combat;
 using UnityEngine;
 
 namespace Rushitadel.World
@@ -77,7 +78,17 @@ namespace Rushitadel.World
             float halfHeight = gameplayCamera.orthographicSize;
             // Both objects are camera children. z=10 puts them on the XY gameplay plane.
             rearHazard.transform.localPosition = new Vector3(0f, -halfHeight + rearDepth * 0.5f, 10f);
-            rearHazard.size = new Vector2(rearHazard.size.x, rearDepth);
+            var boundary = PlayfieldBoundary.Instance;
+            float width = rearHazard.size.x;
+            if (boundary != null)
+            {
+                // Match damage and every theme's art to the same world-space cliff edges.
+                var center = rearHazard.transform.position;
+                center.x = (boundary.LeftEdge + boundary.RightEdge) * 0.5f;
+                rearHazard.transform.position = center;
+                width = (boundary.RightEdge - boundary.LeftEdge) / Mathf.Abs(rearHazard.transform.lossyScale.x);
+            }
+            rearHazard.size = new Vector2(width, rearDepth);
             rearVisual.SetSize(rearHazard.size);
         }
 
@@ -92,7 +103,6 @@ namespace Rushitadel.World
             if (gameplayCamera == null || Time.timeScale <= 0f || player == null || !player.IsAlive) return;
             if (!themeApplied || appliedTheme != theme) SetTheme(theme);
             float advance = HoldAdvance ? 0 : forwardSpeed * Time.deltaTime;
-            advance=Mathf.Max(advance,player.transform.position.y-gameplayCamera.transform.position.y-1.5f);
             gameplayCamera.transform.position += Vector3.up * advance;
             DistanceTravelled += advance;
             RefreshAnchors();

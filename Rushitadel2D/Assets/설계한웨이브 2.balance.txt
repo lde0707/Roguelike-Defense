@@ -1,0 +1,291 @@
+기대값 초안: 입력한 조우 거리에서 서로 직선 접근하고 각자 사거리에 도달하면 멈춘다고 가정합니다. 접근 시간 + 체력/유효DPS를 처치 작업량으로, 적의 사거리 진입부터 처치까지를 피격 노출 시간으로 계산합니다. 명중률·사거리 내 공격 가동률은 사용자 가정입니다. 실제 경로·탄속·회피·다수 적 동시 교전·도탄·범위·탄 파괴는 시뮬레이션하지 않습니다. 성장은 웨이브 종료 후 보상을 전량 얻어 공격력을 강화하는 계산 전용 가정입니다. 누적 HP는 예상 피해와 입력한 회복 비율을 합산한 계산값이며 생존 확률은 아닙니다.
+입력:
+{
+    "seed": 1,
+    "totalSeconds": 600.0,
+    "waveCount": 9,
+    "wavesPerTier": 3,
+    "restSeconds": 0.0,
+    "difficulty": 0,
+    "maximumAlive": 8,
+    "maximumElites": 2,
+    "rhythm": 2,
+    "clearBeforeRest": true,
+    "effectiveDpsOverride": 0.0,
+    "pressureMargin": 1.2000000476837159,
+    "recoveryPercent": 0.0,
+    "playerHealth": 100.0,
+    "playerDamage": 25.0,
+    "playerInterval": 0.25,
+    "playerRange": 8.0,
+    "playerMoveSpeed": 2.5,
+    "hitRate": 0.800000011920929,
+    "attackUptime": 0.75,
+    "modelGrowth": false,
+    "firstLevelXp": 100.0,
+    "xpRequirementStep": 0.25,
+    "damagePerLevel": 0.10000000149011612,
+    "goldUpgradeCost": 100.0,
+    "damagePerPurchase": 0.10000000149011612,
+    "enemies": [
+        {
+            "profile": {
+                "instanceID": 568105589213704282
+            },
+            "role": 0,
+            "selectionWeight": 1.0,
+            "spawnKey": "main",
+            "health": 180.0,
+            "healthPerTier": 60.0,
+            "damage": 10.0,
+            "attackInterval": 0.949999988079071,
+            "hitRate": 0.15000000596046449,
+            "attackRange": 10.0,
+            "moveSpeed": 0.0,
+            "encounterDistance": 7.0
+        },
+        {
+            "profile": {
+                "instanceID": 568105589213704268
+            },
+            "role": 1,
+            "selectionWeight": 1.0,
+            "spawnKey": "main",
+            "health": 180.0,
+            "healthPerTier": 60.0,
+            "damage": 10.0,
+            "attackInterval": 1.7999999523162842,
+            "hitRate": 0.15000000596046449,
+            "attackRange": 10.0,
+            "moveSpeed": 0.0,
+            "encounterDistance": 7.0
+        },
+        {
+            "profile": {
+                "instanceID": 568105589213704254
+            },
+            "role": 2,
+            "selectionWeight": 1.0,
+            "spawnKey": "main",
+            "health": 243.0,
+            "healthPerTier": 81.0,
+            "damage": 10.0,
+            "attackInterval": 1.7999999523162842,
+            "hitRate": 0.15000000596046449,
+            "attackRange": 10.0,
+            "moveSpeed": 0.0,
+            "encounterDistance": 7.0
+        },
+        {
+            "profile": {
+                "instanceID": 568105589213704240
+            },
+            "role": 3,
+            "selectionWeight": 1.0,
+            "spawnKey": "main",
+            "health": 162.0,
+            "healthPerTier": 54.0,
+            "damage": 10.0,
+            "attackInterval": 2.4000000953674318,
+            "hitRate": 0.15000000596046449,
+            "attackRange": 10.0,
+            "moveSpeed": 0.0,
+            "encounterDistance": 7.0
+        },
+        {
+            "profile": {
+                "instanceID": 568105589213704226
+            },
+            "role": 3,
+            "selectionWeight": 1.0,
+            "spawnKey": "main",
+            "health": 180.0,
+            "healthPerTier": 60.0,
+            "damage": 10.0,
+            "attackInterval": 1.7999999523162842,
+            "hitRate": 0.15000000596046449,
+            "attackRange": 10.0,
+            "moveSpeed": 0.0,
+            "encounterDistance": 7.0
+        },
+        {
+            "profile": {
+                "instanceID": 568105589213704212
+            },
+            "role": 4,
+            "selectionWeight": 0.3499999940395355,
+            "spawnKey": "main",
+            "health": 600.0,
+            "healthPerTier": 180.0,
+            "damage": 16.0,
+            "attackInterval": 2.799999952316284,
+            "hitRate": 0.15000000596046449,
+            "attackRange": 10.0,
+            "moveSpeed": 0.0,
+            "encounterDistance": 7.0
+        },
+        {
+            "profile": {
+                "instanceID": 568105589213704198
+            },
+            "role": 4,
+            "selectionWeight": 0.3499999940395355,
+            "spawnKey": "main",
+            "health": 600.0,
+            "healthPerTier": 180.0,
+            "damage": 16.0,
+            "attackInterval": 2.799999952316284,
+            "hitRate": 0.15000000596046449,
+            "attackRange": 10.0,
+            "moveSpeed": 0.0,
+            "encounterDistance": 7.0
+        }
+    ]
+}
+{
+    "wave": 1,
+    "count": 3,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 66.66666412353516,
+    "effectiveDps": 60.0,
+    "estimatedWorkSeconds": 8.699999809265137,
+    "estimatedDamage": 8.02500057220459,
+    "xpEarned": 60.0,
+    "goldEarned": 0.0,
+    "goldRemaining": 0.0,
+    "remainingHealth": 91.9749984741211,
+    "note": "목표 화력 예산 미달: 적 피해 또는 적 1마리의 크기가 제한 요인"
+}
+{
+    "wave": 2,
+    "count": 2,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 66.66666412353516,
+    "effectiveDps": 60.0,
+    "estimatedWorkSeconds": 5.699999809265137,
+    "estimatedDamage": 7.7092108726501469,
+    "xpEarned": 40.0,
+    "goldEarned": 0.0,
+    "goldRemaining": 0.0,
+    "remainingHealth": 84.26578521728516,
+    "note": "목표 화력 예산 미달: 적 피해 또는 적 1마리의 크기가 제한 요인"
+}
+{
+    "wave": 3,
+    "count": 3,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 66.66666412353516,
+    "effectiveDps": 60.0,
+    "estimatedWorkSeconds": 9.75,
+    "estimatedDamage": 9.075000762939454,
+    "xpEarned": 60.0,
+    "goldEarned": 0.0,
+    "goldRemaining": 0.0,
+    "remainingHealth": 75.19078826904297,
+    "note": "목표 화력 예산 미달: 적 피해 또는 적 1마리의 크기가 제한 요인"
+}
+{
+    "wave": 4,
+    "count": 3,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 66.66666412353516,
+    "effectiveDps": 60.0,
+    "estimatedWorkSeconds": 11.59999942779541,
+    "estimatedDamage": 10.700000762939454,
+    "xpEarned": 60.0,
+    "goldEarned": 0.0,
+    "goldRemaining": 0.0,
+    "remainingHealth": 64.49078369140625,
+    "note": "목표 화력 예산 미달: 적 피해 또는 적 1마리의 크기가 제한 요인"
+}
+{
+    "wave": 5,
+    "count": 3,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 66.66666412353516,
+    "effectiveDps": 60.0,
+    "estimatedWorkSeconds": 12.59999942779541,
+    "estimatedDamage": 10.800000190734864,
+    "xpEarned": 60.0,
+    "goldEarned": 0.0,
+    "goldRemaining": 0.0,
+    "remainingHealth": 53.6907844543457,
+    "note": "목표 화력 예산 미달: 적 피해 또는 적 1마리의 크기가 제한 요인"
+}
+{
+    "wave": 6,
+    "count": 3,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 66.66666412353516,
+    "effectiveDps": 60.0,
+    "estimatedWorkSeconds": 11.199999809265137,
+    "estimatedDamage": 12.978947639465332,
+    "xpEarned": 60.0,
+    "goldEarned": 0.0,
+    "goldRemaining": 0.0,
+    "remainingHealth": 40.71183776855469,
+    "note": "목표 화력 예산 미달: 적 피해 또는 적 1마리의 크기가 제한 요인"
+}
+{
+    "wave": 7,
+    "count": 2,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 66.66666412353516,
+    "effectiveDps": 60.0,
+    "estimatedWorkSeconds": 9.5,
+    "estimatedDamage": 12.848685264587403,
+    "xpEarned": 40.0,
+    "goldEarned": 0.0,
+    "goldRemaining": 0.0,
+    "remainingHealth": 27.8631534576416,
+    "note": "목표 화력 예산 미달: 적 피해 또는 적 1마리의 크기가 제한 요인"
+}
+{
+    "wave": 8,
+    "count": 2,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 66.66666412353516,
+    "effectiveDps": 60.0,
+    "estimatedWorkSeconds": 10.0,
+    "estimatedDamage": 14.473685264587403,
+    "xpEarned": 40.0,
+    "goldEarned": 0.0,
+    "goldRemaining": 0.0,
+    "remainingHealth": 13.3894681930542,
+    "note": "목표 화력 예산 미달: 적 피해 또는 적 1마리의 크기가 제한 요인"
+}
+{
+    "wave": 9,
+    "count": 1,
+    "startLevel": 1,
+    "endLevel": 1,
+    "purchases": 0,
+    "seconds": 66.66666412353516,
+    "effectiveDps": 60.0,
+    "estimatedWorkSeconds": 16.0,
+    "estimatedDamage": 16.457143783569337,
+    "xpEarned": 35.0,
+    "goldEarned": 0.0,
+    "goldRemaining": 0.0,
+    "remainingHealth": -3.067676544189453,
+    "note": "목표 화력 예산 미달: 적 피해 또는 적 1마리의 크기가 제한 요인"
+}
+8웨이브부터 누적 예상 HP가 25% 미만입니다. 난이도를 낮추거나 실제 회복·빌드로 검증하세요.
+시간은 계획상 기준입니다. 동시 적 제한과 잔여 적 정리로 실제 전투는 길어질 수 있습니다. 누적 HP는 기대값이며 회복·성장은 실제 게임에 자동 적용되지 않습니다.
+동시 공격 안전 여유 1.2배를 적용했습니다. 탄 파괴·광역·도탄·실제 다중 포탑 전투는 시뮬레이션하지 않습니다. 실측 유효 DPS로 보정하세요.

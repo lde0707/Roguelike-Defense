@@ -41,10 +41,10 @@ namespace Rushitadel.Progression
             Vector3 right=transform.TransformPoint(new Vector3(2,0,0));
             return (left-query).sqrMagnitude<=(right-query).sqrMagnitude?left:right;
         }
-        public void Configure(EnemyProjectileController template,int level)
+        public void Configure(EnemyProjectileController template,int level,PressureTheme? selectedTheme=null)
         {
             prefab=template;stage=level;Health=GetComponent<EnemyController>();
-            var theme=ForwardPressureController.Instance!=null?ForwardPressureController.Instance.Theme:PressureTheme.Grass;
+            var theme=selectedTheme ?? (ForwardPressureController.Instance!=null?ForwardPressureController.Instance.Theme:PressureTheme.Grass);
             Kind=theme==PressureTheme.Grass?BossKind.Butterfly:theme==PressureTheme.Fire?BossKind.Lava:theme==PressureTheme.Ice?BossKind.Ice:BossKind.Twins;
             BuildArt();StartCoroutine(RunPatterns());
         }

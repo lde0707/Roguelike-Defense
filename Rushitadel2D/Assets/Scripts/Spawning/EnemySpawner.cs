@@ -22,11 +22,12 @@ namespace Rushitadel.Spawning
         // Boss endurance grows faster than ordinary enemies so later builds still see multiple patterns.
         public static float BossHealthForStage(int stage) => 6000f + (Mathf.Max(1, stage) - 1) * 3000f;
         public void TakeCampaignControl() { CampaignControlled = true; StopAllCoroutines(); }
-        public EnemyController SpawnCampaignEnemy(int stage, bool boss = false)
+        public EnemyController SpawnCampaignEnemy(int stage, bool boss = false, int forcedVariant = -1, GameObject selectedPrefab = null)
         {
-            if (enemyPrefab == null) return null;
+            var prefab = !boss && selectedPrefab != null ? selectedPrefab : enemyPrefab;
+            if (prefab == null) return null;
             float cameraY = Camera.main.transform.position.y;
-            int variant=rosterIndex%7;
+            int variant=forcedVariant >= 0 ? Mathf.Clamp(forcedVariant,0,6) : rosterIndex%7;
             if(!boss && variant>=5 && FindObjectsByType<EnemyArchetype>(FindObjectsSortMode.None).Count(e=>e.Elite)>=2)return null;
             var pos=new Vector3(0,cameraY+2.5f,0);
             if(!boss)
@@ -46,13 +47,15 @@ namespace Rushitadel.Spawning
                 if(!placed)return null;
                 rosterIndex++;
             }
-            var go = Instantiate(enemyPrefab, pos, Quaternion.identity); go.SetActive(true);
+            var go = Instantiate(prefab, pos, Quaternion.identity); go.SetActive(true);
             var enemy = go.GetComponent<EnemyController>();
             enemy.ConfigureRun(boss ? BossHealthForStage(stage) : 180 + (stage-1) * 60, boss ? 100 : 20, true);
             if (!boss)
             {
                 var theme=Rushitadel.World.ForwardPressureController.Instance!=null?Rushitadel.World.ForwardPressureController.Instance.Theme:Rushitadel.World.PressureTheme.Grass;
-                go.AddComponent<EnemyArchetype>().Configure(variant,stage,theme);
+                var identity=go.GetComponent<CampaignEnemyPrefab>();
+                if(identity!=null)theme=identity.ResolveTheme(theme);
+                (go.GetComponent<EnemyArchetype>() ?? go.AddComponent<EnemyArchetype>()).Configure(variant,stage,theme);
             }
             if (boss)
             {

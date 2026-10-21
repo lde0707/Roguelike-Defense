@@ -1,0 +1,290 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aada793297a77d458840735234f2571, type: 3}
+  m_Name: "\uC124\uACC4\uD55C\uC6E8\uC774\uBE0C 1"
+  m_EditorClassIdentifier: WaveLab.Waves::WaveLab.Waves.WavePlan
+  schemaVersion: 1
+  seed: 1
+  maximumAlive: 8
+  maximumElites: 2
+  minimumSpawnSpacing: 0.75
+  waves:
+  - id: 95a3e497ffcf69469c73c4a1cd103413
+    title: "1 \xB7 \uADE0\uD615 \uC804\uD22C"
+    end: 3
+    durationSeconds: 66.666664
+    restSeconds: 0
+    groups:
+    - id: 6fa34e5ba584df4a7a0ea09ce3c1176c
+      enemy: {fileID: 11400000, guid: 1b0d98ceb38bf8847b4d46f96761aecb, type: 2}
+      role: 0
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 63.666668
+    - id: 4e828ee421020fbe3b5358f0a328184b
+      enemy: {fileID: 11400000, guid: b30e5ac07f7e58e429eaec37a704edc2, type: 2}
+      role: 1
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 1.25
+      intervalSeconds: 62.416668
+    - id: 81eb91e912e3f1bc9ac41ac15ea986da
+      enemy: {fileID: 11400000, guid: 0b2f0b40a4adb2746b318f6faa8e33da, type: 2}
+      role: 2
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 2.5
+      intervalSeconds: 60.116665
+    - id: 3fbd575be68e39108f9334304d5a3c52
+      enemy: {fileID: 11400000, guid: a7f5dbccee22462499c37145a5611a47, type: 2}
+      role: 3
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 3.75
+      intervalSeconds: 30.108334
+  - id: d2d18995b490073efdb192cd7d944b6b
+    title: "2 \xB7 \uADE0\uD615 \uC804\uD22C"
+    end: 3
+    durationSeconds: 66.666664
+    restSeconds: 0
+    groups:
+    - id: 8003bdd9f2b1de4f8ba43f87c7ca08f6
+      enemy: {fileID: 11400000, guid: 1b0d98ceb38bf8847b4d46f96761aecb, type: 2}
+      role: 0
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 63.666668
+    - id: cec604346dec32fdd23192e2a163cfc5
+      enemy: {fileID: 11400000, guid: 0b2f0b40a4adb2746b318f6faa8e33da, type: 2}
+      role: 2
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 2.5
+      intervalSeconds: 30.058332
+    - id: 981de7f0d1afa3253af246ec74b73f32
+      enemy: {fileID: 11400000, guid: a7f5dbccee22462499c37145a5611a47, type: 2}
+      role: 3
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 3.75
+      intervalSeconds: 30.108334
+  - id: aed1bf6b5f7f3c6c28d47a96e0ad7046
+    title: "3 \xB7 \uADE0\uD615 \uC804\uD22C"
+    end: 3
+    durationSeconds: 66.666664
+    restSeconds: 0
+    groups:
+    - id: 9322df6327f9bd101af25f3a06ca56f7
+      enemy: {fileID: 11400000, guid: b30e5ac07f7e58e429eaec37a704edc2, type: 2}
+      role: 1
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 1.25
+      intervalSeconds: 20.805555
+    - id: d8b1677322de43a5ceb51d18f9205e85
+      enemy: {fileID: 11400000, guid: 0b2f0b40a4adb2746b318f6faa8e33da, type: 2}
+      role: 2
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 2.5
+      intervalSeconds: 60.116665
+    - id: 9a355437eaac4485af13938dff31365e
+      enemy: {fileID: 11400000, guid: a7f5dbccee22462499c37145a5611a47, type: 2}
+      role: 3
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 3.75
+      intervalSeconds: 20.072222
+  - id: 6898fc783940c5de4409f8c4fa93da03
+    title: "4 \xB7 \uADE0\uD615 \uC804\uD22C"
+    end: 3
+    durationSeconds: 66.666664
+    restSeconds: 0
+    groups:
+    - id: 4bbc95b1e289296ccb8f17449c7ebe9a
+      enemy: {fileID: 11400000, guid: a7f5dbccee22462499c37145a5611a47, type: 2}
+      role: 3
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 3.75
+      intervalSeconds: 59.316666
+    - id: 89e5fd77ec9f60f4cd25403bb64f99fa
+      enemy: {fileID: 11400000, guid: 9d080fd47c4a9ef4a827c9a1d4cb2d2b, type: 2}
+      role: 3
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 5
+      intervalSeconds: 57.666668
+    - id: c9842e2537c1969a8f6f9cb1229a28c5
+      enemy: {fileID: 11400000, guid: d1ec04856a0d1d44f9d1c672f27a59e8, type: 2}
+      role: 4
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 29.583334
+      intervalSeconds: 24.083334
+  - id: c46451ad5ba0647da131727cf61d1e6e
+    title: "5 \xB7 \uADE0\uD615 \uC804\uD22C"
+    end: 3
+    durationSeconds: 66.666664
+    restSeconds: 0
+    groups:
+    - id: 3fd8f5fa4f622ff950433e33fc7bef58
+      enemy: {fileID: 11400000, guid: 1b0d98ceb38bf8847b4d46f96761aecb, type: 2}
+      role: 0
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 62.666668
+    - id: d34c9b02bfca6528b935f45efc20bb04
+      enemy: {fileID: 11400000, guid: b30e5ac07f7e58e429eaec37a704edc2, type: 2}
+      role: 1
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 1.25
+      intervalSeconds: 30.708334
+    - id: 55cbba7b0d855e9a5834745d1d4a6726
+      enemy: {fileID: 11400000, guid: 0b2f0b40a4adb2746b318f6faa8e33da, type: 2}
+      role: 2
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 2.5
+      intervalSeconds: 58.766666
+  - id: cd3aa34b85725b2c9b33308739b842af
+    title: "6 \xB7 \uADE0\uD615 \uC804\uD22C"
+    end: 3
+    durationSeconds: 66.666664
+    restSeconds: 0
+    groups:
+    - id: 01f4d29a7bee4b95ca486fcecd1ce1a5
+      enemy: {fileID: 11400000, guid: b30e5ac07f7e58e429eaec37a704edc2, type: 2}
+      role: 1
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 1.25
+      intervalSeconds: 61.416668
+    - id: 162f3360889188136d02bc0144d5e392
+      enemy: {fileID: 11400000, guid: 0b2f0b40a4adb2746b318f6faa8e33da, type: 2}
+      role: 2
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 2.5
+      intervalSeconds: 19.588888
+    - id: 48a776245885cfe20def022a155e8d7e
+      enemy: {fileID: 11400000, guid: a7f5dbccee22462499c37145a5611a47, type: 2}
+      role: 3
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 3.75
+      intervalSeconds: 59.316666
+  - id: 111e2c886cbeeb94be9406f564dda956
+    title: "7 \xB7 \uADE0\uD615 \uC804\uD22C"
+    end: 3
+    durationSeconds: 66.666664
+    restSeconds: 0
+    groups:
+    - id: 081f99756050a20886e8720e753eafba
+      enemy: {fileID: 11400000, guid: b30e5ac07f7e58e429eaec37a704edc2, type: 2}
+      role: 1
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 1.25
+      intervalSeconds: 30.208334
+    - id: f809dcae95581989c4f71079e80dc538
+      enemy: {fileID: 11400000, guid: 0b2f0b40a4adb2746b318f6faa8e33da, type: 2}
+      role: 2
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 2.5
+      intervalSeconds: 57.416668
+    - id: b70836b41f6a27b6237c8bd6f9857580
+      enemy: {fileID: 11400000, guid: 9d080fd47c4a9ef4a827c9a1d4cb2d2b, type: 2}
+      role: 3
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 5
+      intervalSeconds: 56.666668
+  - id: 060fe0fe59438f4fb978223a593f36f8
+    title: "8 \xB7 \uADE0\uD615 \uC804\uD22C"
+    end: 3
+    durationSeconds: 66.666664
+    restSeconds: 0
+    groups:
+    - id: e1268f4fdbd5b3091f3e8190949cc63e
+      enemy: {fileID: 11400000, guid: b30e5ac07f7e58e429eaec37a704edc2, type: 2}
+      role: 1
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 1.25
+      intervalSeconds: 60.416668
+    - id: 2737046464a75ddbd894c312b3bf2b36
+      enemy: {fileID: 11400000, guid: a7f5dbccee22462499c37145a5611a47, type: 2}
+      role: 3
+      spawnKey: main
+      count: 3
+      batchSize: 1
+      startSeconds: 3.75
+      intervalSeconds: 19.472221
+    - id: b7fcec49f26122dbd65ce604d7befa1c
+      enemy: {fileID: 11400000, guid: 9d080fd47c4a9ef4a827c9a1d4cb2d2b, type: 2}
+      role: 3
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 5
+      intervalSeconds: 28.333334
+  - id: 500e0755b3ea09c94018f6ff5f134b47
+    title: "9 \xB7 \uADE0\uD615 \uC804\uD22C"
+    end: 3
+    durationSeconds: 66.666664
+    restSeconds: 0
+    groups:
+    - id: dc0f9fa7287251154b7ed685199aa660
+      enemy: {fileID: 11400000, guid: 1b0d98ceb38bf8847b4d46f96761aecb, type: 2}
+      role: 0
+      spawnKey: main
+      count: 2
+      batchSize: 1
+      startSeconds: 0
+      intervalSeconds: 30.833334
+    - id: 2ed5e9ce9c3b031298e89b09e05c86f1
+      enemy: {fileID: 11400000, guid: 0b2f0b40a4adb2746b318f6faa8e33da, type: 2}
+      role: 2
+      spawnKey: main
+      count: 1
+      batchSize: 1
+      startSeconds: 2.5
+      intervalSeconds: 57.416668

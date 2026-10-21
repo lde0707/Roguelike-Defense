@@ -56,7 +56,7 @@ namespace Rushitadel.Progression
             var testBody=player.GetComponent<Rigidbody2D>();Vector2 savedPosition=testBody.position;
             testBody.position=new Vector2(0,savedCameraY+3);
             pressure.enabled=true;yield return null;yield return null;
-            Check(pressure.GameplayCamera.transform.position.y>=savedCameraY+1.4f,"camera follows player beyond old front barrier");
+            Check(Mathf.Approximately(pressure.GameplayCamera.transform.position.y,savedCameraY),"held camera does not follow forward player");
             pressure.enabled=false;testBody.position=savedPosition;
             pressure.RestoreProgress(savedCameraY,savedDistance,PressureTheme.Grass);
             int pausedFrame=pursuit.FrameIndex;Time.timeScale=0;yield return new WaitForSecondsRealtime(.2f);

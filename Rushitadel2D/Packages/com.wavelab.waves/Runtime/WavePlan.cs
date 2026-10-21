@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace WaveLab.Waves
 {
-    public enum WaveEnd { AllDefeated, AllSpawned, Duration }
+    public enum WaveEnd { AllDefeated, AllSpawned, Duration, DurationAndCleared }
+    public enum EnemyRole { Normal, Fast, Tank, Ranged, Elite }
     [Serializable] public sealed class SpawnGroup
     {
         public string id = Guid.NewGuid().ToString("N");
         public EnemyProfile enemy;
+        public EnemyRole role;
         public string spawnKey = "main";
         [Min(1)] public int count = 10;
         [Min(1)] public int batchSize = 1;
@@ -29,6 +31,10 @@ namespace WaveLab.Waves
     {
         public int schemaVersion = 1;
         public int seed = 1;
+        // Zero preserves the behaviour of existing authoring assets.
+        [Min(0)] public int maximumAlive;
+        [Min(0)] public int maximumElites;
+        [Min(0)] public float minimumSpawnSpacing;
         public List<WaveDefinition> waves = new List<WaveDefinition>();
     }
     public static class WaveValidation
@@ -38,6 +44,10 @@ namespace WaveLab.Waves
             var errors = new List<string>();
             if (plan == null) { errors.Add("웨이브 플랜을 선택하세요."); return errors; }
             if (plan.schemaVersion != 1) errors.Add("지원하지 않는 데이터 버전입니다.");
+            if (plan.maximumAlive < 0 || plan.maximumAlive > 256 || plan.maximumElites < 0 ||
+                (plan.maximumAlive > 0 && plan.maximumElites > plan.maximumAlive))
+                errors.Add("동시 적은 0~256, 엘리트 상한은 동시 적 이하로 지정하세요. 0은 제한 없음입니다.");
+            if (!Finite(plan.minimumSpawnSpacing) || plan.minimumSpawnSpacing < 0) errors.Add("등장 간격 거리 오류");
             if (plan.waves == null || plan.waves.Count == 0) { errors.Add("웨이브를 추가하세요."); return errors; }
             var ids = new HashSet<string>();
             for (int i = 0; i < plan.waves.Count; i++)
@@ -46,7 +56,9 @@ namespace WaveLab.Waves
                 if (w == null) { errors.Add(p + ": 데이터 없음"); continue; }
                 if (string.IsNullOrWhiteSpace(w.id) || !ids.Add(w.id)) errors.Add(p + ": ID 누락/중복");
                 if (!Finite(w.restSeconds) || w.restSeconds < 0) errors.Add(p + ": 휴식 시간 오류");
-                if (w.end == WaveEnd.Duration && (!Finite(w.durationSeconds) || w.durationSeconds <= 0)) errors.Add(p + ": 제한 시간 오류");
+                if (!Enum.IsDefined(typeof(WaveEnd), w.end)) errors.Add(p + ": 완료 조건 오류");
+                bool timed = w.end == WaveEnd.Duration || w.end == WaveEnd.DurationAndCleared;
+                if (timed && (!Finite(w.durationSeconds) || w.durationSeconds <= 0)) errors.Add(p + ": 제한 시간 오류");
                 if (w.groups == null || w.groups.Count == 0) { errors.Add(p + ": 적 그룹을 추가하세요."); continue; }
                 foreach (var g in w.groups)
                 {
@@ -56,7 +68,8 @@ namespace WaveLab.Waves
                     if (string.IsNullOrWhiteSpace(g.spawnKey)) errors.Add(p + ": 스폰 키 필요");
                     if (g.count < 1 || g.count > 10000 || g.batchSize < 1 || g.batchSize > 10000) errors.Add(p + ": 수량은 1~10000");
                     if (!Finite(g.startSeconds) || g.startSeconds < 0 || !Finite(g.intervalSeconds) || g.intervalSeconds <= 0) errors.Add(p + ": 등장 시간 오류");
-                    if (w.end == WaveEnd.Duration && g.LastSpawnSeconds >= w.durationSeconds) errors.Add(p + ": 마지막 등장보다 종료 시간을 늦게 지정하세요.");
+                    if (!Enum.IsDefined(typeof(EnemyRole), g.role)) errors.Add(p + ": 적 역할 오류");
+                    if (timed && g.LastSpawnSeconds >= w.durationSeconds) errors.Add(p + ": 마지막 등장보다 종료 시간을 늦게 지정하세요.");
                     if (g.enemy != null) foreach (var r in g.enemy.defeatRewards)
                         if (r == null || string.IsNullOrWhiteSpace(r.resourceId) || !Finite(r.amount) || r.amount < 0) errors.Add(p + ": 보상 값 오류");
                 }
