@@ -122,7 +122,9 @@ namespace Rushitadel.World
 
         public Vector2 ClampPlayer(Vector2 position, float radius)
         {
-            position.y = Mathf.Max(position.y, Bottom + radius);
+            // Keep movement and recoil visible without restoring the removed front wall.
+            float top = gameplayCamera.transform.position.y + gameplayCamera.orthographicSize;
+            position.y = Mathf.Clamp(position.y, Bottom + radius, top - radius);
             return position;
         }
 

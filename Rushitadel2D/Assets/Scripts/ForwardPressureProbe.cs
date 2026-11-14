@@ -63,8 +63,9 @@ namespace Rushitadel
             yield return null;
             player.ApplyRecoil(Vector2.down, 0.18f, 0.12f);
             yield return new WaitForSeconds(0.2f);
-            Check(pressure.ClampPlayer(new Vector2(0,camera.transform.position.y+20),player.BodyRadius).y>camera.transform.position.y+19,
-                "No upper barrier clamp");
+            Check(Mathf.Approximately(pressure.ClampPlayer(new Vector2(0,camera.transform.position.y+20),player.BodyRadius).y,
+                camera.transform.position.y+camera.orthographicSize-player.BodyRadius),
+                "Movement and recoil stay within the top camera edge without a front wall");
             InputSystem.RemoveDevice(keyboard);
 
             body.position = new Vector2(0f, pressure.RearHazard.bounds.max.y - 0.2f);

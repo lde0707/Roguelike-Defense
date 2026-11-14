@@ -3,7 +3,7 @@
 <!-- WINDOWS-RELEASE-START -->
 ## Windows에서 바로 플레이
 
-**[Rushitadel · Windows 실행 파일 다운로드](https://github.com/lde0707/portfolio-game-builds/releases/tag/rushitadel-2026-11-14)**
+**[Rushitadel · Windows 실행 파일 다운로드](https://github.com/lde0707/portfolio-game-builds/releases/tag/rushitadel-2026-11-14-r2)**
 
 포탑과 직접 공격을 조합해 적의 공격을 버티는 액션 디펜스 게임.
 
@@ -21,12 +21,10 @@
 
 ## 배포 버전과 확인 범위
 
-- 패키지: `portfolio-windows-2026-11-14` / Windows x64
-- 빌드 날짜: 2026-11-14
-- Unity: 6000.5.3f1
-- 소스: 이 릴리스 태그가 가리키는 커밋
-- 빌드된 실행 파일을 22초 동안 실행해 엔진·그래픽 초기화, 프로세스 유지, 주요 런타임 예외 유무를 확인했습니다. 전체 스테이지 완주·저장 호환성·모든 PC 사양 검사는 포함하지 않습니다.
-- 게임의 기존 사용자 저장 파일을 삭제하거나 초기화하지 않습니다.
+- Windows x64 / 검증일 2026-11-14
+- 이동·공격, 경험치 획득, 라운드 전환, 포탑 변형 선택, 일시정지와 타이틀 복귀를 확인했습니다. 상단 이동·반동의 화면 이탈 수정도 같은 입력으로 재검증했습니다.
+- 모든 테마·보스 완주와 이전 버전 전체 저장 파일 호환성은 확인하지 않았습니다.
+- [실제 입력 검증 기록](PLAYTEST.md)
 
 ## 소스에서 열기
 

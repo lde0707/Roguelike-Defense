@@ -3,7 +3,7 @@
 <!-- WINDOWS-RELEASE-START -->
 ## Windows에서 바로 플레이
 
-**[Rushitadel · Windows 실행 파일 다운로드](https://github.com/lde0707/portfolio-game-builds/releases/tag/rushitadel-2026-11-14)**
+**[Rushitadel · Windows 실행 파일 다운로드](https://github.com/lde0707/portfolio-game-builds/releases/tag/rushitadel-2026-11-14-r2)**
 
 포탑과 직접 공격을 조합해 적의 공격을 버티는 액션 디펜스 게임.
 
@@ -52,3 +52,5 @@ WASD 이동 / 마우스 조준·좌클릭 원거리 공격 / 5포탑 자동 회�
 - `창업동아리 서류 .hwpx`는 별도의 사업·행정 문서다. 사업 목표·예산·시장 내용은 게임 규칙 변경으로 바꾸지 않는다.
 - 작업 전 자료는 `.work/sync-20261005/backup/`에 보존했다. 개인 작업·검수 파일은 배포 기획서가 아니다.
 - 기획 규칙은 문서·XLSX·UI·실행 데이터에서 같은 ID로 관리하고, 제안 기능의 채택은 별도로 기록한다.
+
+[2026-11-14 실제 플레이·수정 재검증](PLAYTEST.md)
