@@ -3,7 +3,7 @@
 <!-- WINDOWS-RELEASE-START -->
 ## Windows에서 바로 플레이
 
-**[Rushitadel · Windows 실행 파일 다운로드](https://github.com/lde0707/Roguelike-Defense/releases/tag/portfolio-windows-2026-11-14)**
+**[Rushitadel · Windows 실행 파일 다운로드](https://github.com/lde0707/portfolio-game-builds/releases/tag/rushitadel-2026-11-14)**
 
 포탑과 직접 공격을 조합해 적의 공격을 버티는 액션 디펜스 게임.
 
