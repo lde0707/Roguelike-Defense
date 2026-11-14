@@ -22,6 +22,7 @@ namespace Rushitadel.Presentation
 
         private void LateUpdate()
         {
+            if(font != null && font.material.mainTexture != null) font.material.mainTexture.filterMode = FilterMode.Point;
             if (titleBackgroundMaterial != null && canvas != null &&
                 UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Title")
             {

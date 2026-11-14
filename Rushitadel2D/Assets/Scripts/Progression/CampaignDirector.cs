@@ -166,15 +166,21 @@ namespace Rushitadel.Progression
         {
             ClearProjectiles();
             ForwardPressureController.Instance.HoldAdvance = true;
-            // Let the last crystals finish their delayed attraction before freezing the safe area.
+            // Collect the final XP and resolve earned upgrades before advancing automatically.
             if (FindObjectsByType<ExperiencePickup>(FindObjectsSortMode.None).Length > 0 || PendingAugments > 0) return;
             if (State.phase == RunPhase.Boss) State.defeatedBosses++;
-            State.phase = RunPhase.Maintenance; State.recovered = false;
-            var health = PlayerHealth.Instance;
-            var pos = new Vector3(0, Camera.main.transform.position.y - 1, 0);
-            health.transform.position = pos; health.GetComponent<Rigidbody2D>().position = pos;
-            SaveCheckpoint("라운드 종료 · 안전 정비");
-            GameFrontend.Instance.ShowMaintenance();
+            State.phase = RunPhase.Maintenance;
+            CompleteRoundRecovery();
+        }
+        // Also migrates checkpoints saved in the old maintenance menu.
+        public void CompleteRoundRecovery()
+        {
+            if(State.phase!=RunPhase.Maintenance || !PlayerHealth.Instance.IsAlive)return;
+            if(PendingAugments>0){GameFrontend.Instance.ShowAugments();return;}
+            PlayerHealth.Instance.RestoreHealth(PlayerHealth.Instance.MaximumHealth);
+            PlayerHealEffect.Play(PlayerHealth.Instance.transform);
+            State.recovered=true;
+            Depart();
         }
         public static void ClearProjectiles()
         {
@@ -251,7 +257,7 @@ namespace Rushitadel.Progression
         {
             if (State.phase == RunPhase.Complete || State.phase == RunPhase.Defeat) GameFrontend.Instance.ShowRunResult(State.phase == RunPhase.Complete);
             else if (PendingAugments > 0) GameFrontend.Instance.ShowAugments();
-            else if (State.phase == RunPhase.Maintenance) GameFrontend.Instance.ShowMaintenance();
+            else if (State.phase == RunPhase.Maintenance) CompleteRoundRecovery();
             else if (State.phase == RunPhase.Theme) GameFrontend.Instance.ShowNextTheme();
             else GameFrontend.Instance.ShowBattle();
         }

@@ -20,6 +20,7 @@ namespace Rushitadel.Presentation
             }
             else if(view==6){ShowTitle();ConfirmQuit(ShowTitle);}
             else if(view==7) {newSlot=1;candidates=new[]{0,1};ShowThemes();}
+            else if(view==9 || view==10) BuildResult(view==9,"도달 STAGE 3/3 · ROUND 3/3\n보스 격파 3/3 · LV 14\n총 XP 1380 · 포탑 증강 12개\nWeb 8개");
             else {NewPage("maintenance",false);Image(content,"Web background",0,0,1920,1080,new Color32(22,28,35,255));selectedWebIcon=6;DrawWebTree(null);}
             Canvas.ForceUpdateCanvases();
             foreach(var graphic in canvas.GetComponentsInChildren<Graphic>(true))graphic.material=null;

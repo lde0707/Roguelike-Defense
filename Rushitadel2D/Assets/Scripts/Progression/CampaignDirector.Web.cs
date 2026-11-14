@@ -7,8 +7,8 @@ namespace Rushitadel.Progression
         public bool NeedsFirstForms=>System.Array.IndexOf(State.turretForms,0)>=0;
         public bool CanBuyNode(int index,out string reason)
         {
-            reason="정비에서 회복 선택 후 구매 가능";
-            if(State.phase!=RunPhase.Maintenance||!State.recovered||State.playerWeb==null||index<0||index>=State.playerWeb.nodes.Length)return false;
+            reason="일시정지 메뉴의 플레이어 Web에서 구매 가능";
+            if(!PlayerHealth.Instance.IsAlive||Time.timeScale>0||State.phase==RunPhase.Complete||State.phase==RunPhase.Defeat||State.playerWeb==null||index<0||index>=State.playerWeb.nodes.Length)return false;
             var node=State.playerWeb.nodes[index];
             if(node.owned){reason="획득 완료";return false;}
             if(!RandomPlayerWeb.Accessible(State.playerWeb,index)){reason="연결된 노드를 하나 이상 구매하세요";return false;}
@@ -19,7 +19,7 @@ namespace Rushitadel.Progression
         {
             if(!CanBuyNode(index,out _))return false;
             var n=State.playerWeb.nodes[index];n.owned=true;State.spentXp+=n.cost;
-            ApplyBuild();SaveCheckpoint("안전 정비 · 랜덤 Web 구매");return true;
+            ApplyBuild();return true; // Persist together with the next safe round checkpoint.
         }
     }
 }

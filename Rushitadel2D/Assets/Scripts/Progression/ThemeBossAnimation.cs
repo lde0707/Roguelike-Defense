@@ -20,7 +20,7 @@ namespace Rushitadel.Progression
         private float age;
         private float actionAge,windup,hold,recovery,peak,end;
         private bool action;
-        private bool explicitRing,contactSpin;
+        private bool explicitRing,contactSpin,liveEnergy;
         public bool IsContactSpinning=>contactSpin;
         public void SetContactSpin(bool value)
         {
@@ -39,10 +39,19 @@ namespace Rushitadel.Progression
         private void ApplyAction()
         {
             if(clip==null||clip.idle.Length==0)return;
-            var frames=clip.attack.Length>0?clip.attack:clip.idle;
+            var actionFrames=clip.attack.Length>0?clip.attack:clip.idle;
+            // Ring attacks and wing beats must animate while damage is being emitted.
+            if(explicitRing || clip.attack.Length==0)
+            { SetFrame(actionFrames[(int)(actionAge*12)%actionFrames.Length]); return; }
+            if(liveEnergy && actionAge>=windup && actionAge<windup+hold)
+            {
+                // Authored D actionFrames 4..8 retain the open pose with changing water/electric arcs.
+                int first=Mathf.Min(3,actionFrames.Length-1),last=Mathf.Min(7,actionFrames.Length-1);
+                SetFrame(actionFrames[first+(int)((actionAge-windup)*12)%(last-first+1)]);return;
+            }
             float frame=actionAge<windup?Mathf.Lerp(0,peak,actionAge/windup):
                 actionAge<windup+hold?peak:Mathf.Lerp(peak,end,(actionAge-windup-hold)/recovery);
-            SetFrame(frames[Mathf.Clamp(Mathf.RoundToInt(frame*(frames.Length-1)),0,frames.Length-1)]);
+            SetFrame(actionFrames[Mathf.Clamp(Mathf.RoundToInt(frame*(actionFrames.Length-1)),0,actionFrames.Length-1)]);
         }
         private MaterialPropertyBlock properties;
         private void SetFrame(Sprite sprite)
@@ -66,6 +75,7 @@ namespace Rushitadel.Progression
         public void Configure(CampaignBoss boss,SpriteRenderer target,string type,string idlePrefix,string attackPrefix,float width)
         {
             owner=boss;renderer2D=target;clip=Load(type,idlePrefix,attackPrefix);
+            liveEnergy=type=="D";
             explicitRing=type=="B"&&idlePrefix=="boss_Type_B_weapon_idle_";
             if(clip.idle.Length==0)return;
             SetFrame(clip.idle[0]);renderer2D.color=Color.white;
@@ -78,7 +88,8 @@ namespace Rushitadel.Progression
             if(contactSpin)
             {
                 age+=Time.deltaTime;
-                SetFrame(clip.idle[(int)(age*30)%clip.idle.Length]);
+                var actionFrames=clip.attack.Length>0?clip.attack:clip.idle;
+                SetFrame(actionFrames[(int)(age*12)%actionFrames.Length]);
                 return;
             }
             if(action)

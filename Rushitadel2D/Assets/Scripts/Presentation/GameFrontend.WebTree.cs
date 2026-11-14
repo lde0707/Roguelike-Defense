@@ -29,7 +29,7 @@ namespace Rushitadel.Presentation
         private void ShowWebTree(CampaignDirector d)
         {
             if(webScroll!=null)webPosition=webScroll.normalizedPosition;
-            Time.timeScale=0;NewPage("maintenance",false);
+            Time.timeScale=0;NewPage("web",false);back=ShowPause;
             Image(content,"Web background",0,0,1920,1080,new Color32(22,28,35,255)).raycastTarget=false;
             DrawWebTree(d);
         }
@@ -65,10 +65,10 @@ namespace Rushitadel.Presentation
                 int index=i;var n=graph.nodes[i];bool open=RandomPlayerWeb.Accessible(graph,i);
                 float size=RandomPlayerWeb.Category(n.upgrade)==0?56:72;
                 var b=Button(web,"",n.x-size/2,n.y-size/2,size,size,()=>{selectedWebIcon=index;ShowWebTree(d);});
-                b.GetComponent<Image>().sprite=WebNodeShape;b.transform.Find("Fill").GetComponent<Image>().sprite=WebNodeShape;
+                b.GetComponent<Image>().sprite=WebNodeShape;
                 b.name="Web Node "+index;b.GetComponent<Image>().color=n.owned?new Color32(161,211,144,255):WebColor(n.upgrade)*(open?1:.5f);
                 var art=Image(b.transform,"Icon",(size-44)/2,(size-44)/2,44,44,Color.white);
-                art.sprite=Resources.Load<Sprite>("WebIcons/"+WebIcons[n.upgrade]);art.raycastTarget=false;art.preserveAspect=true;
+                art.sprite=RetroUiArt.WebIcon(WebIcons[n.upgrade]);art.raycastTarget=false;art.preserveAspect=true;
                 if(n.owned)Label(b.transform,"✓",36,-8,25,25,18);
                 if(i==selectedWebIcon)b.GetComponent<Image>().color=Color.white;
             }
@@ -92,8 +92,8 @@ namespace Rushitadel.Presentation
             }
             else Label(detail,"아이콘을 선택하세요\n\n클릭은 확인만 합니다.\n구매 버튼으로 XP를 사용합니다.",25,35,380,300,26);
             if(d!=null&&!string.IsNullOrEmpty(d.SaveError))Button(content,"저장 실패 · 재시도",1450,390,390,65,()=>{d.SaveCheckpoint("Web 저장 재시도");ShowWebTree(d);});
-            Button(content,"출발",1450,975,390,65,()=>d?.Depart(),d!=null);
-            Label(content,"구매한 경로는 유지됩니다 · 새 게임마다 모양과 증강 구성이 달라집니다",65,1000,1300,40,23);
+            Button(content,"돌아가기",1450,975,390,65,ShowPause,d!=null);
+            Label(content,"구매는 즉시 적용 · 진행 내용은 다음 라운드 전환 시 저장됩니다",65,1000,1300,40,23);
         }
         private void WebWire(Transform parent,Vector2 a,Vector2 b,Color color)
         {

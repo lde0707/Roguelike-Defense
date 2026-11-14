@@ -23,9 +23,10 @@ namespace Rushitadel.Presentation
         private Action dialogCancel;
         private bool loading;
         private AudioSource audioSource;
-        private AudioClip clickClip;
-        private readonly Color ink = new Color32(183, 195, 173, 255);
-        private readonly Color panel = new Color32(27, 34, 43, 255);
+        private AudioClip clickClip, clearClip, defeatClip;
+        private bool resultCuePlayed;
+        private readonly Color ink = new Color32(224, 219, 199, 255);
+        private readonly Color panel = new Color32(24, 30, 41, 255);
         public string CurrentPage => page;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -66,6 +67,7 @@ namespace Rushitadel.Presentation
             var samples = new float[2400];
             for (int i = 0; i < samples.Length; i++) samples[i] = Mathf.Sin(i * 2f * Mathf.PI * 660f / 48000f) * 0.1f * (1f - i / 2400f);
             clickClip.SetData(samples, 0);
+            clearClip = ResultUiMotion.CreateCue(true); defeatClip = ResultUiMotion.CreateCue(false);
             SceneManager.sceneLoaded += SceneReady;
         }
         private void OnDestroy()
@@ -73,6 +75,8 @@ namespace Rushitadel.Presentation
             if (Instance != this) return;
             SceneManager.sceneLoaded -= SceneReady;
             if (clickClip != null) Destroy(clickClip);
+            if (clearClip != null) Destroy(clearClip);
+            if (defeatClip != null) Destroy(defeatClip);
             DisposeTitleMaterials();
             // The bundled font is a shared Resources asset, not an owned runtime object.
             Instance = null;
@@ -89,6 +93,7 @@ namespace Rushitadel.Presentation
             }
             else if (scene.name == "inGame")
             {
+                resultCuePlayed = false;
                 FindFirstObjectByType<Rushitadel.Spawning.EnemySpawner>()?.TakeCampaignControl();
                 NewPage("game", false);
                 new GameObject("Run Session").AddComponent<RunSession>();
@@ -110,6 +115,7 @@ namespace Rushitadel.Presentation
         private void NewPage(string name, bool backdrop = true)
         {
             EnsureTitleMaterials();
+            if(page == "result" && name != "result" && audioSource != null) audioSource.Stop();
             page = name; back = null; dialogCancel = null;
             if (canvas == null)
             {
@@ -136,7 +142,10 @@ namespace Rushitadel.Presentation
                 art.rectTransform.offsetMin = art.rectTransform.offsetMax = Vector2.zero;
                 art.transform.SetAsFirstSibling();
                 art.raycastTarget = false;
-                art.material = titleBackgroundMaterial;
+                art.sprite = RetroUiArt.Theme(5);
+                art.color = new Color(.55f,.59f,.65f,1);
+                // Atlas UVs must not scroll into adjacent theme tiles.
+                art.material = null;
             }
             if (Application.isPlaying && EventSystem.current == null)
                 new GameObject("UI Event System", typeof(EventSystem), typeof(InputSystemUIInputModule));
@@ -159,6 +168,19 @@ namespace Rushitadel.Presentation
             image.color = color;
             if (page == "title" && name != "Background") image.material = titleCursorMaterial;
             if (sprite != null) image.sprite = Resources.Load<Sprite>("TitleUI/" + sprite);
+            else if (name == "Fill" && h > 24)
+            {
+                image.sprite = RetroUiArt.Button; image.type = UnityEngine.UI.Image.Type.Sliced;
+                image.pixelsPerUnitMultiplier = 4; image.color = Color.white;
+            }
+            else if (name == "Panel Border" || name == "Dialog Border" || name == "Details border" ||
+                name == "Progress strip" || name == "Player resources" || name.EndsWith("panel") || name.EndsWith(" List"))
+            {
+                image.sprite = RetroUiArt.Panel; image.type = UnityEngine.UI.Image.Type.Sliced;
+                image.pixelsPerUnitMultiplier = 4; image.color = Color.white;
+            }
+            else if (name == "Panel Fill" || name == "Dialog Fill" || name == "Details fill" || name == "List Background")
+            { image.color = Color.clear; image.raycastTarget = false; }
             return image;
         }
         private Text Label(Transform parent, string text, float x, float y, float w, float h, int size = 28, TextAnchor align = TextAnchor.MiddleLeft)
@@ -171,12 +193,12 @@ namespace Rushitadel.Presentation
         }
         private Button Button(Transform parent, string text, float x, float y, float w, float h, Action action, bool enabled = true)
         {
-            var border = Image(parent, text + " Button", x, y, w, h, ink);
+            var border = Image(parent, text + " Button", x, y, w, h, new Color32(58,66,79,255));
             var fill = Image(border.transform, "Fill", 3, 3, w - 6, h - 6, panel);
             var button = border.gameObject.AddComponent<Button>();
             button.targetGraphic = fill; button.interactable = enabled;
             var colors = button.colors;
-            colors.normalColor = Color.white; colors.highlightedColor = new Color(2f, 2f, 1.8f);
+            colors.normalColor = Color.white; colors.highlightedColor = new Color(1.22f, 1.18f, 1.05f);
             colors.selectedColor = colors.highlightedColor; colors.pressedColor = new Color(0.65f, 0.7f, 0.65f);
             colors.disabledColor = new Color(0.4f, 0.4f, 0.4f); colors.fadeDuration = 0;
             button.colors = colors;
@@ -187,18 +209,11 @@ namespace Rushitadel.Presentation
         }
         private void ArtButton(string id, int row, Action action, bool enabled = true)
         {
-            var image = Image(content, id + "Button", 720, 340 + row * 116, 480, 96, Color.white, id + "_Normal");
-            var button = image.gameObject.AddComponent<Button>(); button.targetGraphic = image;
-            button.transition = Selectable.Transition.SpriteSwap;
-            var state = new SpriteState {
-                highlightedSprite = Resources.Load<Sprite>("TitleUI/" + id + "_Hover"),
-                selectedSprite = Resources.Load<Sprite>("TitleUI/" + id + "_Hover"),
-                pressedSprite = Resources.Load<Sprite>("TitleUI/" + id + "_Pressed"),
-                disabledSprite = Resources.Load<Sprite>("TitleUI/" + id + "_Normal") };
-            button.spriteState = state; button.interactable = enabled;
-            if (!enabled) image.color = new Color(0.5f, 0.5f, 0.5f);
-            button.onClick.AddListener(() => { if (!loading) { audioSource.PlayOneShot(clickClip); action(); } });
+            string title = id == "Start" ? "새 게임" : id == "Continue" ? "이어하기" : id == "Settings" ? "설정" : "게임 종료";
+            var button = Button(content,title,720,340+row*116,480,96,()=>{if(!loading)action();},enabled);
+            button.name = id + "Button";
         }
+
         private RectTransform Panel(string title)
         {
             var border = Image(content, "Panel Border", 360, 110, 1200, 860, ink);
@@ -232,7 +247,8 @@ namespace Rushitadel.Presentation
         public void ShowTitle()
         {
             NewPage("title");
-            Image(content, "Logo", 650, 175, 620, 95, Color.white, "Logo").raycastTarget = false;
+            Label(content, "RUSHITADEL", 540, 165, 840, 100, 76, TextAnchor.MiddleCenter);
+            Label(content, "코어를 지키고 · 성채를 돌파하라", 610, 265, 700, 44, 25, TextAnchor.MiddleCenter);
             ArtButton("Start", 0, () => ShowSlots(true));
             ArtButton("Continue", 1, () => ShowSlots(false), RunStore.Latest() != null);
             ArtButton("Settings", 2, () => ShowSettings(ShowTitle));
@@ -253,6 +269,7 @@ namespace Rushitadel.Presentation
             var p = Panel(dead ? "플레이어 HP 0" : "일시정지");
             Label(p, RunSession.SaveSummary, 50, 115, 1100, 160, 26);
             Button(p, "계속하기", 350, 300, 500, 75, ResumeGame, !dead);
+            if(!dead && Rushitadel.Progression.CampaignDirector.Instance!=null)Button(p,"플레이어 Web",70,300,240,75,()=>ShowWebTree(Rushitadel.Progression.CampaignDirector.Instance));
             Button(p, "설정", 350, 400, 500, 75, () => ShowSettings(ShowPause));
             Button(p, "타이틀로", 350, 500, 500, 75, () => Confirm("타이틀로 이동할까요?\n최근 안전 저장 이후 전투 진행은 저장되지 않습니다.", () => Load("Title")));
             Button(p, "게임 종료", 350, 600, 500, 75, () => ConfirmQuit(ShowPause));

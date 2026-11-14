@@ -11,7 +11,7 @@ namespace Rushitadel.Presentation
             var camera=Camera.main;var bounds=PlayfieldBoundary.Instance;
             if(camera==null||bounds==null)return Screen.width*.16f;
             float x=camera.WorldToScreenPoint(new Vector3(right?bounds.RightEdge:bounds.LeftEdge,camera.transform.position.y,0)).x;
-            return Mathf.Clamp(right?Screen.width-x:x,0,Screen.width*.5f);
+            return Mathf.Clamp(right?camera.pixelWidth-x:x,0,camera.pixelWidth*.5f);
         }
     }
 }

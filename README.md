@@ -1,5 +1,23 @@
 # Rushitadel
 
+<!-- WINDOWS-RELEASE-START -->
+## Windows에서 바로 플레이
+
+**[Rushitadel · Windows 실행 파일 다운로드](https://github.com/lde0707/Roguelike-Defense/releases/tag/portfolio-windows-2026-11-14)**
+
+포탑과 직접 공격을 조합해 적의 공격을 버티는 액션 디펜스 게임.
+
+1. 위 Releases 페이지의 `Rushitadel-Windows-x64.zip`을 내려받습니다. `Source code` 파일은 실행 파일이 아닙니다.
+2. ZIP 전체를 한 폴더에 압축 해제합니다.
+3. `Rushitadel.exe`를 실행합니다. Unity 설치는 필요 없습니다.
+
+`Rushitadel_Data`, `UnityPlayer.dll`, 나머지 동봉 폴더를 함께 유지해야 합니다. Windows 64비트용이며 모바일·macOS에서는 실행되지 않습니다.
+
+**조작:** WASD 이동 / 마우스 조준 / 좌클릭 원거리 공격 / 우클릭 동력 공격 / Esc 일시정지.
+
+[실행·검증 범위](PLAY.md) · [QA 포트폴리오](https://leedoeon.vercel.app/qa/index.html)
+<!-- WINDOWS-RELEASE-END -->
+
 현재 기획 기준: **플레이어 본체 1기 + 부착 포탑 5기(T1~T5), 플레이어 HP 단일 관리**. 기준일: 2026-10-05.
 
 ## 현재 문서

@@ -18,7 +18,7 @@ namespace Rushitadel.Presentation
             var button=Button(parent,Themes[theme],x,y,width,height,choose);
             button.GetComponent<Image>().color=selected?ink:new Color32(85,101,105,255);
             var art=Image(button.transform,"Theme Illustration",4,4,width-8,height-62,Color.white);
-            art.sprite=Resources.Load<Sprite>("ThemeCards/"+ThemeCardAssets[theme]);
+            art.sprite=RetroUiArt.Theme(theme);
             art.raycastTarget=false;art.transform.SetSiblingIndex(1);
             var band=Image(button.transform,"Title backing",4,height-58,width-8,54,new Color(.07f,.10f,.13f,.94f));
             band.raycastTarget=false;band.transform.SetSiblingIndex(2);

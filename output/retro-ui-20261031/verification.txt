@@ -1,0 +1,1 @@
+PASS: title, slots, themes, settings/audio, web, live HUD, pause, clear and defeat rendered. Effects mute, paused animation, one-shot result cue and cleanup checked. Saves isolated.
