@@ -1,56 +1,67 @@
 # Rushitadel
 
-<!-- WINDOWS-RELEASE-START -->
-## Windows에서 바로 플레이
+**이동·직접 공격과 포탑 성장을 조합해 적의 공격을 버티는 액션 디펜스 게임입니다.**
 
-**[Rushitadel · Windows 실행 파일 다운로드](https://github.com/lde0707/portfolio-game-builds/releases/tag/rushitadel-2026-11-14-r2)**
+3인 팀 · 개발 완료 · 액션 디펜스 · Unity 6000.5.3f1 · C#
 
-포탑과 직접 공격을 조합해 적의 공격을 버티는 액션 디펜스 게임.
+[Windows 실행 파일](https://github.com/lde0707/portfolio-game-builds/releases/tag/rushitadel-2026-11-14-r2) · [QA 엑셀](https://leedoeon.vercel.app/qa/reports/rushitadel.xlsx) · [QA 포트폴리오](https://leedoeon.vercel.app/qa/index.html)
 
-1. 위 Releases 페이지의 `Rushitadel-Windows-x64.zip`을 내려받습니다. `Source code` 파일은 실행 파일이 아닙니다.
-2. ZIP 전체를 한 폴더에 압축 해제합니다.
-3. `Rushitadel.exe`를 실행합니다. Unity 설치는 필요 없습니다.
+<img src="Portfolio/gameplay.webp" alt="Rushitadel 실제 게임 화면" width="900">
 
-`Rushitadel_Data`, `UnityPlayer.dll`, 나머지 동봉 폴더를 함께 유지해야 합니다. Windows 64비트용이며 모바일·macOS에서는 실행되지 않습니다.
+## 내가 맡은 역할
 
-**조작:** WASD 이동 / 마우스 조준 / 좌클릭 원거리 공격 / 우클릭 동력 공격 / Esc 일시정지.
+포탑 성장·전투·재화 시스템 기획을 담당했습니다.
 
-[실행·검증 범위](PLAY.md) · [QA 포트폴리오](https://leedoeon.vercel.app/qa/index.html)
-<!-- WINDOWS-RELEASE-END -->
+## 게임의 주요 흐름
 
-현재 기획 기준: **플레이어 본체 1기 + 부착 포탑 5기(T1~T5), 플레이어 HP 단일 관리**. 기준일: 2026-10-05.
+저장 불러오기 → 전투·경험치 → 다음 라운드 → 포탑 변형
 
-## 현재 문서
+## 실행 방법
 
-| 파일 | 역할 |
-| --- | --- |
-| [게임 기획](docs/게임_기획_대화정리.md) | 현재 규칙, 아트·맵·보스 기준, 확정/제안/미정 구분 |
-| [UI 기획서](<Rushitadel UI기획서.pptx>) | 화면별 표 양식, HUD·강화·정비·저장·결과 |
-| [시스템 기획서](<Rushitadel 시스템 기획서.pptx>) | 런·전투·성장·보스·저장 명세 |
-| [상세 기획서](Rushitadel_시스템_상세기획서_v2.txt) | 기능·예외·데이터 계약·검수 기준 |
-| [증강 후보](Rushitadel_증강_정리본v2.xlsx) | Web 6가지, 변형 15종, 공통·전용 증강 |
-| [강화·변형 후보](Rushitadel_TowerUpgrade_정리본.xlsx) | 강화 스탯 후보와 변형 상세, 동일 S3 ID |
-| [흐름도](로그디펜스.drawio) | 런 / 플레이어 전투 / 성장 / 저장·제작 4개 페이지 |
-| [구현 현황](docs/구현_현황.md) | 실제 구현 범위, 미구현 명세, 테스트 결과 |
-| [Unity 실행 안내](Rushitadel2D/README_2D.md) | 조작, 테스트값, 씬 재생성·검증 방법 |
+### Unity 없이 플레이
 
-루트 PPT가 현재 편집본이다. `output/planning-20261005/`의 PPT는 같은 내용의 배포본이다. 개별 효과 수치와 테스트 기본값은 최종 밸런스 확정을 의미하지 않는다.
+1. 위 **Windows 실행 파일** 링크에서 `Rushitadel-Windows-x64.zip`을 받습니다.
+2. ZIP **전체를 압축 해제**합니다.
+3. `Rushitadel.exe`를 실행합니다.
 
-## 실행
+Windows 64비트용입니다. EXE와 `Data` 폴더·`UnityPlayer.dll`을 함께 유지하세요. GitHub의 `Source code` 압축 파일은 게임 실행 패키지가 아닙니다.
 
-Unity 6000.5.3f1로 `Rushitadel2D`를 열고 `Assets/Scenes/Title.unity`에서 새 게임을 실행한다.
+**기본 조작:** WASD 이동 / 마우스 조준 / 좌클릭 원거리 공격 / 우클릭 동력 공격 / Esc 일시정지
 
-WASD 이동 / 마우스 조준·좌클릭 원거리 공격 / 5포탑 자동 회전·정면 비유도 사격(5유닛) / 우클릭 동력 공격 / ESC 일시정지. HP 0에서 패배하며 재시작할 수 있다. 현재는 전투 프로토타입이며 런 전체 진행·보스·성장 UI·저장은 명세 단계다.
+<details>
+<summary>Unity에서 소스 열기</summary>
 
-절벽 벽은 플레이어 이동·반동을 차단한다. 절벽 밖 적 탄은 길 안으로 진입할 때 통과하고 밖으로 나갈 때만 도탄한다. 적 탄에 HP가 있어 포탑·플레이어 공격으로 파괴할 수 있다. 우클릭은 최대 기력 70%를 소비하며, 본체 지름 1.5배의 원형 공격과 짧은 후방 반동을 발생시킨다. 중앙 반지름 30%는 즉사, 나머지는 최대 HP 기준 100%→가장자리 50% 피해다. 상세 수치·검증은 Unity 실행 안내에 기록한다.
+1. Unity Hub에서 `Rushitadel2D` 폴더를 프로젝트로 추가합니다.
+2. **Unity 6000.5.3f1**으로 엽니다.
+3. `Assets/Scenes/Title.unity` 씬을 열고 Play를 실행합니다.
+4. 실행 파일을 만들 때 Windows Build Support를 설치하고 기존 Build Settings의 씬 구성으로 Windows x64를 빌드합니다.
 
-카메라가 전진하고 연결 타일 배경이 아래로 흐른다. 플레이어가 정지하면 후방 위험 구역에 가까워진다. 화면 아래 테마 위험 구역은 접촉 중 1초마다 강한 피해를 주고, 위쪽 장벽은 통과할 수 없다. 전진 속도 0.8유닛/초·후방 최대 HP 50%/초는 현재 테스트값이다.
+</details>
 
-## 자료 관리
+## QA 테스트
 
-- `IMG/`, PSD, 원본 아트·애니메이션은 제작 자료다. 현재 런타임에 연결된 리소스와 구분한다.
-- `창업동아리 서류 .hwpx`는 별도의 사업·행정 문서다. 사업 목표·예산·시장 내용은 게임 규칙 변경으로 바꾸지 않는다.
-- 작업 전 자료는 `.work/sync-20261005/backup/`에 보존했다. 개인 작업·검수 파일은 배포 기획서가 아니다.
-- 기획 규칙은 문서·XLSX·UI·실행 데이터에서 같은 ID로 관리하고, 제안 기능의 채택은 별도로 기록한다.
+Windows 빌드에 실제 키보드·마우스 입력을 보내 확인한 내용입니다. 세부 조건과 관찰값은 **QA 엑셀의 플레이 재검증 시트**에서 볼 수 있습니다.
 
-[2026-11-14 실제 플레이·수정 재검증](PLAYTEST.md)
+| 확인 기능 | 테스트 조건 | 관찰 결과 |
+|---|---|---|
+| 전투·성장 | 이동·공격 후 경험치 획득 | 다음 라운드 진입과 포탑 변형 적용 |
+| 상단 이동 제한 | W를 길게 유지 | 수정 전 이탈 재현, 수정 후 본체까지 화면 안 유지 |
+| 반동·일시정지 | 상단 반동 발사 후 일시정지 | 반동 후 경계 유지, 정지 중 카메라·체력 유지 |
+
+### 결함 수정 후 재검증
+
+W를 길게 누르면 캐릭터가 화면 위로 사라지는 문제를 확인했습니다. 본체 반지름을 포함한 경계 제한을 적용한 뒤, 같은 이동 입력과 반동 발사로 화면 안에 유지되는지 재검증했습니다.
+
+| 수정 전 | 수정 후 |
+|---|---|
+| ![화면 위로 이탈](Portfolio/boundary-before.webp) | ![화면 안에 위치 유지](Portfolio/boundary-after.webp) |
+
+**검증 범위:** 모든 테마·보스 완주와 이전 버전 전체 저장 파일 호환성은 확인하지 않았습니다.
+
+[실제 입력 검증 기록](PLAYTEST.md) · [실행·검증 안내](PLAY.md)
+
+## 소스와 상세 문서
+
+- [이동 경계·전방 압박](Rushitadel2D/Assets/Scripts/World/ForwardPressureController.cs)
+- [전투 진행](Rushitadel2D/Assets/Scripts/Progression/CampaignDirector.cs)
+- [기존 개발·설계 기록](README-DEV-NOTES.md)
